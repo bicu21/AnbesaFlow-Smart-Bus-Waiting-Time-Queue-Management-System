@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: anbesaflow-auth
+
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/anbesaflow}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+app:
+  jwt:
+    # 512-bit HMAC-SHA Secret Key (Hex-encoded 64-byte string)
+    secret: ${JWT_SECRET:9a67431a7b1b369c0d4860b81c4e743a6d4860b81c4e743a6d4860b81c4e743a9a67431a7b1b369c0d4860b81c4e743a6d4860b81c4e743a6d4860b81c4e743a}
+    # Token expiration time: 24 hours in milliseconds (24 * 60 * 60 * 1000)
+    expiration-ms: 86400000
+    header: Authorization
+    prefix: "Bearer "
+
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-binding-errors: always
