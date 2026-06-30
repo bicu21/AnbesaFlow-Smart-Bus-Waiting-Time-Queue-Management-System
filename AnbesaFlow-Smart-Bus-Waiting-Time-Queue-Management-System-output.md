@@ -3,8 +3,8 @@
 ## 📊 Project Information
 
 - **Project Name**: `AnbesaFlow-Smart-Bus-Waiting-Time-Queue-Management-System`
-- **Generated On**: 2026-06-30 16:02:30 (Africa/Nairobi / GMT+03:00)
-- **Total Files Processed**: 119
+- **Generated On**: 2026-06-30 16:31:37 (Africa/Nairobi / GMT+03:00)
+- **Total Files Processed**: 125
 - **Export Tool**: Easy Whole Project to Single Text File for LLMs v1.1.0
 - **Tool Author**: Jota / José Guilherme Pandolfi
 
@@ -91,7 +91,10 @@
 │   │       ├── 📁 db/
 │   │       │   └── 📁 migration/
 │   │       │       ├── 📄 V1__init_schema.sql (356 B)
-│   │       │       └── 📄 V2__create_queue_entry_table.sql (461 B)
+│   │       │       ├── 📄 V2__create_queue_entry_table.sql (461 B)
+│   │       │       ├── 📄 V3__create_bus_table.sql (365 B)
+│   │       │       ├── 📄 V4__create_route_table.sql (278 B)
+│   │       │       └── 📄 V5__create_bus_stop_and_arrival_log_tables.sql (797 B)
 │   │       └── 📄 application.yml (1 KB)
 │   └── 📁 test/
 │       └── 📁 java/
@@ -164,7 +167,10 @@
 │   │   ├── 📁 db/
 │   │   │   └── 📁 migration/
 │   │   │       ├── 📄 V1__init_schema.sql (356 B)
-│   │   │       └── 📄 V2__create_queue_entry_table.sql (461 B)
+│   │   │       ├── 📄 V2__create_queue_entry_table.sql (461 B)
+│   │   │       ├── 📄 V3__create_bus_table.sql (365 B)
+│   │   │       ├── 📄 V4__create_route_table.sql (278 B)
+│   │   │       └── 📄 V5__create_bus_stop_and_arrival_log_tables.sql (797 B)
 │   │   └── 📄 application.yml (1 KB)
 │   ├── 📁 maven-status/
 │   │   └── 📁 maven-compiler-plugin/
@@ -238,9 +244,15 @@
 - [📄 src/main/java/com/anbesaflow/auth/AnbesaFlowAuthApplication.java](#📄-src-main-java-com-anbesaflow-auth-anbesaflowauthapplication-java)
 - [📄 src/main/resources/db/migration/V1__init_schema.sql](#📄-src-main-resources-db-migration-v1-init-schema-sql)
 - [📄 src/main/resources/db/migration/V2__create_queue_entry_table.sql](#📄-src-main-resources-db-migration-v2-create-queue-entry-table-sql)
+- [📄 src/main/resources/db/migration/V3__create_bus_table.sql](#📄-src-main-resources-db-migration-v3-create-bus-table-sql)
+- [📄 src/main/resources/db/migration/V4__create_route_table.sql](#📄-src-main-resources-db-migration-v4-create-route-table-sql)
+- [📄 src/main/resources/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql](#📄-src-main-resources-db-migration-v5-create-bus-stop-and-arrival-log-tables-sql)
 - [📄 src/main/resources/application.yml](#📄-src-main-resources-application-yml)
 - [📄 target/classes/db/migration/V1__init_schema.sql](#📄-target-classes-db-migration-v1-init-schema-sql)
 - [📄 target/classes/db/migration/V2__create_queue_entry_table.sql](#📄-target-classes-db-migration-v2-create-queue-entry-table-sql)
+- [📄 target/classes/db/migration/V3__create_bus_table.sql](#📄-target-classes-db-migration-v3-create-bus-table-sql)
+- [📄 target/classes/db/migration/V4__create_route_table.sql](#📄-target-classes-db-migration-v4-create-route-table-sql)
+- [📄 target/classes/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql](#📄-target-classes-db-migration-v5-create-bus-stop-and-arrival-log-tables-sql)
 - [📄 target/classes/application.yml](#📄-target-classes-application-yml)
 - [📄 AnbesaFlow_Authentication_Postman_Collection.json](#📄-anbesaflow-authentication-postman-collection-json)
 - [📄 pom.xml](#📄-pom-xml)
@@ -252,11 +264,11 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Files | 119 |
+| Total Files | 125 |
 | Total Directories | 37 |
-| Text Files | 63 |
+| Text Files | 69 |
 | Binary Files | 56 |
-| Total Size | 176.05 KB |
+| Total Size | 178.86 KB |
 
 ### 📄 File Types Distribution
 
@@ -264,7 +276,7 @@
 |-----------|-------|
 | `.java` | 54 |
 | `.class` | 54 |
-| `.sql` | 4 |
+| `.sql` | 10 |
 | `.yml` | 2 |
 | `.lst` | 2 |
 | `.json` | 1 |
@@ -2579,7 +2591,7 @@ public class JwtTokenProvider {
 - **Location**: `src/main/java/com/anbesaflow/auth/security/SecurityConfig.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/security`
 - **Created**: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 14:19:21 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 16:25:05 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `93b1838838e2b8f9558a36637af0de6c`
 - **SHA256**: `ee5064bb8dc536fe926975cf185f7507b94aa57e69f5359e23c95132c64e7729`
 - **Encoding**: ASCII
@@ -3340,6 +3352,144 @@ ON queue_entries(position);
 
 ---
 
+### <a id="📄-src-main-resources-db-migration-v3-create-bus-table-sql"></a>📄 `src/main/resources/db/migration/V3__create_bus_table.sql`
+
+**File Info:**
+- **Size**: 365 B
+- **Extension**: `.sql`
+- **Language**: `sql`
+- **Location**: `src/main/resources/db/migration/V3__create_bus_table.sql`
+- **Relative Path**: `src/main/resources/db/migration`
+- **Created**: 2026-06-30 16:03:35 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 16:31:15 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `abacdbba3a2a6a0410018680967f9027`
+- **SHA256**: `a15e0c4aaf3ed5a3e413ea8c5a6b0afbba0e0da8552ffb285c49ea9f79f7a974`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```sql
+CREATE TABLE buses (
+
+    id BIGSERIAL PRIMARY KEY,
+
+    plate_number VARCHAR(50) NOT NULL UNIQUE,
+
+    capacity INTEGER NOT NULL
+        CHECK (capacity > 0),
+
+    status VARCHAR(50) NOT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_bus_status
+ON buses(status);
+
+CREATE INDEX idx_bus_plate
+ON buses(plate_number);
+```
+
+---
+
+### <a id="📄-src-main-resources-db-migration-v4-create-route-table-sql"></a>📄 `src/main/resources/db/migration/V4__create_route_table.sql`
+
+**File Info:**
+- **Size**: 278 B
+- **Extension**: `.sql`
+- **Language**: `sql`
+- **Location**: `src/main/resources/db/migration/V4__create_route_table.sql`
+- **Relative Path**: `src/main/resources/db/migration`
+- **Created**: 2026-06-30 16:03:43 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 16:31:27 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `2724843474bcfc47dc4abd260d0d6821`
+- **SHA256**: `95c1a3d2a56d50003ea96fc9ff422f9ffb73e18d49395189e2766d0bdcdf3ed9`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```sql
+CREATE TABLE routes (
+
+    id BIGSERIAL PRIMARY KEY,
+
+    name VARCHAR(150) NOT NULL,
+
+    start_point VARCHAR(100) NOT NULL,
+
+    end_point VARCHAR(100) NOT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_route_name
+ON routes(name);
+```
+
+---
+
+### <a id="📄-src-main-resources-db-migration-v5-create-bus-stop-and-arrival-log-tables-sql"></a>📄 `src/main/resources/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql`
+
+**File Info:**
+- **Size**: 797 B
+- **Extension**: `.sql`
+- **Language**: `sql`
+- **Location**: `src/main/resources/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql`
+- **Relative Path**: `src/main/resources/db/migration`
+- **Created**: 2026-06-30 16:03:59 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 16:31:36 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `c039b9442688c99fce2d07835bba33b6`
+- **SHA256**: `df6eae64247a31b1699ae1c30a1d928fd5712cdc515628e6fc85e7bb6c322939`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```sql
+CREATE TABLE bus_stops (
+
+    id BIGSERIAL PRIMARY KEY,
+
+    name VARCHAR(120) NOT NULL,
+
+    location VARCHAR(255) NOT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE arrival_logs (
+
+    id BIGSERIAL PRIMARY KEY,
+
+    bus_id BIGINT NOT NULL,
+
+    bus_stop_id BIGINT NOT NULL,
+
+    arrival_time TIMESTAMP,
+
+    departure_time TIMESTAMP,
+
+    status VARCHAR(50) NOT NULL,
+
+    CONSTRAINT fk_arrival_bus
+        FOREIGN KEY (bus_id)
+        REFERENCES buses(id)
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_arrival_stop
+        FOREIGN KEY (bus_stop_id)
+        REFERENCES bus_stops(id)
+        ON DELETE CASCADE
+);
+
+CREATE INDEX idx_arrival_bus
+ON arrival_logs(bus_id);
+
+CREATE INDEX idx_arrival_stop
+ON arrival_logs(bus_stop_id);
+```
+
+---
+
 ### <a id="📄-src-main-resources-application-yml"></a>📄 `src/main/resources/application.yml`
 
 **File Info:**
@@ -3566,6 +3716,144 @@ ON queue_entries(bus_stop);
 
 CREATE INDEX idx_queue_position
 ON queue_entries(position);
+```
+
+---
+
+### <a id="📄-target-classes-db-migration-v3-create-bus-table-sql"></a>📄 `target/classes/db/migration/V3__create_bus_table.sql`
+
+**File Info:**
+- **Size**: 365 B
+- **Extension**: `.sql`
+- **Language**: `sql`
+- **Location**: `target/classes/db/migration/V3__create_bus_table.sql`
+- **Relative Path**: `target/classes/db/migration`
+- **Created**: 2026-06-30 16:03:35 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 16:31:15 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `abacdbba3a2a6a0410018680967f9027`
+- **SHA256**: `a15e0c4aaf3ed5a3e413ea8c5a6b0afbba0e0da8552ffb285c49ea9f79f7a974`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```sql
+CREATE TABLE buses (
+
+    id BIGSERIAL PRIMARY KEY,
+
+    plate_number VARCHAR(50) NOT NULL UNIQUE,
+
+    capacity INTEGER NOT NULL
+        CHECK (capacity > 0),
+
+    status VARCHAR(50) NOT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_bus_status
+ON buses(status);
+
+CREATE INDEX idx_bus_plate
+ON buses(plate_number);
+```
+
+---
+
+### <a id="📄-target-classes-db-migration-v4-create-route-table-sql"></a>📄 `target/classes/db/migration/V4__create_route_table.sql`
+
+**File Info:**
+- **Size**: 278 B
+- **Extension**: `.sql`
+- **Language**: `sql`
+- **Location**: `target/classes/db/migration/V4__create_route_table.sql`
+- **Relative Path**: `target/classes/db/migration`
+- **Created**: 2026-06-30 16:03:44 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 16:31:27 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `2724843474bcfc47dc4abd260d0d6821`
+- **SHA256**: `95c1a3d2a56d50003ea96fc9ff422f9ffb73e18d49395189e2766d0bdcdf3ed9`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```sql
+CREATE TABLE routes (
+
+    id BIGSERIAL PRIMARY KEY,
+
+    name VARCHAR(150) NOT NULL,
+
+    start_point VARCHAR(100) NOT NULL,
+
+    end_point VARCHAR(100) NOT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_route_name
+ON routes(name);
+```
+
+---
+
+### <a id="📄-target-classes-db-migration-v5-create-bus-stop-and-arrival-log-tables-sql"></a>📄 `target/classes/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql`
+
+**File Info:**
+- **Size**: 797 B
+- **Extension**: `.sql`
+- **Language**: `sql`
+- **Location**: `target/classes/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql`
+- **Relative Path**: `target/classes/db/migration`
+- **Created**: 2026-06-30 16:03:59 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 16:31:36 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `c039b9442688c99fce2d07835bba33b6`
+- **SHA256**: `df6eae64247a31b1699ae1c30a1d928fd5712cdc515628e6fc85e7bb6c322939`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```sql
+CREATE TABLE bus_stops (
+
+    id BIGSERIAL PRIMARY KEY,
+
+    name VARCHAR(120) NOT NULL,
+
+    location VARCHAR(255) NOT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE arrival_logs (
+
+    id BIGSERIAL PRIMARY KEY,
+
+    bus_id BIGINT NOT NULL,
+
+    bus_stop_id BIGINT NOT NULL,
+
+    arrival_time TIMESTAMP,
+
+    departure_time TIMESTAMP,
+
+    status VARCHAR(50) NOT NULL,
+
+    CONSTRAINT fk_arrival_bus
+        FOREIGN KEY (bus_id)
+        REFERENCES buses(id)
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_arrival_stop
+        FOREIGN KEY (bus_stop_id)
+        REFERENCES bus_stops(id)
+        ON DELETE CASCADE
+);
+
+CREATE INDEX idx_arrival_bus
+ON arrival_logs(bus_id);
+
+CREATE INDEX idx_arrival_stop
+ON arrival_logs(bus_stop_id);
 ```
 
 ---
