@@ -3,9 +3,9 @@ spring:
     name: anbesaflow-auth
 
   datasource:
-    url: ${DATABASE_URL:jdbc:postgresql://dpg-d921vdkvikkc73bl0fqg-a:5432/anbesa_flow}
-    username: ${DATABASE_USERNAME:anbesa_flow_user}
-    password: ${DATABASE_PASSWORD:iqvLwlA0DqcHccSzuejwv2Ui7Yv56auX}
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -23,9 +23,7 @@ spring:
 
 app:
   jwt:
-    # 512-bit HMAC-SHA Secret Key (Hex-encoded 64-byte string)
-    secret: ${JWT_SECRET:9a67431a7b1b369c0d4860b81c4e743a6d4860b81c4e743a6d4860b81c4e743a9a67431a7b1b369c0d4860b81c4e743a6d4860b81c4e743a6d4860b81c4e743a}
-    # Token expiration time: 24 hours in milliseconds (24 * 60 * 60 * 1000)
+    secret: ${JWT_SECRET}
     expiration-ms: 86400000
     header: Authorization
     prefix: "Bearer "
