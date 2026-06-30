@@ -2,11 +2,10 @@ package com.anbesaflow.auth.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name="arrival_logs")
+@Table(name = "arrival_logs")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -15,20 +14,23 @@ import java.time.LocalDateTime;
 public class ArrivalLog {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name="bus_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "bus_id", nullable = false)
     private Bus bus;
 
-    @ManyToOne
-    @JoinColumn(name="bus_stop_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "bus_stop_id", nullable = false)
     private BusStop busStop;
 
+    @Column(name = "arrival_time")
     private LocalDateTime arrivalTime;
 
+    @Column(name = "departure_time")
     private LocalDateTime departureTime;
 
-    private String status;
+    @Column(nullable = false, length = 50)
+    private String status; // e.g., ON_TIME, DELAYED
 }

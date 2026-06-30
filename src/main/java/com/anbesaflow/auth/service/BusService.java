@@ -1,25 +1,51 @@
 package com.anbesaflow.auth.service;
 
-import com.anbesaflow.auth.dto.BusRequest;
-import com.anbesaflow.auth.dto.BusResponse;
+import com.anbesaflow.auth.entity.Bus;
+import com.anbesaflow.auth.exception.ResourceNotFoundException;
+import com.anbesaflow.auth.repository.BusRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+@Service
+@Transactional
+public class BusService {
 
-public interface BusService {
+    private final BusRepository busRepository;
 
-    BusResponse create(
-            BusRequest request
-    );
+    public BusService(BusRepository busRepository) {
+        this.busRepository = busRepository;
+    }
 
-    List<BusResponse> getAll();
+    public Bus createBus(Bus bus) {
+        return busRepository.save(bus);
+    }
 
-    BusResponse update(
-            Long id,
-            BusRequest request
-    );
+    @Transactional(readOnly = true)
+    public Page<Bus> getAllBuses(String status, Pageable pageable) {
+        if (status != null && !status.isBlank()) {
+            return busRepository.findByStatus(status, pageable);
+        }
+        return busRepository.findAll(pageable);
+    }
 
-    void delete(
-            Long id
-    );
+    @Transactional(readOnly = true)
+    public Bus getBusById(Long id) {
+        return busRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Bus not found with id: " + id));
+    }
 
+    public Bus updateBus(Long id, Bus updatedBus) {
+        Bus existingBus = getBusById(id);
+        existingBus.setPlateNumber(updatedBus.getPlateNumber());
+        existingBus.setCapacity(updatedBus.getCapacity());
+        existingBus.setStatus(updatedBus.getStatus());
+        return busRepository.save(existingBus);
+    }
+
+    public void deleteBus(Long id) {
+        Bus bus = getBusById(id);
+        busRepository.delete(bus);
+    }
 }

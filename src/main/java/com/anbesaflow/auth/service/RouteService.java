@@ -1,25 +1,52 @@
 package com.anbesaflow.auth.service;
 
-import com.anbesaflow.auth.dto.RouteRequest;
-import com.anbesaflow.auth.dto.RouteResponse;
+import com.anbesaflow.auth.entity.Route;
+import com.anbesaflow.auth.exception.ResourceNotFoundException;
+import com.anbesaflow.auth.repository.RouteRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+@Service
+@Transactional
+public class RouteService {
 
-public interface RouteService {
+    private final RouteRepository routeRepository;
 
-    RouteResponse create(
-            RouteRequest request
-    );
+    public RouteService(RouteRepository routeRepository) {
+        this.routeRepository = routeRepository;
+    }
 
-    List<RouteResponse> getAll();
+    public Route createRoute(Route route) {
+        return routeRepository.save(route);
+    }
 
-    RouteResponse update(
-            Long id,
-            RouteRequest request
-    );
+    @Transactional(readOnly = true)
+    public Page<Route> getAllRoutes(String search, Pageable pageable) {
+        if (search != null && !search.isBlank()) {
+            return routeRepository.findByNameContainingIgnoreCaseOrStartPointContainingIgnoreCaseOrEndPointContainingIgnoreCase(
+                    search, search, search, pageable);
+        }
+        return routeRepository.findAll(pageable);
+    }
 
-    void delete(
-            Long id
-    );
+    @Transactional(readOnly = true)
+    public Route getRouteById(Long id) {
+        return routeRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Route not found with id: " + id));
+    }
 
+    public Route updateRoute(Long id, Route updatedRoute) {
+        Route existingRoute = getRouteById(id);
+        existingRoute.setName(updatedRoute.getName());
+        existingRoute.setStartPoint(updatedRoute.getStartPoint());
+        existingRoute.setEndPoint(updatedRoute.getEndPoint());
+        return routeRepository.save(existingRoute);
+    }
+
+    public void deleteRoute(Long id) {
+        Route route = getRouteById(id);
+        routeRepository.delete(route);
+    }
 }

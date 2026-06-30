@@ -3,7 +3,7 @@
 ## 📊 Project Information
 
 - **Project Name**: `AnbesaFlow-Smart-Bus-Waiting-Time-Queue-Management-System`
-- **Generated On**: 2026-06-30 18:04:52 (Africa/Nairobi / GMT+03:00)
+- **Generated On**: 2026-06-30 20:11:32 (Africa/Nairobi / GMT+03:00)
 - **Total Files Processed**: 138
 - **Export Tool**: Easy Whole Project to Single Text File for LLMs v1.1.0
 - **Tool Author**: Jota / José Guilherme Pandolfi
@@ -21,155 +21,158 @@
 
 ```
 ├── 📁 src/
-│   ├── 📁 main/
-│   │   ├── 📁 java/
-│   │   │   └── 📁 com/
-│   │   │       └── 📁 anbesaflow/
-│   │   │           └── 📁 auth/
-│   │   │               ├── 📁 controller/
-│   │   │               │   ├── 📄 AdminController.java (1.46 KB)
-│   │   │               │   ├── 📄 AuthController.java (1.28 KB)
-│   │   │               │   ├── 📄 OperatorController.java (1.72 KB)
-│   │   │               │   ├── 📄 PassengerController.java (1.71 KB)
-│   │   │               │   ├── 📄 QueueController.java (2.15 KB)
-│   │   │               │   └── 📄 UserController.java (1.04 KB)
-│   │   │               ├── 📁 dto/
-│   │   │               │   ├── 📄 ArrivalLogRequest.java (266 B)
-│   │   │               │   ├── 📄 ArrivalLogResponse.java (345 B)
-│   │   │               │   ├── 📄 AuthResponse.java (845 B)
-│   │   │               │   ├── 📄 BusRequest.java (213 B)
-│   │   │               │   ├── 📄 BusResponse.java (206 B)
-│   │   │               │   ├── 📄 BusStopRequest.java (223 B)
-│   │   │               │   ├── 📄 BusStopResponse.java (248 B)
-│   │   │               │   ├── 📄 ErrorResponse.java (1.38 KB)
-│   │   │               │   ├── 📄 JoinQueueRequest.java (401 B)
-│   │   │               │   ├── 📄 LoginRequest.java (651 B)
-│   │   │               │   ├── 📄 QueueStatusResponse.java (783 B)
-│   │   │               │   ├── 📄 RegisterRequest.java (1.08 KB)
-│   │   │               │   ├── 📄 RouteRequest.java (267 B)
-│   │   │               │   ├── 📄 RouteResponse.java (292 B)
-│   │   │               │   ├── 📄 UserResponse.java (1.26 KB)
-│   │   │               │   └── 📄 WaitingTimeResponse.java (354 B)
-│   │   │               ├── 📁 entity/
-│   │   │               │   ├── 📄 ArrivalLog.java (621 B)
-│   │   │               │   ├── 📄 Bus.java (498 B)
-│   │   │               │   ├── 📄 BusStop.java (367 B)
-│   │   │               │   ├── 📄 QueueEntry.java (1.68 KB)
-│   │   │               │   ├── 📄 Role.java (104 B)
-│   │   │               │   ├── 📄 Route.java (396 B)
-│   │   │               │   └── 📄 User.java (1.83 KB)
-│   │   │               ├── 📁 exception/
-│   │   │               │   ├── 📄 GlobalExceptionHandler.java (4.68 KB)
-│   │   │               │   ├── 📄 QueueNotFoundException.java (194 B)
-│   │   │               │   ├── 📄 ResourceNotFoundException.java (352 B)
-│   │   │               │   └── 📄 UserAlreadyExistsException.java (353 B)
-│   │   │               ├── 📁 repository/
-│   │   │               │   ├── 📄 ArrivalLogRepository.java (376 B)
-│   │   │               │   ├── 📄 BusRepository.java (399 B)
-│   │   │               │   ├── 📄 BusStopRepository.java (424 B)
-│   │   │               │   ├── 📄 QueueEntryRepository.java (685 B)
-│   │   │               │   ├── 📄 RouteRepository.java (373 B)
-│   │   │               │   └── 📄 UserRepository.java (408 B)
-│   │   │               ├── 📁 security/
-│   │   │               │   ├── 📄 CustomUserDetails.java (2.36 KB)
-│   │   │               │   ├── 📄 CustomUserDetailsService.java (1.08 KB)
-│   │   │               │   ├── 📄 JwtAuthenticationFilter.java (3.52 KB)
-│   │   │               │   ├── 📄 JwtTokenProvider.java (3.96 KB)
-│   │   │               │   ├── 📄 SecurityConfig.java (3.21 KB)
-│   │   │               │   └── 📄 TokenBlacklistService.java (1.74 KB)
-│   │   │               ├── 📁 service/
-│   │   │               │   ├── 📄 ArrivalLogService.java (487 B)
-│   │   │               │   ├── 📄 AuthService.java (3.95 KB)
-│   │   │               │   ├── 📄 BusService.java (431 B)
-│   │   │               │   ├── 📄 BusStopService.java (463 B)
-│   │   │               │   ├── 📄 QueueService.java (3.84 KB)
-│   │   │               │   ├── 📄 RouteService.java (447 B)
-│   │   │               │   ├── 📄 UserService.java (1.13 KB)
-│   │   │               │   └── 📄 WaitingTimeService.java (523 B)
-│   │   │               └── 📄 AnbesaFlowAuthApplication.java (438 B)
-│   │   └── 📁 resources/
-│   │       ├── 📁 db/
-│   │       │   └── 📁 migration/
-│   │       │       ├── 📄 V1__init_schema.sql (356 B)
-│   │       │       ├── 📄 V2__create_queue_entry_table.sql (461 B)
-│   │       │       ├── 📄 V3__create_bus_table.sql (365 B)
-│   │       │       ├── 📄 V4__create_route_table.sql (278 B)
-│   │       │       └── 📄 V5__create_bus_stop_and_arrival_log_tables.sql (797 B)
-│   │       └── 📄 application.yml (1 KB)
-│   └── 📁 test/
-│       └── 📁 java/
+│   └── 📁 main/
+│       ├── 📁 java/
+│       │   └── 📁 com/
+│       │       └── 📁 anbesaflow/
+│       │           └── 📁 auth/
+│       │               ├── 📁 controller/
+│       │               │   ├── 📄 AdminController.java (1.46 KB)
+│       │               │   ├── 📄 ArrivalLogController.java (1.2 KB)
+│       │               │   ├── 📄 AuthController.java (1.28 KB)
+│       │               │   ├── 📄 BusController.java (1.54 KB)
+│       │               │   ├── 📄 BusStopController.java (1.67 KB)
+│       │               │   ├── 📄 OperatorController.java (1.72 KB)
+│       │               │   ├── 📄 PassengerController.java (1.71 KB)
+│       │               │   ├── 📄 QueueController.java (2.15 KB)
+│       │               │   ├── 📄 RouteController.java (1.6 KB)
+│       │               │   └── 📄 UserController.java (1.04 KB)
+│       │               ├── 📁 dto/
+│       │               │   ├── 📄 ArrivalLogRequest.java (266 B)
+│       │               │   ├── 📄 ArrivalLogResponse.java (345 B)
+│       │               │   ├── 📄 AuthResponse.java (845 B)
+│       │               │   ├── 📄 BusRequest.java (213 B)
+│       │               │   ├── 📄 BusResponse.java (206 B)
+│       │               │   ├── 📄 BusStopRequest.java (223 B)
+│       │               │   ├── 📄 BusStopResponse.java (248 B)
+│       │               │   ├── 📄 ErrorResponse.java (1.38 KB)
+│       │               │   ├── 📄 JoinQueueRequest.java (401 B)
+│       │               │   ├── 📄 LoginRequest.java (651 B)
+│       │               │   ├── 📄 QueueStatusResponse.java (783 B)
+│       │               │   ├── 📄 RegisterRequest.java (1.08 KB)
+│       │               │   ├── 📄 RouteRequest.java (267 B)
+│       │               │   ├── 📄 RouteResponse.java (292 B)
+│       │               │   ├── 📄 UserResponse.java (1.26 KB)
+│       │               │   └── 📄 WaitingTimeResponse.java (354 B)
+│       │               ├── 📁 entity/
+│       │               │   ├── 📄 ArrivalLog.java (855 B)
+│       │               │   ├── 📄 Bus.java (1.68 KB)
+│       │               │   ├── 📄 BusStop.java (1.3 KB)
+│       │               │   ├── 📄 QueueEntry.java (1.68 KB)
+│       │               │   ├── 📄 Role.java (104 B)
+│       │               │   ├── 📄 Route.java (1.38 KB)
+│       │               │   └── 📄 User.java (1.83 KB)
+│       │               ├── 📁 exception/
+│       │               │   ├── 📄 GlobalExceptionHandler.java (4.68 KB)
+│       │               │   ├── 📄 QueueNotFoundException.java (194 B)
+│       │               │   ├── 📄 ResourceNotFoundException.java (352 B)
+│       │               │   └── 📄 UserAlreadyExistsException.java (353 B)
+│       │               ├── 📁 repository/
+│       │               │   ├── 📄 ArrivalLogRepository.java (537 B)
+│       │               │   ├── 📄 BusRepository.java (527 B)
+│       │               │   ├── 📄 BusStopRepository.java (549 B)
+│       │               │   ├── 📄 QueueEntryRepository.java (685 B)
+│       │               │   ├── 📄 RouteRepository.java (575 B)
+│       │               │   └── 📄 UserRepository.java (408 B)
+│       │               ├── 📁 security/
+│       │               │   ├── 📄 CustomUserDetails.java (2.36 KB)
+│       │               │   ├── 📄 CustomUserDetailsService.java (1.08 KB)
+│       │               │   ├── 📄 JwtAuthenticationFilter.java (3.52 KB)
+│       │               │   ├── 📄 JwtTokenProvider.java (3.96 KB)
+│       │               │   ├── 📄 SecurityConfig.java (3.21 KB)
+│       │               │   └── 📄 TokenBlacklistService.java (1.74 KB)
+│       │               ├── 📁 service/
+│       │               │   ├── 📄 ArrivalLogService.java (1.15 KB)
+│       │               │   ├── 📄 AuthService.java (3.95 KB)
+│       │               │   ├── 📄 BusService.java (1.65 KB)
+│       │               │   ├── 📄 BusStopService.java (1.75 KB)
+│       │               │   ├── 📄 QueueService.java (3.84 KB)
+│       │               │   ├── 📄 RouteService.java (1.84 KB)
+│       │               │   ├── 📄 UserService.java (1.13 KB)
+│       │               │   └── 📄 WaitingTimeService.java (523 B)
+│       │               └── 📄 AnbesaFlowAuthApplication.java (438 B)
+│       └── 📁 resources/
+│           ├── 📁 db/
+│           │   └── 📁 migration/
+│           │       ├── 📄 V1__init_schema.sql (356 B)
+│           │       ├── 📄 V2__create_queue_entry_table.sql (461 B)
+│           │       ├── 📄 V3__create_bus_table.sql (365 B)
+│           │       ├── 📄 V4__create_route_table.sql (278 B)
+│           │       └── 📄 V5__create_bus_stop_and_arrival_log_tables.sql (797 B)
+│           └── 📄 application.yml (1 KB)
 ├── 📁 target/
 │   ├── 📁 classes/
 │   │   ├── 📁 com/
 │   │   │   └── 📁 anbesaflow/
 │   │   │       └── 📁 auth/
 │   │   │           ├── 📁 controller/
-│   │   │           │   ├── 📄 AdminController.class (3.16 KB)
+│   │   │           │   ├── 📄 AdminController.class (3.14 KB)
+│   │   │           │   ├── 📄 ArrivalLogController.class (2.55 KB)
 │   │   │           │   ├── 📄 AuthController.class (2.9 KB)
-│   │   │           │   ├── 📄 OperatorController.class (2.95 KB)
-│   │   │           │   ├── 📄 PassengerController.class (3.37 KB)
-│   │   │           │   ├── 📄 QueueController.class (2.96 KB)
+│   │   │           │   ├── 📄 BusController.class (3.89 KB)
+│   │   │           │   ├── 📄 BusStopController.class (4 KB)
+│   │   │           │   ├── 📄 OperatorController.class (2.93 KB)
+│   │   │           │   ├── 📄 PassengerController.class (3.35 KB)
+│   │   │           │   ├── 📄 QueueController.class (2.97 KB)
+│   │   │           │   ├── 📄 RouteController.class (3.94 KB)
 │   │   │           │   └── 📄 UserController.class (2.01 KB)
 │   │   │           ├── 📁 dto/
-│   │   │           │   ├── 📄 ArrivalLogRequest.class (1.19 KB)
-│   │   │           │   ├── 📄 ArrivalLogResponse.class (1.59 KB)
-│   │   │           │   ├── 📄 ArrivalLogResponse$ArrivalLogResponseBuilder.class (2.64 KB)
+│   │   │           │   ├── 📄 ArrivalLogRequest.class (1.07 KB)
+│   │   │           │   ├── 📄 ArrivalLogResponse.class (1.45 KB)
+│   │   │           │   ├── 📄 ArrivalLogResponse$ArrivalLogResponseBuilder.class (2.41 KB)
 │   │   │           │   ├── 📄 AuthResponse.class (1.31 KB)
-│   │   │           │   ├── 📄 BusRequest.class (1.16 KB)
-│   │   │           │   ├── 📄 BusResponse.class (1.38 KB)
-│   │   │           │   ├── 📄 BusResponse$BusResponseBuilder.class (2.33 KB)
-│   │   │           │   ├── 📄 BusStopRequest.class (1.16 KB)
-│   │   │           │   ├── 📄 BusStopResponse.class (1.4 KB)
-│   │   │           │   ├── 📄 BusStopResponse$BusStopResponseBuilder.class (2.38 KB)
+│   │   │           │   ├── 📄 BusRequest.class (1.04 KB)
+│   │   │           │   ├── 📄 BusResponse.class (1.25 KB)
+│   │   │           │   ├── 📄 BusResponse$BusResponseBuilder.class (2.05 KB)
+│   │   │           │   ├── 📄 BusStopRequest.class (1.04 KB)
+│   │   │           │   ├── 📄 BusStopResponse.class (1.27 KB)
+│   │   │           │   ├── 📄 BusStopResponse$BusStopResponseBuilder.class (2.1 KB)
 │   │   │           │   ├── 📄 ErrorResponse.class (1.76 KB)
 │   │   │           │   ├── 📄 JoinQueueRequest.class (787 B)
 │   │   │           │   ├── 📄 LoginRequest.class (961 B)
 │   │   │           │   ├── 📄 QueueStatusResponse.class (1.01 KB)
 │   │   │           │   ├── 📄 RegisterRequest.class (1.53 KB)
-│   │   │           │   ├── 📄 RouteRequest.class (1.42 KB)
-│   │   │           │   ├── 📄 RouteResponse.class (1.56 KB)
-│   │   │           │   ├── 📄 RouteResponse$RouteResponseBuilder.class (2.57 KB)
+│   │   │           │   ├── 📄 RouteRequest.class (1.28 KB)
+│   │   │           │   ├── 📄 RouteResponse.class (1.42 KB)
+│   │   │           │   ├── 📄 RouteResponse$RouteResponseBuilder.class (2.26 KB)
 │   │   │           │   ├── 📄 UserResponse.class (1.9 KB)
 │   │   │           │   └── 📄 WaitingTimeResponse.class (585 B)
 │   │   │           ├── 📁 entity/
-│   │   │           │   ├── 📄 ArrivalLog.class (3.15 KB)
+│   │   │           │   ├── 📄 ArrivalLog.class (3.37 KB)
 │   │   │           │   ├── 📄 ArrivalLog$ArrivalLogBuilder.class (3.03 KB)
-│   │   │           │   ├── 📄 Bus.class (2.27 KB)
-│   │   │           │   ├── 📄 Bus$BusBuilder.class (2.22 KB)
-│   │   │           │   ├── 📄 BusStop.class (1.84 KB)
-│   │   │           │   ├── 📄 BusStop$BusStopBuilder.class (1.99 KB)
+│   │   │           │   ├── 📄 Bus.class (2.43 KB)
+│   │   │           │   ├── 📄 BusStop.class (2.06 KB)
 │   │   │           │   ├── 📄 QueueEntry.class (2.51 KB)
-│   │   │           │   ├── 📄 Role.class (1.14 KB)
-│   │   │           │   ├── 📄 Route.class (2.09 KB)
-│   │   │           │   ├── 📄 Route$RouteBuilder.class (2.15 KB)
-│   │   │           │   └── 📄 User.class (3.02 KB)
+│   │   │           │   ├── 📄 Role.class (1.16 KB)
+│   │   │           │   ├── 📄 Route.class (2.12 KB)
+│   │   │           │   └── 📄 User.class (3 KB)
 │   │   │           ├── 📁 exception/
-│   │   │           │   ├── 📄 GlobalExceptionHandler.class (8.39 KB)
+│   │   │           │   ├── 📄 GlobalExceptionHandler.class (8.37 KB)
 │   │   │           │   ├── 📄 QueueNotFoundException.class (455 B)
 │   │   │           │   ├── 📄 ResourceNotFoundException.class (630 B)
 │   │   │           │   └── 📄 UserAlreadyExistsException.class (632 B)
 │   │   │           ├── 📁 repository/
-│   │   │           │   ├── 📄 ArrivalLogRepository.class (641 B)
-│   │   │           │   ├── 📄 BusRepository.class (692 B)
-│   │   │           │   ├── 📄 BusStopRepository.class (645 B)
+│   │   │           │   ├── 📄 ArrivalLogRepository.class (839 B)
+│   │   │           │   ├── 📄 BusRepository.class (937 B)
+│   │   │           │   ├── 📄 BusStopRepository.class (952 B)
 │   │   │           │   ├── 📄 QueueEntryRepository.class (1.13 KB)
-│   │   │           │   ├── 📄 RouteRepository.class (637 B)
+│   │   │           │   ├── 📄 RouteRepository.class (946 B)
 │   │   │           │   └── 📄 UserRepository.class (682 B)
 │   │   │           ├── 📁 security/
 │   │   │           │   ├── 📄 CustomUserDetails.class (3.39 KB)
-│   │   │           │   ├── 📄 CustomUserDetailsService.class (2.69 KB)
-│   │   │           │   ├── 📄 JwtAuthenticationFilter.class (4.71 KB)
-│   │   │           │   ├── 📄 JwtTokenProvider.class (5.46 KB)
-│   │   │           │   ├── 📄 SecurityConfig.class (7.22 KB)
-│   │   │           │   └── 📄 TokenBlacklistService.class (2.56 KB)
+│   │   │           │   ├── 📄 CustomUserDetailsService.class (2.72 KB)
+│   │   │           │   ├── 📄 JwtAuthenticationFilter.class (4.65 KB)
+│   │   │           │   ├── 📄 JwtTokenProvider.class (5.45 KB)
+│   │   │           │   ├── 📄 SecurityConfig.class (6.66 KB)
+│   │   │           │   └── 📄 TokenBlacklistService.class (2.48 KB)
 │   │   │           ├── 📁 service/
-│   │   │           │   ├── 📄 ArrivalLogService.class (612 B)
+│   │   │           │   ├── 📄 ArrivalLogService.class (1.93 KB)
 │   │   │           │   ├── 📄 AuthService.class (6.12 KB)
-│   │   │           │   ├── 📄 BusService.class (563 B)
-│   │   │           │   ├── 📄 BusStopService.class (591 B)
+│   │   │           │   ├── 📄 BusService.class (3.95 KB)
+│   │   │           │   ├── 📄 BusStopService.class (3.95 KB)
 │   │   │           │   ├── 📄 QueueService.class (6.04 KB)
-│   │   │           │   ├── 📄 RouteService.class (577 B)
-│   │   │           │   ├── 📄 UserService.class (3.22 KB)
+│   │   │           │   ├── 📄 RouteService.class (4.17 KB)
+│   │   │           │   ├── 📄 UserService.class (3.15 KB)
 │   │   │           │   └── 📄 WaitingTimeService.class (897 B)
 │   │   │           └── 📄 AnbesaFlowAuthApplication.class (836 B)
 │   │   ├── 📁 db/
@@ -184,21 +187,13 @@
 │   │   └── 📁 annotations/
 │   ├── 📁 generated-test-sources/
 │   │   └── 📁 test-annotations/
-│   ├── 📁 maven-archiver/
-│   │   └── 📄 pom.properties (67 B)
 │   ├── 📁 maven-status/
 │   │   └── 📁 maven-compiler-plugin/
-│   │       ├── 📁 compile/
-│   │       │   └── 📁 default-compile/
-│   │       │       ├── 📄 createdFiles.lst (2.6 KB)
-│   │       │       └── 📄 inputFiles.lst (8.98 KB)
-│   │       └── 📁 testCompile/
-│   │           └── 📁 default-testCompile/
-│   │               ├── 📄 createdFiles.lst
-│   │               └── 📄 inputFiles.lst
-│   ├── 📁 test-classes/
-│   ├── 📄 anbesaflow-auth-1.0.0.jar (49.31 MB)
-│   └── 📄 anbesaflow-auth-1.0.0.jar.original (54.52 KB)
+│   │       └── 📁 compile/
+│   │           └── 📁 default-compile/
+│   │               ├── 📄 createdFiles.lst (3.08 KB)
+│   │               └── 📄 inputFiles.lst (8.98 KB)
+│   └── 📁 test-classes/
 ├── 📄 AnbesaFlow_Authentication_Postman_Collection.json (13.19 KB)
 ├── 📄 pom.xml (3.46 KB)
 └── 📄 README.md (19 B)
@@ -209,10 +204,14 @@
 **Project Files:**
 
 - [📄 src/main/java/com/anbesaflow/auth/controller/AdminController.java](#📄-src-main-java-com-anbesaflow-auth-controller-admincontroller-java)
+- [📄 src/main/java/com/anbesaflow/auth/controller/ArrivalLogController.java](#📄-src-main-java-com-anbesaflow-auth-controller-arrivallogcontroller-java)
 - [📄 src/main/java/com/anbesaflow/auth/controller/AuthController.java](#📄-src-main-java-com-anbesaflow-auth-controller-authcontroller-java)
+- [📄 src/main/java/com/anbesaflow/auth/controller/BusController.java](#📄-src-main-java-com-anbesaflow-auth-controller-buscontroller-java)
+- [📄 src/main/java/com/anbesaflow/auth/controller/BusStopController.java](#📄-src-main-java-com-anbesaflow-auth-controller-busstopcontroller-java)
 - [📄 src/main/java/com/anbesaflow/auth/controller/OperatorController.java](#📄-src-main-java-com-anbesaflow-auth-controller-operatorcontroller-java)
 - [📄 src/main/java/com/anbesaflow/auth/controller/PassengerController.java](#📄-src-main-java-com-anbesaflow-auth-controller-passengercontroller-java)
 - [📄 src/main/java/com/anbesaflow/auth/controller/QueueController.java](#📄-src-main-java-com-anbesaflow-auth-controller-queuecontroller-java)
+- [📄 src/main/java/com/anbesaflow/auth/controller/RouteController.java](#📄-src-main-java-com-anbesaflow-auth-controller-routecontroller-java)
 - [📄 src/main/java/com/anbesaflow/auth/controller/UserController.java](#📄-src-main-java-com-anbesaflow-auth-controller-usercontroller-java)
 - [📄 src/main/java/com/anbesaflow/auth/dto/ArrivalLogRequest.java](#📄-src-main-java-com-anbesaflow-auth-dto-arrivallogrequest-java)
 - [📄 src/main/java/com/anbesaflow/auth/dto/ArrivalLogResponse.java](#📄-src-main-java-com-anbesaflow-auth-dto-arrivallogresponse-java)
@@ -274,7 +273,6 @@
 - [📄 target/classes/db/migration/V4__create_route_table.sql](#📄-target-classes-db-migration-v4-create-route-table-sql)
 - [📄 target/classes/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql](#📄-target-classes-db-migration-v5-create-bus-stop-and-arrival-log-tables-sql)
 - [📄 target/classes/application.yml](#📄-target-classes-application-yml)
-- [📄 target/maven-archiver/pom.properties](#📄-target-maven-archiver-pom-properties)
 - [📄 AnbesaFlow_Authentication_Postman_Collection.json](#📄-anbesaflow-authentication-postman-collection-json)
 - [📄 pom.xml](#📄-pom-xml)
 - [📄 README.md](#📄-readme-md)
@@ -286,23 +284,20 @@
 | Metric | Count |
 |--------|-------|
 | Total Files | 138 |
-| Total Directories | 44 |
-| Text Files | 70 |
-| Binary Files | 68 |
-| Total Size | 49.59 MB |
+| Total Directories | 39 |
+| Text Files | 73 |
+| Binary Files | 65 |
+| Total Size | 260.48 KB |
 
 ### 📄 File Types Distribution
 
 | Extension | Count |
 |-----------|-------|
-| `.class` | 62 |
-| `.java` | 54 |
+| `.class` | 63 |
+| `.java` | 58 |
 | `.sql` | 10 |
-| `.lst` | 4 |
 | `.yml` | 2 |
-| `.properties` | 1 |
-| `.jar` | 1 |
-| `.original` | 1 |
+| `.lst` | 2 |
 | `.json` | 1 |
 | `.xml` | 1 |
 | `.md` | 1 |
@@ -371,6 +366,60 @@ public class AdminController {
 
 ---
 
+### <a id="📄-src-main-java-com-anbesaflow-auth-controller-arrivallogcontroller-java"></a>📄 `src/main/java/com/anbesaflow/auth/controller/ArrivalLogController.java`
+
+**File Info:**
+- **Size**: 1.2 KB
+- **Extension**: `.java`
+- **Language**: `java`
+- **Location**: `src/main/java/com/anbesaflow/auth/controller/ArrivalLogController.java`
+- **Relative Path**: `src/main/java/com/anbesaflow/auth/controller`
+- **Created**: 2026-06-30 20:03:18 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 20:03:25 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `5991b3c10ddc371e1d0feb1a9e86f8bc`
+- **SHA256**: `29822ffe807c040befd0996e8cf52ff92a52db16fc06f1d0e0e54350c6f63cac`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```java
+package com.anbesaflow.auth.controller;
+
+import com.anbesaflow.auth.entity.ArrivalLog;
+import com.anbesaflow.auth.service.ArrivalLogService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/v1/arrival-logs")
+public class ArrivalLogController {
+
+    private final ArrivalLogService arrivalLogService;
+
+    public ArrivalLogController(ArrivalLogService arrivalLogService) {
+        this.arrivalLogService = arrivalLogService;
+    }
+
+    @PostMapping
+    public ResponseEntity<ArrivalLog> logArrival(@RequestBody ArrivalLog arrivalLog) {
+        return new ResponseEntity<>(arrivalLogService.logArrival(arrivalLog), HttpStatus.CREATED);
+    }
+
+    @GetMapping
+    public ResponseEntity<Page<ArrivalLog>> getArrivalLogs(
+            @RequestParam(required = false) Long busId,
+            @RequestParam(required = false) Long busStopId,
+            Pageable pageable) {
+        return ResponseEntity.ok(arrivalLogService.getArrivalLogs(busId, busStopId, pageable));
+    }
+}
+```
+
+---
+
 ### <a id="📄-src-main-java-com-anbesaflow-auth-controller-authcontroller-java"></a>📄 `src/main/java/com/anbesaflow/auth/controller/AuthController.java`
 
 **File Info:**
@@ -427,6 +476,144 @@ public class AuthController {
     }
 }
 
+```
+
+---
+
+### <a id="📄-src-main-java-com-anbesaflow-auth-controller-buscontroller-java"></a>📄 `src/main/java/com/anbesaflow/auth/controller/BusController.java`
+
+**File Info:**
+- **Size**: 1.54 KB
+- **Extension**: `.java`
+- **Language**: `java`
+- **Location**: `src/main/java/com/anbesaflow/auth/controller/BusController.java`
+- **Relative Path**: `src/main/java/com/anbesaflow/auth/controller`
+- **Created**: 2026-06-30 20:02:18 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 20:02:24 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `3c643e0b250d9d5f3506b1002c072d85`
+- **SHA256**: `b188c8116714d58be0f30294c1c7236cbf3df17d492f08717fdb2cceebda94f8`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```java
+package com.anbesaflow.auth.controller;
+
+import com.anbesaflow.auth.entity.Bus;
+import com.anbesaflow.auth.service.BusService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/v1/buses")
+public class BusController {
+
+    private final BusService busService;
+
+    public BusController(BusService busService) {
+        this.busService = busService;
+    }
+
+    @PostMapping
+    public ResponseEntity<Bus> createBus(@RequestBody Bus bus) {
+        return new ResponseEntity<>(busService.createBus(bus), HttpStatus.CREATED);
+    }
+
+    @GetMapping
+    public ResponseEntity<Page<Bus>> getAllBuses(
+            @RequestParam(required = false) String status,
+            Pageable pageable) {
+        return ResponseEntity.ok(busService.getAllBuses(status, pageable));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Bus> getBusById(@PathVariable Long id) {
+        return ResponseEntity.ok(busService.getBusById(id));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Bus> updateBus(@PathVariable Long id, @RequestBody Bus bus) {
+        return ResponseEntity.ok(busService.updateBus(id, bus));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteBus(@PathVariable Long id) {
+        busService.deleteBus(id);
+        return ResponseEntity.noContent().build();
+    }
+}
+```
+
+---
+
+### <a id="📄-src-main-java-com-anbesaflow-auth-controller-busstopcontroller-java"></a>📄 `src/main/java/com/anbesaflow/auth/controller/BusStopController.java`
+
+**File Info:**
+- **Size**: 1.67 KB
+- **Extension**: `.java`
+- **Language**: `java`
+- **Location**: `src/main/java/com/anbesaflow/auth/controller/BusStopController.java`
+- **Relative Path**: `src/main/java/com/anbesaflow/auth/controller`
+- **Created**: 2026-06-30 20:02:50 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 20:02:58 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `cf07adf879d171ece83ccc1aca525ed7`
+- **SHA256**: `d547d41af2bf0ea95998ba275acbd231b8492acba98837cafce8f259831a162d`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```java
+package com.anbesaflow.auth.controller;
+
+import com.anbesaflow.auth.entity.BusStop;
+import com.anbesaflow.auth.service.BusStopService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/v1/bus-stops")
+public class BusStopController {
+
+    private final BusStopService busStopService;
+
+    public BusStopController(BusStopService busStopService) {
+        this.busStopService = busStopService;
+    }
+
+    @PostMapping
+    public ResponseEntity<BusStop> createBusStop(@RequestBody BusStop busStop) {
+        return new ResponseEntity<>(busStopService.createBusStop(busStop), HttpStatus.CREATED);
+    }
+
+    @GetMapping
+    public ResponseEntity<Page<BusStop>> getAllBusStops(
+            @RequestParam(required = false) String search,
+            Pageable pageable) {
+        return ResponseEntity.ok(busStopService.getAllBusStops(search, pageable));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<BusStop> getBusStopById(@PathVariable Long id) {
+        return ResponseEntity.ok(busStopService.getBusStopById(id));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<BusStop> updateBusStop(@PathVariable Long id, @RequestBody BusStop busStop) {
+        return ResponseEntity.ok(busStopService.updateBusStop(id, busStop));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteBusStop(@PathVariable Long id) {
+        busStopService.deleteBusStop(id);
+        return ResponseEntity.noContent().build();
+    }
+}
 ```
 
 ---
@@ -664,6 +851,75 @@ public class QueueController {
 
 ---
 
+### <a id="📄-src-main-java-com-anbesaflow-auth-controller-routecontroller-java"></a>📄 `src/main/java/com/anbesaflow/auth/controller/RouteController.java`
+
+**File Info:**
+- **Size**: 1.6 KB
+- **Extension**: `.java`
+- **Language**: `java`
+- **Location**: `src/main/java/com/anbesaflow/auth/controller/RouteController.java`
+- **Relative Path**: `src/main/java/com/anbesaflow/auth/controller`
+- **Created**: 2026-06-30 20:01:46 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 20:01:55 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `f69f9fc641d6d0adb645bc20a749a725`
+- **SHA256**: `7bee3c4753dd51b1d63acb4ff78c9ccb5e91d72d91361cf20202017d22bb2c56`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```java
+package com.anbesaflow.auth.controller;
+
+import com.anbesaflow.auth.entity.Route;
+import com.anbesaflow.auth.service.RouteService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/v1/routes")
+public class RouteController {
+
+    private final RouteService routeService;
+
+    public RouteController(RouteService routeService) {
+        this.routeService = routeService;
+    }
+
+    @PostMapping
+    public ResponseEntity<Route> createRoute(@RequestBody Route route) {
+        return new ResponseEntity<>(routeService.createRoute(route), HttpStatus.CREATED);
+    }
+
+    @GetMapping
+    public ResponseEntity<Page<Route>> getAllRoutes(
+            @RequestParam(required = false) String search,
+            Pageable pageable) {
+        return ResponseEntity.ok(routeService.getAllRoutes(search, pageable));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Route> getRouteById(@PathVariable Long id) {
+        return ResponseEntity.ok(routeService.getRouteById(id));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Route> updateRoute(@PathVariable Long id, @RequestBody Route route) {
+        return ResponseEntity.ok(routeService.updateRoute(id, route));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteRoute(@PathVariable Long id) {
+        routeService.deleteRoute(id);
+        return ResponseEntity.noContent().build();
+    }
+}
+```
+
+---
+
 ### <a id="📄-src-main-java-com-anbesaflow-auth-controller-usercontroller-java"></a>📄 `src/main/java/com/anbesaflow/auth/controller/UserController.java`
 
 **File Info:**
@@ -865,7 +1121,7 @@ public class AuthResponse {
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/BusRequest.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
 - **Created**: 2026-06-30 15:59:33 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 17:50:16 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 19:40:23 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `f0cf62988a8f7423a511c6adf2397c67`
 - **SHA256**: `d91f70e9bded16ab1f2a4a382e1d5668b51541a4b93fd623139f3be7a04bdf65`
 - **Encoding**: ASCII
@@ -900,7 +1156,7 @@ private String status;
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/BusResponse.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
 - **Created**: 2026-06-30 15:59:44 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 17:50:41 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 19:40:23 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `8a1f6c71f5713b6aebaaf3ab2610d3d1`
 - **SHA256**: `b7b939934f8e12986353103249023cbe7af959346a4c2cba322622f37df2f22b`
 - **Encoding**: ASCII
@@ -938,7 +1194,7 @@ String status;
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/BusStopRequest.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
 - **Created**: 2026-06-30 16:00:14 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 17:52:13 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 19:40:23 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `de706f315dfb1a489b7aa74ddd67073b`
 - **SHA256**: `9d5caf0f34a80606bc8affe5dca6063433ebe2afcb6481ecdf199e5cb43325c0`
 - **Encoding**: ASCII
@@ -972,7 +1228,7 @@ public class BusStopRequest {
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/BusStopResponse.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
 - **Created**: 2026-06-30 16:00:40 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 17:52:22 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 19:40:23 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `cd006e20886675b3f6a8f10c6d3fee18`
 - **SHA256**: `d6774f9e2c09fe7c433174b5bcf2a9fbe3acb5029c3bdbedd7699a99b24202e7`
 - **Encoding**: ASCII
@@ -1246,7 +1502,7 @@ public class QueueStatusResponse {
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/RegisterRequest.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
 - **Created**: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 19:40:23 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `aa2821ecb1cbd64198bee5a7993061f8`
 - **SHA256**: `701e6ecc5e07596740f38f7f203f5f1c47baa371ef9b325cd58a034949fadb72`
 - **Encoding**: ASCII
@@ -1323,7 +1579,7 @@ public class RegisterRequest {
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/RouteRequest.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
 - **Created**: 2026-06-30 15:59:55 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 17:51:44 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 19:40:23 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `2e74dc863399ed959a8901117536b29a`
 - **SHA256**: `24322a946d147c46dc42578432d7df2fb86c5f4b067132459be30fc9fcbc2632`
 - **Encoding**: ASCII
@@ -1358,7 +1614,7 @@ public class RouteRequest {
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/RouteResponse.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
 - **Created**: 2026-06-30 16:00:04 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 17:51:56 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 19:40:23 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `baa73e8152b6bf58e3810f01b4109c8e`
 - **SHA256**: `122e73fbd8ea61f352ae82e51965f904380a2d21aba0b3391dc9de57bf87b201`
 - **Encoding**: ASCII
@@ -1510,15 +1766,15 @@ public class WaitingTimeResponse {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-entity-arrivallog-java"></a>📄 `src/main/java/com/anbesaflow/auth/entity/ArrivalLog.java`
 
 **File Info:**
-- **Size**: 621 B
+- **Size**: 855 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/entity/ArrivalLog.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/entity`
 - **Created**: 2026-06-30 15:57:27 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:42:15 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `9e7d1e476b93df9c56cbe3f624628318`
-- **SHA256**: `6609c8079e493f745b8372c6e2d1eb405927c941f37b85184c15bbfbae838c5f`
+- **Modified**: 2026-06-30 19:56:43 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `a996aac8244ad6802a77aee584207eb0`
+- **SHA256**: `60680eacad3526c75f3b0242d790b83f7d7b03817387d46e4d6061f86db91553`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -1528,11 +1784,10 @@ package com.anbesaflow.auth.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name="arrival_logs")
+@Table(name = "arrival_logs")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -1541,22 +1796,25 @@ import java.time.LocalDateTime;
 public class ArrivalLog {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name="bus_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "bus_id", nullable = false)
     private Bus bus;
 
-    @ManyToOne
-    @JoinColumn(name="bus_stop_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "bus_stop_id", nullable = false)
     private BusStop busStop;
 
+    @Column(name = "arrival_time")
     private LocalDateTime arrivalTime;
 
+    @Column(name = "departure_time")
     private LocalDateTime departureTime;
 
-    private String status;
+    @Column(nullable = false, length = 50)
+    private String status; // e.g., ON_TIME, DELAYED
 }
 ```
 
@@ -1565,15 +1823,15 @@ public class ArrivalLog {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-entity-bus-java"></a>📄 `src/main/java/com/anbesaflow/auth/entity/Bus.java`
 
 **File Info:**
-- **Size**: 498 B
+- **Size**: 1.68 KB
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/entity/Bus.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/entity`
 - **Created**: 2026-06-30 15:56:36 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:40:44 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `d70504a4c4f361e441d7a5a7bc944d4e`
-- **SHA256**: `0140219b38487f96e42725731c755ab1f32c947967c0aaba56eff95ecd434a4d`
+- **Modified**: 2026-06-30 20:11:16 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `e75014e2a5848062ef7ff347b3363691`
+- **SHA256**: `70cbcf65c25cfd3c089c6a13d5742f8d58eb5993110fbf49a0666c2d31b6ed09`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -1582,29 +1840,57 @@ public class ArrivalLog {
 package com.anbesaflow.auth.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import java.time.LocalDateTime;
 
 @Entity
-@Table(name="buses")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+@Table(name = "buses")
 public class Bus {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable=false,unique=true)
+    @Column(name = "plate_number", nullable = false, unique = true, length = 50)
     private String plateNumber;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private Integer capacity;
 
-    @Column(nullable=false)
-    private String status;
+    @Column(nullable = false, length = 50)
+    private String status; // e.g., AVAILABLE, IN_TRANSIT, MAINTENANCE
+
+    @Column(name = "created_at", updatable = false)
+    private LocalDateTime createdAt;
+
+    public Bus() {}
+
+    public Bus(Long id, String plateNumber, Integer capacity, String status) {
+        this.id = id;
+        this.plateNumber = plateNumber;
+        this.capacity = capacity;
+        this.status = status;
+    }
+
+    @PrePersist
+    protected void onCreate() {
+        this.createdAt = LocalDateTime.now();
+    }
+
+    // Explicit Getters and Setters to resolve any Lombok/IDE compilation issues
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getPlateNumber() { return plateNumber; }
+    public void setPlateNumber(String plateNumber) { this.plateNumber = plateNumber; }
+
+    public Integer getCapacity() { return capacity; }
+    public void setCapacity(Integer capacity) { this.capacity = capacity; }
+
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
+
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }
 ```
 
@@ -1613,15 +1899,15 @@ public class Bus {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-entity-busstop-java"></a>📄 `src/main/java/com/anbesaflow/auth/entity/BusStop.java`
 
 **File Info:**
-- **Size**: 367 B
+- **Size**: 1.3 KB
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/entity/BusStop.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/entity`
 - **Created**: 2026-06-30 15:56:59 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:41:59 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `e307a7537a58febda13e599d73bd6f56`
-- **SHA256**: `e9ec3a8fc1db3e0e8200038729db832069096bf3f065df842aadbe0e014d7d47`
+- **Modified**: 2026-06-30 20:08:29 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `238d4c201216e1535422b1fe9c467ea7`
+- **SHA256**: `7f79a5b580f20019ebf620ca88b46720536a049b72eaf404d04f28ea54d7923b`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -1630,24 +1916,50 @@ public class Bus {
 package com.anbesaflow.auth.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import java.time.LocalDateTime;
 
 @Entity
-@Table(name="bus_stops")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+@Table(name = "bus_stops")
 public class BusStop {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    @Column(nullable = false, length = 120)
+    private String name; 
 
+    @Column(nullable = false, length = 255)
     private String location;
+
+    @Column(name = "created_at", updatable = false)
+    private LocalDateTime createdAt;
+
+    public BusStop() {}
+
+    public BusStop(Long id, String name, String location) {
+        this.id = id;
+        this.name = name;
+        this.location = location;
+    }
+
+    @PrePersist
+    protected void onCreate() {
+        this.createdAt = LocalDateTime.now();
+    }
+
+    // Explicit Getters and Setters to guarantee compilation
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public String getLocation() { return location; }
+    public void setLocation(String location) { this.location = location; }
+
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }
 ```
 
@@ -1788,15 +2100,15 @@ public enum Role {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-entity-route-java"></a>📄 `src/main/java/com/anbesaflow/auth/entity/Route.java`
 
 **File Info:**
-- **Size**: 396 B
+- **Size**: 1.38 KB
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/entity/Route.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/entity`
 - **Created**: 2026-06-30 15:56:49 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:41:28 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `0ecc5d16305a58ab2cdc93a040595a49`
-- **SHA256**: `cd25c3a5d06e3b6c56700467a95ec5e9adfa1131f7e05949a5ae7bddaaa1496a`
+- **Modified**: 2026-06-30 20:08:55 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `69261331895b8c1c627b0c0cddd28679`
+- **SHA256**: `7d89530e9216d9699037845bd05a54d8e71fac86497cf09f9f3f2095d948cec7`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -1805,26 +2117,50 @@ public enum Role {
 package com.anbesaflow.auth.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import java.time.LocalDateTime;
 
 @Entity
-@Table(name="routes")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+@Table(name = "routes")
 public class Route {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    @Column(nullable = false, length = 100)
+    private String name; 
 
+    @Column(name = "start_point", nullable = false, length = 100)
     private String startPoint;
 
+    @Column(name = "end_point", nullable = false, length = 100)
     private String endPoint;
+
+    @Column(name = "created_at", updatable = false)
+    private LocalDateTime createdAt;
+
+    public Route() {}
+
+    @PrePersist
+    protected void onCreate() {
+        this.createdAt = LocalDateTime.now();
+    }
+
+    // Explicit Getters and Setters
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public String getStartPoint() { return startPoint; }
+    public void setStartPoint(String startPoint) { this.startPoint = startPoint; }
+
+    public String getEndPoint() { return endPoint; }
+    public void setEndPoint(String endPoint) { this.endPoint = endPoint; }
+
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }
 ```
 
@@ -2168,34 +2504,32 @@ public class UserAlreadyExistsException extends RuntimeException {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-repository-arrivallogrepository-java"></a>📄 `src/main/java/com/anbesaflow/auth/repository/ArrivalLogRepository.java`
 
 **File Info:**
-- **Size**: 376 B
+- **Size**: 537 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/repository/ArrivalLogRepository.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/repository`
 - **Created**: 2026-06-30 15:58:25 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 17:47:28 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `1f7fa4555ef43685fce3f86e4ee622cc`
-- **SHA256**: `c8256c77be82fbbefea85e373a926d185c581e657621cf4f49f40fdf93c84ace`
+- **Modified**: 2026-06-30 19:57:52 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `acda8a3d74da75b7325d08abe944eddf`
+- **SHA256**: `4e164e8fbeba566f20c071a292dd70919e6ef3da916dd880051bb9d81240f56b`
 - **Encoding**: ASCII
 
 **File code content:**
 
 ```java
 package com.anbesaflow.auth.repository;
+
 import com.anbesaflow.auth.entity.ArrivalLog;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import java.util.List;
+
 @Repository
-public interface ArrivalLogRepository
-extends JpaRepository<ArrivalLog,Long>{
-
-List<ArrivalLog>
-findByStatus(
-String status
-);
-
+public interface ArrivalLogRepository extends JpaRepository<ArrivalLog, Long> {
+    Page<ArrivalLog> findByBusId(Long busId, Pageable pageable);
+    Page<ArrivalLog> findByBusStopId(Long busStopId, Pageable pageable);
 }
 ```
 
@@ -2204,35 +2538,34 @@ String status
 ### <a id="📄-src-main-java-com-anbesaflow-auth-repository-busrepository-java"></a>📄 `src/main/java/com/anbesaflow/auth/repository/BusRepository.java`
 
 **File Info:**
-- **Size**: 399 B
+- **Size**: 527 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/repository/BusRepository.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/repository`
 - **Created**: 2026-06-30 15:57:46 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 17:45:37 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `0abbf6f9da89623ab4378bbdce84bca0`
-- **SHA256**: `416a65e207d50b181bbb6fcf24cae7c654f86975445c76566ef8f669feed155b`
+- **Modified**: 2026-06-30 19:57:13 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `6594541665bd4c94819ab30b04024262`
+- **SHA256**: `07a0677234acfc8af0b31f6be6712a7c7d9d7203f1d9275484aff7e4b08059ed`
 - **Encoding**: ASCII
 
 **File code content:**
 
 ```java
 package com.anbesaflow.auth.repository;
-import com.anbesaflow.auth.entity.Bus;
-import org.springframework.data.jpa.repository.JpaRepository;
-import java.util.List;
 
+import com.anbesaflow.auth.entity.Bus;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
-public interface BusRepository
-extends JpaRepository<Bus,Long>{
-
-List<Bus> findByStatus(String status);
-
-boolean existsByPlateNumber(String plateNumber);
-
+public interface BusRepository extends JpaRepository<Bus, Long> {
+    Optional<Bus> findByPlateNumber(String plateNumber);
+    Page<Bus> findByStatus(String status, Pageable pageable);
 }
 ```
 
@@ -2241,36 +2574,34 @@ boolean existsByPlateNumber(String plateNumber);
 ### <a id="📄-src-main-java-com-anbesaflow-auth-repository-busstoprepository-java"></a>📄 `src/main/java/com/anbesaflow/auth/repository/BusStopRepository.java`
 
 **File Info:**
-- **Size**: 424 B
+- **Size**: 549 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/repository/BusStopRepository.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/repository`
 - **Created**: 2026-06-30 15:58:10 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 17:46:57 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `3676047b8274b06ef779b02a1136d6d9`
-- **SHA256**: `1333c392c3e3bbf6bdb37ee2b44a3bb75a292144916dcaefa7824971418ad35f`
+- **Modified**: 2026-06-30 19:57:44 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `6b98035c5c1c5dc3b189fe1d76f5517a`
+- **SHA256**: `5cbda23d997b1aa750950effd0a47a881d2fb80646dec13e5b9d9f0cc97ed554`
 - **Encoding**: ASCII
 
 **File code content:**
 
 ```java
 package com.anbesaflow.auth.repository;
-import com.anbesaflow.auth.entity.Route;
+
 import com.anbesaflow.auth.entity.BusStop;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import java.util.List;
+
+import java.util.Optional;
 
 @Repository
-public interface BusStopRepository
-extends JpaRepository<BusStop,Long>{
-
-List<BusStop>
-findByNameContainingIgnoreCase(
-String name
-);
-
+public interface BusStopRepository extends JpaRepository<BusStop, Long> {
+    Optional<BusStop> findByName(String name);
+    Page<BusStop> findByNameContainingIgnoreCase(String name, Pageable pageable);
 }
 ```
 
@@ -2324,34 +2655,32 @@ public interface QueueEntryRepository extends JpaRepository<QueueEntry, Long> {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-repository-routerepository-java"></a>📄 `src/main/java/com/anbesaflow/auth/repository/RouteRepository.java`
 
 **File Info:**
-- **Size**: 373 B
+- **Size**: 575 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/repository/RouteRepository.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/repository`
 - **Created**: 2026-06-30 15:57:58 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 17:45:48 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `2b962d95342a5ec0e016cfdb4e36542b`
-- **SHA256**: `44d81e6c9f58e5f35f2e097ac9c150f214a8639979140bc83a188cf423dd1807`
+- **Modified**: 2026-06-30 19:57:33 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `a91b37c0a1b8b3745ad5fa5a1f0de980`
+- **SHA256**: `f052a986b2fd999da724f6a60b14817d8b9d22bc7673899ab7bfa5be9eeea63e`
 - **Encoding**: ASCII
 
 **File code content:**
 
 ```java
 package com.anbesaflow.auth.repository;
-import com.anbesaflow.auth.entity.Route;
-import java.util.List;
 
+import com.anbesaflow.auth.entity.Route;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
 @Repository
-public interface RouteRepository
-extends JpaRepository<Route,Long>{
-
-List<Route> findByNameContainingIgnoreCase(
-String name
-);
-
+public interface RouteRepository extends JpaRepository<Route, Long> {
+    Page<Route> findByNameContainingIgnoreCaseOrStartPointContainingIgnoreCaseOrEndPointContainingIgnoreCase(
+            String name, String startPoint, String endPoint, Pageable pageable);
 }
 ```
 
@@ -2970,15 +3299,15 @@ public class TokenBlacklistService {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-service-arrivallogservice-java"></a>📄 `src/main/java/com/anbesaflow/auth/service/ArrivalLogService.java`
 
 **File Info:**
-- **Size**: 487 B
+- **Size**: 1.15 KB
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/service/ArrivalLogService.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/service`
 - **Created**: 2026-06-30 16:02:27 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 18:04:51 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `e148d6e0235b2a72cff1bb90a586d29c`
-- **SHA256**: `6848cf67fda4e112bb82ecc693159c28d8ae921834c43a340bd2cd39f35b983e`
+- **Modified**: 2026-06-30 19:59:45 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `1e6bcbb3952a7559ec397e1ae2584bbc`
+- **SHA256**: `c6c7b762e005bb727af2c8f6cd3db6faa580ea3a021ea2eef59130737614baea`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -2986,28 +3315,36 @@ public class TokenBlacklistService {
 ```java
 package com.anbesaflow.auth.service;
 
-import com.anbesaflow.auth.dto.ArrivalLogRequest;
-import com.anbesaflow.auth.dto.ArrivalLogResponse;
+import com.anbesaflow.auth.entity.ArrivalLog;
+import com.anbesaflow.auth.repository.ArrivalLogRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+@Service
+@Transactional
+public class ArrivalLogService {
 
-public interface ArrivalLogService {
+    private final ArrivalLogRepository arrivalLogRepository;
 
-    ArrivalLogResponse create(
-            ArrivalLogRequest request
-    );
+    public ArrivalLogService(ArrivalLogRepository arrivalLogRepository) {
+        this.arrivalLogRepository = arrivalLogRepository;
+    }
 
-    List<ArrivalLogResponse> getAll();
+    public ArrivalLog logArrival(ArrivalLog arrivalLog) {
+        return arrivalLogRepository.save(arrivalLog);
+    }
 
-    ArrivalLogResponse update(
-            Long id,
-            ArrivalLogRequest request
-    );
-
-    void delete(
-            Long id
-    );
-
+    @Transactional(readOnly = true)
+    public Page<ArrivalLog> getArrivalLogs(Long busId, Long busStopId, Pageable pageable) {
+        if (busId != null) {
+            return arrivalLogRepository.findByBusId(busId, pageable);
+        } else if (busStopId != null) {
+            return arrivalLogRepository.findByBusStopId(busStopId, pageable);
+        }
+        return arrivalLogRepository.findAll(pageable);
+    }
 }
 ```
 
@@ -3134,15 +3471,15 @@ public class AuthService {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-service-busservice-java"></a>📄 `src/main/java/com/anbesaflow/auth/service/BusService.java`
 
 **File Info:**
-- **Size**: 431 B
+- **Size**: 1.65 KB
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/service/BusService.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/service`
 - **Created**: 2026-06-30 16:01:49 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 18:03:57 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `e427a6c97b62ffd655a7f90d3548f48d`
-- **SHA256**: `33e31f57d6852a52997183509f31b5ea9507f93b9a0e1495110b61edc99a9d37`
+- **Modified**: 2026-06-30 20:11:32 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `f516bc45ed9c1b2e0b2d55641f8a3685`
+- **SHA256**: `1a3d6574ef4e71134457a90d049d7916d1fd50fec492513def2dd0078059c22e`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -3150,28 +3487,54 @@ public class AuthService {
 ```java
 package com.anbesaflow.auth.service;
 
-import com.anbesaflow.auth.dto.BusRequest;
-import com.anbesaflow.auth.dto.BusResponse;
+import com.anbesaflow.auth.entity.Bus;
+import com.anbesaflow.auth.exception.ResourceNotFoundException;
+import com.anbesaflow.auth.repository.BusRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+@Service
+@Transactional
+public class BusService {
 
-public interface BusService {
+    private final BusRepository busRepository;
 
-    BusResponse create(
-            BusRequest request
-    );
+    public BusService(BusRepository busRepository) {
+        this.busRepository = busRepository;
+    }
 
-    List<BusResponse> getAll();
+    public Bus createBus(Bus bus) {
+        return busRepository.save(bus);
+    }
 
-    BusResponse update(
-            Long id,
-            BusRequest request
-    );
+    @Transactional(readOnly = true)
+    public Page<Bus> getAllBuses(String status, Pageable pageable) {
+        if (status != null && !status.isBlank()) {
+            return busRepository.findByStatus(status, pageable);
+        }
+        return busRepository.findAll(pageable);
+    }
 
-    void delete(
-            Long id
-    );
+    @Transactional(readOnly = true)
+    public Bus getBusById(Long id) {
+        return busRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Bus not found with id: " + id));
+    }
 
+    public Bus updateBus(Long id, Bus updatedBus) {
+        Bus existingBus = getBusById(id);
+        existingBus.setPlateNumber(updatedBus.getPlateNumber());
+        existingBus.setCapacity(updatedBus.getCapacity());
+        existingBus.setStatus(updatedBus.getStatus());
+        return busRepository.save(existingBus);
+    }
+
+    public void deleteBus(Long id) {
+        Bus bus = getBusById(id);
+        busRepository.delete(bus);
+    }
 }
 ```
 
@@ -3180,15 +3543,15 @@ public interface BusService {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-service-busstopservice-java"></a>📄 `src/main/java/com/anbesaflow/auth/service/BusStopService.java`
 
 **File Info:**
-- **Size**: 463 B
+- **Size**: 1.75 KB
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/service/BusStopService.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/service`
 - **Created**: 2026-06-30 16:02:14 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 18:04:38 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `909b4e1da1a55a330617b7bae602d5e8`
-- **SHA256**: `cf713b419264488a2206b88a07d9e6d124c4a31db05664b9edb89b9dafe05d4e`
+- **Modified**: 2026-06-30 20:09:35 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `4f363c61a95078789233357bcd8706d7`
+- **SHA256**: `8855572ff8af4f9cbbcb71120ec5b9dab84e3eb45b3c137a5ee11087ebd15882`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -3196,28 +3559,53 @@ public interface BusService {
 ```java
 package com.anbesaflow.auth.service;
 
-import com.anbesaflow.auth.dto.BusStopRequest;
-import com.anbesaflow.auth.dto.BusStopResponse;
+import com.anbesaflow.auth.entity.BusStop;
+import com.anbesaflow.auth.exception.ResourceNotFoundException;
+import com.anbesaflow.auth.repository.BusStopRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+@Service
+@Transactional
+public class BusStopService {
 
-public interface BusStopService {
+    private final BusStopRepository busStopRepository;
 
-    BusStopResponse create(
-            BusStopRequest request
-    );
+    public BusStopService(BusStopRepository busStopRepository) {
+        this.busStopRepository = busStopRepository;
+    }
 
-    List<BusStopResponse> getAll();
+    public BusStop createBusStop(BusStop busStop) {
+        return busStopRepository.save(busStop);
+    }
 
-    BusStopResponse update(
-            Long id,
-            BusStopRequest request
-    );
+    @Transactional(readOnly = true)
+    public Page<BusStop> getAllBusStops(String search, Pageable pageable) {
+        if (search != null && !search.isBlank()) {
+            return busStopRepository.findByNameContainingIgnoreCase(search, pageable);
+        }
+        return busStopRepository.findAll(pageable);
+    }
 
-    void delete(
-            Long id
-    );
+    @Transactional(readOnly = true)
+    public BusStop getBusStopById(Long id) {
+        return busStopRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Bus Stop not found with id: " + id));
+    }
 
+    public BusStop updateBusStop(Long id, BusStop updatedBusStop) {
+        BusStop existingStop = getBusStopById(id);
+        existingStop.setName(updatedBusStop.getName());
+        existingStop.setLocation(updatedBusStop.getLocation());
+        return busStopRepository.save(existingStop);
+    }
+
+    public void deleteBusStop(Long id) {
+        BusStop busStop = getBusStopById(id);
+        busStopRepository.delete(busStop);
+    }
 }
 ```
 
@@ -3387,15 +3775,15 @@ public int getEstimatedWaitingTime(){
 ### <a id="📄-src-main-java-com-anbesaflow-auth-service-routeservice-java"></a>📄 `src/main/java/com/anbesaflow/auth/service/RouteService.java`
 
 **File Info:**
-- **Size**: 447 B
+- **Size**: 1.84 KB
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/service/RouteService.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/service`
 - **Created**: 2026-06-30 16:02:04 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 18:04:26 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `ee375d679ef932c69a614018ae39a2ff`
-- **SHA256**: `53bf10e32a1fe774097fbe384b6ea72a02a413920363bef3fc0ba1655f516030`
+- **Modified**: 2026-06-30 20:09:51 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `051b84e87ac3e8cbcc92c525c11719bb`
+- **SHA256**: `bd24ae32f06a5dfcd7d9f267fa4251f9bf6dbea58bfb4701d83517b1a5ceec6e`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -3403,28 +3791,55 @@ public int getEstimatedWaitingTime(){
 ```java
 package com.anbesaflow.auth.service;
 
-import com.anbesaflow.auth.dto.RouteRequest;
-import com.anbesaflow.auth.dto.RouteResponse;
+import com.anbesaflow.auth.entity.Route;
+import com.anbesaflow.auth.exception.ResourceNotFoundException;
+import com.anbesaflow.auth.repository.RouteRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+@Service
+@Transactional
+public class RouteService {
 
-public interface RouteService {
+    private final RouteRepository routeRepository;
 
-    RouteResponse create(
-            RouteRequest request
-    );
+    public RouteService(RouteRepository routeRepository) {
+        this.routeRepository = routeRepository;
+    }
 
-    List<RouteResponse> getAll();
+    public Route createRoute(Route route) {
+        return routeRepository.save(route);
+    }
 
-    RouteResponse update(
-            Long id,
-            RouteRequest request
-    );
+    @Transactional(readOnly = true)
+    public Page<Route> getAllRoutes(String search, Pageable pageable) {
+        if (search != null && !search.isBlank()) {
+            return routeRepository.findByNameContainingIgnoreCaseOrStartPointContainingIgnoreCaseOrEndPointContainingIgnoreCase(
+                    search, search, search, pageable);
+        }
+        return routeRepository.findAll(pageable);
+    }
 
-    void delete(
-            Long id
-    );
+    @Transactional(readOnly = true)
+    public Route getRouteById(Long id) {
+        return routeRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Route not found with id: " + id));
+    }
 
+    public Route updateRoute(Long id, Route updatedRoute) {
+        Route existingRoute = getRouteById(id);
+        existingRoute.setName(updatedRoute.getName());
+        existingRoute.setStartPoint(updatedRoute.getStartPoint());
+        existingRoute.setEndPoint(updatedRoute.getEndPoint());
+        return routeRepository.save(existingRoute);
+    }
+
+    public void deleteRoute(Long id) {
+        Route route = getRouteById(id);
+        routeRepository.delete(route);
+    }
 }
 ```
 
@@ -3846,10 +4261,14 @@ server:
 The following files were not included in the text content:
 
 - `target/classes/com/anbesaflow/auth/controller/AdminController.class`
+- `target/classes/com/anbesaflow/auth/controller/ArrivalLogController.class`
 - `target/classes/com/anbesaflow/auth/controller/AuthController.class`
+- `target/classes/com/anbesaflow/auth/controller/BusController.class`
+- `target/classes/com/anbesaflow/auth/controller/BusStopController.class`
 - `target/classes/com/anbesaflow/auth/controller/OperatorController.class`
 - `target/classes/com/anbesaflow/auth/controller/PassengerController.class`
 - `target/classes/com/anbesaflow/auth/controller/QueueController.class`
+- `target/classes/com/anbesaflow/auth/controller/RouteController.class`
 - `target/classes/com/anbesaflow/auth/controller/UserController.class`
 
 ## 🚫 Binary/Excluded Files
@@ -3884,13 +4303,10 @@ The following files were not included in the text content:
 - `target/classes/com/anbesaflow/auth/entity/ArrivalLog.class`
 - `target/classes/com/anbesaflow/auth/entity/ArrivalLog$ArrivalLogBuilder.class`
 - `target/classes/com/anbesaflow/auth/entity/Bus.class`
-- `target/classes/com/anbesaflow/auth/entity/Bus$BusBuilder.class`
 - `target/classes/com/anbesaflow/auth/entity/BusStop.class`
-- `target/classes/com/anbesaflow/auth/entity/BusStop$BusStopBuilder.class`
 - `target/classes/com/anbesaflow/auth/entity/QueueEntry.class`
 - `target/classes/com/anbesaflow/auth/entity/Role.class`
 - `target/classes/com/anbesaflow/auth/entity/Route.class`
-- `target/classes/com/anbesaflow/auth/entity/Route$RouteBuilder.class`
 - `target/classes/com/anbesaflow/auth/entity/User.class`
 
 ## 🚫 Binary/Excluded Files
@@ -3951,7 +4367,7 @@ The following files were not included in the text content:
 - **Language**: `sql`
 - **Location**: `target/classes/db/migration/V1__init_schema.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 16:48:06 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 19:48:26 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `47babe6a83cb9430d2757b5c900cedde`
 - **SHA256**: `fd2b61e463f3a6772a8ba7349fe5ab74b5444f913a489cd9111352eb1b8e2089`
@@ -3984,7 +4400,7 @@ CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
 - **Language**: `sql`
 - **Location**: `target/classes/db/migration/V2__create_queue_entry_table.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 16:48:06 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 19:48:26 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 14:19:21 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `0bf34dc2776d1e38f88d07e6e6a045ae`
 - **SHA256**: `471243f8d03f1a9a240ff65946b210d4e2e08b2bbe2ca6f85ef9211eb2878373`
@@ -4028,7 +4444,7 @@ ON queue_entries(position);
 - **Language**: `sql`
 - **Location**: `target/classes/db/migration/V3__create_bus_table.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 16:48:06 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 19:48:26 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 16:31:15 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `abacdbba3a2a6a0410018680967f9027`
 - **SHA256**: `a15e0c4aaf3ed5a3e413ea8c5a6b0afbba0e0da8552ffb285c49ea9f79f7a974`
@@ -4068,7 +4484,7 @@ ON buses(plate_number);
 - **Language**: `sql`
 - **Location**: `target/classes/db/migration/V4__create_route_table.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 16:48:07 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 19:48:26 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 16:31:27 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `2724843474bcfc47dc4abd260d0d6821`
 - **SHA256**: `95c1a3d2a56d50003ea96fc9ff422f9ffb73e18d49395189e2766d0bdcdf3ed9`
@@ -4104,7 +4520,7 @@ ON routes(name);
 - **Language**: `sql`
 - **Location**: `target/classes/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 16:48:07 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 19:48:26 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 16:31:36 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `c039b9442688c99fce2d07835bba33b6`
 - **SHA256**: `df6eae64247a31b1699ae1c30a1d928fd5712cdc515628e6fc85e7bb6c322939`
@@ -4166,8 +4582,8 @@ ON arrival_logs(bus_stop_id);
 - **Language**: `yaml`
 - **Location**: `target/classes/application.yml`
 - **Relative Path**: `target/classes`
-- **Created**: 2026-06-30 16:40:13 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:48:06 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 19:48:26 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 19:48:26 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `1cadd546df5716b7f78628dcc3bb7080`
 - **SHA256**: `28e38a1b9503ba6186c132f2bebdab11366a1f88186525f55920620c31e79172`
 - **Encoding**: ASCII
@@ -4217,51 +4633,12 @@ server:
 
 ---
 
-### <a id="📄-target-maven-archiver-pom-properties"></a>📄 `target/maven-archiver/pom.properties`
-
-**File Info:**
-- **Size**: 67 B
-- **Extension**: `.properties`
-- **Language**: `text`
-- **Location**: `target/maven-archiver/pom.properties`
-- **Relative Path**: `target/maven-archiver`
-- **Created**: 2026-06-30 16:32:41 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:32:41 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `1e2341ade8f78e9852767486af6aab75`
-- **SHA256**: `a328a0fd9611202e511cb7589a51b71f658ae0b30781c248ef12592a7e981bb6`
-- **Encoding**: ASCII
-
-**File code content:**
-
-```text
-artifactId=anbesaflow-auth
-groupId=com.anbesaflow
-version=1.0.0
-
-```
-
----
-
 ## 🚫 Binary/Excluded Files
 
 The following files were not included in the text content:
 
 - `target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst`
 - `target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst`
-
-## 🚫 Binary/Excluded Files
-
-The following files were not included in the text content:
-
-- `target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst`
-- `target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst`
-
-## 🚫 Binary/Excluded Files
-
-The following files were not included in the text content:
-
-- `target/anbesaflow-auth-1.0.0.jar`
-- `target/anbesaflow-auth-1.0.0.jar.original`
 
 ### <a id="📄-anbesaflow-authentication-postman-collection-json"></a>📄 `AnbesaFlow_Authentication_Postman_Collection.json`
 
@@ -4944,7 +5321,7 @@ The following files were not included in the text content:
 - **Location**: `pom.xml`
 - **Relative Path**: `root`
 - **Created**: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:40:01 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 19:40:23 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `271bb8ad7bf18edf7baccf9d38a5302d`
 - **SHA256**: `d166e2e59f13739750c21504cd413a77a80e265b0f9000878accf4239c7ea080`
 - **Encoding**: ASCII

@@ -1,25 +1,50 @@
 package com.anbesaflow.auth.service;
 
-import com.anbesaflow.auth.dto.BusStopRequest;
-import com.anbesaflow.auth.dto.BusStopResponse;
+import com.anbesaflow.auth.entity.BusStop;
+import com.anbesaflow.auth.exception.ResourceNotFoundException;
+import com.anbesaflow.auth.repository.BusStopRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+@Service
+@Transactional
+public class BusStopService {
 
-public interface BusStopService {
+    private final BusStopRepository busStopRepository;
 
-    BusStopResponse create(
-            BusStopRequest request
-    );
+    public BusStopService(BusStopRepository busStopRepository) {
+        this.busStopRepository = busStopRepository;
+    }
 
-    List<BusStopResponse> getAll();
+    public BusStop createBusStop(BusStop busStop) {
+        return busStopRepository.save(busStop);
+    }
 
-    BusStopResponse update(
-            Long id,
-            BusStopRequest request
-    );
+    @Transactional(readOnly = true)
+    public Page<BusStop> getAllBusStops(String search, Pageable pageable) {
+        if (search != null && !search.isBlank()) {
+            return busStopRepository.findByNameContainingIgnoreCase(search, pageable);
+        }
+        return busStopRepository.findAll(pageable);
+    }
 
-    void delete(
-            Long id
-    );
+    @Transactional(readOnly = true)
+    public BusStop getBusStopById(Long id) {
+        return busStopRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Bus Stop not found with id: " + id));
+    }
 
+    public BusStop updateBusStop(Long id, BusStop updatedBusStop) {
+        BusStop existingStop = getBusStopById(id);
+        existingStop.setName(updatedBusStop.getName());
+        existingStop.setLocation(updatedBusStop.getLocation());
+        return busStopRepository.save(existingStop);
+    }
+
+    public void deleteBusStop(Long id) {
+        BusStop busStop = getBusStopById(id);
+        busStopRepository.delete(busStop);
+    }
 }
