@@ -1,31 +1,50 @@
 package com.anbesaflow.auth.service;
 
 import com.anbesaflow.auth.entity.BusStop;
-import com.anbesaflow.auth.entity.Route;
+import com.anbesaflow.auth.exception.ResourceNotFoundException;
 import com.anbesaflow.auth.repository.BusStopRepository;
-import com.anbesaflow.auth.repository.RouteRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class BusStopService {
 
     private final BusStopRepository busStopRepository;
-    private final RouteRepository routeRepository;
 
-    public BusStopService(BusStopRepository busStopRepository, RouteRepository routeRepository) {
+    public BusStopService(BusStopRepository busStopRepository) {
         this.busStopRepository = busStopRepository;
-        this.routeRepository = routeRepository;
     }
 
-    public BusStop createBusStop(String name, String locationDescription, Long routeId) {
-        Route route = routeId != null ? routeRepository.findById(routeId).orElse(null) : null;
-        BusStop stop = new BusStop(name, locationDescription, null, null, route);
-        return busStopRepository.save(stop);
+    public BusStop createBusStop(BusStop busStop) {
+        return busStopRepository.save(busStop);
     }
 
-    public List<BusStop> getAllBusStops() {
-        return busStopRepository.findAll();
+    @Transactional(readOnly = true)
+    public Page<BusStop> getAllBusStops(String search, Pageable pageable) {
+        if (search != null && !search.isBlank()) {
+            return busStopRepository.findByNameContainingIgnoreCase(search, pageable);
+        }
+        return busStopRepository.findAll(pageable);
+    }
+
+    @Transactional(readOnly = true)
+    public BusStop getBusStopById(Long id) {
+        return busStopRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Bus Stop not found with id: " + id));
+    }
+
+    public BusStop updateBusStop(Long id, BusStop updatedBusStop) {
+        BusStop existingStop = getBusStopById(id);
+        existingStop.setName(updatedBusStop.getName());
+        existingStop.setLocation(updatedBusStop.getLocation());
+        return busStopRepository.save(existingStop);
+    }
+
+    public void deleteBusStop(Long id) {
+        BusStop busStop = getBusStopById(id);
+        busStopRepository.delete(busStop);
     }
 }

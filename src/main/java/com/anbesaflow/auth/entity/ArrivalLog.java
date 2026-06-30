@@ -1,13 +1,16 @@
 package com.anbesaflow.auth.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 import java.time.LocalDateTime;
 
-/**
- * Records whenever a bus arrives at or departs from a stop.
- * Used to calculate historical travel times and predict future arrivals.
- */
 @Entity
+@Table(name = "arrival_logs")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Table(name = "arrival_logs")
 public class ArrivalLog {
 
@@ -23,36 +26,12 @@ public class ArrivalLog {
     @JoinColumn(name = "bus_stop_id", nullable = false)
     private BusStop busStop;
 
-    @Column(nullable = false)
+    @Column(name = "arrival_time")
     private LocalDateTime arrivalTime;
 
-    @Column
+    @Column(name = "departure_time")
     private LocalDateTime departureTime;
 
-    // ── Constructors ──────────────────────────────────────────────────────────
-
-    public ArrivalLog() {}
-
-    public ArrivalLog(Bus bus, BusStop busStop, LocalDateTime arrivalTime) {
-        this.bus = bus;
-        this.busStop = busStop;
-        this.arrivalTime = arrivalTime;
-    }
-
-    // ── Getters & Setters ─────────────────────────────────────────────────────
-
-    public Long getId()                                 { return id; }
-    public void setId(Long id)                          { this.id = id; }
-
-    public Bus getBus()                                 { return bus; }
-    public void setBus(Bus bus)                         { this.bus = bus; }
-
-    public BusStop getBusStop()                         { return busStop; }
-    public void setBusStop(BusStop busStop)             { this.busStop = busStop; }
-
-    public LocalDateTime getArrivalTime()               { return arrivalTime; }
-    public void setArrivalTime(LocalDateTime arr)       { this.arrivalTime = arr; }
-
-    public LocalDateTime getDepartureTime()             { return departureTime; }
-    public void setDepartureTime(LocalDateTime dep)     { this.departureTime = dep; }
+    @Column(nullable = false, length = 50)
+    private String status; // e.g., ON_TIME, DELAYED
 }

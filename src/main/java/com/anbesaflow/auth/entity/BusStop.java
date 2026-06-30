@@ -1,11 +1,8 @@
 package com.anbesaflow.auth.entity;
 
 import jakarta.persistence.*;
+import java.time.LocalDateTime;
 
-/**
- * Represents a physical bus stop location in the AnbesaFlow network.
- * One BusStop can have many QueueEntries and many ArrivalLogs.
- */
 @Entity
 @Table(name = "bus_stops")
 public class BusStop {
@@ -14,59 +11,38 @@ public class BusStop {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 150)
-    private String name;
+    @Column(nullable = false, length = 120)
+    private String name; 
 
-    @Column(length = 255)
-    private String locationDescription;
+    @Column(nullable = false, length = 255)
+    private String location;
 
-    @Column(precision = 10, scale = 7)
-    private Double latitude;
-
-    @Column(precision = 10, scale = 7)
-    private Double longitude;
-
-    /** The transit route this stop belongs to */
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "route_id")
-    private Route route;
-
-    @Column(nullable = false)
-    private boolean active = true;
-
-    // ── Constructors ──────────────────────────────────────────────────────────
+    @Column(name = "created_at", updatable = false)
+    private LocalDateTime createdAt;
 
     public BusStop() {}
 
-    public BusStop(String name, String locationDescription, Double latitude,
-                   Double longitude, Route route) {
-        this.name                = name;
-        this.locationDescription = locationDescription;
-        this.latitude            = latitude;
-        this.longitude           = longitude;
-        this.route               = route;
+    public BusStop(Long id, String name, String location) {
+        this.id = id;
+        this.name = name;
+        this.location = location;
     }
 
-    // ── Getters & Setters ─────────────────────────────────────────────────────
+    @PrePersist
+    protected void onCreate() {
+        this.createdAt = LocalDateTime.now();
+    }
 
-    public Long getId()                               { return id; }
-    public void setId(Long id)                        { this.id = id; }
+    // Explicit Getters and Setters to guarantee compilation
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
 
-    public String getName()                           { return name; }
-    public void setName(String name)                  { this.name = name; }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
 
-    public String getLocationDescription()            { return locationDescription; }
-    public void setLocationDescription(String loc)    { this.locationDescription = loc; }
+    public String getLocation() { return location; }
+    public void setLocation(String location) { this.location = location; }
 
-    public Double getLatitude()                       { return latitude; }
-    public void setLatitude(Double lat)               { this.latitude = lat; }
-
-    public Double getLongitude()                      { return longitude; }
-    public void setLongitude(Double lon)              { this.longitude = lon; }
-
-    public Route getRoute()                           { return route; }
-    public void setRoute(Route route)                 { this.route = route; }
-
-    public boolean isActive()                         { return active; }
-    public void setActive(boolean active)             { this.active = active; }
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }

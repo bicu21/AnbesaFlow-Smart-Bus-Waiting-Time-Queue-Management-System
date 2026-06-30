@@ -1,39 +1,51 @@
 package com.anbesaflow.auth.service;
 
 import com.anbesaflow.auth.entity.Bus;
-import com.anbesaflow.auth.entity.Route;
+import com.anbesaflow.auth.exception.ResourceNotFoundException;
 import com.anbesaflow.auth.repository.BusRepository;
-import com.anbesaflow.auth.repository.RouteRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class BusService {
 
     private final BusRepository busRepository;
-    private final RouteRepository routeRepository;
 
-    public BusService(BusRepository busRepository, RouteRepository routeRepository) {
+    public BusService(BusRepository busRepository) {
         this.busRepository = busRepository;
-        this.routeRepository = routeRepository;
     }
 
-    public Bus createBus(String plateNumber, Integer capacity, Long routeId) {
-        Route route = routeRepository.findById(routeId)
-                .orElseThrow(() -> new IllegalArgumentException("Route not found"));
-        Bus bus = new Bus(plateNumber, capacity, route);
+    public Bus createBus(Bus bus) {
         return busRepository.save(bus);
     }
 
-    public Bus updateBusStatus(String plateNumber, Bus.BusStatus status) {
-        Bus bus = busRepository.findByPlateNumber(plateNumber)
-                .orElseThrow(() -> new IllegalArgumentException("Bus not found"));
-        bus.setStatus(status);
-        return busRepository.save(bus);
+    @Transactional(readOnly = true)
+    public Page<Bus> getAllBuses(String status, Pageable pageable) {
+        if (status != null && !status.isBlank()) {
+            return busRepository.findByStatus(status, pageable);
+        }
+        return busRepository.findAll(pageable);
     }
 
-    public List<Bus> getAllBuses() {
-        return busRepository.findAll();
+    @Transactional(readOnly = true)
+    public Bus getBusById(Long id) {
+        return busRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Bus not found with id: " + id));
+    }
+
+    public Bus updateBus(Long id, Bus updatedBus) {
+        Bus existingBus = getBusById(id);
+        existingBus.setPlateNumber(updatedBus.getPlateNumber());
+        existingBus.setCapacity(updatedBus.getCapacity());
+        existingBus.setStatus(updatedBus.getStatus());
+        return busRepository.save(existingBus);
+    }
+
+    public void deleteBus(Long id) {
+        Bus bus = getBusById(id);
+        busRepository.delete(bus);
     }
 }

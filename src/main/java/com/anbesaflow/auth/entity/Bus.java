@@ -1,64 +1,55 @@
 package com.anbesaflow.auth.entity;
 
 import jakarta.persistence.*;
+import java.time.LocalDateTime;
 
-/**
- * Represents an individual bus vehicle registered in the AnbesaFlow system.
- * One Route can have many Buses.
- * One Bus can have many ArrivalLogs.
- */
 @Entity
 @Table(name = "buses")
 public class Bus {
-
-    public enum BusStatus {
-        ACTIVE, DELAYED, OUT_OF_SERVICE
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    /** Plate number or fleet identifier, e.g. "AA-1234" */
-    @Column(nullable = false, unique = true, length = 30)
+    @Column(name = "plate_number", nullable = false, unique = true, length = 50)
     private String plateNumber;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false, length = 20)
-    private BusStatus status = BusStatus.ACTIVE;
-
-    /** Seating / standing capacity — used in waiting-time estimation */
     @Column(nullable = false)
-    private Integer capacity = 50;
+    private Integer capacity;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "route_id", nullable = false)
-    private Route route;
+    @Column(nullable = false, length = 50)
+    private String status; // e.g., AVAILABLE, IN_TRANSIT, MAINTENANCE
 
-    // ── Constructors ──────────────────────────────────────────────────────────
+    @Column(name = "created_at", updatable = false)
+    private LocalDateTime createdAt;
 
     public Bus() {}
 
-    public Bus(String plateNumber, Integer capacity, Route route) {
+    public Bus(Long id, String plateNumber, Integer capacity, String status) {
+        this.id = id;
         this.plateNumber = plateNumber;
-        this.capacity    = capacity;
-        this.route       = route;
+        this.capacity = capacity;
+        this.status = status;
     }
 
-    // ── Getters & Setters ─────────────────────────────────────────────────────
+    @PrePersist
+    protected void onCreate() {
+        this.createdAt = LocalDateTime.now();
+    }
 
-    public Long getId()                           { return id; }
-    public void setId(Long id)                    { this.id = id; }
+    // Explicit Getters and Setters to resolve any Lombok/IDE compilation issues
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
 
-    public String getPlateNumber()                { return plateNumber; }
-    public void setPlateNumber(String p)          { this.plateNumber = p; }
+    public String getPlateNumber() { return plateNumber; }
+    public void setPlateNumber(String plateNumber) { this.plateNumber = plateNumber; }
 
-    public BusStatus getStatus()                  { return status; }
-    public void setStatus(BusStatus s)            { this.status = s; }
+    public Integer getCapacity() { return capacity; }
+    public void setCapacity(Integer capacity) { this.capacity = capacity; }
 
-    public Integer getCapacity()                  { return capacity; }
-    public void setCapacity(Integer c)            { this.capacity = c; }
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
 
-    public Route getRoute()                       { return route; }
-    public void setRoute(Route route)             { this.route = route; }
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }
