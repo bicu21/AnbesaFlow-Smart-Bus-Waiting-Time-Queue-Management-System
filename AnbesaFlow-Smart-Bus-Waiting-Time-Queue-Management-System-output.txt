@@ -5,8 +5,8 @@ PROJECT EXPORT FOR LLMs
 PROJECT INFORMATION:
 --------------------------------------------------
 Project Name: AnbesaFlow-Smart-Bus-Waiting-Time-Queue-Management-System
-Generated On: 2026-06-30 16:31:37 (Africa/Nairobi / GMT+03:00)
-Total Files Processed: 125
+Generated On: 2026-06-30 16:42:16 (Africa/Nairobi / GMT+03:00)
+Total Files Processed: 134
 Export Tool: Easy Whole Project to Single Text File for LLMs v1.1.0
 Tool Author: Jota / José Guilherme Pandolfi
 
@@ -53,12 +53,12 @@ PROJECT STRUCTURE
 │   │   │               │   ├── 📄 UserResponse.java (1.26 KB)
 │   │   │               │   └── 📄 WaitingTimeResponse.java (354 B)
 │   │   │               ├── 📁 entity/
-│   │   │               │   ├── 📄 ArrivalLog.java (75 B)
-│   │   │               │   ├── 📄 Bus.java (66 B)
-│   │   │               │   ├── 📄 BusStop.java (72 B)
+│   │   │               │   ├── 📄 ArrivalLog.java (621 B)
+│   │   │               │   ├── 📄 Bus.java (498 B)
+│   │   │               │   ├── 📄 BusStop.java (367 B)
 │   │   │               │   ├── 📄 QueueEntry.java (1.68 KB)
 │   │   │               │   ├── 📄 Role.java (104 B)
-│   │   │               │   ├── 📄 Route.java (70 B)
+│   │   │               │   ├── 📄 Route.java (396 B)
 │   │   │               │   └── 📄 User.java (1.83 KB)
 │   │   │               ├── 📁 exception/
 │   │   │               │   ├── 📄 GlobalExceptionHandler.java (4.68 KB)
@@ -130,12 +130,16 @@ PROJECT STRUCTURE
 │   │   │           │   ├── 📄 UserResponse.class (1.9 KB)
 │   │   │           │   └── 📄 WaitingTimeResponse.class (585 B)
 │   │   │           ├── 📁 entity/
-│   │   │           │   ├── 📄 ArrivalLog.class (309 B)
-│   │   │           │   ├── 📄 Bus.class (288 B)
-│   │   │           │   ├── 📄 BusStop.class (300 B)
+│   │   │           │   ├── 📄 ArrivalLog.class (3.15 KB)
+│   │   │           │   ├── 📄 ArrivalLog$ArrivalLogBuilder.class (3.03 KB)
+│   │   │           │   ├── 📄 Bus.class (2.27 KB)
+│   │   │           │   ├── 📄 Bus$BusBuilder.class (2.22 KB)
+│   │   │           │   ├── 📄 BusStop.class (1.84 KB)
+│   │   │           │   ├── 📄 BusStop$BusStopBuilder.class (1.99 KB)
 │   │   │           │   ├── 📄 QueueEntry.class (2.51 KB)
 │   │   │           │   ├── 📄 Role.class (1.14 KB)
-│   │   │           │   ├── 📄 Route.class (294 B)
+│   │   │           │   ├── 📄 Route.class (2.09 KB)
+│   │   │           │   ├── 📄 Route$RouteBuilder.class (2.15 KB)
 │   │   │           │   └── 📄 User.class (3.02 KB)
 │   │   │           ├── 📁 exception/
 │   │   │           │   ├── 📄 GlobalExceptionHandler.class (8.39 KB)
@@ -174,33 +178,48 @@ PROJECT STRUCTURE
 │   │   │       ├── 📄 V4__create_route_table.sql (278 B)
 │   │   │       └── 📄 V5__create_bus_stop_and_arrival_log_tables.sql (797 B)
 │   │   └── 📄 application.yml (1 KB)
+│   ├── 📁 generated-sources/
+│   │   └── 📁 annotations/
+│   ├── 📁 generated-test-sources/
+│   │   └── 📁 test-annotations/
+│   ├── 📁 maven-archiver/
+│   │   └── 📄 pom.properties (67 B)
 │   ├── 📁 maven-status/
 │   │   └── 📁 maven-compiler-plugin/
-│   │       └── 📁 compile/
-│   │           └── 📁 default-compile/
-│   │               ├── 📄 createdFiles.lst (1.73 KB)
-│   │               └── 📄 inputFiles.lst (5.75 KB)
-│   └── 📁 test-classes/
+│   │       ├── 📁 compile/
+│   │       │   └── 📁 default-compile/
+│   │       │       ├── 📄 createdFiles.lst (2.6 KB)
+│   │       │       └── 📄 inputFiles.lst (8.98 KB)
+│   │       └── 📁 testCompile/
+│   │           └── 📁 default-testCompile/
+│   │               ├── 📄 createdFiles.lst
+│   │               └── 📄 inputFiles.lst
+│   ├── 📁 test-classes/
+│   ├── 📄 anbesaflow-auth-1.0.0.jar (49.31 MB)
+│   └── 📄 anbesaflow-auth-1.0.0.jar.original (54.52 KB)
 ├── 📄 AnbesaFlow_Authentication_Postman_Collection.json (13.19 KB)
-├── 📄 pom.xml (3.29 KB)
+├── 📄 pom.xml (3.46 KB)
 └── 📄 README.md (19 B)
 
 ================================================================================
 PROJECT STATISTICS
 ================================================================================
-Total Files: 125
-Total Directories: 37
-Text Files: 69
-Binary Files: 56
-Total Size: 178.86 KB
+Total Files: 134
+Total Directories: 44
+Text Files: 70
+Binary Files: 64
+Total Size: 49.56 MB
 
 FILE TYPES DISTRIBUTION:
 ------------------------------
+.class          : 58
 .java           : 54
-.class          : 54
 .sql            : 10
+.lst            : 4
 .yml            : 2
-.lst            : 2
+.properties     : 1
+.jar            : 1
+.original       : 1
 .json           : 1
 .xml            : 1
 .md             : 1
@@ -1367,25 +1386,53 @@ FILE: src/main/java/com/anbesaflow/auth/entity/ArrivalLog.java
 
 FILE INFORMATION:
 ----------------------------------------
-Size: 75 B
+Size: 621 B
 Extension: .java
 Language: java
 Location: src/main/java/com/anbesaflow/auth/entity/ArrivalLog.java
 Relative Path: src/main/java/com/anbesaflow/auth/entity
 Created: 2026-06-30 15:57:27 (Africa/Nairobi / GMT+03:00)
-Modified: 2026-06-30 15:57:30 (Africa/Nairobi / GMT+03:00)
-MD5: 7fb64efac6c891206e310499fb61b6fa
-SHA256: d627bb9352be627fc3741f641f9f5936b4afec3dcdf5c038d181ecba5c7b2f7f
+Modified: 2026-06-30 16:42:15 (Africa/Nairobi / GMT+03:00)
+MD5: 9e7d1e476b93df9c56cbe3f624628318
+SHA256: 6609c8079e493f745b8372c6e2d1eb405927c941f37b85184c15bbfbae838c5f
 Encoding: ASCII
 
 FILE CONTENT:
 ----------------------------------------
 package com.anbesaflow.auth.entity;
 
-public class ArrivalLog {
-    
-}
+import jakarta.persistence.*;
+import lombok.*;
 
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name="arrival_logs")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class ArrivalLog {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name="bus_id")
+    private Bus bus;
+
+    @ManyToOne
+    @JoinColumn(name="bus_stop_id")
+    private BusStop busStop;
+
+    private LocalDateTime arrivalTime;
+
+    private LocalDateTime departureTime;
+
+    private String status;
+}
 ================================================================================
 
 
@@ -1395,23 +1442,45 @@ FILE: src/main/java/com/anbesaflow/auth/entity/Bus.java
 
 FILE INFORMATION:
 ----------------------------------------
-Size: 66 B
+Size: 498 B
 Extension: .java
 Language: java
 Location: src/main/java/com/anbesaflow/auth/entity/Bus.java
 Relative Path: src/main/java/com/anbesaflow/auth/entity
 Created: 2026-06-30 15:56:36 (Africa/Nairobi / GMT+03:00)
-Modified: 2026-06-30 15:57:13 (Africa/Nairobi / GMT+03:00)
-MD5: c68476f6e020904e14187fdf09938a1c
-SHA256: 49d94144d25de59a2c24163b299595722094466544d3310c7f096a38b5348f1f
+Modified: 2026-06-30 16:40:44 (Africa/Nairobi / GMT+03:00)
+MD5: d70504a4c4f361e441d7a5a7bc944d4e
+SHA256: 0140219b38487f96e42725731c755ab1f32c947967c0aaba56eff95ecd434a4d
 Encoding: ASCII
 
 FILE CONTENT:
 ----------------------------------------
 package com.anbesaflow.auth.entity;
 
+import jakarta.persistence.*;
+import lombok.*;
+
+@Entity
+@Table(name="buses")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Bus {
-    
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable=false,unique=true)
+    private String plateNumber;
+
+    @Column(nullable=false)
+    private Integer capacity;
+
+    @Column(nullable=false)
+    private String status;
 }
 ================================================================================
 
@@ -1422,25 +1491,41 @@ FILE: src/main/java/com/anbesaflow/auth/entity/BusStop.java
 
 FILE INFORMATION:
 ----------------------------------------
-Size: 72 B
+Size: 367 B
 Extension: .java
 Language: java
 Location: src/main/java/com/anbesaflow/auth/entity/BusStop.java
 Relative Path: src/main/java/com/anbesaflow/auth/entity
 Created: 2026-06-30 15:56:59 (Africa/Nairobi / GMT+03:00)
-Modified: 2026-06-30 15:57:01 (Africa/Nairobi / GMT+03:00)
-MD5: 92885525e2666945f749c2171474bb01
-SHA256: 26264f3bf4af1f82c431fc40d21df58335508c1de2454c4c3bb15153e0abc3b6
+Modified: 2026-06-30 16:41:59 (Africa/Nairobi / GMT+03:00)
+MD5: e307a7537a58febda13e599d73bd6f56
+SHA256: e9ec3a8fc1db3e0e8200038729db832069096bf3f065df842aadbe0e014d7d47
 Encoding: ASCII
 
 FILE CONTENT:
 ----------------------------------------
 package com.anbesaflow.auth.entity;
 
-public class BusStop {
-    
-}
+import jakarta.persistence.*;
+import lombok.*;
 
+@Entity
+@Table(name="bus_stops")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class BusStop {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+
+    private String location;
+}
 ================================================================================
 
 
@@ -1584,25 +1669,43 @@ FILE: src/main/java/com/anbesaflow/auth/entity/Route.java
 
 FILE INFORMATION:
 ----------------------------------------
-Size: 70 B
+Size: 396 B
 Extension: .java
 Language: java
 Location: src/main/java/com/anbesaflow/auth/entity/Route.java
 Relative Path: src/main/java/com/anbesaflow/auth/entity
 Created: 2026-06-30 15:56:49 (Africa/Nairobi / GMT+03:00)
-Modified: 2026-06-30 15:56:51 (Africa/Nairobi / GMT+03:00)
-MD5: d1678c8a52d8185f803661f4b6aab041
-SHA256: 751d71c10a8a18bb72c881ce6d5526f849cd5aad5cbfd5d949fc3ad2af354a3e
+Modified: 2026-06-30 16:41:28 (Africa/Nairobi / GMT+03:00)
+MD5: 0ecc5d16305a58ab2cdc93a040595a49
+SHA256: cd25c3a5d06e3b6c56700467a95ec5e9adfa1131f7e05949a5ae7bddaaa1496a
 Encoding: ASCII
 
 FILE CONTENT:
 ----------------------------------------
 package com.anbesaflow.auth.entity;
 
-public class Route {
-    
-}
+import jakarta.persistence.*;
+import lombok.*;
 
+@Entity
+@Table(name="routes")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Route {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+
+    private String startPoint;
+
+    private String endPoint;
+}
 ================================================================================
 
 
@@ -3570,11 +3673,15 @@ BINARY/EXCLUDED FILES (not included in text content)
 BINARY/EXCLUDED FILES (not included in text content)
 ================================================================================
 - target/classes/com/anbesaflow/auth/entity/ArrivalLog.class
+- target/classes/com/anbesaflow/auth/entity/ArrivalLog$ArrivalLogBuilder.class
 - target/classes/com/anbesaflow/auth/entity/Bus.class
+- target/classes/com/anbesaflow/auth/entity/Bus$BusBuilder.class
 - target/classes/com/anbesaflow/auth/entity/BusStop.class
+- target/classes/com/anbesaflow/auth/entity/BusStop$BusStopBuilder.class
 - target/classes/com/anbesaflow/auth/entity/QueueEntry.class
 - target/classes/com/anbesaflow/auth/entity/Role.class
 - target/classes/com/anbesaflow/auth/entity/Route.class
+- target/classes/com/anbesaflow/auth/entity/Route$RouteBuilder.class
 - target/classes/com/anbesaflow/auth/entity/User.class
 
 
@@ -3639,7 +3746,7 @@ Extension: .sql
 Language: sql
 Location: target/classes/db/migration/V1__init_schema.sql
 Relative Path: target/classes/db/migration
-Created: 2026-06-30 14:19:35 (Africa/Nairobi / GMT+03:00)
+Created: 2026-06-30 16:40:13 (Africa/Nairobi / GMT+03:00)
 Modified: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
 MD5: 47babe6a83cb9430d2757b5c900cedde
 SHA256: fd2b61e463f3a6772a8ba7349fe5ab74b5444f913a489cd9111352eb1b8e2089
@@ -3673,7 +3780,7 @@ Extension: .sql
 Language: sql
 Location: target/classes/db/migration/V2__create_queue_entry_table.sql
 Relative Path: target/classes/db/migration
-Created: 2026-06-30 14:19:35 (Africa/Nairobi / GMT+03:00)
+Created: 2026-06-30 16:40:13 (Africa/Nairobi / GMT+03:00)
 Modified: 2026-06-30 14:19:21 (Africa/Nairobi / GMT+03:00)
 MD5: 0bf34dc2776d1e38f88d07e6e6a045ae
 SHA256: 471243f8d03f1a9a240ff65946b210d4e2e08b2bbe2ca6f85ef9211eb2878373
@@ -3718,7 +3825,7 @@ Extension: .sql
 Language: sql
 Location: target/classes/db/migration/V3__create_bus_table.sql
 Relative Path: target/classes/db/migration
-Created: 2026-06-30 16:03:35 (Africa/Nairobi / GMT+03:00)
+Created: 2026-06-30 16:40:13 (Africa/Nairobi / GMT+03:00)
 Modified: 2026-06-30 16:31:15 (Africa/Nairobi / GMT+03:00)
 MD5: abacdbba3a2a6a0410018680967f9027
 SHA256: a15e0c4aaf3ed5a3e413ea8c5a6b0afbba0e0da8552ffb285c49ea9f79f7a974
@@ -3759,7 +3866,7 @@ Extension: .sql
 Language: sql
 Location: target/classes/db/migration/V4__create_route_table.sql
 Relative Path: target/classes/db/migration
-Created: 2026-06-30 16:03:44 (Africa/Nairobi / GMT+03:00)
+Created: 2026-06-30 16:40:13 (Africa/Nairobi / GMT+03:00)
 Modified: 2026-06-30 16:31:27 (Africa/Nairobi / GMT+03:00)
 MD5: 2724843474bcfc47dc4abd260d0d6821
 SHA256: 95c1a3d2a56d50003ea96fc9ff422f9ffb73e18d49395189e2766d0bdcdf3ed9
@@ -3796,7 +3903,7 @@ Extension: .sql
 Language: sql
 Location: target/classes/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql
 Relative Path: target/classes/db/migration
-Created: 2026-06-30 16:03:59 (Africa/Nairobi / GMT+03:00)
+Created: 2026-06-30 16:40:13 (Africa/Nairobi / GMT+03:00)
 Modified: 2026-06-30 16:31:36 (Africa/Nairobi / GMT+03:00)
 MD5: c039b9442688c99fce2d07835bba33b6
 SHA256: df6eae64247a31b1699ae1c30a1d928fd5712cdc515628e6fc85e7bb6c322939
@@ -3859,8 +3966,8 @@ Extension: .yml
 Language: yaml
 Location: target/classes/application.yml
 Relative Path: target/classes
-Created: 2026-06-30 14:19:21 (Africa/Nairobi / GMT+03:00)
-Modified: 2026-06-30 14:19:35 (Africa/Nairobi / GMT+03:00)
+Created: 2026-06-30 16:40:13 (Africa/Nairobi / GMT+03:00)
+Modified: 2026-06-30 16:40:13 (Africa/Nairobi / GMT+03:00)
 MD5: 1cadd546df5716b7f78628dcc3bb7080
 SHA256: 28e38a1b9503ba6186c132f2bebdab11366a1f88186525f55920620c31e79172
 Encoding: ASCII
@@ -3909,10 +4016,50 @@ server:
 
 
 ================================================================================
+FILE: target/maven-archiver/pom.properties
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 67 B
+Extension: .properties
+Language: text
+Location: target/maven-archiver/pom.properties
+Relative Path: target/maven-archiver
+Created: 2026-06-30 16:32:41 (Africa/Nairobi / GMT+03:00)
+Modified: 2026-06-30 16:32:41 (Africa/Nairobi / GMT+03:00)
+MD5: 1e2341ade8f78e9852767486af6aab75
+SHA256: a328a0fd9611202e511cb7589a51b71f658ae0b30781c248ef12592a7e981bb6
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+artifactId=anbesaflow-auth
+groupId=com.anbesaflow
+version=1.0.0
+
+================================================================================
+
+
+================================================================================
 BINARY/EXCLUDED FILES (not included in text content)
 ================================================================================
 - target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
 - target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+
+
+================================================================================
+BINARY/EXCLUDED FILES (not included in text content)
+================================================================================
+- target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+- target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+
+
+================================================================================
+BINARY/EXCLUDED FILES (not included in text content)
+================================================================================
+- target/anbesaflow-auth-1.0.0.jar
+- target/anbesaflow-auth-1.0.0.jar.original
 
 
 ================================================================================
@@ -4594,15 +4741,15 @@ FILE: pom.xml
 
 FILE INFORMATION:
 ----------------------------------------
-Size: 3.29 KB
+Size: 3.46 KB
 Extension: .xml
 Language: xml
 Location: pom.xml
 Relative Path: root
 Created: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
-Modified: 2026-06-30 14:19:21 (Africa/Nairobi / GMT+03:00)
-MD5: a32cbd130062097af896739506114037
-SHA256: e847557ae5fcd486b2d54bc9caba4f351aeaf9e51ebf8f5a5ad2a99b7d7b5b15
+Modified: 2026-06-30 16:40:01 (Africa/Nairobi / GMT+03:00)
+MD5: 271bb8ad7bf18edf7baccf9d38a5302d
+SHA256: d166e2e59f13739750c21504cd413a77a80e265b0f9000878accf4239c7ea080
 Encoding: ASCII
 
 FILE CONTENT:
@@ -4677,6 +4824,11 @@ FILE CONTENT:
             <artifactId>jjwt-jackson</artifactId>
             <version>${jjwt.version}</version>
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
 
         <!-- Test dependencies -->
