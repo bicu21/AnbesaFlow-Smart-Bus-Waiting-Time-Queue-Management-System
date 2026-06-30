@@ -3,8 +3,8 @@
 ## 📊 Project Information
 
 - **Project Name**: `AnbesaFlow-Smart-Bus-Waiting-Time-Queue-Management-System`
-- **Generated On**: 2026-06-30 23:19:16 (Africa/Nairobi / GMT+03:00)
-- **Total Files Processed**: 163
+- **Generated On**: 2026-06-30 23:29:35 (Africa/Nairobi / GMT+03:00)
+- **Total Files Processed**: 161
 - **Export Tool**: Easy Whole Project to Single Text File for LLMs v1.1.0
 - **Tool Author**: Jota / José Guilherme Pandolfi
 
@@ -96,12 +96,11 @@
 │   │   └── 📁 resources/
 │   │       ├── 📁 db/
 │   │       │   └── 📁 migration/
-│   │       │       ├── 📄 V1__init_schema.sql (859 B)
-│   │       │       ├── 📄 V2__create_queue_entry_table.sql (259 B)
-│   │       │       ├── 📄 V3__create_bus_table.sql (991 B)
-│   │       │       ├── 📄 V4__create_arrival_log_table.sql (643 B)
-│   │       │       ├── 📄 V5__create_bus_stop_and_arrival_log_tables.sql (1.76 KB)
-│   │       │       └── 📄 V5__seed_data.sql (1.96 KB)
+│   │       │       ├── 📄 V1__init_users_and_queue.sql (859 B)
+│   │       │       ├── 📄 V2__create_routes_table.sql (259 B)
+│   │       │       ├── 📄 V3__create_bus_stops_and_buses.sql (991 B)
+│   │       │       ├── 📄 V4__create_arrival_logs.sql (643 B)
+│   │       │       └── 📄 V5__seed_anbesaflow_data.sql (1.84 KB)
 │   │       ├── 📁 static/
 │   │       │   ├── 📁 css/
 │   │       │   │   ├── 📄 auth.css (4.47 KB)
@@ -197,12 +196,11 @@
 │   │   │           └── 📄 AnbesaFlowAuthApplication.class (836 B)
 │   │   ├── 📁 db/
 │   │   │   └── 📁 migration/
-│   │   │       ├── 📄 V1__init_schema.sql (859 B)
-│   │   │       ├── 📄 V2__create_queue_entry_table.sql (259 B)
-│   │   │       ├── 📄 V3__create_bus_table.sql (991 B)
-│   │   │       ├── 📄 V4__create_arrival_log_table.sql (643 B)
-│   │   │       ├── 📄 V5__create_bus_stop_and_arrival_log_tables.sql (1.76 KB)
-│   │   │       └── 📄 V5__seed_data.sql (1.96 KB)
+│   │   │       ├── 📄 V1__init_users_and_queue.sql (859 B)
+│   │   │       ├── 📄 V2__create_routes_table.sql (259 B)
+│   │   │       ├── 📄 V3__create_bus_stops_and_buses.sql (991 B)
+│   │   │       ├── 📄 V4__create_arrival_logs.sql (643 B)
+│   │   │       └── 📄 V5__seed_anbesaflow_data.sql (1.84 KB)
 │   │   ├── 📁 static/
 │   │   │   ├── 📁 css/
 │   │   │   │   ├── 📄 auth.css (4.47 KB)
@@ -300,12 +298,11 @@
 - [📄 src/main/java/com/anbesaflow/auth/service/UserService.java](#📄-src-main-java-com-anbesaflow-auth-service-userservice-java)
 - [📄 src/main/java/com/anbesaflow/auth/service/WaitingTimeService.java](#📄-src-main-java-com-anbesaflow-auth-service-waitingtimeservice-java)
 - [📄 src/main/java/com/anbesaflow/auth/AnbesaFlowAuthApplication.java](#📄-src-main-java-com-anbesaflow-auth-anbesaflowauthapplication-java)
-- [📄 src/main/resources/db/migration/V1__init_schema.sql](#📄-src-main-resources-db-migration-v1-init-schema-sql)
-- [📄 src/main/resources/db/migration/V2__create_queue_entry_table.sql](#📄-src-main-resources-db-migration-v2-create-queue-entry-table-sql)
-- [📄 src/main/resources/db/migration/V3__create_bus_table.sql](#📄-src-main-resources-db-migration-v3-create-bus-table-sql)
-- [📄 src/main/resources/db/migration/V4__create_arrival_log_table.sql](#📄-src-main-resources-db-migration-v4-create-arrival-log-table-sql)
-- [📄 src/main/resources/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql](#📄-src-main-resources-db-migration-v5-create-bus-stop-and-arrival-log-tables-sql)
-- [📄 src/main/resources/db/migration/V5__seed_data.sql](#📄-src-main-resources-db-migration-v5-seed-data-sql)
+- [📄 src/main/resources/db/migration/V1__init_users_and_queue.sql](#📄-src-main-resources-db-migration-v1-init-users-and-queue-sql)
+- [📄 src/main/resources/db/migration/V2__create_routes_table.sql](#📄-src-main-resources-db-migration-v2-create-routes-table-sql)
+- [📄 src/main/resources/db/migration/V3__create_bus_stops_and_buses.sql](#📄-src-main-resources-db-migration-v3-create-bus-stops-and-buses-sql)
+- [📄 src/main/resources/db/migration/V4__create_arrival_logs.sql](#📄-src-main-resources-db-migration-v4-create-arrival-logs-sql)
+- [📄 src/main/resources/db/migration/V5__seed_anbesaflow_data.sql](#📄-src-main-resources-db-migration-v5-seed-anbesaflow-data-sql)
 - [📄 src/main/resources/static/css/auth.css](#📄-src-main-resources-static-css-auth-css)
 - [📄 src/main/resources/static/css/dashboard.css](#📄-src-main-resources-static-css-dashboard-css)
 - [📄 src/main/resources/static/css/global.css](#📄-src-main-resources-static-css-global-css)
@@ -315,12 +312,11 @@
 - [📄 src/main/resources/static/pages/login.html](#📄-src-main-resources-static-pages-login-html)
 - [📄 src/main/resources/static/index.html](#📄-src-main-resources-static-index-html)
 - [📄 src/main/resources/application.yml](#📄-src-main-resources-application-yml)
-- [📄 target/classes/db/migration/V1__init_schema.sql](#📄-target-classes-db-migration-v1-init-schema-sql)
-- [📄 target/classes/db/migration/V2__create_queue_entry_table.sql](#📄-target-classes-db-migration-v2-create-queue-entry-table-sql)
-- [📄 target/classes/db/migration/V3__create_bus_table.sql](#📄-target-classes-db-migration-v3-create-bus-table-sql)
-- [📄 target/classes/db/migration/V4__create_arrival_log_table.sql](#📄-target-classes-db-migration-v4-create-arrival-log-table-sql)
-- [📄 target/classes/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql](#📄-target-classes-db-migration-v5-create-bus-stop-and-arrival-log-tables-sql)
-- [📄 target/classes/db/migration/V5__seed_data.sql](#📄-target-classes-db-migration-v5-seed-data-sql)
+- [📄 target/classes/db/migration/V1__init_users_and_queue.sql](#📄-target-classes-db-migration-v1-init-users-and-queue-sql)
+- [📄 target/classes/db/migration/V2__create_routes_table.sql](#📄-target-classes-db-migration-v2-create-routes-table-sql)
+- [📄 target/classes/db/migration/V3__create_bus_stops_and_buses.sql](#📄-target-classes-db-migration-v3-create-bus-stops-and-buses-sql)
+- [📄 target/classes/db/migration/V4__create_arrival_logs.sql](#📄-target-classes-db-migration-v4-create-arrival-logs-sql)
+- [📄 target/classes/db/migration/V5__seed_anbesaflow_data.sql](#📄-target-classes-db-migration-v5-seed-anbesaflow-data-sql)
 - [📄 target/classes/static/css/auth.css](#📄-target-classes-static-css-auth-css)
 - [📄 target/classes/static/css/dashboard.css](#📄-target-classes-static-css-dashboard-css)
 - [📄 target/classes/static/css/global.css](#📄-target-classes-static-css-global-css)
@@ -341,11 +337,11 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Files | 163 |
+| Total Files | 161 |
 | Total Directories | 52 |
-| Text Files | 93 |
+| Text Files | 91 |
 | Binary Files | 70 |
-| Total Size | 51.75 MB |
+| Total Size | 51.74 MB |
 
 ### 📄 File Types Distribution
 
@@ -353,7 +349,7 @@
 |-----------|-------|
 | `.class` | 65 |
 | `.java` | 59 |
-| `.sql` | 12 |
+| `.sql` | 10 |
 | `.css` | 8 |
 | `.js` | 4 |
 | `.html` | 4 |
@@ -4200,13 +4196,13 @@ public class AnbesaFlowAuthApplication {
 
 ---
 
-### <a id="📄-src-main-resources-db-migration-v1-init-schema-sql"></a>📄 `src/main/resources/db/migration/V1__init_schema.sql`
+### <a id="📄-src-main-resources-db-migration-v1-init-users-and-queue-sql"></a>📄 `src/main/resources/db/migration/V1__init_users_and_queue.sql`
 
 **File Info:**
 - **Size**: 859 B
 - **Extension**: `.sql`
 - **Language**: `sql`
-- **Location**: `src/main/resources/db/migration/V1__init_schema.sql`
+- **Location**: `src/main/resources/db/migration/V1__init_users_and_queue.sql`
 - **Relative Path**: `src/main/resources/db/migration`
 - **Created**: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 23:17:42 (Africa/Nairobi / GMT+03:00)
@@ -4247,13 +4243,13 @@ CREATE INDEX IF NOT EXISTS idx_queue_position ON queue_entries(position);
 
 ---
 
-### <a id="📄-src-main-resources-db-migration-v2-create-queue-entry-table-sql"></a>📄 `src/main/resources/db/migration/V2__create_queue_entry_table.sql`
+### <a id="📄-src-main-resources-db-migration-v2-create-routes-table-sql"></a>📄 `src/main/resources/db/migration/V2__create_routes_table.sql`
 
 **File Info:**
 - **Size**: 259 B
 - **Extension**: `.sql`
 - **Language**: `sql`
-- **Location**: `src/main/resources/db/migration/V2__create_queue_entry_table.sql`
+- **Location**: `src/main/resources/db/migration/V2__create_routes_table.sql`
 - **Relative Path**: `src/main/resources/db/migration`
 - **Created**: 2026-06-30 14:19:21 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 23:18:00 (Africa/Nairobi / GMT+03:00)
@@ -4275,13 +4271,13 @@ CREATE TABLE IF NOT EXISTS routes (
 
 ---
 
-### <a id="📄-src-main-resources-db-migration-v3-create-bus-table-sql"></a>📄 `src/main/resources/db/migration/V3__create_bus_table.sql`
+### <a id="📄-src-main-resources-db-migration-v3-create-bus-stops-and-buses-sql"></a>📄 `src/main/resources/db/migration/V3__create_bus_stops_and_buses.sql`
 
 **File Info:**
 - **Size**: 991 B
 - **Extension**: `.sql`
 - **Language**: `sql`
-- **Location**: `src/main/resources/db/migration/V3__create_bus_table.sql`
+- **Location**: `src/main/resources/db/migration/V3__create_bus_stops_and_buses.sql`
 - **Relative Path**: `src/main/resources/db/migration`
 - **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 23:18:28 (Africa/Nairobi / GMT+03:00)
@@ -4325,13 +4321,13 @@ CREATE INDEX IF NOT EXISTS idx_bus_plate ON buses(plate_number);
 
 ---
 
-### <a id="📄-src-main-resources-db-migration-v4-create-arrival-log-table-sql"></a>📄 `src/main/resources/db/migration/V4__create_arrival_log_table.sql`
+### <a id="📄-src-main-resources-db-migration-v4-create-arrival-logs-sql"></a>📄 `src/main/resources/db/migration/V4__create_arrival_logs.sql`
 
 **File Info:**
 - **Size**: 643 B
 - **Extension**: `.sql`
 - **Language**: `sql`
-- **Location**: `src/main/resources/db/migration/V4__create_arrival_log_table.sql`
+- **Location**: `src/main/resources/db/migration/V4__create_arrival_logs.sql`
 - **Relative Path**: `src/main/resources/db/migration`
 - **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 23:18:52 (Africa/Nairobi / GMT+03:00)
@@ -4365,116 +4361,85 @@ CREATE INDEX IF NOT EXISTS idx_arrival_stop ON arrival_logs(bus_stop_id);
 
 ---
 
-### <a id="📄-src-main-resources-db-migration-v5-create-bus-stop-and-arrival-log-tables-sql"></a>📄 `src/main/resources/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql`
+### <a id="📄-src-main-resources-db-migration-v5-seed-anbesaflow-data-sql"></a>📄 `src/main/resources/db/migration/V5__seed_anbesaflow_data.sql`
 
 **File Info:**
-- **Size**: 1.76 KB
+- **Size**: 1.84 KB
 - **Extension**: `.sql`
 - **Language**: `sql`
-- **Location**: `src/main/resources/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql`
+- **Location**: `src/main/resources/db/migration/V5__seed_anbesaflow_data.sql`
 - **Relative Path**: `src/main/resources/db/migration`
 - **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 23:19:16 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `5427c1b8a379da6cbfd0e2e753b1a81a`
-- **SHA256**: `ff55edc04e53c807374378c2476eff495a711367f6560122457e01d89c23fdf1`
+- **Modified**: 2026-06-30 23:29:34 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `26fb64d19d824ca5aaa5734ce59c9602`
+- **SHA256**: `872b3ce34e3543ba980ddf28d922de1bfb57610700e792a60f28a01b934e97c9`
 - **Encoding**: ASCII
 
 **File code content:**
 
 ```sql
--- Seed system users (password is 'password' encoded with BCrypt)
+-- =========================
+-- USERS SEED
+-- =========================
 INSERT INTO users (name, email, password, role) VALUES 
 ('Admin User', 'admin@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'ADMIN'),
 ('Operator User', 'operator@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'OPERATOR'),
 ('Passenger One', 'passenger1@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'PASSENGER')
 ON CONFLICT (email) DO NOTHING;
 
--- Seed Routes
+-- =========================
+-- ROUTES SEED
+-- =========================
 INSERT INTO routes (route_code, description, active) VALUES 
 ('R47', 'Megenagna to Bole', TRUE),
 ('R12', 'Piassa to Arat Kilo', TRUE)
 ON CONFLICT (route_code) DO NOTHING;
 
--- Seed Bus Stops linked to matching routes
-INSERT INTO bus_stops (name, location, route_id) 
-SELECT 'Megenagna Station', 'Main terminal at Megenagna', id FROM routes WHERE route_code = 'R47'
-WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Megenagna Station');
+-- =========================
+-- BUS STOPS SEED (FIXED)
+-- =========================
 
-INSERT INTO bus_stops (name, location, route_id) 
-SELECT 'Bole Station', 'Terminal near Bole Airport', id FROM routes WHERE route_code = 'R47'
-WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Bole Station');
+INSERT INTO bus_stops (name, location, route_id)
+SELECT
+    'Megenagna Station',
+    'Main terminal at Megenagna',
+    r.id
+FROM routes r
+WHERE r.route_code = 'R47'
+AND NOT EXISTS (
+    SELECT 1 FROM bus_stops bs WHERE bs.name = 'Megenagna Station'
+);
 
-INSERT INTO bus_stops (name, location, route_id) 
-SELECT 'Piassa Station', 'Main terminal at Piassa', id FROM routes WHERE route_code = 'R12'
-WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Piassa Station');
+INSERT INTO bus_stops (name, location, route_id)
+SELECT
+    'Bole Station',
+    'Terminal near Bole Airport',
+    r.id
+FROM routes r
+WHERE r.route_code = 'R47'
+AND NOT EXISTS (
+    SELECT 1 FROM bus_stops bs WHERE bs.name = 'Bole Station'
+);
 
--- Seed Fleet Buses
-INSERT INTO buses (plate_number, status, capacity, route_id) 
-SELECT 'AA-1001', 'ACTIVE', 60, id FROM routes WHERE route_code = 'R47'
+INSERT INTO bus_stops (name, location, route_id)
+SELECT
+    'Piassa Station',
+    'Main terminal at Piassa',
+    r.id
+FROM routes r
+WHERE r.route_code = 'R12'
+AND NOT EXISTS (
+    SELECT 1 FROM bus_stops bs WHERE bs.name = 'Piassa Station'
+);
+
+-- =========================
+-- BUSES SEED (FIXED)
+-- =========================
+
+INSERT INTO buses (plate_number, status, capacity) VALUES 
+('AA-1001', 'ACTIVE', 60),
+('AA-1002', 'ACTIVE', 50)
 ON CONFLICT (plate_number) DO NOTHING;
-
-INSERT INTO buses (plate_number, status, capacity, route_id) 
-SELECT 'AA-1002', 'ACTIVE', 50, id FROM routes WHERE route_code = 'R12'
-ON CONFLICT (plate_number) DO NOTHING;
-```
-
----
-
-### <a id="📄-src-main-resources-db-migration-v5-seed-data-sql"></a>📄 `src/main/resources/db/migration/V5__seed_data.sql`
-
-**File Info:**
-- **Size**: 1.96 KB
-- **Extension**: `.sql`
-- **Language**: `sql`
-- **Location**: `src/main/resources/db/migration/V5__seed_data.sql`
-- **Relative Path**: `src/main/resources/db/migration`
-- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `462f61df5cc6c158044523ed5e6df717`
-- **SHA256**: `357bbc6149c1f20b433190cfcbdfa5f8be9dbe7308d00178e51277131499dcd3`
-- **Encoding**: ASCII
-
-**File code content:**
-
-```sql
--- Seed some dummy users (password is 'password' encoded with BCrypt)
-INSERT INTO users (name, email, password, role) VALUES 
-('Admin User', 'admin@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'ADMIN'),
-('Operator User', 'operator@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'OPERATOR'),
-('Passenger One', 'passenger1@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'PASSENGER')
-ON CONFLICT (email) DO NOTHING;
-
--- Seed Routes
-INSERT INTO routes (route_code, description, active) VALUES 
-('R47', 'Megenagna to Bole', TRUE),
-('R12', 'Piassa to Arat Kilo', TRUE)
-ON CONFLICT (route_code) DO NOTHING;
-
--- We need to get the IDs of the routes we just inserted to insert bus stops and buses.
--- To keep it simple and idempotent, we use subqueries.
-
--- Seed Bus Stops
-INSERT INTO bus_stops (name, location_description, route_id, active) 
-SELECT 'Megenagna Station', 'Main terminal at Megenagna', id, TRUE FROM routes WHERE route_code = 'R47'
-WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Megenagna Station');
-
-INSERT INTO bus_stops (name, location_description, route_id, active) 
-SELECT 'Bole Station', 'Terminal near Bole Airport', id, TRUE FROM routes WHERE route_code = 'R47'
-WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Bole Station');
-
-INSERT INTO bus_stops (name, location_description, route_id, active) 
-SELECT 'Piassa Station', 'Main terminal at Piassa', id, TRUE FROM routes WHERE route_code = 'R12'
-WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Piassa Station');
-
--- Seed Buses
-INSERT INTO buses (plate_number, status, capacity, route_id) 
-SELECT 'AA-1001', 'ACTIVE', 60, id FROM routes WHERE route_code = 'R47'
-ON CONFLICT (plate_number) DO NOTHING;
-
-INSERT INTO buses (plate_number, status, capacity, route_id) 
-SELECT 'AA-1002', 'ACTIVE', 50, id FROM routes WHERE route_code = 'R12'
-ON CONFLICT (plate_number) DO NOTHING;
-
 ```
 
 ---
@@ -6677,15 +6642,15 @@ The following files were not included in the text content:
 
 - `target/classes/com/anbesaflow/auth/AnbesaFlowAuthApplication.class`
 
-### <a id="📄-target-classes-db-migration-v1-init-schema-sql"></a>📄 `target/classes/db/migration/V1__init_schema.sql`
+### <a id="📄-target-classes-db-migration-v1-init-users-and-queue-sql"></a>📄 `target/classes/db/migration/V1__init_users_and_queue.sql`
 
 **File Info:**
 - **Size**: 859 B
 - **Extension**: `.sql`
 - **Language**: `sql`
-- **Location**: `target/classes/db/migration/V1__init_schema.sql`
+- **Location**: `target/classes/db/migration/V1__init_users_and_queue.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 23:19:42 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 23:17:42 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `0e947ccc94287870d41c1ea9c6d5de30`
 - **SHA256**: `3fe6595f355d68ddd6500b9f0e2b3bee24f2c982e8b7f032e3e135493c7b84fe`
@@ -6724,15 +6689,15 @@ CREATE INDEX IF NOT EXISTS idx_queue_position ON queue_entries(position);
 
 ---
 
-### <a id="📄-target-classes-db-migration-v2-create-queue-entry-table-sql"></a>📄 `target/classes/db/migration/V2__create_queue_entry_table.sql`
+### <a id="📄-target-classes-db-migration-v2-create-routes-table-sql"></a>📄 `target/classes/db/migration/V2__create_routes_table.sql`
 
 **File Info:**
 - **Size**: 259 B
 - **Extension**: `.sql`
 - **Language**: `sql`
-- **Location**: `target/classes/db/migration/V2__create_queue_entry_table.sql`
+- **Location**: `target/classes/db/migration/V2__create_routes_table.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 23:20:02 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 23:18:00 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `a2c3f784bbe322884f167d8a8562567e`
 - **SHA256**: `6c258588092dffd82e5fcd442cbe201c7b1f98ec71e5a569eb898183ff1df6d8`
@@ -6752,15 +6717,15 @@ CREATE TABLE IF NOT EXISTS routes (
 
 ---
 
-### <a id="📄-target-classes-db-migration-v3-create-bus-table-sql"></a>📄 `target/classes/db/migration/V3__create_bus_table.sql`
+### <a id="📄-target-classes-db-migration-v3-create-bus-stops-and-buses-sql"></a>📄 `target/classes/db/migration/V3__create_bus_stops_and_buses.sql`
 
 **File Info:**
 - **Size**: 991 B
 - **Extension**: `.sql`
 - **Language**: `sql`
-- **Location**: `target/classes/db/migration/V3__create_bus_table.sql`
+- **Location**: `target/classes/db/migration/V3__create_bus_stops_and_buses.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 23:20:24 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 23:18:28 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `f2bf85535df9eb514ec8ba5a9982eaaf`
 - **SHA256**: `dc9a6533f32ed9f52ce3bb3e675bb64f3fad5a4455a514ad4b7495ed66b50b27`
@@ -6802,15 +6767,15 @@ CREATE INDEX IF NOT EXISTS idx_bus_plate ON buses(plate_number);
 
 ---
 
-### <a id="📄-target-classes-db-migration-v4-create-arrival-log-table-sql"></a>📄 `target/classes/db/migration/V4__create_arrival_log_table.sql`
+### <a id="📄-target-classes-db-migration-v4-create-arrival-logs-sql"></a>📄 `target/classes/db/migration/V4__create_arrival_logs.sql`
 
 **File Info:**
 - **Size**: 643 B
 - **Extension**: `.sql`
 - **Language**: `sql`
-- **Location**: `target/classes/db/migration/V4__create_arrival_log_table.sql`
+- **Location**: `target/classes/db/migration/V4__create_arrival_logs.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 23:20:41 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 23:18:52 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `79454ca0e0a6d18212aab0cb2468291c`
 - **SHA256**: `2ecbbccaa08ba531c27fc85f31efaec90a8abbdcaeb6b6d2e58ee71309ff5455`
@@ -6842,116 +6807,85 @@ CREATE INDEX IF NOT EXISTS idx_arrival_stop ON arrival_logs(bus_stop_id);
 
 ---
 
-### <a id="📄-target-classes-db-migration-v5-create-bus-stop-and-arrival-log-tables-sql"></a>📄 `target/classes/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql`
+### <a id="📄-target-classes-db-migration-v5-seed-anbesaflow-data-sql"></a>📄 `target/classes/db/migration/V5__seed_anbesaflow_data.sql`
 
 **File Info:**
-- **Size**: 1.76 KB
+- **Size**: 1.84 KB
 - **Extension**: `.sql`
 - **Language**: `sql`
-- **Location**: `target/classes/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql`
+- **Location**: `target/classes/db/migration/V5__seed_anbesaflow_data.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 23:19:16 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `5427c1b8a379da6cbfd0e2e753b1a81a`
-- **SHA256**: `ff55edc04e53c807374378c2476eff495a711367f6560122457e01d89c23fdf1`
+- **Created**: 2026-06-30 23:20:58 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 23:29:34 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `26fb64d19d824ca5aaa5734ce59c9602`
+- **SHA256**: `872b3ce34e3543ba980ddf28d922de1bfb57610700e792a60f28a01b934e97c9`
 - **Encoding**: ASCII
 
 **File code content:**
 
 ```sql
--- Seed system users (password is 'password' encoded with BCrypt)
+-- =========================
+-- USERS SEED
+-- =========================
 INSERT INTO users (name, email, password, role) VALUES 
 ('Admin User', 'admin@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'ADMIN'),
 ('Operator User', 'operator@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'OPERATOR'),
 ('Passenger One', 'passenger1@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'PASSENGER')
 ON CONFLICT (email) DO NOTHING;
 
--- Seed Routes
+-- =========================
+-- ROUTES SEED
+-- =========================
 INSERT INTO routes (route_code, description, active) VALUES 
 ('R47', 'Megenagna to Bole', TRUE),
 ('R12', 'Piassa to Arat Kilo', TRUE)
 ON CONFLICT (route_code) DO NOTHING;
 
--- Seed Bus Stops linked to matching routes
-INSERT INTO bus_stops (name, location, route_id) 
-SELECT 'Megenagna Station', 'Main terminal at Megenagna', id FROM routes WHERE route_code = 'R47'
-WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Megenagna Station');
+-- =========================
+-- BUS STOPS SEED (FIXED)
+-- =========================
 
-INSERT INTO bus_stops (name, location, route_id) 
-SELECT 'Bole Station', 'Terminal near Bole Airport', id FROM routes WHERE route_code = 'R47'
-WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Bole Station');
+INSERT INTO bus_stops (name, location, route_id)
+SELECT
+    'Megenagna Station',
+    'Main terminal at Megenagna',
+    r.id
+FROM routes r
+WHERE r.route_code = 'R47'
+AND NOT EXISTS (
+    SELECT 1 FROM bus_stops bs WHERE bs.name = 'Megenagna Station'
+);
 
-INSERT INTO bus_stops (name, location, route_id) 
-SELECT 'Piassa Station', 'Main terminal at Piassa', id FROM routes WHERE route_code = 'R12'
-WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Piassa Station');
+INSERT INTO bus_stops (name, location, route_id)
+SELECT
+    'Bole Station',
+    'Terminal near Bole Airport',
+    r.id
+FROM routes r
+WHERE r.route_code = 'R47'
+AND NOT EXISTS (
+    SELECT 1 FROM bus_stops bs WHERE bs.name = 'Bole Station'
+);
 
--- Seed Fleet Buses
-INSERT INTO buses (plate_number, status, capacity, route_id) 
-SELECT 'AA-1001', 'ACTIVE', 60, id FROM routes WHERE route_code = 'R47'
+INSERT INTO bus_stops (name, location, route_id)
+SELECT
+    'Piassa Station',
+    'Main terminal at Piassa',
+    r.id
+FROM routes r
+WHERE r.route_code = 'R12'
+AND NOT EXISTS (
+    SELECT 1 FROM bus_stops bs WHERE bs.name = 'Piassa Station'
+);
+
+-- =========================
+-- BUSES SEED (FIXED)
+-- =========================
+
+INSERT INTO buses (plate_number, status, capacity) VALUES 
+('AA-1001', 'ACTIVE', 60),
+('AA-1002', 'ACTIVE', 50)
 ON CONFLICT (plate_number) DO NOTHING;
-
-INSERT INTO buses (plate_number, status, capacity, route_id) 
-SELECT 'AA-1002', 'ACTIVE', 50, id FROM routes WHERE route_code = 'R12'
-ON CONFLICT (plate_number) DO NOTHING;
-```
-
----
-
-### <a id="📄-target-classes-db-migration-v5-seed-data-sql"></a>📄 `target/classes/db/migration/V5__seed_data.sql`
-
-**File Info:**
-- **Size**: 1.96 KB
-- **Extension**: `.sql`
-- **Language**: `sql`
-- **Location**: `target/classes/db/migration/V5__seed_data.sql`
-- **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `462f61df5cc6c158044523ed5e6df717`
-- **SHA256**: `357bbc6149c1f20b433190cfcbdfa5f8be9dbe7308d00178e51277131499dcd3`
-- **Encoding**: ASCII
-
-**File code content:**
-
-```sql
--- Seed some dummy users (password is 'password' encoded with BCrypt)
-INSERT INTO users (name, email, password, role) VALUES 
-('Admin User', 'admin@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'ADMIN'),
-('Operator User', 'operator@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'OPERATOR'),
-('Passenger One', 'passenger1@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'PASSENGER')
-ON CONFLICT (email) DO NOTHING;
-
--- Seed Routes
-INSERT INTO routes (route_code, description, active) VALUES 
-('R47', 'Megenagna to Bole', TRUE),
-('R12', 'Piassa to Arat Kilo', TRUE)
-ON CONFLICT (route_code) DO NOTHING;
-
--- We need to get the IDs of the routes we just inserted to insert bus stops and buses.
--- To keep it simple and idempotent, we use subqueries.
-
--- Seed Bus Stops
-INSERT INTO bus_stops (name, location_description, route_id, active) 
-SELECT 'Megenagna Station', 'Main terminal at Megenagna', id, TRUE FROM routes WHERE route_code = 'R47'
-WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Megenagna Station');
-
-INSERT INTO bus_stops (name, location_description, route_id, active) 
-SELECT 'Bole Station', 'Terminal near Bole Airport', id, TRUE FROM routes WHERE route_code = 'R47'
-WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Bole Station');
-
-INSERT INTO bus_stops (name, location_description, route_id, active) 
-SELECT 'Piassa Station', 'Main terminal at Piassa', id, TRUE FROM routes WHERE route_code = 'R12'
-WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Piassa Station');
-
--- Seed Buses
-INSERT INTO buses (plate_number, status, capacity, route_id) 
-SELECT 'AA-1001', 'ACTIVE', 60, id FROM routes WHERE route_code = 'R47'
-ON CONFLICT (plate_number) DO NOTHING;
-
-INSERT INTO buses (plate_number, status, capacity, route_id) 
-SELECT 'AA-1002', 'ACTIVE', 50, id FROM routes WHERE route_code = 'R12'
-ON CONFLICT (plate_number) DO NOTHING;
-
 ```
 
 ---
