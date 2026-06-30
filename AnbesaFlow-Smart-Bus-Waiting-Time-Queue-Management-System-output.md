@@ -3,8 +3,8 @@
 ## 📊 Project Information
 
 - **Project Name**: `AnbesaFlow-Smart-Bus-Waiting-Time-Queue-Management-System`
-- **Generated On**: 2026-06-30 17:47:29 (Africa/Nairobi / GMT+03:00)
-- **Total Files Processed**: 134
+- **Generated On**: 2026-06-30 17:53:26 (Africa/Nairobi / GMT+03:00)
+- **Total Files Processed**: 138
 - **Export Tool**: Easy Whole Project to Single Text File for LLMs v1.1.0
 - **Tool Author**: Jota / José Guilherme Pandolfi
 
@@ -34,20 +34,20 @@
 │   │   │               │   ├── 📄 QueueController.java (2.15 KB)
 │   │   │               │   └── 📄 UserController.java (1.04 KB)
 │   │   │               ├── 📁 dto/
-│   │   │               │   ├── 📄 ArrivalLogRequest.java (79 B)
-│   │   │               │   ├── 📄 ArrivalLogResponse.java (80 B)
+│   │   │               │   ├── 📄 ArrivalLogRequest.java (266 B)
+│   │   │               │   ├── 📄 ArrivalLogResponse.java (345 B)
 │   │   │               │   ├── 📄 AuthResponse.java (845 B)
-│   │   │               │   ├── 📄 BusRequest.java (72 B)
-│   │   │               │   ├── 📄 BusResponse.java (73 B)
-│   │   │               │   ├── 📄 BusStopRequest.java (76 B)
-│   │   │               │   ├── 📄 BusStopResponse.java (77 B)
+│   │   │               │   ├── 📄 BusRequest.java (213 B)
+│   │   │               │   ├── 📄 BusResponse.java (206 B)
+│   │   │               │   ├── 📄 BusStopRequest.java (223 B)
+│   │   │               │   ├── 📄 BusStopResponse.java (248 B)
 │   │   │               │   ├── 📄 ErrorResponse.java (1.38 KB)
 │   │   │               │   ├── 📄 JoinQueueRequest.java (401 B)
 │   │   │               │   ├── 📄 LoginRequest.java (651 B)
 │   │   │               │   ├── 📄 QueueStatusResponse.java (783 B)
 │   │   │               │   ├── 📄 RegisterRequest.java (1.08 KB)
-│   │   │               │   ├── 📄 RouteRequest.java (74 B)
-│   │   │               │   ├── 📄 RouteResponse.java (75 B)
+│   │   │               │   ├── 📄 RouteRequest.java (267 B)
+│   │   │               │   ├── 📄 RouteResponse.java (292 B)
 │   │   │               │   ├── 📄 UserResponse.java (1.26 KB)
 │   │   │               │   └── 📄 WaitingTimeResponse.java (354 B)
 │   │   │               ├── 📁 entity/
@@ -111,20 +111,24 @@
 │   │   │           │   ├── 📄 QueueController.class (2.96 KB)
 │   │   │           │   └── 📄 UserController.class (2.01 KB)
 │   │   │           ├── 📁 dto/
-│   │   │           │   ├── 📄 ArrivalLogRequest.class (324 B)
-│   │   │           │   ├── 📄 ArrivalLogResponse.class (327 B)
+│   │   │           │   ├── 📄 ArrivalLogRequest.class (1.19 KB)
+│   │   │           │   ├── 📄 ArrivalLogResponse.class (1.59 KB)
+│   │   │           │   ├── 📄 ArrivalLogResponse$ArrivalLogResponseBuilder.class (2.64 KB)
 │   │   │           │   ├── 📄 AuthResponse.class (1.31 KB)
-│   │   │           │   ├── 📄 BusRequest.class (303 B)
-│   │   │           │   ├── 📄 BusResponse.class (306 B)
-│   │   │           │   ├── 📄 BusStopRequest.class (315 B)
-│   │   │           │   ├── 📄 BusStopResponse.class (318 B)
+│   │   │           │   ├── 📄 BusRequest.class (1.16 KB)
+│   │   │           │   ├── 📄 BusResponse.class (1.38 KB)
+│   │   │           │   ├── 📄 BusResponse$BusResponseBuilder.class (2.33 KB)
+│   │   │           │   ├── 📄 BusStopRequest.class (1.16 KB)
+│   │   │           │   ├── 📄 BusStopResponse.class (1.4 KB)
+│   │   │           │   ├── 📄 BusStopResponse$BusStopResponseBuilder.class (2.38 KB)
 │   │   │           │   ├── 📄 ErrorResponse.class (1.76 KB)
 │   │   │           │   ├── 📄 JoinQueueRequest.class (787 B)
 │   │   │           │   ├── 📄 LoginRequest.class (961 B)
 │   │   │           │   ├── 📄 QueueStatusResponse.class (1.01 KB)
 │   │   │           │   ├── 📄 RegisterRequest.class (1.53 KB)
-│   │   │           │   ├── 📄 RouteRequest.class (309 B)
-│   │   │           │   ├── 📄 RouteResponse.class (312 B)
+│   │   │           │   ├── 📄 RouteRequest.class (1.42 KB)
+│   │   │           │   ├── 📄 RouteResponse.class (1.56 KB)
+│   │   │           │   ├── 📄 RouteResponse$RouteResponseBuilder.class (2.57 KB)
 │   │   │           │   ├── 📄 UserResponse.class (1.9 KB)
 │   │   │           │   └── 📄 WaitingTimeResponse.class (585 B)
 │   │   │           ├── 📁 entity/
@@ -281,17 +285,17 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Files | 134 |
+| Total Files | 138 |
 | Total Directories | 44 |
 | Text Files | 70 |
-| Binary Files | 64 |
-| Total Size | 49.56 MB |
+| Binary Files | 68 |
+| Total Size | 49.58 MB |
 
 ### 📄 File Types Distribution
 
 | Extension | Count |
 |-----------|-------|
-| `.class` | 58 |
+| `.class` | 62 |
 | `.java` | 54 |
 | `.sql` | 10 |
 | `.lst` | 4 |
@@ -719,15 +723,15 @@ public class UserController {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-dto-arrivallogrequest-java"></a>📄 `src/main/java/com/anbesaflow/auth/dto/ArrivalLogRequest.java`
 
 **File Info:**
-- **Size**: 79 B
+- **Size**: 266 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/ArrivalLogRequest.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
 - **Created**: 2026-06-30 16:01:02 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:01:04 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `8daad39a4bd27c44e87cadff5ff3ef47`
-- **SHA256**: `4675656f162f12631f71fd9dbeb2e3ad5f0ea5dd8523a3fa58dd9646b981382b`
+- **Modified**: 2026-06-30 17:52:53 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `2c0045d4a23751553d599f23e3dd6d83`
+- **SHA256**: `05225dca36f011ae6b24436eeb1e30098c5824d2c3d49955a8907fdcd78a9a46`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -735,8 +739,16 @@ public class UserController {
 ```java
 package com.anbesaflow.auth.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+import java.time.LocalDateTime;
+
+@Getter
+@Setter
 public class ArrivalLogRequest {
-    
+    private Long busId;
+    private Long busStopId;
+    private LocalDateTime arrivalTime;
 }
 
 ```
@@ -746,15 +758,15 @@ public class ArrivalLogRequest {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-dto-arrivallogresponse-java"></a>📄 `src/main/java/com/anbesaflow/auth/dto/ArrivalLogResponse.java`
 
 **File Info:**
-- **Size**: 80 B
+- **Size**: 345 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/ArrivalLogResponse.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
 - **Created**: 2026-06-30 16:01:14 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:01:16 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `7cbb7798f6aefa8da1171f394de61971`
-- **SHA256**: `4d8f0a7919abcb116fedbc5c04c702e756de3fa8b2f2711bd33df3e6c369a2ed`
+- **Modified**: 2026-06-30 17:53:25 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `89a0cfe7ad239e5093a40c5aca70e110`
+- **SHA256**: `3669404c4bb621de53e5620a6012445b9f9329f37e3b0a0d2e284e79a0bdd571`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -762,8 +774,18 @@ public class ArrivalLogRequest {
 ```java
 package com.anbesaflow.auth.dto;
 
+import lombok.Builder;
+import lombok.Getter;
+import java.time.LocalDateTime;
+
+@Getter
+@Builder
 public class ArrivalLogResponse {
-    
+    private Long id;
+    private Long busId;
+    private Long busStopId;
+    private LocalDateTime arrivalTime;
+    private String status; // e.g., DELAYED, ON_TIME
 }
 
 ```
@@ -837,26 +859,34 @@ public class AuthResponse {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-dto-busrequest-java"></a>📄 `src/main/java/com/anbesaflow/auth/dto/BusRequest.java`
 
 **File Info:**
-- **Size**: 72 B
+- **Size**: 213 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/BusRequest.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
 - **Created**: 2026-06-30 15:59:33 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 15:59:35 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `d493ced4af40db2b93922aebece34167`
-- **SHA256**: `a07208a82f365715a56cd04a97ff6a985b1f1cc2a0ad441535c94e15c2fa93dc`
+- **Modified**: 2026-06-30 17:50:16 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `f0cf62988a8f7423a511c6adf2397c67`
+- **SHA256**: `d91f70e9bded16ab1f2a4a382e1d5668b51541a4b93fd623139f3be7a04bdf65`
 - **Encoding**: ASCII
 
 **File code content:**
 
 ```java
 package com.anbesaflow.auth.dto;
+import lombok.Getter;
+import lombok.Setter;
+@Getter
+@Setter
+public class BusRequest{
 
-public class BusRequest {
-    
+private String plateNumber;
+
+private Integer capacity;
+
+private String status;
+
 }
-
 ```
 
 ---
@@ -864,24 +894,35 @@ public class BusRequest {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-dto-busresponse-java"></a>📄 `src/main/java/com/anbesaflow/auth/dto/BusResponse.java`
 
 **File Info:**
-- **Size**: 73 B
+- **Size**: 206 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/BusResponse.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
 - **Created**: 2026-06-30 15:59:44 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 15:59:46 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `b89ef964a8e952f08d8ff76cf1844fff`
-- **SHA256**: `ee943008d6ba57b17935f19e282e24fd1fee33ddd7bb5ba8666519a95b536189`
+- **Modified**: 2026-06-30 17:50:41 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `8a1f6c71f5713b6aebaaf3ab2610d3d1`
+- **SHA256**: `b7b939934f8e12986353103249023cbe7af959346a4c2cba322622f37df2f22b`
 - **Encoding**: ASCII
 
 **File code content:**
 
 ```java
 package com.anbesaflow.auth.dto;
+import lombok.Builder;
+import lombok.Getter;
+@Getter
+@Builder
+public class BusResponse{
 
-public class BusResponse {
-    
+Long id;
+
+String plateNumber;
+
+Integer capacity;
+
+String status;
+
 }
 
 ```
@@ -891,15 +932,15 @@ public class BusResponse {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-dto-busstoprequest-java"></a>📄 `src/main/java/com/anbesaflow/auth/dto/BusStopRequest.java`
 
 **File Info:**
-- **Size**: 76 B
+- **Size**: 223 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/BusStopRequest.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
 - **Created**: 2026-06-30 16:00:14 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:00:16 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `07386fa1972dec02dfad805f6b80873b`
-- **SHA256**: `09a7fad1d7562669560e657b939edb186f7d7e638838f0a30e16503e61eb905e`
+- **Modified**: 2026-06-30 17:52:13 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `de706f315dfb1a489b7aa74ddd67073b`
+- **SHA256**: `9d5caf0f34a80606bc8affe5dca6063433ebe2afcb6481ecdf199e5cb43325c0`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -907,8 +948,15 @@ public class BusResponse {
 ```java
 package com.anbesaflow.auth.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class BusStopRequest {
-    
+    private String name;
+    private Double latitude;
+    private Double longitude;
 }
 
 ```
@@ -918,15 +966,15 @@ public class BusStopRequest {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-dto-busstopresponse-java"></a>📄 `src/main/java/com/anbesaflow/auth/dto/BusStopResponse.java`
 
 **File Info:**
-- **Size**: 77 B
+- **Size**: 248 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/BusStopResponse.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
 - **Created**: 2026-06-30 16:00:40 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:00:43 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `25540aae60258180baf96072999bd49a`
-- **SHA256**: `dd34033131296b20fccaa95e44b96f565f416330ca7dde420e68651542d60915`
+- **Modified**: 2026-06-30 17:52:22 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `cd006e20886675b3f6a8f10c6d3fee18`
+- **SHA256**: `d6774f9e2c09fe7c433174b5bcf2a9fbe3acb5029c3bdbedd7699a99b24202e7`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -934,8 +982,16 @@ public class BusStopRequest {
 ```java
 package com.anbesaflow.auth.dto;
 
+import lombok.Builder;
+import lombok.Getter;
+
+@Getter
+@Builder
 public class BusStopResponse {
-    
+    private Long id;
+    private String name;
+    private Double latitude;
+    private Double longitude;
 }
 
 ```
@@ -1261,15 +1317,15 @@ public class RegisterRequest {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-dto-routerequest-java"></a>📄 `src/main/java/com/anbesaflow/auth/dto/RouteRequest.java`
 
 **File Info:**
-- **Size**: 74 B
+- **Size**: 267 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/RouteRequest.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
 - **Created**: 2026-06-30 15:59:55 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 15:59:57 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `87314983d85b87d6445f92d747023490`
-- **SHA256**: `b616c810c884f3caeb3ef4cd335d05176c1de2c1dd1593fa3be8c84dd2f7e1c0`
+- **Modified**: 2026-06-30 17:51:44 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `2e74dc863399ed959a8901117536b29a`
+- **SHA256**: `24322a946d147c46dc42578432d7df2fb86c5f4b067132459be30fc9fcbc2632`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -1277,8 +1333,16 @@ public class RegisterRequest {
 ```java
 package com.anbesaflow.auth.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class RouteRequest {
-    
+    private String routeNumber;
+    private String startLocation;
+    private String endLocation;
+    private Double distanceKm;
 }
 
 ```
@@ -1288,15 +1352,15 @@ public class RouteRequest {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-dto-routeresponse-java"></a>📄 `src/main/java/com/anbesaflow/auth/dto/RouteResponse.java`
 
 **File Info:**
-- **Size**: 75 B
+- **Size**: 292 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/RouteResponse.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
 - **Created**: 2026-06-30 16:00:04 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:00:06 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `4239a217b50882e99b2c162e92ba5722`
-- **SHA256**: `1bc4d0ca011d114b98abe5439bc7181576ed7967ca9afa3966a4629d13e88dd4`
+- **Modified**: 2026-06-30 17:51:56 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `baa73e8152b6bf58e3810f01b4109c8e`
+- **SHA256**: `122e73fbd8ea61f352ae82e51965f904380a2d21aba0b3391dc9de57bf87b201`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -1304,8 +1368,17 @@ public class RouteRequest {
 ```java
 package com.anbesaflow.auth.dto;
 
+import lombok.Builder;
+import lombok.Getter;
+
+@Getter
+@Builder
 public class RouteResponse {
-    
+    private Long id;
+    private String routeNumber;
+    private String startLocation;
+    private String endLocation;
+    private Double distanceKm;
 }
 
 ```
@@ -3709,11 +3782,14 @@ The following files were not included in the text content:
 
 - `target/classes/com/anbesaflow/auth/dto/ArrivalLogRequest.class`
 - `target/classes/com/anbesaflow/auth/dto/ArrivalLogResponse.class`
+- `target/classes/com/anbesaflow/auth/dto/ArrivalLogResponse$ArrivalLogResponseBuilder.class`
 - `target/classes/com/anbesaflow/auth/dto/AuthResponse.class`
 - `target/classes/com/anbesaflow/auth/dto/BusRequest.class`
 - `target/classes/com/anbesaflow/auth/dto/BusResponse.class`
+- `target/classes/com/anbesaflow/auth/dto/BusResponse$BusResponseBuilder.class`
 - `target/classes/com/anbesaflow/auth/dto/BusStopRequest.class`
 - `target/classes/com/anbesaflow/auth/dto/BusStopResponse.class`
+- `target/classes/com/anbesaflow/auth/dto/BusStopResponse$BusStopResponseBuilder.class`
 - `target/classes/com/anbesaflow/auth/dto/ErrorResponse.class`
 - `target/classes/com/anbesaflow/auth/dto/JoinQueueRequest.class`
 - `target/classes/com/anbesaflow/auth/dto/LoginRequest.class`
@@ -3721,6 +3797,7 @@ The following files were not included in the text content:
 - `target/classes/com/anbesaflow/auth/dto/RegisterRequest.class`
 - `target/classes/com/anbesaflow/auth/dto/RouteRequest.class`
 - `target/classes/com/anbesaflow/auth/dto/RouteResponse.class`
+- `target/classes/com/anbesaflow/auth/dto/RouteResponse$RouteResponseBuilder.class`
 - `target/classes/com/anbesaflow/auth/dto/UserResponse.class`
 - `target/classes/com/anbesaflow/auth/dto/WaitingTimeResponse.class`
 
