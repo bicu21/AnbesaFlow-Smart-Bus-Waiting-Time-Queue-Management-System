@@ -3,7 +3,7 @@
 ## 📊 Project Information
 
 - **Project Name**: `AnbesaFlow-Smart-Bus-Waiting-Time-Queue-Management-System`
-- **Generated On**: 2026-06-30 16:42:16 (Africa/Nairobi / GMT+03:00)
+- **Generated On**: 2026-06-30 17:47:29 (Africa/Nairobi / GMT+03:00)
 - **Total Files Processed**: 134
 - **Export Tool**: Easy Whole Project to Single Text File for LLMs v1.1.0
 - **Tool Author**: Jota / José Guilherme Pandolfi
@@ -64,11 +64,11 @@
 │   │   │               │   ├── 📄 ResourceNotFoundException.java (352 B)
 │   │   │               │   └── 📄 UserAlreadyExistsException.java (353 B)
 │   │   │               ├── 📁 repository/
-│   │   │               │   ├── 📄 ArrivalLogRepository.java (89 B)
-│   │   │               │   ├── 📄 BusRepository.java (82 B)
-│   │   │               │   ├── 📄 BusStopRepository.java (86 B)
+│   │   │               │   ├── 📄 ArrivalLogRepository.java (376 B)
+│   │   │               │   ├── 📄 BusRepository.java (399 B)
+│   │   │               │   ├── 📄 BusStopRepository.java (424 B)
 │   │   │               │   ├── 📄 QueueEntryRepository.java (685 B)
-│   │   │               │   ├── 📄 RouteRepository.java (84 B)
+│   │   │               │   ├── 📄 RouteRepository.java (373 B)
 │   │   │               │   └── 📄 UserRepository.java (408 B)
 │   │   │               ├── 📁 security/
 │   │   │               │   ├── 📄 CustomUserDetails.java (2.36 KB)
@@ -145,11 +145,11 @@
 │   │   │           │   ├── 📄 ResourceNotFoundException.class (630 B)
 │   │   │           │   └── 📄 UserAlreadyExistsException.class (632 B)
 │   │   │           ├── 📁 repository/
-│   │   │           │   ├── 📄 ArrivalLogRepository.class (347 B)
-│   │   │           │   ├── 📄 BusRepository.class (326 B)
-│   │   │           │   ├── 📄 BusStopRepository.class (338 B)
+│   │   │           │   ├── 📄 ArrivalLogRepository.class (641 B)
+│   │   │           │   ├── 📄 BusRepository.class (692 B)
+│   │   │           │   ├── 📄 BusStopRepository.class (645 B)
 │   │   │           │   ├── 📄 QueueEntryRepository.class (1.13 KB)
-│   │   │           │   ├── 📄 RouteRepository.class (332 B)
+│   │   │           │   ├── 📄 RouteRepository.class (637 B)
 │   │   │           │   └── 📄 UserRepository.class (682 B)
 │   │   │           ├── 📁 security/
 │   │   │           │   ├── 📄 CustomUserDetails.class (3.39 KB)
@@ -2095,26 +2095,35 @@ public class UserAlreadyExistsException extends RuntimeException {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-repository-arrivallogrepository-java"></a>📄 `src/main/java/com/anbesaflow/auth/repository/ArrivalLogRepository.java`
 
 **File Info:**
-- **Size**: 89 B
+- **Size**: 376 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/repository/ArrivalLogRepository.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/repository`
 - **Created**: 2026-06-30 15:58:25 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 15:58:27 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `c2dc0942d5f1cfa96a18b3a22d8e2ceb`
-- **SHA256**: `eab52f149a549b04de8e2e8f3c82d238dc93e9b7241ba58296e0929c2df90ea9`
+- **Modified**: 2026-06-30 17:47:28 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `1f7fa4555ef43685fce3f86e4ee622cc`
+- **SHA256**: `c8256c77be82fbbefea85e373a926d185c581e657621cf4f49f40fdf93c84ace`
 - **Encoding**: ASCII
 
 **File code content:**
 
 ```java
 package com.anbesaflow.auth.repository;
+import com.anbesaflow.auth.entity.ArrivalLog;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import java.util.List;
+@Repository
+public interface ArrivalLogRepository
+extends JpaRepository<ArrivalLog,Long>{
 
-public class ArrivalLogRepository {
-    
+List<ArrivalLog>
+findByStatus(
+String status
+);
+
 }
-
 ```
 
 ---
@@ -2122,26 +2131,36 @@ public class ArrivalLogRepository {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-repository-busrepository-java"></a>📄 `src/main/java/com/anbesaflow/auth/repository/BusRepository.java`
 
 **File Info:**
-- **Size**: 82 B
+- **Size**: 399 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/repository/BusRepository.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/repository`
 - **Created**: 2026-06-30 15:57:46 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 15:57:48 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `a93e15774cf840258bccc40034a1a9d1`
-- **SHA256**: `343e4db908fc8835187cabc0c89d69e410b5ad08a36bd9095123e7991e6f013b`
+- **Modified**: 2026-06-30 17:45:37 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `0abbf6f9da89623ab4378bbdce84bca0`
+- **SHA256**: `416a65e207d50b181bbb6fcf24cae7c654f86975445c76566ef8f669feed155b`
 - **Encoding**: ASCII
 
 **File code content:**
 
 ```java
 package com.anbesaflow.auth.repository;
+import com.anbesaflow.auth.entity.Bus;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
 
-public class BusRepository {
-    
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface BusRepository
+extends JpaRepository<Bus,Long>{
+
+List<Bus> findByStatus(String status);
+
+boolean existsByPlateNumber(String plateNumber);
+
 }
-
 ```
 
 ---
@@ -2149,26 +2168,37 @@ public class BusRepository {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-repository-busstoprepository-java"></a>📄 `src/main/java/com/anbesaflow/auth/repository/BusStopRepository.java`
 
 **File Info:**
-- **Size**: 86 B
+- **Size**: 424 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/repository/BusStopRepository.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/repository`
 - **Created**: 2026-06-30 15:58:10 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 15:58:12 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `160f0baf22160bd54a8bb16efdf167be`
-- **SHA256**: `2cbf46132034ab8860779ece13e09857c6961f5c2440c42af58d93d53a5219e1`
+- **Modified**: 2026-06-30 17:46:57 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `3676047b8274b06ef779b02a1136d6d9`
+- **SHA256**: `1333c392c3e3bbf6bdb37ee2b44a3bb75a292144916dcaefa7824971418ad35f`
 - **Encoding**: ASCII
 
 **File code content:**
 
 ```java
 package com.anbesaflow.auth.repository;
+import com.anbesaflow.auth.entity.Route;
+import com.anbesaflow.auth.entity.BusStop;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import java.util.List;
 
-public class BusStopRepository {
-    
+@Repository
+public interface BusStopRepository
+extends JpaRepository<BusStop,Long>{
+
+List<BusStop>
+findByNameContainingIgnoreCase(
+String name
+);
+
 }
-
 ```
 
 ---
@@ -2221,26 +2251,35 @@ public interface QueueEntryRepository extends JpaRepository<QueueEntry, Long> {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-repository-routerepository-java"></a>📄 `src/main/java/com/anbesaflow/auth/repository/RouteRepository.java`
 
 **File Info:**
-- **Size**: 84 B
+- **Size**: 373 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/repository/RouteRepository.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/repository`
 - **Created**: 2026-06-30 15:57:58 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 15:58:00 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `cce407c0a4196531f265055f0cfcf853`
-- **SHA256**: `0adef5aedebb94fc4c44022b7f6d90e7277a38bbb53405ed6d974419ad108394`
+- **Modified**: 2026-06-30 17:45:48 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `2b962d95342a5ec0e016cfdb4e36542b`
+- **SHA256**: `44d81e6c9f58e5f35f2e097ac9c150f214a8639979140bc83a188cf423dd1807`
 - **Encoding**: ASCII
 
 **File code content:**
 
 ```java
 package com.anbesaflow.auth.repository;
+import com.anbesaflow.auth.entity.Route;
+import java.util.List;
 
-public class RouteRepository {
-    
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+@Repository
+public interface RouteRepository
+extends JpaRepository<Route,Long>{
+
+List<Route> findByNameContainingIgnoreCase(
+String name
+);
+
 }
-
 ```
 
 ---
@@ -3759,7 +3798,7 @@ The following files were not included in the text content:
 - **Language**: `sql`
 - **Location**: `target/classes/db/migration/V1__init_schema.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 16:40:13 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 16:48:06 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `47babe6a83cb9430d2757b5c900cedde`
 - **SHA256**: `fd2b61e463f3a6772a8ba7349fe5ab74b5444f913a489cd9111352eb1b8e2089`
@@ -3792,7 +3831,7 @@ CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
 - **Language**: `sql`
 - **Location**: `target/classes/db/migration/V2__create_queue_entry_table.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 16:40:13 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 16:48:06 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 14:19:21 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `0bf34dc2776d1e38f88d07e6e6a045ae`
 - **SHA256**: `471243f8d03f1a9a240ff65946b210d4e2e08b2bbe2ca6f85ef9211eb2878373`
@@ -3836,7 +3875,7 @@ ON queue_entries(position);
 - **Language**: `sql`
 - **Location**: `target/classes/db/migration/V3__create_bus_table.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 16:40:13 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 16:48:06 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 16:31:15 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `abacdbba3a2a6a0410018680967f9027`
 - **SHA256**: `a15e0c4aaf3ed5a3e413ea8c5a6b0afbba0e0da8552ffb285c49ea9f79f7a974`
@@ -3876,7 +3915,7 @@ ON buses(plate_number);
 - **Language**: `sql`
 - **Location**: `target/classes/db/migration/V4__create_route_table.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 16:40:13 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 16:48:07 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 16:31:27 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `2724843474bcfc47dc4abd260d0d6821`
 - **SHA256**: `95c1a3d2a56d50003ea96fc9ff422f9ffb73e18d49395189e2766d0bdcdf3ed9`
@@ -3912,7 +3951,7 @@ ON routes(name);
 - **Language**: `sql`
 - **Location**: `target/classes/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 16:40:13 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 16:48:07 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 16:31:36 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `c039b9442688c99fce2d07835bba33b6`
 - **SHA256**: `df6eae64247a31b1699ae1c30a1d928fd5712cdc515628e6fc85e7bb6c322939`
@@ -3975,7 +4014,7 @@ ON arrival_logs(bus_stop_id);
 - **Location**: `target/classes/application.yml`
 - **Relative Path**: `target/classes`
 - **Created**: 2026-06-30 16:40:13 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:40:13 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 16:48:06 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `1cadd546df5716b7f78628dcc3bb7080`
 - **SHA256**: `28e38a1b9503ba6186c132f2bebdab11366a1f88186525f55920620c31e79172`
 - **Encoding**: ASCII
