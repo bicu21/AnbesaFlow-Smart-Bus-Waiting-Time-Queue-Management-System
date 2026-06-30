@@ -1,17 +1,23 @@
 package com.anbesaflow.auth.security;
 
-import io.jsonwebtoken.*;
-import io.jsonwebtoken.security.Keys;
+import java.security.Key;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
-import java.security.Key;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.MalformedJwtException;
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.UnsupportedJwtException;
+import io.jsonwebtoken.security.Keys;
 
 @Component
 public class JwtTokenProvider {
@@ -29,7 +35,7 @@ public class JwtTokenProvider {
         if (jwtSecret.length() >= 64) {
             // Hex string convert to bytes
             try {
-                keyBytes = javax.xml.bind.DatatypeConverter.parseHexBinary(jwtSecret);
+                keyBytes = java.util.HexFormat.of().parseHex(jwtSecret);
             } catch (Exception e) {
                 // Fallback to raw bytes
                 keyBytes = jwtSecret.getBytes();

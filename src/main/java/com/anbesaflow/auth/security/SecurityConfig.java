@@ -53,7 +53,10 @@ public class SecurityConfig {
                         // Permit public authentication endpoints
                         .requestMatchers("/auth/register", "/auth/login").permitAll()
                         // Any other request must be authenticated
-                        .anyRequest().authenticated()
+                        .requestMatchers("/queue/**")
+                        .hasRole("PASSENGER")
+                        .anyRequest()
+                        .authenticated()
                 )
                 // Add JWT filter before standard Spring Security UsernamePasswordAuthenticationFilter
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);

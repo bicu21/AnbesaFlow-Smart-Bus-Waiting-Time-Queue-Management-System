@@ -1,6 +1,7 @@
 package com.anbesaflow.auth.exception;
 
-import com.anbesaflow.auth.dto.ErrorResponse;
+import java.util.stream.Collectors;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 
-import java.util.stream.Collectors;
+import com.anbesaflow.auth.dto.ErrorResponse;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
@@ -84,4 +85,14 @@ public class GlobalExceptionHandler {
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+    @ExceptionHandler(QueueNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleQueue(
+        QueueNotFoundException ex){
+            return ResponseEntity.status(404)
+                        .body(new ErrorResponse(
+                    404,
+                    ex.getMessage(), null, null
+            ));
+    }
+    
 }
