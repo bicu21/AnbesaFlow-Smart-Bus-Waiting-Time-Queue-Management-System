@@ -36,7 +36,9 @@ public class Bus {
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
     }
-
+    @ManyToOne(fetch = FetchType.LAZY)
+@JoinColumn(name = "route_id", nullable = false)
+private Route route;
     // Explicit Getters and Setters to resolve any Lombok/IDE compilation issues
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
@@ -52,4 +54,11 @@ public class Bus {
 
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+    public Route getRoute() {
+    return route;
+}
+
+public void setRoute(Route route) {
+    this.route = route;
+}
 }

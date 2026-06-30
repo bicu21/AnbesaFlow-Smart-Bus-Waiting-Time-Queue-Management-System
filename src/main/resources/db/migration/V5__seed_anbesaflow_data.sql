@@ -55,8 +55,29 @@ AND NOT EXISTS (
 -- =========================
 -- BUSES SEED (FIXED)
 -- =========================
+-- =========================
+-- BUSES SEED
+-- =========================
+INSERT INTO buses (plate_number, status, capacity, route_id)
+SELECT
+    'AA-1001',
+    'ACTIVE',
+    60,
+    r.id
+FROM routes r
+WHERE r.route_code = 'R47'
+AND NOT EXISTS (
+    SELECT 1 FROM buses b WHERE b.plate_number = 'AA-1001'
+);
 
-INSERT INTO buses (plate_number, status, capacity) VALUES 
-('AA-1001', 'ACTIVE', 60),
-('AA-1002', 'ACTIVE', 50)
-ON CONFLICT (plate_number) DO NOTHING;
+INSERT INTO buses (plate_number, status, capacity, route_id)
+SELECT
+    'AA-1002',
+    'ACTIVE',
+    50,
+    r.id
+FROM routes r
+WHERE r.route_code = 'R12'
+AND NOT EXISTS (
+    SELECT 1 FROM buses b WHERE b.plate_number = 'AA-1002'
+);

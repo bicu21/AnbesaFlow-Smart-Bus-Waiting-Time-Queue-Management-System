@@ -3,7 +3,7 @@
 ## 📊 Project Information
 
 - **Project Name**: `AnbesaFlow-Smart-Bus-Waiting-Time-Queue-Management-System`
-- **Generated On**: 2026-06-30 23:29:35 (Africa/Nairobi / GMT+03:00)
+- **Generated On**: 2026-06-30 23:44:28 (Africa/Nairobi / GMT+03:00)
 - **Total Files Processed**: 161
 - **Export Tool**: Easy Whole Project to Single Text File for LLMs v1.1.0
 - **Tool Author**: Jota / José Guilherme Pandolfi
@@ -58,7 +58,7 @@
 │   │   │               │   └── 📄 WaitingTimeResponse.java (354 B)
 │   │   │               ├── 📁 entity/
 │   │   │               │   ├── 📄 ArrivalLog.java (857 B)
-│   │   │               │   ├── 📄 Bus.java (1.68 KB)
+│   │   │               │   ├── 📄 Bus.java (1.91 KB)
 │   │   │               │   ├── 📄 BusStop.java (1.6 KB)
 │   │   │               │   ├── 📄 QueueEntry.java (1.68 KB)
 │   │   │               │   ├── 📄 Role.java (104 B)
@@ -100,7 +100,7 @@
 │   │       │       ├── 📄 V2__create_routes_table.sql (259 B)
 │   │       │       ├── 📄 V3__create_bus_stops_and_buses.sql (991 B)
 │   │       │       ├── 📄 V4__create_arrival_logs.sql (643 B)
-│   │       │       └── 📄 V5__seed_anbesaflow_data.sql (1.84 KB)
+│   │       │       └── 📄 V5__seed_anbesaflow_data.sql (2.24 KB)
 │   │       ├── 📁 static/
 │   │       │   ├── 📁 css/
 │   │       │   │   ├── 📄 auth.css (4.47 KB)
@@ -159,7 +159,7 @@
 │   │   │           ├── 📁 entity/
 │   │   │           │   ├── 📄 ArrivalLog.class (3.37 KB)
 │   │   │           │   ├── 📄 ArrivalLog$ArrivalLogBuilder.class (3.03 KB)
-│   │   │           │   ├── 📄 Bus.class (2.43 KB)
+│   │   │           │   ├── 📄 Bus.class (2.89 KB)
 │   │   │           │   ├── 📄 BusStop.class (2.57 KB)
 │   │   │           │   ├── 📄 QueueEntry.class (2.51 KB)
 │   │   │           │   ├── 📄 Role.class (1.14 KB)
@@ -200,7 +200,7 @@
 │   │   │       ├── 📄 V2__create_routes_table.sql (259 B)
 │   │   │       ├── 📄 V3__create_bus_stops_and_buses.sql (991 B)
 │   │   │       ├── 📄 V4__create_arrival_logs.sql (643 B)
-│   │   │       └── 📄 V5__seed_anbesaflow_data.sql (1.84 KB)
+│   │   │       └── 📄 V5__seed_anbesaflow_data.sql (2.24 KB)
 │   │   ├── 📁 static/
 │   │   │   ├── 📁 css/
 │   │   │   │   ├── 📄 auth.css (4.47 KB)
@@ -341,7 +341,7 @@
 | Total Directories | 52 |
 | Text Files | 91 |
 | Binary Files | 70 |
-| Total Size | 51.74 MB |
+| Total Size | 51.75 MB |
 
 ### 📄 File Types Distribution
 
@@ -2017,15 +2017,15 @@ public class ArrivalLog {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-entity-bus-java"></a>📄 `src/main/java/com/anbesaflow/auth/entity/Bus.java`
 
 **File Info:**
-- **Size**: 1.68 KB
+- **Size**: 1.91 KB
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/entity/Bus.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/entity`
 - **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `79b3c7c0a59d96b69abe92a3ff731e9d`
-- **SHA256**: `4aa5897b77bf68dd96d5c5ddda0e1cbcbd21335564619850311c2dd8cf1ba2b9`
+- **Modified**: 2026-06-30 23:40:57 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `079bd142c672a317fe580db929fff62e`
+- **SHA256**: `25af616db7d7045a9aa3180aec67b0bcbc6a9d2753443fad4ac6d9c42e6d6761`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -2069,7 +2069,9 @@ public class Bus {
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
     }
-
+    @ManyToOne(fetch = FetchType.LAZY)
+@JoinColumn(name = "route_id", nullable = false)
+private Route route;
     // Explicit Getters and Setters to resolve any Lombok/IDE compilation issues
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
@@ -2085,6 +2087,13 @@ public class Bus {
 
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+    public Route getRoute() {
+    return route;
+}
+
+public void setRoute(Route route) {
+    this.route = route;
+}
 }
 
 ```
@@ -4364,15 +4373,15 @@ CREATE INDEX IF NOT EXISTS idx_arrival_stop ON arrival_logs(bus_stop_id);
 ### <a id="📄-src-main-resources-db-migration-v5-seed-anbesaflow-data-sql"></a>📄 `src/main/resources/db/migration/V5__seed_anbesaflow_data.sql`
 
 **File Info:**
-- **Size**: 1.84 KB
+- **Size**: 2.24 KB
 - **Extension**: `.sql`
 - **Language**: `sql`
 - **Location**: `src/main/resources/db/migration/V5__seed_anbesaflow_data.sql`
 - **Relative Path**: `src/main/resources/db/migration`
 - **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 23:29:34 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `26fb64d19d824ca5aaa5734ce59c9602`
-- **SHA256**: `872b3ce34e3543ba980ddf28d922de1bfb57610700e792a60f28a01b934e97c9`
+- **Modified**: 2026-06-30 23:44:27 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `1f85a34862d9c225bebe1af1446b6bdc`
+- **SHA256**: `9ddf33c890ffc189fad3e6c613005581d7d4261b59d02851c522f25fd8f802d5`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -4435,11 +4444,32 @@ AND NOT EXISTS (
 -- =========================
 -- BUSES SEED (FIXED)
 -- =========================
+-- =========================
+-- BUSES SEED
+-- =========================
+INSERT INTO buses (plate_number, status, capacity, route_id)
+SELECT
+    'AA-1001',
+    'ACTIVE',
+    60,
+    r.id
+FROM routes r
+WHERE r.route_code = 'R47'
+AND NOT EXISTS (
+    SELECT 1 FROM buses b WHERE b.plate_number = 'AA-1001'
+);
 
-INSERT INTO buses (plate_number, status, capacity) VALUES 
-('AA-1001', 'ACTIVE', 60),
-('AA-1002', 'ACTIVE', 50)
-ON CONFLICT (plate_number) DO NOTHING;
+INSERT INTO buses (plate_number, status, capacity, route_id)
+SELECT
+    'AA-1002',
+    'ACTIVE',
+    50,
+    r.id
+FROM routes r
+WHERE r.route_code = 'R12'
+AND NOT EXISTS (
+    SELECT 1 FROM buses b WHERE b.plate_number = 'AA-1002'
+);
 ```
 
 ---
@@ -6810,15 +6840,15 @@ CREATE INDEX IF NOT EXISTS idx_arrival_stop ON arrival_logs(bus_stop_id);
 ### <a id="📄-target-classes-db-migration-v5-seed-anbesaflow-data-sql"></a>📄 `target/classes/db/migration/V5__seed_anbesaflow_data.sql`
 
 **File Info:**
-- **Size**: 1.84 KB
+- **Size**: 2.24 KB
 - **Extension**: `.sql`
 - **Language**: `sql`
 - **Location**: `target/classes/db/migration/V5__seed_anbesaflow_data.sql`
 - **Relative Path**: `target/classes/db/migration`
 - **Created**: 2026-06-30 23:20:58 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 23:29:34 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `26fb64d19d824ca5aaa5734ce59c9602`
-- **SHA256**: `872b3ce34e3543ba980ddf28d922de1bfb57610700e792a60f28a01b934e97c9`
+- **Modified**: 2026-06-30 23:44:27 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `1f85a34862d9c225bebe1af1446b6bdc`
+- **SHA256**: `9ddf33c890ffc189fad3e6c613005581d7d4261b59d02851c522f25fd8f802d5`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -6881,11 +6911,32 @@ AND NOT EXISTS (
 -- =========================
 -- BUSES SEED (FIXED)
 -- =========================
+-- =========================
+-- BUSES SEED
+-- =========================
+INSERT INTO buses (plate_number, status, capacity, route_id)
+SELECT
+    'AA-1001',
+    'ACTIVE',
+    60,
+    r.id
+FROM routes r
+WHERE r.route_code = 'R47'
+AND NOT EXISTS (
+    SELECT 1 FROM buses b WHERE b.plate_number = 'AA-1001'
+);
 
-INSERT INTO buses (plate_number, status, capacity) VALUES 
-('AA-1001', 'ACTIVE', 60),
-('AA-1002', 'ACTIVE', 50)
-ON CONFLICT (plate_number) DO NOTHING;
+INSERT INTO buses (plate_number, status, capacity, route_id)
+SELECT
+    'AA-1002',
+    'ACTIVE',
+    50,
+    r.id
+FROM routes r
+WHERE r.route_code = 'R12'
+AND NOT EXISTS (
+    SELECT 1 FROM buses b WHERE b.plate_number = 'AA-1002'
+);
 ```
 
 ---
