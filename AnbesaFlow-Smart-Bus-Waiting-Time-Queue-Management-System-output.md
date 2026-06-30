@@ -3,8 +3,8 @@
 ## 📊 Project Information
 
 - **Project Name**: `AnbesaFlow-Smart-Bus-Waiting-Time-Queue-Management-System`
-- **Generated On**: 2026-06-30 20:11:32 (Africa/Nairobi / GMT+03:00)
-- **Total Files Processed**: 138
+- **Generated On**: 2026-06-30 23:02:04 (Africa/Nairobi / GMT+03:00)
+- **Total Files Processed**: 167
 - **Export Tool**: Easy Whole Project to Single Text File for LLMs v1.1.0
 - **Tool Author**: Jota / José Guilherme Pandolfi
 
@@ -21,133 +21,155 @@
 
 ```
 ├── 📁 src/
-│   └── 📁 main/
-│       ├── 📁 java/
-│       │   └── 📁 com/
-│       │       └── 📁 anbesaflow/
-│       │           └── 📁 auth/
-│       │               ├── 📁 controller/
-│       │               │   ├── 📄 AdminController.java (1.46 KB)
-│       │               │   ├── 📄 ArrivalLogController.java (1.2 KB)
-│       │               │   ├── 📄 AuthController.java (1.28 KB)
-│       │               │   ├── 📄 BusController.java (1.54 KB)
-│       │               │   ├── 📄 BusStopController.java (1.67 KB)
-│       │               │   ├── 📄 OperatorController.java (1.72 KB)
-│       │               │   ├── 📄 PassengerController.java (1.71 KB)
-│       │               │   ├── 📄 QueueController.java (2.15 KB)
-│       │               │   ├── 📄 RouteController.java (1.6 KB)
-│       │               │   └── 📄 UserController.java (1.04 KB)
-│       │               ├── 📁 dto/
-│       │               │   ├── 📄 ArrivalLogRequest.java (266 B)
-│       │               │   ├── 📄 ArrivalLogResponse.java (345 B)
-│       │               │   ├── 📄 AuthResponse.java (845 B)
-│       │               │   ├── 📄 BusRequest.java (213 B)
-│       │               │   ├── 📄 BusResponse.java (206 B)
-│       │               │   ├── 📄 BusStopRequest.java (223 B)
-│       │               │   ├── 📄 BusStopResponse.java (248 B)
-│       │               │   ├── 📄 ErrorResponse.java (1.38 KB)
-│       │               │   ├── 📄 JoinQueueRequest.java (401 B)
-│       │               │   ├── 📄 LoginRequest.java (651 B)
-│       │               │   ├── 📄 QueueStatusResponse.java (783 B)
-│       │               │   ├── 📄 RegisterRequest.java (1.08 KB)
-│       │               │   ├── 📄 RouteRequest.java (267 B)
-│       │               │   ├── 📄 RouteResponse.java (292 B)
-│       │               │   ├── 📄 UserResponse.java (1.26 KB)
-│       │               │   └── 📄 WaitingTimeResponse.java (354 B)
-│       │               ├── 📁 entity/
-│       │               │   ├── 📄 ArrivalLog.java (855 B)
-│       │               │   ├── 📄 Bus.java (1.68 KB)
-│       │               │   ├── 📄 BusStop.java (1.3 KB)
-│       │               │   ├── 📄 QueueEntry.java (1.68 KB)
-│       │               │   ├── 📄 Role.java (104 B)
-│       │               │   ├── 📄 Route.java (1.38 KB)
-│       │               │   └── 📄 User.java (1.83 KB)
-│       │               ├── 📁 exception/
-│       │               │   ├── 📄 GlobalExceptionHandler.java (4.68 KB)
-│       │               │   ├── 📄 QueueNotFoundException.java (194 B)
-│       │               │   ├── 📄 ResourceNotFoundException.java (352 B)
-│       │               │   └── 📄 UserAlreadyExistsException.java (353 B)
-│       │               ├── 📁 repository/
-│       │               │   ├── 📄 ArrivalLogRepository.java (537 B)
-│       │               │   ├── 📄 BusRepository.java (527 B)
-│       │               │   ├── 📄 BusStopRepository.java (549 B)
-│       │               │   ├── 📄 QueueEntryRepository.java (685 B)
-│       │               │   ├── 📄 RouteRepository.java (575 B)
-│       │               │   └── 📄 UserRepository.java (408 B)
-│       │               ├── 📁 security/
-│       │               │   ├── 📄 CustomUserDetails.java (2.36 KB)
-│       │               │   ├── 📄 CustomUserDetailsService.java (1.08 KB)
-│       │               │   ├── 📄 JwtAuthenticationFilter.java (3.52 KB)
-│       │               │   ├── 📄 JwtTokenProvider.java (3.96 KB)
-│       │               │   ├── 📄 SecurityConfig.java (3.21 KB)
-│       │               │   └── 📄 TokenBlacklistService.java (1.74 KB)
-│       │               ├── 📁 service/
-│       │               │   ├── 📄 ArrivalLogService.java (1.15 KB)
-│       │               │   ├── 📄 AuthService.java (3.95 KB)
-│       │               │   ├── 📄 BusService.java (1.65 KB)
-│       │               │   ├── 📄 BusStopService.java (1.75 KB)
-│       │               │   ├── 📄 QueueService.java (3.84 KB)
-│       │               │   ├── 📄 RouteService.java (1.84 KB)
-│       │               │   ├── 📄 UserService.java (1.13 KB)
-│       │               │   └── 📄 WaitingTimeService.java (523 B)
-│       │               └── 📄 AnbesaFlowAuthApplication.java (438 B)
-│       └── 📁 resources/
-│           ├── 📁 db/
-│           │   └── 📁 migration/
-│           │       ├── 📄 V1__init_schema.sql (356 B)
-│           │       ├── 📄 V2__create_queue_entry_table.sql (461 B)
-│           │       ├── 📄 V3__create_bus_table.sql (365 B)
-│           │       ├── 📄 V4__create_route_table.sql (278 B)
-│           │       └── 📄 V5__create_bus_stop_and_arrival_log_tables.sql (797 B)
-│           └── 📄 application.yml (1 KB)
+│   ├── 📁 main/
+│   │   ├── 📁 java/
+│   │   │   └── 📁 com/
+│   │   │       └── 📁 anbesaflow/
+│   │   │           └── 📁 auth/
+│   │   │               ├── 📁 config/
+│   │   │               │   └── 📄 CorsConfig.java (902 B)
+│   │   │               ├── 📁 controller/
+│   │   │               │   ├── 📄 AdminController.java (3.11 KB)
+│   │   │               │   ├── 📄 ArrivalLogController.java (1.2 KB)
+│   │   │               │   ├── 📄 AuthController.java (1.28 KB)
+│   │   │               │   ├── 📄 BusController.java (1.54 KB)
+│   │   │               │   ├── 📄 BusStopController.java (1.67 KB)
+│   │   │               │   ├── 📄 OperatorController.java (2.88 KB)
+│   │   │               │   ├── 📄 PassengerController.java (1.71 KB)
+│   │   │               │   ├── 📄 QueueController.java (2.15 KB)
+│   │   │               │   ├── 📄 RouteController.java (1.6 KB)
+│   │   │               │   └── 📄 UserController.java (1.04 KB)
+│   │   │               ├── 📁 dto/
+│   │   │               │   ├── 📄 ArrivalLogRequest.java (266 B)
+│   │   │               │   ├── 📄 ArrivalLogResponse.java (345 B)
+│   │   │               │   ├── 📄 AuthResponse.java (845 B)
+│   │   │               │   ├── 📄 BusRequest.java (213 B)
+│   │   │               │   ├── 📄 BusResponse.java (206 B)
+│   │   │               │   ├── 📄 BusStopRequest.java (223 B)
+│   │   │               │   ├── 📄 BusStopResponse.java (248 B)
+│   │   │               │   ├── 📄 ErrorResponse.java (1.38 KB)
+│   │   │               │   ├── 📄 JoinQueueRequest.java (401 B)
+│   │   │               │   ├── 📄 LoginRequest.java (651 B)
+│   │   │               │   ├── 📄 QueueStatusResponse.java (783 B)
+│   │   │               │   ├── 📄 RegisterRequest.java (1.08 KB)
+│   │   │               │   ├── 📄 RouteRequest.java (267 B)
+│   │   │               │   ├── 📄 RouteResponse.java (292 B)
+│   │   │               │   ├── 📄 UserResponse.java (1.26 KB)
+│   │   │               │   └── 📄 WaitingTimeResponse.java (354 B)
+│   │   │               ├── 📁 entity/
+│   │   │               │   ├── 📄 ArrivalLog.java (857 B)
+│   │   │               │   ├── 📄 Bus.java (1.68 KB)
+│   │   │               │   ├── 📄 BusStop.java (1.6 KB)
+│   │   │               │   ├── 📄 QueueEntry.java (1.68 KB)
+│   │   │               │   ├── 📄 Role.java (104 B)
+│   │   │               │   ├── 📄 Route.java (1.38 KB)
+│   │   │               │   └── 📄 User.java (1.83 KB)
+│   │   │               ├── 📁 exception/
+│   │   │               │   ├── 📄 GlobalExceptionHandler.java (4.68 KB)
+│   │   │               │   ├── 📄 QueueNotFoundException.java (194 B)
+│   │   │               │   ├── 📄 ResourceNotFoundException.java (352 B)
+│   │   │               │   └── 📄 UserAlreadyExistsException.java (353 B)
+│   │   │               ├── 📁 repository/
+│   │   │               │   ├── 📄 ArrivalLogRepository.java (539 B)
+│   │   │               │   ├── 📄 BusRepository.java (529 B)
+│   │   │               │   ├── 📄 BusStopRepository.java (551 B)
+│   │   │               │   ├── 📄 QueueEntryRepository.java (685 B)
+│   │   │               │   ├── 📄 RouteRepository.java (577 B)
+│   │   │               │   └── 📄 UserRepository.java (408 B)
+│   │   │               ├── 📁 security/
+│   │   │               │   ├── 📄 CustomUserDetails.java (2.36 KB)
+│   │   │               │   ├── 📄 CustomUserDetailsService.java (1.08 KB)
+│   │   │               │   ├── 📄 JwtAuthenticationFilter.java (3.52 KB)
+│   │   │               │   ├── 📄 JwtTokenProvider.java (3.96 KB)
+│   │   │               │   ├── 📄 SecurityConfig.java (3.21 KB)
+│   │   │               │   └── 📄 TokenBlacklistService.java (1.74 KB)
+│   │   │               ├── 📁 service/
+│   │   │               │   ├── 📄 ArrivalLogService.java (1.15 KB)
+│   │   │               │   ├── 📄 AuthService.java (3.95 KB)
+│   │   │               │   ├── 📄 BusService.java (1.65 KB)
+│   │   │               │   ├── 📄 BusStopService.java (1.75 KB)
+│   │   │               │   ├── 📄 QueueService.java (3.84 KB)
+│   │   │               │   ├── 📄 RouteService.java (1.84 KB)
+│   │   │               │   ├── 📄 UserService.java (1.13 KB)
+│   │   │               │   └── 📄 WaitingTimeService.java (523 B)
+│   │   │               └── 📄 AnbesaFlowAuthApplication.java (438 B)
+│   │   └── 📁 resources/
+│   │       ├── 📁 db/
+│   │       │   └── 📁 migration/
+│   │       │       ├── 📄 V1__init_schema.sql (356 B)
+│   │       │       ├── 📄 V2__create_queue_entry_table.sql (461 B)
+│   │       │       ├── 📄 V3__create_bus_table.sql (365 B)
+│   │       │       ├── 📄 V3__create_route_and_bus_tables.sql (1 KB)
+│   │       │       ├── 📄 V4__create_arrival_log_table.sql (467 B)
+│   │       │       ├── 📄 V4__create_route_table.sql (278 B)
+│   │       │       ├── 📄 V5__create_bus_stop_and_arrival_log_tables.sql (797 B)
+│   │       │       └── 📄 V5__seed_data.sql (1.96 KB)
+│   │       ├── 📁 static/
+│   │       │   ├── 📁 css/
+│   │       │   │   ├── 📄 auth.css (4.47 KB)
+│   │       │   │   ├── 📄 dashboard.css (9.98 KB)
+│   │       │   │   ├── 📄 global.css (7.65 KB)
+│   │       │   │   └── 📄 landing.css (13.06 KB)
+│   │       │   ├── 📁 js/
+│   │       │   │   ├── 📄 dashboard.js (3.14 KB)
+│   │       │   │   └── 📄 main.js (2.94 KB)
+│   │       │   ├── 📁 pages/
+│   │       │   │   └── 📄 login.html (5.07 KB)
+│   │       │   └── 📄 index.html (11.44 KB)
+│   │       └── 📄 application.yml (696 B)
+│   └── 📁 test/
+│       └── 📁 java/
 ├── 📁 target/
 │   ├── 📁 classes/
 │   │   ├── 📁 com/
 │   │   │   └── 📁 anbesaflow/
 │   │   │       └── 📁 auth/
+│   │   │           ├── 📁 config/
+│   │   │           │   ├── 📄 CorsConfig.class (776 B)
+│   │   │           │   └── 📄 CorsConfig$1.class (1.62 KB)
 │   │   │           ├── 📁 controller/
-│   │   │           │   ├── 📄 AdminController.class (3.14 KB)
+│   │   │           │   ├── 📄 AdminController.class (5.36 KB)
 │   │   │           │   ├── 📄 ArrivalLogController.class (2.55 KB)
 │   │   │           │   ├── 📄 AuthController.class (2.9 KB)
 │   │   │           │   ├── 📄 BusController.class (3.89 KB)
 │   │   │           │   ├── 📄 BusStopController.class (4 KB)
-│   │   │           │   ├── 📄 OperatorController.class (2.93 KB)
-│   │   │           │   ├── 📄 PassengerController.class (3.35 KB)
-│   │   │           │   ├── 📄 QueueController.class (2.97 KB)
+│   │   │           │   ├── 📄 OperatorController.class (5.56 KB)
+│   │   │           │   ├── 📄 PassengerController.class (3.37 KB)
+│   │   │           │   ├── 📄 QueueController.class (2.96 KB)
 │   │   │           │   ├── 📄 RouteController.class (3.94 KB)
 │   │   │           │   └── 📄 UserController.class (2.01 KB)
 │   │   │           ├── 📁 dto/
-│   │   │           │   ├── 📄 ArrivalLogRequest.class (1.07 KB)
-│   │   │           │   ├── 📄 ArrivalLogResponse.class (1.45 KB)
-│   │   │           │   ├── 📄 ArrivalLogResponse$ArrivalLogResponseBuilder.class (2.41 KB)
+│   │   │           │   ├── 📄 ArrivalLogRequest.class (1.19 KB)
+│   │   │           │   ├── 📄 ArrivalLogResponse.class (1.59 KB)
+│   │   │           │   ├── 📄 ArrivalLogResponse$ArrivalLogResponseBuilder.class (2.64 KB)
 │   │   │           │   ├── 📄 AuthResponse.class (1.31 KB)
-│   │   │           │   ├── 📄 BusRequest.class (1.04 KB)
-│   │   │           │   ├── 📄 BusResponse.class (1.25 KB)
-│   │   │           │   ├── 📄 BusResponse$BusResponseBuilder.class (2.05 KB)
-│   │   │           │   ├── 📄 BusStopRequest.class (1.04 KB)
-│   │   │           │   ├── 📄 BusStopResponse.class (1.27 KB)
-│   │   │           │   ├── 📄 BusStopResponse$BusStopResponseBuilder.class (2.1 KB)
+│   │   │           │   ├── 📄 BusRequest.class (1.16 KB)
+│   │   │           │   ├── 📄 BusResponse.class (1.38 KB)
+│   │   │           │   ├── 📄 BusResponse$BusResponseBuilder.class (2.33 KB)
+│   │   │           │   ├── 📄 BusStopRequest.class (1.16 KB)
+│   │   │           │   ├── 📄 BusStopResponse.class (1.4 KB)
+│   │   │           │   ├── 📄 BusStopResponse$BusStopResponseBuilder.class (2.38 KB)
 │   │   │           │   ├── 📄 ErrorResponse.class (1.76 KB)
 │   │   │           │   ├── 📄 JoinQueueRequest.class (787 B)
 │   │   │           │   ├── 📄 LoginRequest.class (961 B)
 │   │   │           │   ├── 📄 QueueStatusResponse.class (1.01 KB)
 │   │   │           │   ├── 📄 RegisterRequest.class (1.53 KB)
-│   │   │           │   ├── 📄 RouteRequest.class (1.28 KB)
-│   │   │           │   ├── 📄 RouteResponse.class (1.42 KB)
-│   │   │           │   ├── 📄 RouteResponse$RouteResponseBuilder.class (2.26 KB)
+│   │   │           │   ├── 📄 RouteRequest.class (1.42 KB)
+│   │   │           │   ├── 📄 RouteResponse.class (1.56 KB)
+│   │   │           │   ├── 📄 RouteResponse$RouteResponseBuilder.class (2.57 KB)
 │   │   │           │   ├── 📄 UserResponse.class (1.9 KB)
 │   │   │           │   └── 📄 WaitingTimeResponse.class (585 B)
 │   │   │           ├── 📁 entity/
 │   │   │           │   ├── 📄 ArrivalLog.class (3.37 KB)
 │   │   │           │   ├── 📄 ArrivalLog$ArrivalLogBuilder.class (3.03 KB)
 │   │   │           │   ├── 📄 Bus.class (2.43 KB)
-│   │   │           │   ├── 📄 BusStop.class (2.06 KB)
+│   │   │           │   ├── 📄 BusStop.class (2.57 KB)
 │   │   │           │   ├── 📄 QueueEntry.class (2.51 KB)
-│   │   │           │   ├── 📄 Role.class (1.16 KB)
+│   │   │           │   ├── 📄 Role.class (1.14 KB)
 │   │   │           │   ├── 📄 Route.class (2.12 KB)
-│   │   │           │   └── 📄 User.class (3 KB)
+│   │   │           │   └── 📄 User.class (3.02 KB)
 │   │   │           ├── 📁 exception/
-│   │   │           │   ├── 📄 GlobalExceptionHandler.class (8.37 KB)
+│   │   │           │   ├── 📄 GlobalExceptionHandler.class (8.39 KB)
 │   │   │           │   ├── 📄 QueueNotFoundException.class (455 B)
 │   │   │           │   ├── 📄 ResourceNotFoundException.class (630 B)
 │   │   │           │   └── 📄 UserAlreadyExistsException.class (632 B)
@@ -160,11 +182,11 @@
 │   │   │           │   └── 📄 UserRepository.class (682 B)
 │   │   │           ├── 📁 security/
 │   │   │           │   ├── 📄 CustomUserDetails.class (3.39 KB)
-│   │   │           │   ├── 📄 CustomUserDetailsService.class (2.72 KB)
-│   │   │           │   ├── 📄 JwtAuthenticationFilter.class (4.65 KB)
-│   │   │           │   ├── 📄 JwtTokenProvider.class (5.45 KB)
-│   │   │           │   ├── 📄 SecurityConfig.class (6.66 KB)
-│   │   │           │   └── 📄 TokenBlacklistService.class (2.48 KB)
+│   │   │           │   ├── 📄 CustomUserDetailsService.class (2.69 KB)
+│   │   │           │   ├── 📄 JwtAuthenticationFilter.class (4.71 KB)
+│   │   │           │   ├── 📄 JwtTokenProvider.class (5.46 KB)
+│   │   │           │   ├── 📄 SecurityConfig.class (7.22 KB)
+│   │   │           │   └── 📄 TokenBlacklistService.class (2.56 KB)
 │   │   │           ├── 📁 service/
 │   │   │           │   ├── 📄 ArrivalLogService.class (1.93 KB)
 │   │   │           │   ├── 📄 AuthService.class (6.12 KB)
@@ -172,7 +194,7 @@
 │   │   │           │   ├── 📄 BusStopService.class (3.95 KB)
 │   │   │           │   ├── 📄 QueueService.class (6.04 KB)
 │   │   │           │   ├── 📄 RouteService.class (4.17 KB)
-│   │   │           │   ├── 📄 UserService.class (3.15 KB)
+│   │   │           │   ├── 📄 UserService.class (3.22 KB)
 │   │   │           │   └── 📄 WaitingTimeService.class (897 B)
 │   │   │           └── 📄 AnbesaFlowAuthApplication.class (836 B)
 │   │   ├── 📁 db/
@@ -180,21 +202,41 @@
 │   │   │       ├── 📄 V1__init_schema.sql (356 B)
 │   │   │       ├── 📄 V2__create_queue_entry_table.sql (461 B)
 │   │   │       ├── 📄 V3__create_bus_table.sql (365 B)
+│   │   │       ├── 📄 V3__create_route_and_bus_tables.sql (1 KB)
+│   │   │       ├── 📄 V4__create_arrival_log_table.sql (467 B)
 │   │   │       ├── 📄 V4__create_route_table.sql (278 B)
-│   │   │       └── 📄 V5__create_bus_stop_and_arrival_log_tables.sql (797 B)
-│   │   └── 📄 application.yml (1 KB)
+│   │   │       ├── 📄 V5__create_bus_stop_and_arrival_log_tables.sql (797 B)
+│   │   │       └── 📄 V5__seed_data.sql (1.96 KB)
+│   │   ├── 📁 static/
+│   │   │   ├── 📁 css/
+│   │   │   │   ├── 📄 auth.css (4.47 KB)
+│   │   │   │   ├── 📄 dashboard.css (9.98 KB)
+│   │   │   │   ├── 📄 global.css (7.65 KB)
+│   │   │   │   └── 📄 landing.css (13.06 KB)
+│   │   │   ├── 📁 js/
+│   │   │   │   ├── 📄 dashboard.js (3.14 KB)
+│   │   │   │   └── 📄 main.js (2.94 KB)
+│   │   │   ├── 📁 pages/
+│   │   │   │   └── 📄 login.html (5.07 KB)
+│   │   │   └── 📄 index.html (11.44 KB)
+│   │   └── 📄 application.yml (696 B)
 │   ├── 📁 generated-sources/
 │   │   └── 📁 annotations/
 │   ├── 📁 generated-test-sources/
 │   │   └── 📁 test-annotations/
+│   ├── 📁 maven-archiver/
+│   │   └── 📄 pom.properties (67 B)
 │   ├── 📁 maven-status/
 │   │   └── 📁 maven-compiler-plugin/
 │   │       └── 📁 compile/
 │   │           └── 📁 default-compile/
-│   │               ├── 📄 createdFiles.lst (3.08 KB)
-│   │               └── 📄 inputFiles.lst (8.98 KB)
-│   └── 📁 test-classes/
+│   │               ├── 📄 createdFiles.lst (3.14 KB)
+│   │               └── 📄 inputFiles.lst (9.67 KB)
+│   ├── 📁 test-classes/
+│   ├── 📄 anbesaflow-auth-1.0.0.jar (51.28 MB)
+│   └── 📄 anbesaflow-auth-1.0.0.jar.original (75.47 KB)
 ├── 📄 AnbesaFlow_Authentication_Postman_Collection.json (13.19 KB)
+├── 📄 Dockerfile (318 B)
 ├── 📄 pom.xml (3.46 KB)
 └── 📄 README.md (19 B)
 ```
@@ -203,6 +245,7 @@
 
 **Project Files:**
 
+- [📄 src/main/java/com/anbesaflow/auth/config/CorsConfig.java](#📄-src-main-java-com-anbesaflow-auth-config-corsconfig-java)
 - [📄 src/main/java/com/anbesaflow/auth/controller/AdminController.java](#📄-src-main-java-com-anbesaflow-auth-controller-admincontroller-java)
 - [📄 src/main/java/com/anbesaflow/auth/controller/ArrivalLogController.java](#📄-src-main-java-com-anbesaflow-auth-controller-arrivallogcontroller-java)
 - [📄 src/main/java/com/anbesaflow/auth/controller/AuthController.java](#📄-src-main-java-com-anbesaflow-auth-controller-authcontroller-java)
@@ -264,15 +307,38 @@
 - [📄 src/main/resources/db/migration/V1__init_schema.sql](#📄-src-main-resources-db-migration-v1-init-schema-sql)
 - [📄 src/main/resources/db/migration/V2__create_queue_entry_table.sql](#📄-src-main-resources-db-migration-v2-create-queue-entry-table-sql)
 - [📄 src/main/resources/db/migration/V3__create_bus_table.sql](#📄-src-main-resources-db-migration-v3-create-bus-table-sql)
+- [📄 src/main/resources/db/migration/V3__create_route_and_bus_tables.sql](#📄-src-main-resources-db-migration-v3-create-route-and-bus-tables-sql)
+- [📄 src/main/resources/db/migration/V4__create_arrival_log_table.sql](#📄-src-main-resources-db-migration-v4-create-arrival-log-table-sql)
 - [📄 src/main/resources/db/migration/V4__create_route_table.sql](#📄-src-main-resources-db-migration-v4-create-route-table-sql)
 - [📄 src/main/resources/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql](#📄-src-main-resources-db-migration-v5-create-bus-stop-and-arrival-log-tables-sql)
+- [📄 src/main/resources/db/migration/V5__seed_data.sql](#📄-src-main-resources-db-migration-v5-seed-data-sql)
+- [📄 src/main/resources/static/css/auth.css](#📄-src-main-resources-static-css-auth-css)
+- [📄 src/main/resources/static/css/dashboard.css](#📄-src-main-resources-static-css-dashboard-css)
+- [📄 src/main/resources/static/css/global.css](#📄-src-main-resources-static-css-global-css)
+- [📄 src/main/resources/static/css/landing.css](#📄-src-main-resources-static-css-landing-css)
+- [📄 src/main/resources/static/js/dashboard.js](#📄-src-main-resources-static-js-dashboard-js)
+- [📄 src/main/resources/static/js/main.js](#📄-src-main-resources-static-js-main-js)
+- [📄 src/main/resources/static/pages/login.html](#📄-src-main-resources-static-pages-login-html)
+- [📄 src/main/resources/static/index.html](#📄-src-main-resources-static-index-html)
 - [📄 src/main/resources/application.yml](#📄-src-main-resources-application-yml)
 - [📄 target/classes/db/migration/V1__init_schema.sql](#📄-target-classes-db-migration-v1-init-schema-sql)
 - [📄 target/classes/db/migration/V2__create_queue_entry_table.sql](#📄-target-classes-db-migration-v2-create-queue-entry-table-sql)
 - [📄 target/classes/db/migration/V3__create_bus_table.sql](#📄-target-classes-db-migration-v3-create-bus-table-sql)
+- [📄 target/classes/db/migration/V3__create_route_and_bus_tables.sql](#📄-target-classes-db-migration-v3-create-route-and-bus-tables-sql)
+- [📄 target/classes/db/migration/V4__create_arrival_log_table.sql](#📄-target-classes-db-migration-v4-create-arrival-log-table-sql)
 - [📄 target/classes/db/migration/V4__create_route_table.sql](#📄-target-classes-db-migration-v4-create-route-table-sql)
 - [📄 target/classes/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql](#📄-target-classes-db-migration-v5-create-bus-stop-and-arrival-log-tables-sql)
+- [📄 target/classes/db/migration/V5__seed_data.sql](#📄-target-classes-db-migration-v5-seed-data-sql)
+- [📄 target/classes/static/css/auth.css](#📄-target-classes-static-css-auth-css)
+- [📄 target/classes/static/css/dashboard.css](#📄-target-classes-static-css-dashboard-css)
+- [📄 target/classes/static/css/global.css](#📄-target-classes-static-css-global-css)
+- [📄 target/classes/static/css/landing.css](#📄-target-classes-static-css-landing-css)
+- [📄 target/classes/static/js/dashboard.js](#📄-target-classes-static-js-dashboard-js)
+- [📄 target/classes/static/js/main.js](#📄-target-classes-static-js-main-js)
+- [📄 target/classes/static/pages/login.html](#📄-target-classes-static-pages-login-html)
+- [📄 target/classes/static/index.html](#📄-target-classes-static-index-html)
 - [📄 target/classes/application.yml](#📄-target-classes-application-yml)
+- [📄 target/maven-archiver/pom.properties](#📄-target-maven-archiver-pom-properties)
 - [📄 AnbesaFlow_Authentication_Postman_Collection.json](#📄-anbesaflow-authentication-postman-collection-json)
 - [📄 pom.xml](#📄-pom-xml)
 - [📄 README.md](#📄-readme-md)
@@ -283,39 +349,92 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Files | 138 |
-| Total Directories | 39 |
-| Text Files | 73 |
-| Binary Files | 65 |
-| Total Size | 260.48 KB |
+| Total Files | 167 |
+| Total Directories | 52 |
+| Text Files | 97 |
+| Binary Files | 70 |
+| Total Size | 51.75 MB |
 
 ### 📄 File Types Distribution
 
 | Extension | Count |
 |-----------|-------|
-| `.class` | 63 |
-| `.java` | 58 |
-| `.sql` | 10 |
+| `.class` | 65 |
+| `.java` | 59 |
+| `.sql` | 16 |
+| `.css` | 8 |
+| `.js` | 4 |
+| `.html` | 4 |
 | `.yml` | 2 |
 | `.lst` | 2 |
+| `.properties` | 1 |
+| `.jar` | 1 |
+| `.original` | 1 |
 | `.json` | 1 |
+| `no extension` | 1 |
 | `.xml` | 1 |
 | `.md` | 1 |
 
 ## 💻 File Code Contents
 
+### <a id="📄-src-main-java-com-anbesaflow-auth-config-corsconfig-java"></a>📄 `src/main/java/com/anbesaflow/auth/config/CorsConfig.java`
+
+**File Info:**
+- **Size**: 902 B
+- **Extension**: `.java`
+- **Language**: `java`
+- **Location**: `src/main/java/com/anbesaflow/auth/config/CorsConfig.java`
+- **Relative Path**: `src/main/java/com/anbesaflow/auth/config`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `dce48089967f95806d21b8f9e4274971`
+- **SHA256**: `9a70e4739dc0ff5ff22e1137e913e02d4398ecc7385d79bd9f8097db53dc63a9`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```java
+package com.anbesaflow.auth.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class CorsConfig {
+
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**")
+                        .allowedOrigins("*") // In production, replace with specific origins
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                        .allowedHeaders("*")
+                        .exposedHeaders("Authorization");
+            }
+        };
+    }
+}
+
+```
+
+---
+
 ### <a id="📄-src-main-java-com-anbesaflow-auth-controller-admincontroller-java"></a>📄 `src/main/java/com/anbesaflow/auth/controller/AdminController.java`
 
 **File Info:**
-- **Size**: 1.46 KB
+- **Size**: 3.11 KB
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/controller/AdminController.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/controller`
 - **Created**: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `cfa164e5bda6f90c666b8c0f4bb41673`
-- **SHA256**: `9cfbd302c4aec89466f26f8e7f12ea87ef00d0e6cbb49163f4d084fa2ad0d48f`
+- **Modified**: 2026-06-30 22:43:39 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `38053d7eb78b7c37a7f386ac7ffa06ed`
+- **SHA256**: `a041c48f1446fb2110a0c33e387cd085b1401441000ec5bdc5788b80c54b8aa5`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -323,35 +442,85 @@
 ```java
 package com.anbesaflow.auth.controller;
 
+import com.anbesaflow.auth.entity.BusStop;
+import com.anbesaflow.auth.entity.Route;
+import com.anbesaflow.auth.service.BusStopService;
+import com.anbesaflow.auth.service.RouteService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
+import java.util.List;
 
 @RestController
 @RequestMapping("/admin")
 @PreAuthorize("hasRole('ADMIN')")
 public class AdminController {
 
+    private final RouteService routeService;
+    private final BusStopService busStopService;
+
+    public AdminController(RouteService routeService, BusStopService busStopService) {
+        this.routeService = routeService;
+        this.busStopService = busStopService;
+    }
+
     @PostMapping("/bus-stops")
-    public ResponseEntity<Map<String, String>> createBusStop(@RequestBody Map<String, String> request) {
+    public ResponseEntity<Map<String, Object>> createBusStop(@RequestBody Map<String, String> request) {
         String name = request.getOrDefault("name", "Unknown Stop");
+        String location = request.getOrDefault("location", "");
+        Long routeId = request.containsKey("routeId") ? Long.parseLong(request.get("routeId")) : null;
+        
+        BusStop stop = new BusStop();
+stop.setName(name);
+stop.setLocation(location);
+
+// If BusStop has a Route field, we'll set it later.
+
+BusStop savedStop = busStopService.createBusStop(stop);;
+        
         return ResponseEntity.ok(Map.of(
                 "status", "success",
-                "message", "Bus stop '" + name + "' created successfully"
+                "message", "Bus stop '" + name + "' created successfully",
+                "data", stop
         ));
     }
+    
+    @GetMapping("/bus-stops")
+public ResponseEntity<List<BusStop>> getBusStops() {
+    return ResponseEntity.ok(
+            busStopService
+                    .getAllBusStops(null, org.springframework.data.domain.Pageable.unpaged())
+                    .getContent()
+    );
+}
 
     @PostMapping("/routes")
-    public ResponseEntity<Map<String, String>> createRoute(@RequestBody Map<String, String> request) {
-        String routeCode = request.getOrDefault("routeCode", "Unknown Route");
-        return ResponseEntity.ok(Map.of(
-                "status", "success",
-                "message", "Route '" + routeCode + "' created successfully"
-        ));
-    }
+public ResponseEntity<Map<String, Object>> createRoute(@RequestBody Map<String, String> request) {
 
+    Route route = new Route();
+    route.setName(request.getOrDefault("name", "Unknown Route"));
+    route.setStartPoint(request.getOrDefault("startPoint", ""));
+    route.setEndPoint(request.getOrDefault("endPoint", ""));
+
+    Route savedRoute = routeService.createRoute(route);
+
+    return ResponseEntity.ok(Map.of(
+            "status", "success",
+            "message", "Route created successfully",
+            "data", savedRoute
+    ));
+}
+    
+@GetMapping("/routes")
+public ResponseEntity<List<Route>> getRoutes() {
+    return ResponseEntity.ok(
+            routeService
+                    .getAllRoutes(null, org.springframework.data.domain.Pageable.unpaged())
+                    .getContent()
+    );
+}
     @PostMapping("/settings")
     public ResponseEntity<Map<String, String>> updateSettings(@RequestBody Map<String, Object> settings) {
         return ResponseEntity.ok(Map.of(
@@ -374,8 +543,8 @@ public class AdminController {
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/controller/ArrivalLogController.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/controller`
-- **Created**: 2026-06-30 20:03:18 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 20:03:25 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `5991b3c10ddc371e1d0feb1a9e86f8bc`
 - **SHA256**: `29822ffe807c040befd0996e8cf52ff92a52db16fc06f1d0e0e54350c6f63cac`
 - **Encoding**: ASCII
@@ -488,8 +657,8 @@ public class AuthController {
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/controller/BusController.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/controller`
-- **Created**: 2026-06-30 20:02:18 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 20:02:24 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `3c643e0b250d9d5f3506b1002c072d85`
 - **SHA256**: `b188c8116714d58be0f30294c1c7236cbf3df17d492f08717fdb2cceebda94f8`
 - **Encoding**: ASCII
@@ -557,8 +726,8 @@ public class BusController {
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/controller/BusStopController.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/controller`
-- **Created**: 2026-06-30 20:02:50 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 20:02:58 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `cf07adf879d171ece83ccc1aca525ed7`
 - **SHA256**: `d547d41af2bf0ea95998ba275acbd231b8492acba98837cafce8f259831a162d`
 - **Encoding**: ASCII
@@ -621,15 +790,15 @@ public class BusStopController {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-controller-operatorcontroller-java"></a>📄 `src/main/java/com/anbesaflow/auth/controller/OperatorController.java`
 
 **File Info:**
-- **Size**: 1.72 KB
+- **Size**: 2.88 KB
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/controller/OperatorController.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/controller`
 - **Created**: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `71b2e4cd68b5ea57921661680775ae75`
-- **SHA256**: `0c4620d226a500a77f5c99552e5de8f32fceb42b2ca6ce6ebaf63a3cc128655e`
+- **Modified**: 2026-06-30 23:02:03 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `17e5c101bff225ecf46d0300049c720b`
+- **SHA256**: `509d5b17c3a9c43cd383992d0764b19dfa378d9bf7bbc94ca4988fc90d374ac3`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -637,48 +806,84 @@ public class BusStopController {
 ```java
 package com.anbesaflow.auth.controller;
 
+import com.anbesaflow.auth.entity.ArrivalLog;
+import com.anbesaflow.auth.entity.Bus;
+import com.anbesaflow.auth.service.ArrivalLogService;
+import com.anbesaflow.auth.service.BusService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.data.domain.Pageable;
 
 import java.util.Map;
-
 @RestController
 @RequestMapping("/operator")
 @PreAuthorize("hasRole('OPERATOR')")
 public class OperatorController {
 
+    private final ArrivalLogService arrivalLogService;
+    private final BusService busService;
+
+    public OperatorController(ArrivalLogService arrivalLogService, BusService busService) {
+        this.arrivalLogService = arrivalLogService;
+        this.busService = busService;
+    }
+
     @PostMapping("/bus-arrivals")
-    public ResponseEntity<Map<String, String>> recordArrival(@RequestBody Map<String, String> request) {
-        String busId = request.getOrDefault("busId", "N/A");
-        String stopId = request.getOrDefault("stopId", "N/A");
+    public ResponseEntity<Map<String, Object>> recordArrival(@RequestBody Map<String, String> request) {
+
+        String busPlate = request.getOrDefault("busPlate", "");
+
+        // TEMP FIX: we don't have recordArrival(), so we return a placeholder response
         return ResponseEntity.ok(Map.of(
                 "status", "success",
-                "message", "Arrival for Bus " + busId + " at Stop " + stopId + " has been recorded."
+                "message", "Arrival endpoint received for bus " + busPlate + " (service method not implemented yet)",
+                "data", busPlate
         ));
     }
 
     @PostMapping("/bus-departures")
-    public ResponseEntity<Map<String, String>> recordDeparture(@RequestBody Map<String, String> request) {
-        String busId = request.getOrDefault("busId", "N/A");
-        String stopId = request.getOrDefault("stopId", "N/A");
+    public ResponseEntity<Map<String, Object>> recordDeparture(@RequestBody Map<String, String> request) {
+
+        String busPlate = request.getOrDefault("busPlate", "");
+
+        // TEMP FIX: same issue, avoid calling missing service method
         return ResponseEntity.ok(Map.of(
                 "status", "success",
-                "message", "Departure for Bus " + busId + " from Stop " + stopId + " has been recorded."
+                "message", "Departure endpoint received for bus " + busPlate + " (service method not implemented yet)",
+                "data", busPlate
         ));
     }
 
-    @PutMapping("/bus-status")
-    public ResponseEntity<Map<String, String>> updateBusStatus(@RequestBody Map<String, String> request) {
-        String busId = request.getOrDefault("busId", "N/A");
-        String status = request.getOrDefault("status", "ACTIVE");
-        return ResponseEntity.ok(Map.of(
-                "status", "success",
-                "message", "Bus " + busId + " status updated to: " + status
-        ));
-    }
+   @PutMapping("/bus-status")
+public ResponseEntity<Map<String, Object>> updateBusStatus(@RequestBody Map<String, String> request) {
+
+    String busPlate = request.getOrDefault("busPlate", "");
+    String status = request.getOrDefault("status", "ACTIVE");
+
+    Bus bus = busService.getAllBuses(null, Pageable.unpaged())
+            .getContent()
+            .stream()
+            .filter(b -> b.getPlateNumber().equals(busPlate))
+            .findFirst()
+            .orElseThrow(() -> new RuntimeException("Bus not found: " + busPlate));
+
+    Bus updatedBus = new Bus(
+            bus.getId(),
+            bus.getPlateNumber(),
+            bus.getCapacity(),
+            status
+    );
+
+    Bus saved = busService.updateBus(bus.getId(), updatedBus);
+
+    return ResponseEntity.ok(Map.of(
+            "status", "success",
+            "message", "Bus " + busPlate + " status updated to: " + status,
+            "data", saved
+    ));
 }
-
+}
 ```
 
 ---
@@ -859,8 +1064,8 @@ public class QueueController {
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/controller/RouteController.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/controller`
-- **Created**: 2026-06-30 20:01:46 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 20:01:55 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `f69f9fc641d6d0adb645bc20a749a725`
 - **SHA256**: `7bee3c4753dd51b1d63acb4ff78c9ccb5e91d72d91361cf20202017d22bb2c56`
 - **Encoding**: ASCII
@@ -984,8 +1189,8 @@ public class UserController {
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/ArrivalLogRequest.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
-- **Created**: 2026-06-30 16:01:02 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 17:52:53 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `2c0045d4a23751553d599f23e3dd6d83`
 - **SHA256**: `05225dca36f011ae6b24436eeb1e30098c5824d2c3d49955a8907fdcd78a9a46`
 - **Encoding**: ASCII
@@ -1019,8 +1224,8 @@ public class ArrivalLogRequest {
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/ArrivalLogResponse.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
-- **Created**: 2026-06-30 16:01:14 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 17:53:25 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `89a0cfe7ad239e5093a40c5aca70e110`
 - **SHA256**: `3669404c4bb621de53e5620a6012445b9f9329f37e3b0a0d2e284e79a0bdd571`
 - **Encoding**: ASCII
@@ -1120,8 +1325,8 @@ public class AuthResponse {
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/BusRequest.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
-- **Created**: 2026-06-30 15:59:33 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 19:40:23 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `f0cf62988a8f7423a511c6adf2397c67`
 - **SHA256**: `d91f70e9bded16ab1f2a4a382e1d5668b51541a4b93fd623139f3be7a04bdf65`
 - **Encoding**: ASCII
@@ -1155,8 +1360,8 @@ private String status;
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/BusResponse.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
-- **Created**: 2026-06-30 15:59:44 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 19:40:23 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `8a1f6c71f5713b6aebaaf3ab2610d3d1`
 - **SHA256**: `b7b939934f8e12986353103249023cbe7af959346a4c2cba322622f37df2f22b`
 - **Encoding**: ASCII
@@ -1193,8 +1398,8 @@ String status;
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/BusStopRequest.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
-- **Created**: 2026-06-30 16:00:14 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 19:40:23 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `de706f315dfb1a489b7aa74ddd67073b`
 - **SHA256**: `9d5caf0f34a80606bc8affe5dca6063433ebe2afcb6481ecdf199e5cb43325c0`
 - **Encoding**: ASCII
@@ -1227,8 +1432,8 @@ public class BusStopRequest {
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/BusStopResponse.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
-- **Created**: 2026-06-30 16:00:40 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 19:40:23 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `cd006e20886675b3f6a8f10c6d3fee18`
 - **SHA256**: `d6774f9e2c09fe7c433174b5bcf2a9fbe3acb5029c3bdbedd7699a99b24202e7`
 - **Encoding**: ASCII
@@ -1578,8 +1783,8 @@ public class RegisterRequest {
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/RouteRequest.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
-- **Created**: 2026-06-30 15:59:55 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 19:40:23 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `2e74dc863399ed959a8901117536b29a`
 - **SHA256**: `24322a946d147c46dc42578432d7df2fb86c5f4b067132459be30fc9fcbc2632`
 - **Encoding**: ASCII
@@ -1613,8 +1818,8 @@ public class RouteRequest {
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/dto/RouteResponse.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/dto`
-- **Created**: 2026-06-30 16:00:04 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 19:40:23 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `baa73e8152b6bf58e3810f01b4109c8e`
 - **SHA256**: `122e73fbd8ea61f352ae82e51965f904380a2d21aba0b3391dc9de57bf87b201`
 - **Encoding**: ASCII
@@ -1766,15 +1971,15 @@ public class WaitingTimeResponse {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-entity-arrivallog-java"></a>📄 `src/main/java/com/anbesaflow/auth/entity/ArrivalLog.java`
 
 **File Info:**
-- **Size**: 855 B
+- **Size**: 857 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/entity/ArrivalLog.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/entity`
-- **Created**: 2026-06-30 15:57:27 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 19:56:43 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `a996aac8244ad6802a77aee584207eb0`
-- **SHA256**: `60680eacad3526c75f3b0242d790b83f7d7b03817387d46e4d6061f86db91553`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:17:03 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `cbfa163066d6eba94f7edee8414b8d8b`
+- **SHA256**: `9a96d04394b5d2b22bcb54e13da3e9dc4cfdcfb2f9825f60645226cbd8e08801`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -1787,12 +1992,12 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "arrival_logs")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Table(name = "arrival_logs")
 public class ArrivalLog {
 
     @Id
@@ -1816,6 +2021,7 @@ public class ArrivalLog {
     @Column(nullable = false, length = 50)
     private String status; // e.g., ON_TIME, DELAYED
 }
+
 ```
 
 ---
@@ -1828,10 +2034,10 @@ public class ArrivalLog {
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/entity/Bus.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/entity`
-- **Created**: 2026-06-30 15:56:36 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 20:11:16 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `e75014e2a5848062ef7ff347b3363691`
-- **SHA256**: `70cbcf65c25cfd3c089c6a13d5742f8d58eb5993110fbf49a0666c2d31b6ed09`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `79b3c7c0a59d96b69abe92a3ff731e9d`
+- **SHA256**: `4aa5897b77bf68dd96d5c5ddda0e1cbcbd21335564619850311c2dd8cf1ba2b9`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -1892,6 +2098,7 @@ public class Bus {
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }
+
 ```
 
 ---
@@ -1899,15 +2106,15 @@ public class Bus {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-entity-busstop-java"></a>📄 `src/main/java/com/anbesaflow/auth/entity/BusStop.java`
 
 **File Info:**
-- **Size**: 1.3 KB
+- **Size**: 1.6 KB
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/entity/BusStop.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/entity`
-- **Created**: 2026-06-30 15:56:59 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 20:08:29 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `238d4c201216e1535422b1fe9c467ea7`
-- **SHA256**: `7f79a5b580f20019ebf620ca88b46720536a049b72eaf404d04f28ea54d7923b`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:21:43 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `243d40372cb7e80467e4b5b73adce63c`
+- **SHA256**: `395ee2f4a3e3bca82e67b2cbe55399fac2780baa06893e9604eacde5fc0b289b`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -1924,6 +2131,7 @@ public class BusStop {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @PrimaryKeyJoinColumn
     private Long id;
 
     @Column(nullable = false, length = 120)
@@ -1931,6 +2139,11 @@ public class BusStop {
 
     @Column(nullable = false, length = 255)
     private String location;
+
+    // 1. ADD THE RELATIONSHIP TO ROUTE
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "route_id")
+    private Route route;
 
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
@@ -1948,7 +2161,7 @@ public class BusStop {
         this.createdAt = LocalDateTime.now();
     }
 
-    // Explicit Getters and Setters to guarantee compilation
+    // Explicit Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -1957,6 +2170,10 @@ public class BusStop {
 
     public String getLocation() { return location; }
     public void setLocation(String location) { this.location = location; }
+
+    // 2. ADD GETTER AND SETTER FOR ROUTE
+    public Route getRoute() { return route; }
+    public void setRoute(Route route) { this.route = route; }
 
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
@@ -1974,7 +2191,7 @@ public class BusStop {
 - **Location**: `src/main/java/com/anbesaflow/auth/entity/QueueEntry.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/entity`
 - **Created**: 2026-06-30 14:19:21 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 14:19:21 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 20:51:17 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `d8dd67bc69a68959131c86ba289149a8`
 - **SHA256**: `ad7217a0b5b0a77f5c8c28e72dbe3c59c5c6b8688600f41e84f5814e062411e7`
 - **Encoding**: ASCII
@@ -2105,10 +2322,10 @@ public enum Role {
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/entity/Route.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/entity`
-- **Created**: 2026-06-30 15:56:49 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 20:08:55 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `69261331895b8c1c627b0c0cddd28679`
-- **SHA256**: `7d89530e9216d9699037845bd05a54d8e71fac86497cf09f9f3f2095d948cec7`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `cd76be7435cef91fe26d91299aaf8b44`
+- **SHA256**: `ad5b82979bdbee6763467fb53f91c521c497ab97d3d56f53357c7e8f8e965ee6`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -2162,6 +2379,7 @@ public class Route {
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }
+
 ```
 
 ---
@@ -2504,15 +2722,15 @@ public class UserAlreadyExistsException extends RuntimeException {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-repository-arrivallogrepository-java"></a>📄 `src/main/java/com/anbesaflow/auth/repository/ArrivalLogRepository.java`
 
 **File Info:**
-- **Size**: 537 B
+- **Size**: 539 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/repository/ArrivalLogRepository.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/repository`
-- **Created**: 2026-06-30 15:58:25 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 19:57:52 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `acda8a3d74da75b7325d08abe944eddf`
-- **SHA256**: `4e164e8fbeba566f20c071a292dd70919e6ef3da916dd880051bb9d81240f56b`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `114b67942ac0fd0ca337255137c2a34a`
+- **SHA256**: `cc34c2e38d3d6f492cbc906ab7336c0dd50d5c8560bd964175eb57b07a257e89`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -2531,6 +2749,7 @@ public interface ArrivalLogRepository extends JpaRepository<ArrivalLog, Long> {
     Page<ArrivalLog> findByBusId(Long busId, Pageable pageable);
     Page<ArrivalLog> findByBusStopId(Long busStopId, Pageable pageable);
 }
+
 ```
 
 ---
@@ -2538,15 +2757,15 @@ public interface ArrivalLogRepository extends JpaRepository<ArrivalLog, Long> {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-repository-busrepository-java"></a>📄 `src/main/java/com/anbesaflow/auth/repository/BusRepository.java`
 
 **File Info:**
-- **Size**: 527 B
+- **Size**: 529 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/repository/BusRepository.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/repository`
-- **Created**: 2026-06-30 15:57:46 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 19:57:13 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `6594541665bd4c94819ab30b04024262`
-- **SHA256**: `07a0677234acfc8af0b31f6be6712a7c7d9d7203f1d9275484aff7e4b08059ed`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `42bd46d0c4202418d7a2a63825de40f9`
+- **SHA256**: `3a448273c3c79bf93b6608932dc2fd7f6fab4d22bde05ff4d688af6dc3574718`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -2567,6 +2786,7 @@ public interface BusRepository extends JpaRepository<Bus, Long> {
     Optional<Bus> findByPlateNumber(String plateNumber);
     Page<Bus> findByStatus(String status, Pageable pageable);
 }
+
 ```
 
 ---
@@ -2574,15 +2794,15 @@ public interface BusRepository extends JpaRepository<Bus, Long> {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-repository-busstoprepository-java"></a>📄 `src/main/java/com/anbesaflow/auth/repository/BusStopRepository.java`
 
 **File Info:**
-- **Size**: 549 B
+- **Size**: 551 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/repository/BusStopRepository.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/repository`
-- **Created**: 2026-06-30 15:58:10 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 19:57:44 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `6b98035c5c1c5dc3b189fe1d76f5517a`
-- **SHA256**: `5cbda23d997b1aa750950effd0a47a881d2fb80646dec13e5b9d9f0cc97ed554`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `bc4fd3ff7f24ff8f8ef63f02c7354d16`
+- **SHA256**: `25de1111668265e5efef58afa23ce809c0687df0cb60f139f6f69d9f2f9be733`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -2603,6 +2823,7 @@ public interface BusStopRepository extends JpaRepository<BusStop, Long> {
     Optional<BusStop> findByName(String name);
     Page<BusStop> findByNameContainingIgnoreCase(String name, Pageable pageable);
 }
+
 ```
 
 ---
@@ -2655,15 +2876,15 @@ public interface QueueEntryRepository extends JpaRepository<QueueEntry, Long> {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-repository-routerepository-java"></a>📄 `src/main/java/com/anbesaflow/auth/repository/RouteRepository.java`
 
 **File Info:**
-- **Size**: 575 B
+- **Size**: 577 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/repository/RouteRepository.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/repository`
-- **Created**: 2026-06-30 15:57:58 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 19:57:33 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `a91b37c0a1b8b3745ad5fa5a1f0de980`
-- **SHA256**: `f052a986b2fd999da724f6a60b14817d8b9d22bc7673899ab7bfa5be9eeea63e`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `2a2e4876d537b4df90f3062c71220156`
+- **SHA256**: `19e7781774f37fb46159e884b9fbf10bb62811946df645e9c24c8e4a29b6365b`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -2682,6 +2903,7 @@ public interface RouteRepository extends JpaRepository<Route, Long> {
     Page<Route> findByNameContainingIgnoreCaseOrStartPointContainingIgnoreCaseOrEndPointContainingIgnoreCase(
             String name, String startPoint, String endPoint, Pageable pageable);
 }
+
 ```
 
 ---
@@ -3304,10 +3526,10 @@ public class TokenBlacklistService {
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/service/ArrivalLogService.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/service`
-- **Created**: 2026-06-30 16:02:27 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 19:59:45 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `1e6bcbb3952a7559ec397e1ae2584bbc`
-- **SHA256**: `c6c7b762e005bb727af2c8f6cd3db6faa580ea3a021ea2eef59130737614baea`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:56:04 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `c826f28fa0cd40a66debc0b63ab7e3c7`
+- **SHA256**: `a14a765795384b001cb3d73100fbf05ad350942bc039a527b7791e5bea1affdc`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -3346,6 +3568,7 @@ public class ArrivalLogService {
         return arrivalLogRepository.findAll(pageable);
     }
 }
+
 ```
 
 ---
@@ -3476,10 +3699,10 @@ public class AuthService {
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/service/BusService.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/service`
-- **Created**: 2026-06-30 16:01:49 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 20:11:32 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `f516bc45ed9c1b2e0b2d55641f8a3685`
-- **SHA256**: `1a3d6574ef4e71134457a90d049d7916d1fd50fec492513def2dd0078059c22e`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `f3a85e14fabe987eebb73a0333ebe9d6`
+- **SHA256**: `d8ebd92410a5973e258ec8d4bd40a47c4799a51978affeb7eeb1e2bc5d24c9a9`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -3536,6 +3759,7 @@ public class BusService {
         busRepository.delete(bus);
     }
 }
+
 ```
 
 ---
@@ -3548,10 +3772,10 @@ public class BusService {
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/service/BusStopService.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/service`
-- **Created**: 2026-06-30 16:02:14 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 20:09:35 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `4f363c61a95078789233357bcd8706d7`
-- **SHA256**: `8855572ff8af4f9cbbcb71120ec5b9dab84e3eb45b3c137a5ee11087ebd15882`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:30:02 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `c190fcc68e8b8fb6cc61558664e3e51f`
+- **SHA256**: `a1aac678d754ddd4980a7f73c69fe9f6156f83eb02b1033b3b837c25328c0d36`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -3607,6 +3831,7 @@ public class BusStopService {
         busStopRepository.delete(busStop);
     }
 }
+
 ```
 
 ---
@@ -3620,7 +3845,7 @@ public class BusStopService {
 - **Location**: `src/main/java/com/anbesaflow/auth/service/QueueService.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/service`
 - **Created**: 2026-06-30 14:19:21 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 14:19:21 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 20:51:17 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `4dd01d457167e329809debd1decb7818`
 - **SHA256**: `c5fad551779eb830cdb8e52d3616c0d87d48dec3d626c21f16872a5c27f940d9`
 - **Encoding**: ASCII
@@ -3780,10 +4005,10 @@ public int getEstimatedWaitingTime(){
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/service/RouteService.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/service`
-- **Created**: 2026-06-30 16:02:04 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 20:09:51 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `051b84e87ac3e8cbcc92c525c11719bb`
-- **SHA256**: `bd24ae32f06a5dfcd7d9f267fa4251f9bf6dbea58bfb4701d83517b1a5ceec6e`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `7ed6f643dbcdc280a27825741c19df37`
+- **SHA256**: `910bf222514d9ebd13dac1ddc6d39f578a5db37813edea139509fa18a6bec103`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -3841,6 +4066,7 @@ public class RouteService {
         routeRepository.delete(route);
     }
 }
+
 ```
 
 ---
@@ -4067,8 +4293,8 @@ ON queue_entries(position);
 - **Language**: `sql`
 - **Location**: `src/main/resources/db/migration/V3__create_bus_table.sql`
 - **Relative Path**: `src/main/resources/db/migration`
-- **Created**: 2026-06-30 16:03:35 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:31:15 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `abacdbba3a2a6a0410018680967f9027`
 - **SHA256**: `a15e0c4aaf3ed5a3e413ea8c5a6b0afbba0e0da8552ffb285c49ea9f79f7a974`
 - **Encoding**: ASCII
@@ -4099,6 +4325,98 @@ ON buses(plate_number);
 
 ---
 
+### <a id="📄-src-main-resources-db-migration-v3-create-route-and-bus-tables-sql"></a>📄 `src/main/resources/db/migration/V3__create_route_and_bus_tables.sql`
+
+**File Info:**
+- **Size**: 1 KB
+- **Extension**: `.sql`
+- **Language**: `sql`
+- **Location**: `src/main/resources/db/migration/V3__create_route_and_bus_tables.sql`
+- **Relative Path**: `src/main/resources/db/migration`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `0bbc5283d13fd813c7f7f6a2de86fe03`
+- **SHA256**: `6a1d203e2d2f72cb61457077d542249be80cab12ec7807b40cdb5aa8a6226a9c`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```sql
+CREATE TABLE IF NOT EXISTS routes (
+    id BIGSERIAL PRIMARY KEY,
+    route_code VARCHAR(50) NOT NULL UNIQUE,
+    description VARCHAR(200) NOT NULL,
+    active BOOLEAN NOT NULL DEFAULT TRUE,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS bus_stops (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(150) NOT NULL,
+    location_description VARCHAR(255),
+    latitude NUMERIC(10, 7),
+    longitude NUMERIC(10, 7),
+    route_id BIGINT,
+    active BOOLEAN NOT NULL DEFAULT TRUE,
+    CONSTRAINT fk_bus_stop_route
+        FOREIGN KEY(route_id)
+        REFERENCES routes(id)
+        ON DELETE SET NULL
+);
+
+CREATE TABLE IF NOT EXISTS buses (
+    id BIGSERIAL PRIMARY KEY,
+    plate_number VARCHAR(30) NOT NULL UNIQUE,
+    status VARCHAR(20) NOT NULL DEFAULT 'ACTIVE',
+    capacity INTEGER NOT NULL DEFAULT 50,
+    route_id BIGINT NOT NULL,
+    CONSTRAINT fk_bus_route
+        FOREIGN KEY(route_id)
+        REFERENCES routes(id)
+        ON DELETE CASCADE
+);
+
+```
+
+---
+
+### <a id="📄-src-main-resources-db-migration-v4-create-arrival-log-table-sql"></a>📄 `src/main/resources/db/migration/V4__create_arrival_log_table.sql`
+
+**File Info:**
+- **Size**: 467 B
+- **Extension**: `.sql`
+- **Language**: `sql`
+- **Location**: `src/main/resources/db/migration/V4__create_arrival_log_table.sql`
+- **Relative Path**: `src/main/resources/db/migration`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `a2f8265227ec64e082e0478de1c11944`
+- **SHA256**: `0d1be63532db76abca41b3af322935f226e463482c73f0da23962724b2512857`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```sql
+CREATE TABLE IF NOT EXISTS arrival_logs (
+    id BIGSERIAL PRIMARY KEY,
+    bus_id BIGINT NOT NULL,
+    bus_stop_id BIGINT NOT NULL,
+    arrival_time TIMESTAMP NOT NULL,
+    departure_time TIMESTAMP,
+    CONSTRAINT fk_arrival_log_bus
+        FOREIGN KEY(bus_id)
+        REFERENCES buses(id)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_arrival_log_bus_stop
+        FOREIGN KEY(bus_stop_id)
+        REFERENCES bus_stops(id)
+        ON DELETE CASCADE
+);
+
+```
+
+---
+
 ### <a id="📄-src-main-resources-db-migration-v4-create-route-table-sql"></a>📄 `src/main/resources/db/migration/V4__create_route_table.sql`
 
 **File Info:**
@@ -4107,8 +4425,8 @@ ON buses(plate_number);
 - **Language**: `sql`
 - **Location**: `src/main/resources/db/migration/V4__create_route_table.sql`
 - **Relative Path**: `src/main/resources/db/migration`
-- **Created**: 2026-06-30 16:03:43 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:31:27 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `2724843474bcfc47dc4abd260d0d6821`
 - **SHA256**: `95c1a3d2a56d50003ea96fc9ff422f9ffb73e18d49395189e2766d0bdcdf3ed9`
 - **Encoding**: ASCII
@@ -4143,8 +4461,8 @@ ON routes(name);
 - **Language**: `sql`
 - **Location**: `src/main/resources/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql`
 - **Relative Path**: `src/main/resources/db/migration`
-- **Created**: 2026-06-30 16:03:59 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:31:36 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `c039b9442688c99fce2d07835bba33b6`
 - **SHA256**: `df6eae64247a31b1699ae1c30a1d928fd5712cdc515628e6fc85e7bb6c322939`
 - **Encoding**: ASCII
@@ -4197,18 +4515,2108 @@ ON arrival_logs(bus_stop_id);
 
 ---
 
+### <a id="📄-src-main-resources-db-migration-v5-seed-data-sql"></a>📄 `src/main/resources/db/migration/V5__seed_data.sql`
+
+**File Info:**
+- **Size**: 1.96 KB
+- **Extension**: `.sql`
+- **Language**: `sql`
+- **Location**: `src/main/resources/db/migration/V5__seed_data.sql`
+- **Relative Path**: `src/main/resources/db/migration`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `462f61df5cc6c158044523ed5e6df717`
+- **SHA256**: `357bbc6149c1f20b433190cfcbdfa5f8be9dbe7308d00178e51277131499dcd3`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```sql
+-- Seed some dummy users (password is 'password' encoded with BCrypt)
+INSERT INTO users (name, email, password, role) VALUES 
+('Admin User', 'admin@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'ADMIN'),
+('Operator User', 'operator@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'OPERATOR'),
+('Passenger One', 'passenger1@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'PASSENGER')
+ON CONFLICT (email) DO NOTHING;
+
+-- Seed Routes
+INSERT INTO routes (route_code, description, active) VALUES 
+('R47', 'Megenagna to Bole', TRUE),
+('R12', 'Piassa to Arat Kilo', TRUE)
+ON CONFLICT (route_code) DO NOTHING;
+
+-- We need to get the IDs of the routes we just inserted to insert bus stops and buses.
+-- To keep it simple and idempotent, we use subqueries.
+
+-- Seed Bus Stops
+INSERT INTO bus_stops (name, location_description, route_id, active) 
+SELECT 'Megenagna Station', 'Main terminal at Megenagna', id, TRUE FROM routes WHERE route_code = 'R47'
+WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Megenagna Station');
+
+INSERT INTO bus_stops (name, location_description, route_id, active) 
+SELECT 'Bole Station', 'Terminal near Bole Airport', id, TRUE FROM routes WHERE route_code = 'R47'
+WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Bole Station');
+
+INSERT INTO bus_stops (name, location_description, route_id, active) 
+SELECT 'Piassa Station', 'Main terminal at Piassa', id, TRUE FROM routes WHERE route_code = 'R12'
+WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Piassa Station');
+
+-- Seed Buses
+INSERT INTO buses (plate_number, status, capacity, route_id) 
+SELECT 'AA-1001', 'ACTIVE', 60, id FROM routes WHERE route_code = 'R47'
+ON CONFLICT (plate_number) DO NOTHING;
+
+INSERT INTO buses (plate_number, status, capacity, route_id) 
+SELECT 'AA-1002', 'ACTIVE', 50, id FROM routes WHERE route_code = 'R12'
+ON CONFLICT (plate_number) DO NOTHING;
+
+```
+
+---
+
+### <a id="📄-src-main-resources-static-css-auth-css"></a>📄 `src/main/resources/static/css/auth.css`
+
+**File Info:**
+- **Size**: 4.47 KB
+- **Extension**: `.css`
+- **Language**: `css`
+- **Location**: `src/main/resources/static/css/auth.css`
+- **Relative Path**: `src/main/resources/static/css`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `86519359668137428cdf0f90b68347e6`
+- **SHA256**: `f56dfea5760e2fe608ef28cde046344624ae278f2df3ab44a28b25d9cb34616f`
+- **Encoding**: UTF-8
+
+**File code content:**
+
+```css
+/* ═══════════════════════════════════════
+   AUTH PAGES — Login & Register styles
+   ═══════════════════════════════════════ */
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Left panel — brand */
+.auth-brand {
+  background: linear-gradient(145deg, var(--orange-500) 0%, #ff4500 60%, var(--red-500) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 64px;
+  position: relative;
+  overflow: hidden;
+}
+.auth-brand::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='200' cy='200' r='200' fill='rgba(255,255,255,.05)'/%3E%3C/svg%3E") center/cover;
+}
+.auth-brand-logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+.auth-brand h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.auth-brand p {
+  color: rgba(255,255,255,.8);
+  font-size: .95rem;
+  line-height: 1.7;
+  max-width: 380px;
+  position: relative;
+  z-index: 1;
+}
+.auth-brand-features {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  position: relative;
+  z-index: 1;
+}
+.auth-feature-item {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  font-size: .88rem;
+  color: rgba(255,255,255,.9);
+}
+.auth-feature-icon {
+  width: 32px; height: 32px;
+  background: rgba(255,255,255,.2);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Right panel — form */
+.auth-form-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 48px;
+  background: var(--white);
+}
+.auth-form-box { width: 100%; max-width: 420px; }
+.auth-form-header { margin-bottom: 2rem; }
+.auth-form-header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--grey-900);
+  margin-bottom: .4rem;
+}
+.auth-form-header p { color: var(--grey-400); font-size: .9rem; }
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin: 1.4rem 0;
+}
+.auth-divider::before, .auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--grey-200);
+}
+.auth-divider span { font-size: .78rem; color: var(--grey-400); font-weight: 500; }
+
+.auth-footer-text {
+  text-align: center;
+  font-size: .85rem;
+  color: var(--grey-500);
+  margin-top: 1.5rem;
+}
+.auth-footer-text a { color: var(--orange-500); font-weight: 600; }
+.auth-footer-text a:hover { text-decoration: underline; }
+
+.password-toggle-wrapper { position: relative; }
+.password-toggle-wrapper .form-input { padding-right: 2.8rem; }
+.password-toggle {
+  position: absolute;
+  right: .85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--grey-400);
+  cursor: pointer;
+  font-size: .9rem;
+  padding: .2rem;
+  transition: color var(--duration) var(--ease);
+}
+.password-toggle:hover { color: var(--orange-500); }
+
+.role-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .65rem;
+  margin-bottom: 1.2rem;
+}
+.role-option {
+  position: relative;
+}
+.role-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.role-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+  padding: .75rem .5rem;
+  border: 1.5px solid var(--grey-200);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--grey-500);
+  transition: all var(--duration) var(--ease);
+  text-align: center;
+}
+.role-label:hover { border-color: var(--orange-400); color: var(--orange-500); }
+.role-option input[type="radio"]:checked + .role-label {
+  border-color: var(--orange-500);
+  background: var(--orange-50);
+  color: var(--orange-600);
+}
+.role-emoji { font-size: 1.4rem; }
+
+@media (max-width: 900px) {
+  .auth-page { grid-template-columns: 1fr; }
+  .auth-brand { display: none; }
+  .auth-form-panel { padding: 48px 24px; min-height: 100vh; }
+}
+
+```
+
+---
+
+### <a id="📄-src-main-resources-static-css-dashboard-css"></a>📄 `src/main/resources/static/css/dashboard.css`
+
+**File Info:**
+- **Size**: 9.98 KB
+- **Extension**: `.css`
+- **Language**: `css`
+- **Location**: `src/main/resources/static/css/dashboard.css`
+- **Relative Path**: `src/main/resources/static/css`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `316cc521a88722f082d6b2b8ab885fb6`
+- **SHA256**: `e8202cec4feada004572ed265ddc3c357625a90f7609a4f6332379423853c369`
+- **Encoding**: UTF-8
+
+**File code content:**
+
+```css
+/* ═══════════════════════════════════════
+   DASHBOARD — shared layout styles
+   ═══════════════════════════════════════ */
+
+/* Layout */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--grey-50);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background: var(--white);
+  border-right: 1px solid var(--grey-100);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  z-index: 100;
+  transition: transform var(--duration) var(--ease);
+}
+.sidebar-logo {
+  padding: 1.4rem 1.4rem 1rem;
+  border-bottom: 1px solid var(--grey-100);
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--grey-900);
+}
+.sidebar-logo .logo-icon { font-size: 1.4rem; }
+.sidebar-nav { flex: 1; padding: 1rem 0; }
+.sidebar-section-label {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--grey-400);
+  padding: .6rem 1.4rem;
+  margin-top: .4rem;
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .65rem 1.4rem;
+  font-size: .88rem;
+  font-weight: 500;
+  color: var(--grey-500);
+  border-radius: 0;
+  transition: all var(--duration) var(--ease);
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  text-decoration: none;
+  position: relative;
+}
+.sidebar-link:hover { color: var(--orange-500); background: var(--orange-50); }
+.sidebar-link.active {
+  color: var(--orange-500);
+  background: rgba(255,107,0,.07);
+  border-left-color: var(--orange-500);
+  font-weight: 600;
+}
+.sidebar-link .link-icon { font-size: 1.1rem; width: 20px; text-align: center; }
+.sidebar-link .link-badge {
+  margin-left: auto;
+  background: var(--orange-500);
+  color: var(--white);
+  font-size: .65rem;
+  font-weight: 700;
+  padding: .1rem .45rem;
+  border-radius: var(--radius-full);
+}
+.sidebar-user {
+  padding: 1rem 1.4rem;
+  border-top: 1px solid var(--grey-100);
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.user-avatar {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, var(--orange-400), var(--orange-600));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--white);
+  flex-shrink: 0;
+}
+.user-info { flex: 1; min-width: 0; }
+.user-name { font-size: .85rem; font-weight: 600; color: var(--grey-900); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.user-role { font-size: .72rem; color: var(--orange-500); font-weight: 600; text-transform: uppercase; }
+.logout-btn {
+  color: var(--grey-400);
+  font-size: .9rem;
+  padding: .3rem;
+  cursor: pointer;
+  transition: color var(--duration) var(--ease);
+}
+.logout-btn:hover { color: var(--red-500); }
+
+/* Main content */
+.dashboard-main {
+  flex: 1;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.dashboard-topbar {
+  background: var(--white);
+  border-bottom: 1px solid var(--grey-100);
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.topbar-title { font-size: 1.05rem; font-weight: 700; color: var(--grey-900); }
+.topbar-right { display: flex; align-items: center; gap: 1rem; }
+.topbar-notif {
+  position: relative;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--grey-500);
+  transition: background var(--duration) var(--ease);
+}
+.topbar-notif:hover { background: var(--grey-100); }
+.notif-dot {
+  position: absolute;
+  top: 6px; right: 6px;
+  width: 8px; height: 8px;
+  background: var(--orange-500);
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+.dashboard-content { flex: 1; padding: 2rem; }
+
+/* Page header */
+.page-header { margin-bottom: 1.8rem; }
+.page-header h1 { font-size: 1.55rem; font-weight: 800; color: var(--grey-900); margin-bottom: .3rem; }
+.page-header p { color: var(--grey-400); font-size: .9rem; }
+
+/* Stats row */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+.stat-box {
+  background: var(--white);
+  border: 1.5px solid var(--grey-100);
+  border-radius: var(--radius-lg);
+  padding: 1.3rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  transition: all var(--duration) var(--ease);
+}
+.stat-box:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.stat-box-icon {
+  width: 40px; height: 40px;
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: .2rem;
+}
+.stat-box-icon.orange { background: rgba(255,107,0,.1); }
+.stat-box-icon.red    { background: rgba(229,57,53,.1); }
+.stat-box-icon.green  { background: rgba(34,197,94,.1); }
+.stat-box-icon.blue   { background: rgba(59,130,246,.1); }
+.stat-box-value { font-size: 1.8rem; font-weight: 800; color: var(--grey-900); line-height: 1; }
+.stat-box-label { font-size: .8rem; color: var(--grey-400); font-weight: 500; }
+.stat-box-change { font-size: .75rem; font-weight: 600; }
+.stat-box-change.positive { color: #16a34a; }
+.stat-box-change.negative { color: var(--red-500); }
+
+/* Panels / content cards */
+.panel {
+  background: var(--white);
+  border: 1.5px solid var(--grey-100);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.6rem;
+}
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+  gap: .8rem;
+}
+.panel-title { font-size: 1rem; font-weight: 700; color: var(--grey-900); }
+.panel-subtitle { font-size: .8rem; color: var(--grey-400); margin-top: .1rem; }
+
+/* Table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .88rem;
+}
+.data-table th {
+  text-align: left;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--grey-400);
+  padding: .6rem .75rem;
+  border-bottom: 1.5px solid var(--grey-100);
+}
+.data-table td {
+  padding: .85rem .75rem;
+  border-bottom: 1px solid var(--grey-50);
+  color: var(--grey-700);
+  vertical-align: middle;
+}
+.data-table tbody tr { transition: background var(--duration) var(--ease); }
+.data-table tbody tr:hover { background: var(--grey-50); }
+.data-table tbody tr:last-child td { border-bottom: none; }
+
+/* Queue card */
+.queue-info-card {
+  background: linear-gradient(135deg, var(--orange-500) 0%, #ff4500 100%);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-orange);
+}
+.queue-big-num {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.queue-info-text h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: .3rem; }
+.queue-info-text p { font-size: .88rem; opacity: .8; }
+.queue-info-right { margin-left: auto; text-align: right; }
+.queue-wait-big { font-size: 2rem; font-weight: 800; }
+.queue-wait-label { font-size: .8rem; opacity: .75; }
+
+/* Search bar */
+.search-bar {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+.search-bar input {
+  width: 100%;
+  padding: .75rem 1rem .75rem 2.8rem;
+  border: 1.5px solid var(--grey-200);
+  border-radius: var(--radius-full);
+  font-size: .9rem;
+  background: var(--white);
+  color: var(--grey-900);
+  transition: border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+.search-bar input:focus {
+  border-color: var(--orange-500);
+  box-shadow: 0 0 0 3px rgba(255,107,0,.1);
+  outline: none;
+}
+.search-icon {
+  position: absolute;
+  left: 1rem; top: 50%; transform: translateY(-50%);
+  color: var(--grey-400);
+  font-size: .95rem;
+  pointer-events: none;
+}
+
+/* Stop cards grid */
+.stops-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+.stop-card {
+  background: var(--white);
+  border: 1.5px solid var(--grey-100);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem;
+  transition: all var(--duration) var(--ease);
+  cursor: pointer;
+}
+.stop-card:hover {
+  border-color: var(--orange-400);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.stop-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: .75rem;
+}
+.stop-card-name { font-size: .98rem; font-weight: 700; color: var(--grey-900); }
+.stop-card-route { font-size: .75rem; color: var(--grey-400); margin-top: .15rem; }
+.stop-card-stats { display: flex; gap: 1rem; margin-bottom: .9rem; }
+.stop-stat { display: flex; flex-direction: column; }
+.stop-stat-val { font-size: 1.15rem; font-weight: 800; color: var(--grey-900); }
+.stop-stat-key { font-size: .7rem; color: var(--grey-400); }
+
+/* Mobile sidebar toggle */
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  bottom: 1.5rem; right: 1.5rem;
+  width: 52px; height: 52px;
+  background: var(--orange-500);
+  border-radius: 50%;
+  box-shadow: var(--shadow-orange);
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--white);
+  cursor: pointer;
+  z-index: 200;
+}
+
+@media (max-width: 900px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.open { transform: translateX(0); }
+  .dashboard-main { margin-left: 0; }
+  .sidebar-toggle { display: flex; }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+  .queue-info-card { flex-direction: column; text-align: center; }
+  .queue-info-right { margin-left: 0; text-align: center; }
+}
+@media (max-width: 500px) {
+  .stats-row { grid-template-columns: 1fr; }
+  .dashboard-content { padding: 1rem; }
+}
+
+```
+
+---
+
+### <a id="📄-src-main-resources-static-css-global-css"></a>📄 `src/main/resources/static/css/global.css`
+
+**File Info:**
+- **Size**: 7.65 KB
+- **Extension**: `.css`
+- **Language**: `css`
+- **Location**: `src/main/resources/static/css/global.css`
+- **Relative Path**: `src/main/resources/static/css`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `75c52ca9b22ca3cfac7cb95d05bf1439`
+- **SHA256**: `01decc2e0165c54e9f9797563adb0fddb7b17ef30ac7d2b1f998352c9bbe03ee`
+- **Encoding**: UTF-8
+
+**File code content:**
+
+```css
+/* ═══════════════════════════════════════════════
+   ANBESAFLOW — Global CSS Design System
+   Palette: White bg · Orange primary · Red accent
+   ═══════════════════════════════════════════════ */
+
+/* ── Custom Properties ── */
+:root {
+  /* Brand colours */
+  --orange-50:  #fff4e6;
+  --orange-100: #ffe0b2;
+  --orange-200: #ffcc80;
+  --orange-400: #ffa726;
+  --orange-500: #FF6B00;   /* primary */
+  --orange-600: #e55f00;
+  --orange-700: #cc5200;
+
+  --red-500:    #E53935;
+  --red-400:    #EF5350;
+
+  --white:      #ffffff;
+  --grey-50:    #f9fafb;
+  --grey-100:   #f3f4f6;
+  --grey-200:   #e5e7eb;
+  --grey-300:   #d1d5db;
+  --grey-400:   #9ca3af;
+  --grey-500:   #6b7280;
+  --grey-700:   #374151;
+  --grey-800:   #1f2937;
+  --grey-900:   #111827;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Shadows */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md:  0 4px 16px rgba(0,0,0,.10);
+  --shadow-lg:  0 10px 40px rgba(0,0,0,.12);
+  --shadow-orange: 0 8px 32px rgba(255,107,0,.28);
+
+  /* Radii */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --ease: cubic-bezier(.4,0,.2,1);
+  --duration: 220ms;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-sans);
+  background: var(--white);
+  color: var(--grey-800);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
+/* ── Utility buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .65rem 1.4rem;
+  border-radius: var(--radius-full);
+  font-size: .9rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  transition: all var(--duration) var(--ease);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--orange-500);
+  color: var(--white);
+  box-shadow: var(--shadow-orange);
+}
+.btn-primary:hover {
+  background: var(--orange-600);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(255,107,0,.38);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--grey-700);
+  border: 1.5px solid var(--grey-300);
+}
+.btn-ghost:hover {
+  border-color: var(--orange-500);
+  color: var(--orange-500);
+  transform: translateY(-2px);
+}
+.btn-danger {
+  background: var(--red-500);
+  color: var(--white);
+}
+.btn-danger:hover {
+  background: var(--red-400);
+  transform: translateY(-2px);
+}
+.btn-lg { padding: .85rem 2rem; font-size: 1rem; }
+.btn-sm { padding: .45rem .9rem; font-size: .82rem; }
+.btn-full { width: 100%; }
+
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--orange-500) 0%, var(--red-500) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.accent { color: var(--orange-500); }
+
+/* ── Section scaffolding ── */
+.section-container { max-width: 1180px; margin: 0 auto; padding: 80px 24px; }
+.section-header { text-align: center; margin-bottom: 56px; }
+.section-eyebrow {
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--orange-500);
+  margin-bottom: .6rem;
+}
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: var(--grey-900);
+  line-height: 1.2;
+  margin-bottom: .8rem;
+}
+.section-sub { color: var(--grey-500); font-size: 1rem; max-width: 480px; margin: 0 auto; }
+
+/* ── Cards ── */
+.card {
+  background: var(--white);
+  border: 1.5px solid var(--grey-100);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--duration) var(--ease), transform var(--duration) var(--ease);
+}
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+/* ── Form controls ── */
+.form-group { margin-bottom: 1.2rem; }
+.form-label {
+  display: block;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--grey-700);
+  margin-bottom: .45rem;
+}
+.form-input {
+  width: 100%;
+  padding: .75rem 1rem;
+  border: 1.5px solid var(--grey-200);
+  border-radius: var(--radius-md);
+  font-size: .95rem;
+  background: var(--grey-50);
+  color: var(--grey-900);
+  transition: border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+.form-input:focus {
+  border-color: var(--orange-500);
+  box-shadow: 0 0 0 3px rgba(255,107,0,.12);
+  background: var(--white);
+}
+.form-select {
+  width: 100%;
+  padding: .75rem 1rem;
+  border: 1.5px solid var(--grey-200);
+  border-radius: var(--radius-md);
+  font-size: .95rem;
+  background: var(--grey-50);
+  color: var(--grey-900);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 1.2em;
+  transition: border-color var(--duration) var(--ease);
+}
+.form-select:focus { border-color: var(--orange-500); outline: none; }
+
+/* ── Alert / toast ── */
+.alert {
+  padding: .85rem 1.1rem;
+  border-radius: var(--radius-md);
+  font-size: .88rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.alert-error { background: rgba(229,57,53,.08); color: var(--red-500); border: 1px solid rgba(229,57,53,.18); }
+.alert-success { background: rgba(255,107,0,.08); color: var(--orange-600); border: 1px solid rgba(255,107,0,.2); }
+
+/* ── Badge / pill ── */
+.badge {
+  display: inline-block;
+  padding: .25rem .7rem;
+  border-radius: var(--radius-full);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.badge-orange { background: var(--orange-50); color: var(--orange-600); }
+.badge-red    { background: rgba(229,57,53,.1); color: var(--red-500); }
+.badge-green  { background: rgba(34,197,94,.1); color: #16a34a; }
+.badge-grey   { background: var(--grey-100); color: var(--grey-500); }
+
+/* ── Loading spinner ── */
+.spinner {
+  width: 22px; height: 22px;
+  border: 3px solid rgba(255,107,0,.2);
+  border-top-color: var(--orange-500);
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+  display: inline-block;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--grey-100); }
+::-webkit-scrollbar-thumb { background: var(--grey-300); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--orange-400); }
+
+/* ── Fade-in animation ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-in { animation: fadeInUp .55s var(--ease) both; }
+.delay-1 { animation-delay: .1s; }
+.delay-2 { animation-delay: .2s; }
+.delay-3 { animation-delay: .3s; }
+
+/* ── Responsive helper ── */
+@media (max-width: 768px) {
+  .section-container { padding: 60px 16px; }
+}
+
+```
+
+---
+
+### <a id="📄-src-main-resources-static-css-landing-css"></a>📄 `src/main/resources/static/css/landing.css`
+
+**File Info:**
+- **Size**: 13.06 KB
+- **Extension**: `.css`
+- **Language**: `css`
+- **Location**: `src/main/resources/static/css/landing.css`
+- **Relative Path**: `src/main/resources/static/css`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `6a1939e398550829cf7fb0bebccbf2b5`
+- **SHA256**: `580582ad5c8affc5be91225356461e5ad034c24e236eab501bdef6ab12ddb730`
+- **Encoding**: UTF-8
+
+**File code content:**
+
+```css
+/* ═══════════════════════════════════════
+   LANDING PAGE — specific styles
+   ═══════════════════════════════════════ */
+
+/* ── NAVBAR ── */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+.navbar.scrolled {
+  border-color: var(--grey-100);
+  box-shadow: var(--shadow-sm);
+}
+.nav-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--grey-900);
+  flex-shrink: 0;
+}
+.logo-icon { font-size: 1.6rem; }
+.nav-links {
+  display: flex;
+  gap: .25rem;
+  flex: 1;
+}
+.nav-link {
+  padding: .45rem .85rem;
+  border-radius: var(--radius-full);
+  font-size: .88rem;
+  font-weight: 500;
+  color: var(--grey-600);
+  transition: color var(--duration) var(--ease), background var(--duration) var(--ease);
+}
+.nav-link:hover {
+  color: var(--orange-500);
+  background: var(--orange-50);
+}
+.nav-cta { display: flex; gap: .65rem; }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--grey-700);
+  border-radius: 2px;
+  transition: all var(--duration) var(--ease);
+}
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 1rem 24px 1.4rem;
+  background: var(--white);
+  border-top: 1px solid var(--grey-100);
+}
+.mobile-menu a {
+  padding: .55rem .75rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  color: var(--grey-700);
+}
+.mobile-menu.open { display: flex; }
+
+@media (max-width: 820px) {
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  padding-top: 68px;
+  overflow: hidden;
+  position: relative;
+}
+.hero-bg-shapes { position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: .45;
+}
+.shape-1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(255,107,0,.18) 0%, transparent 70%);
+  top: -100px; right: -100px;
+}
+.shape-2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(229,57,53,.12) 0%, transparent 70%);
+  bottom: 0; left: 10%;
+}
+.shape-3 {
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(255,107,0,.1) 0%, transparent 70%);
+  top: 40%; left: 40%;
+}
+.hero-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 64px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--orange-50);
+  border: 1px solid rgba(255,107,0,.2);
+  color: var(--orange-600);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .4rem .9rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.2rem;
+}
+.badge-dot {
+  width: 7px; height: 7px;
+  background: var(--orange-500);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .6; transform: scale(1.4); }
+}
+.hero-title {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.08;
+  color: var(--grey-900);
+  margin-bottom: 1.2rem;
+}
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: var(--grey-500);
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 2rem;
+}
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.trust-item { display: flex; flex-direction: column; }
+.trust-num { font-size: 1.5rem; font-weight: 800; color: var(--grey-900); }
+.trust-label { font-size: .75rem; color: var(--grey-400); font-weight: 500; }
+.trust-divider { width: 1px; height: 36px; background: var(--grey-200); }
+
+/* Phone mockup */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.phone-mockup {
+  width: 280px;
+  background: var(--white);
+  border-radius: 32px;
+  box-shadow: 0 32px 80px rgba(0,0,0,.16), 0 0 0 1px rgba(0,0,0,.06);
+  padding: 24px 20px;
+  position: relative;
+  z-index: 2;
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.phone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.phone-stop { font-weight: 700; font-size: .9rem; color: var(--grey-900); }
+.phone-live {
+  font-size: .72rem;
+  font-weight: 700;
+  color: #16a34a;
+  background: rgba(34,197,94,.1);
+  padding: .2rem .55rem;
+  border-radius: var(--radius-full);
+  animation: blink 2s ease-in-out infinite;
+}
+@keyframes blink { 0%,100% { opacity:1; } 50% { opacity:.5; } }
+
+.phone-queue-card {
+  background: linear-gradient(135deg, var(--orange-500) 0%, #ff4500 100%);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-orange);
+}
+.queue-position, .queue-wait {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.queue-num { font-size: 2.2rem; font-weight: 900; color: var(--white); line-height: 1; }
+.queue-label { font-size: .65rem; color: rgba(255,255,255,.75); font-weight: 500; text-transform: uppercase; }
+.wait-num { font-size: 1.3rem; font-weight: 800; color: var(--white); }
+.wait-label { font-size: .65rem; color: rgba(255,255,255,.75); font-weight: 500; text-transform: uppercase; }
+.queue-divider { width: 1px; height: 36px; background: rgba(255,255,255,.25); }
+
+.phone-bus-row { display: flex; flex-direction: column; gap: .45rem; margin-bottom: 1rem; }
+.bus-tag {
+  font-size: .75rem;
+  font-weight: 600;
+  padding: .35rem .65rem;
+  border-radius: var(--radius-sm);
+}
+.bus-tag.arriving { background: rgba(34,197,94,.1); color: #16a34a; }
+.bus-tag.delayed  { background: rgba(229,57,53,.1); color: var(--red-500); }
+
+.phone-people { margin-bottom: 1rem; }
+.people-bar {
+  height: 6px;
+  background: var(--grey-100);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: .3rem;
+}
+.people-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--orange-400), var(--orange-500));
+  border-radius: 99px;
+  transition: width .8s var(--ease);
+}
+.people-label { font-size: .72rem; color: var(--grey-400); }
+
+.phone-btn {
+  width: 100%;
+  background: var(--grey-100);
+  color: var(--grey-600);
+  font-size: .82rem;
+  font-weight: 600;
+  padding: .55rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--duration) var(--ease);
+}
+.phone-btn:hover { background: rgba(229,57,53,.1); color: var(--red-500); }
+
+/* Floating cards */
+.float-card {
+  position: absolute;
+  background: var(--white);
+  border: 1px solid var(--grey-100);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+  padding: .6rem 1rem;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--grey-800);
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  white-space: nowrap;
+  z-index: 3;
+}
+.float-card-1 { top: 10%; left: -30%; animation: float 4.5s ease-in-out .5s infinite; }
+.float-card-2 { bottom: 10%; right: -25%; animation: float 4s ease-in-out 1s infinite; }
+
+/* ── FEATURES ── */
+.features { background: var(--grey-50); }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.feature-card {
+  background: var(--white);
+  border: 1.5px solid var(--grey-100);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  position: relative;
+  transition: all var(--duration) var(--ease);
+  animation: fadeInUp .5s var(--ease) var(--delay) both;
+}
+.feature-card:hover {
+  border-color: rgba(255,107,0,.3);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+.feature-card.featured {
+  border-color: var(--orange-500);
+  box-shadow: 0 0 0 1px rgba(255,107,0,.15), var(--shadow-orange);
+}
+.feature-badge {
+  position: absolute;
+  top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--orange-500);
+  color: var(--white);
+  font-size: .72rem;
+  font-weight: 700;
+  padding: .25rem .8rem;
+  border-radius: var(--radius-full);
+  letter-spacing: .05em;
+}
+.feature-icon {
+  width: 52px; height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+.feature-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--grey-900); margin-bottom: .9rem; }
+.feature-list li {
+  font-size: .88rem;
+  color: var(--grey-500);
+  padding: .35rem 0;
+  border-bottom: 1px solid var(--grey-50);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.feature-list li::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--orange-500);
+  flex-shrink: 0;
+}
+
+/* ── HOW IT WORKS ── */
+.how-it-works { background: var(--white); }
+.steps-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  justify-content: center;
+}
+.step { flex: 1; text-align: center; padding: 0 1.5rem; }
+.step-num {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--orange-500);
+  opacity: .2;
+  line-height: 1;
+  margin-bottom: .6rem;
+}
+.step-content h3 { font-size: 1.05rem; font-weight: 700; color: var(--grey-900); margin-bottom: .5rem; }
+.step-content p { font-size: .88rem; color: var(--grey-500); line-height: 1.65; }
+.step-connector {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--orange-200), var(--orange-400));
+  border-radius: 99px;
+  margin-top: 22px;
+  flex-shrink: 0;
+}
+
+/* ── STATS ── */
+.stats-section {
+  background: linear-gradient(135deg, var(--orange-500) 0%, #ff4500 100%);
+  padding: 64px 24px;
+}
+.stats-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+.stat-card { color: var(--white); }
+.stat-num {
+  display: block;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: .1rem;
+}
+.stat-plus { font-size: 1.8rem; font-weight: 800; }
+.stat-label { font-size: .85rem; opacity: .8; font-weight: 500; display: block; margin-top: .4rem; }
+
+/* ── CTA ── */
+.cta-section { background: var(--grey-50); padding: 100px 24px; text-align: center; }
+.cta-container { max-width: 600px; margin: 0 auto; }
+.cta-container h2 { font-size: clamp(1.8rem,4vw,2.4rem); font-weight: 800; color: var(--grey-900); margin-bottom: .8rem; }
+.cta-container p { color: var(--grey-500); margin-bottom: 2rem; }
+.cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* ── FOOTER ── */
+.footer { background: var(--grey-900); color: var(--grey-400); }
+.footer-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 56px 24px 32px;
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.footer-brand { flex: 1; min-width: 200px; }
+.footer-brand .nav-logo .logo-text { color: var(--white); }
+.footer-brand p { margin-top: .8rem; font-size: .85rem; line-height: 1.65; }
+.footer-links { display: flex; gap: 3rem; flex-wrap: wrap; }
+.footer-col { display: flex; flex-direction: column; gap: .5rem; }
+.footer-col h4 { color: var(--white); font-size: .85rem; font-weight: 700; margin-bottom: .2rem; }
+.footer-col a { font-size: .83rem; transition: color var(--duration) var(--ease); }
+.footer-col a:hover { color: var(--orange-400); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.08);
+  text-align: center;
+  padding: 1.4rem 24px;
+  font-size: .78rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .hero-container { grid-template-columns: 1fr; text-align: center; }
+  .hero-subtitle { margin: 0 auto 2rem; }
+  .hero-actions { justify-content: center; }
+  .hero-trust { justify-content: center; }
+  .hero-visual { display: none; }
+  .features-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps-container { flex-direction: column; align-items: center; }
+  .step-connector { width: 2px; height: 40px; margin-top: 0; }
+}
+@media (max-width: 500px) {
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .footer-container { flex-direction: column; gap: 2rem; }
+}
+
+```
+
+---
+
+### <a id="📄-src-main-resources-static-js-dashboard-js"></a>📄 `src/main/resources/static/js/dashboard.js`
+
+**File Info:**
+- **Size**: 3.14 KB
+- **Extension**: `.js`
+- **Language**: `javascript`
+- **Location**: `src/main/resources/static/js/dashboard.js`
+- **Relative Path**: `src/main/resources/static/js`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `0484b191367916c3f35437696681bd6f`
+- **SHA256**: `5910e560ee38a0b7d50c373bb072cfd4702c230dfb006e2df273dbef190da361`
+- **Encoding**: UTF-8
+
+**File code content:**
+
+```javascript
+// ═══════════════════════════════════════════
+//  AnbesaFlow — Dashboard shared JS
+// ═══════════════════════════════════════════
+
+/* Sidebar toggle on mobile */
+function initSidebarToggle() {
+  const toggle = document.getElementById('sidebarToggle');
+  const sidebar = document.getElementById('sidebar');
+  if (!toggle || !sidebar) return;
+  toggle.addEventListener('click', () => sidebar.classList.toggle('open'));
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && !toggle.contains(e.target)) {
+      sidebar.classList.remove('open');
+    }
+  });
+}
+
+/* Active link */
+function setActiveLink() {
+  const current = location.pathname.split('/').pop();
+  document.querySelectorAll('.sidebar-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && href.includes(current)) link.classList.add('active');
+  });
+}
+
+/* Logout */
+function initLogout() {
+  const logoutBtn = document.getElementById('logoutBtn');
+  if (!logoutBtn) return;
+  logoutBtn.addEventListener('click', () => {
+    if (confirm('Are you sure you want to sign out?')) {
+      sessionStorage.removeItem('anbesaUser');
+      window.location.href = '../pages/login.html';
+    }
+  });
+}
+
+/* Simple toast */
+function showToast(message, type = 'success') {
+  const existing = document.querySelector('.toast');
+  if (existing) existing.remove();
+
+  const toast = document.createElement('div');
+  toast.className = `toast toast-${type}`;
+  toast.innerHTML = `<span>${type === 'success' ? '✅' : '⚠️'}</span> ${message}`;
+  toast.style.cssText = `
+    position:fixed; bottom:1.5rem; right:1.5rem;
+    background:${type === 'success' ? '#fff' : 'rgba(229,57,53,.08)'};
+    border:1.5px solid ${type === 'success' ? 'rgba(255,107,0,.25)' : 'rgba(229,57,53,.25)'};
+    color:${type === 'success' ? '#FF6B00' : '#E53935'};
+    padding:.75rem 1.2rem; border-radius:12px;
+    box-shadow:0 8px 32px rgba(0,0,0,.12);
+    font-size:.88rem; font-weight:600;
+    display:flex; align-items:center; gap:.6rem;
+    z-index:9999; animation: fadeInUp .35s ease;
+    max-width:320px;
+  `;
+  document.body.appendChild(toast);
+  setTimeout(() => { toast.style.opacity = '0'; toast.style.transition = 'opacity .3s'; setTimeout(() => toast.remove(), 300); }, 3500);
+}
+
+/* Mock user data */
+function getMockUser() {
+  return { name: 'Lydia Kebede', role: 'Passenger', initials: 'LK' };
+}
+
+/* Render sidebar user info */
+function renderUserInfo() {
+  const nameEl = document.getElementById('userName');
+  const roleEl = document.getElementById('userRole');
+  const avatarEl = document.getElementById('userAvatar');
+  const user = getMockUser();
+  if (nameEl) nameEl.textContent = user.name;
+  if (roleEl) roleEl.textContent = user.role;
+  if (avatarEl) avatarEl.textContent = user.initials;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initSidebarToggle();
+  setActiveLink();
+  initLogout();
+  renderUserInfo();
+});
+
+```
+
+---
+
+### <a id="📄-src-main-resources-static-js-main-js"></a>📄 `src/main/resources/static/js/main.js`
+
+**File Info:**
+- **Size**: 2.94 KB
+- **Extension**: `.js`
+- **Language**: `javascript`
+- **Location**: `src/main/resources/static/js/main.js`
+- **Relative Path**: `src/main/resources/static/js`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `0747fd60835c8006a4f508f2e63ac868`
+- **SHA256**: `fb9849cab77472c63cfa66d544049e9be352350ccd96f47127d316e9dfb1301f`
+- **Encoding**: UTF-8
+
+**File code content:**
+
+```javascript
+// ═══════════════════════════════════════════
+//  AnbesaFlow — Main JS (Landing page)
+// ═══════════════════════════════════════════
+
+/* ── Navbar scroll effect ── */
+const navbar = document.getElementById('navbar');
+if (navbar) {
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  });
+}
+
+/* ── Mobile hamburger ── */
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  // Close on link click
+  mobileMenu.querySelectorAll('a').forEach(link =>
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'))
+  );
+}
+
+/* ── Counter animation ── */
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target, 10);
+  const duration = 1800;
+  const start = performance.now();
+  const update = (now) => {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    // Ease out
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(ease * target).toLocaleString();
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+
+const counterEls = document.querySelectorAll('.stat-num[data-target]');
+if (counterEls.length > 0) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  counterEls.forEach(el => observer.observe(el));
+}
+
+/* ── Smooth anchor scroll ── */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', (e) => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+/* ── Fade-in-on-scroll ── */
+const fadeEls = document.querySelectorAll('.feature-card, .step, .stat-card');
+if (fadeEls.length > 0) {
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  fadeEls.forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = `opacity .5s ease ${i * 0.08}s, transform .5s ease ${i * 0.08}s`;
+    fadeObserver.observe(el);
+  });
+}
+
+```
+
+---
+
+### <a id="📄-src-main-resources-static-pages-login-html"></a>📄 `src/main/resources/static/pages/login.html`
+
+**File Info:**
+- **Size**: 5.07 KB
+- **Extension**: `.html`
+- **Language**: `html`
+- **Location**: `src/main/resources/static/pages/login.html`
+- **Relative Path**: `src/main/resources/static/pages`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `58514865406d1ba6203f97094f863b2f`
+- **SHA256**: `62505a5a3c9caf24ac145e9845984c29cd079b21461b337913f9998269656546`
+- **Encoding**: UTF-8
+
+**File code content:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — AnbesaFlow</title>
+  <meta name="description" content="Sign in to AnbesaFlow to manage your bus queue." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/auth.css" />
+</head>
+<body>
+<main class="auth-page">
+
+  <!-- Brand panel -->
+  <div class="auth-brand">
+    <div class="auth-brand-logo">
+      <span>🚌</span>
+      <span>AnbesaFlow</span>
+    </div>
+    <h2>Welcome back to smarter transit.</h2>
+    <p>Real-time queues, live waiting times, and fair boarding — every ride, every stop.</p>
+    <div class="auth-brand-features">
+      <div class="auth-feature-item">
+        <div class="auth-feature-icon">⏱️</div>
+        <span>Know your exact wait time before you even arrive.</span>
+      </div>
+      <div class="auth-feature-item">
+        <div class="auth-feature-icon">📍</div>
+        <span>Join the queue at 120+ bus stops across Addis Ababa.</span>
+      </div>
+      <div class="auth-feature-item">
+        <div class="auth-feature-icon">🔒</div>
+        <span>Secure, token-based authentication protects your data.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form panel -->
+  <div class="auth-form-panel">
+    <div class="auth-form-box animate-in">
+      <div class="auth-form-header">
+        <h1>Sign In</h1>
+        <p>Enter your credentials to access your dashboard.</p>
+      </div>
+
+      <div id="loginAlert" class="alert alert-error" style="display:none;"></div>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="loginEmail">Email Address</label>
+          <input
+            class="form-input"
+            type="email"
+            id="loginEmail"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="loginPassword">Password</label>
+          <div class="password-toggle-wrapper">
+            <input
+              class="form-input"
+              type="password"
+              id="loginPassword"
+              placeholder="••••••••"
+              autocomplete="current-password"
+              required
+            />
+            <span class="password-toggle" id="toggleLoginPwd" title="Show password">👁️</span>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; margin-bottom:1.4rem;">
+          <a href="#" style="font-size:.83rem; color:var(--orange-500); font-weight:600;">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full btn-lg" id="loginBtn">
+          Sign In
+        </button>
+      </form>
+
+      <p class="auth-footer-text">
+        Don't have an account? <a href="register.html">Create one free →</a>
+      </p>
+    </div>
+  </div>
+</main>
+
+<script>
+  const form = document.getElementById('loginForm');
+  const alert = document.getElementById('loginAlert');
+  const loginBtn = document.getElementById('loginBtn');
+
+  // Password toggle
+  document.getElementById('toggleLoginPwd').addEventListener('click', function() {
+    const pwd = document.getElementById('loginPassword');
+    const isText = pwd.type === 'text';
+    pwd.type = isText ? 'password' : 'text';
+    this.textContent = isText ? '👁️' : '🙈';
+  });
+
+  // Mock credentials
+  const USERS = [
+    { email: 'lydia@anbesaflow.et', password: 'pass123', role: 'passenger', page: 'passenger-dashboard.html' },
+    { email: 'operator@anbesaflow.et', password: 'op123', role: 'operator', page: 'operator-dashboard.html' },
+    { email: 'admin@anbesaflow.et', password: 'admin123', role: 'admin', page: 'admin-dashboard.html' },
+  ];
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    alert.style.display = 'none';
+    const email = document.getElementById('loginEmail').value.trim();
+    const pwd = document.getElementById('loginPassword').value;
+
+    if (!email || !pwd) {
+      alert.textContent = 'Please fill in all fields.';
+      alert.style.display = 'block';
+      return;
+    }
+
+    loginBtn.innerHTML = '<span class="spinner"></span> Signing in…';
+    loginBtn.disabled = true;
+
+    await new Promise(r => setTimeout(r, 900)); // simulate API
+
+    const user = USERS.find(u => u.email === email && u.password === pwd);
+    if (user) {
+      sessionStorage.setItem('anbesaUser', JSON.stringify(user));
+      window.location.href = user.page;
+    } else {
+      alert.textContent = 'Invalid email or password. Please try again.';
+      alert.style.display = 'block';
+      loginBtn.innerHTML = 'Sign In';
+      loginBtn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
+
+```
+
+---
+
+### <a id="📄-src-main-resources-static-index-html"></a>📄 `src/main/resources/static/index.html`
+
+**File Info:**
+- **Size**: 11.44 KB
+- **Extension**: `.html`
+- **Language**: `html`
+- **Location**: `src/main/resources/static/index.html`
+- **Relative Path**: `src/main/resources/static`
+- **Created**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `c21a5fc8892eb64396a588625c2c5ae4`
+- **SHA256**: `f33ca6ddf27aac8f79e910c59bab1ef6d42a585bf83197fabe59d2af6b990607`
+- **Encoding**: UTF-8
+
+**File code content:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnbesaFlow — Smart Bus Queue Management</title>
+  <meta name="description" content="AnbesaFlow digitises Addis Ababa's bus-stop queues, giving passengers real-time waiting times and fair queue positions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/landing.css" />
+</head>
+<body>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🚌</span>
+        <span class="logo-text">Anbesa<span class="accent">Flow</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#stats" class="nav-link">Impact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="pages/login.html" class="btn btn-ghost">Sign In</a>
+        <a href="pages/register.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#stats">Impact</a>
+      <a href="pages/login.html" class="btn btn-ghost" style="text-align:center;">Sign In</a>
+      <a href="pages/register.html" class="btn btn-primary" style="text-align:center;">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Smart Transit · Addis Ababa
+        </div>
+        <h1 class="hero-title">
+          No More Guessing.<br />
+          <span class="gradient-text">Know Your Wait.</span>
+        </h1>
+        <p class="hero-subtitle">
+          AnbesaFlow brings real-time queue management and waiting time estimation to Addis Ababa's bus stops — making every commute fairer, faster, and smarter.
+        </p>
+        <div class="hero-actions">
+          <a href="pages/register.html" class="btn btn-primary btn-lg">
+            Join the Queue →
+          </a>
+          <a href="#how-it-works" class="btn btn-ghost btn-lg">
+            See How It Works
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <span class="trust-num">3 000+</span>
+            <span class="trust-label">Daily Commuters</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <span class="trust-num">120+</span>
+            <span class="trust-label">Bus Stops</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <span class="trust-num">99%</span>
+            <span class="trust-label">Uptime</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="phone-header">
+              <span class="phone-stop">Megenagna Stop</span>
+              <span class="phone-live">● LIVE</span>
+            </div>
+            <div class="phone-queue-card">
+              <div class="queue-position">
+                <span class="queue-num">4</span>
+                <span class="queue-label">Your Position</span>
+              </div>
+              <div class="queue-divider"></div>
+              <div class="queue-wait">
+                <span class="wait-num">~8 min</span>
+                <span class="wait-label">Est. Wait</span>
+              </div>
+            </div>
+            <div class="phone-bus-row">
+              <div class="bus-tag arriving">Bus 47 → Arriving</div>
+              <div class="bus-tag delayed">Bus 12 → Delayed</div>
+            </div>
+            <div class="phone-people">
+              <div class="people-bar">
+                <div class="people-fill" style="width:65%"></div>
+              </div>
+              <span class="people-label">Queue: 4 / 20</span>
+            </div>
+            <button class="phone-btn">Leave Queue</button>
+          </div>
+        </div>
+        <div class="float-card float-card-1">
+          <span>✅</span> Queue updated
+        </div>
+        <div class="float-card float-card-2">
+          <span>🚌</span> Bus 47 arriving in 2 min
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FEATURES ══════════════ -->
+  <section class="features" id="features">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">What AnbesaFlow Offers</p>
+        <h2 class="section-title">Built for Every Commuter</h2>
+        <p class="section-sub">Three powerful roles. One seamless platform.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card" style="--delay:0s">
+          <div class="feature-icon" style="background:rgba(255,107,0,.12)">🧍</div>
+          <h3>For Passengers</h3>
+          <ul class="feature-list">
+            <li>Join virtual bus-stop queues</li>
+            <li>Real-time position tracking</li>
+            <li>Live waiting time estimate</li>
+            <li>Search any registered stop</li>
+          </ul>
+        </div>
+        <div class="feature-card featured" style="--delay:.1s">
+          <div class="feature-badge">Most Used</div>
+          <div class="feature-icon" style="background:rgba(255,107,0,.18)">🚌</div>
+          <h3>For Operators</h3>
+          <ul class="feature-list">
+            <li>Submit bus arrival events</li>
+            <li>Mark buses as delayed</li>
+            <li>Update stop status live</li>
+            <li>Simple one-tap interface</li>
+          </ul>
+        </div>
+        <div class="feature-card" style="--delay:.2s">
+          <div class="feature-icon" style="background:rgba(255,107,0,.12)">🛡️</div>
+          <h3>For Admins</h3>
+          <ul class="feature-list">
+            <li>Manage all user accounts</li>
+            <li>Assign & modify roles</li>
+            <li>Monitor system-wide stats</li>
+            <li>Configure routes & stops</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ HOW IT WORKS ══════════════ -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">Simple Process</p>
+        <h2 class="section-title">Three Steps to a Smarter Queue</h2>
+      </div>
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Register & Sign In</h3>
+            <p>Create a free account in under 30 seconds. Sign in with your email and password to access your personalised dashboard.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Find Your Stop & Join</h3>
+            <p>Search for your bus stop by name. See the live queue length and estimated wait, then tap to join the virtual queue.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Track & Board</h3>
+            <p>Watch your position count down in real time as buses arrive. Board when it's your turn — no pushing, no confusion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ STATS ══════════════ -->
+  <section class="stats-section" id="stats">
+    <div class="section-container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-num" data-target="3000">0</span>
+          <span class="stat-plus">+</span>
+          <span class="stat-label">Daily Users</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-target="120">0</span>
+          <span class="stat-plus">+</span>
+          <span class="stat-label">Bus Stops Covered</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-target="40">0</span>
+          <span class="stat-plus">%</span>
+          <span class="stat-label">Wait Time Reduction</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-target="99">0</span>
+          <span class="stat-plus">%</span>
+          <span class="stat-label">System Uptime</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CTA ══════════════ -->
+  <section class="cta-section">
+    <div class="cta-container">
+      <h2>Ready for a smarter commute?</h2>
+      <p>Join thousands of Addis Ababa commuters who already rely on AnbesaFlow every day.</p>
+      <div class="cta-actions">
+        <a href="pages/register.html" class="btn btn-primary btn-lg">Create Free Account</a>
+        <a href="pages/login.html" class="btn btn-ghost btn-lg">Sign In</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-icon">🚌</span>
+          <span class="logo-text">Anbesa<span class="accent">Flow</span></span>
+        </a>
+        <p>Smarter queues for a smarter Addis Ababa.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="pages/login.html">Sign In</a>
+          <a href="pages/register.html">Register</a>
+          <a href="pages/passenger-dashboard.html">Dashboard</a>
+        </div>
+        <div class="footer-col">
+          <h4>Project</h4>
+          <a href="#">SECT-4221</a>
+          <a href="#">Group 3</a>
+          <a href="#">AAiT</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 AnbesaFlow · Group 3 · Addis Ababa Institute of Technology · SECT-4221</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+```
+
+---
+
 ### <a id="📄-src-main-resources-application-yml"></a>📄 `src/main/resources/application.yml`
 
 **File Info:**
-- **Size**: 1 KB
+- **Size**: 696 B
 - **Extension**: `.yml`
 - **Language**: `yaml`
 - **Location**: `src/main/resources/application.yml`
 - **Relative Path**: `src/main/resources`
 - **Created**: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 15:07:44 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `1cadd546df5716b7f78628dcc3bb7080`
-- **SHA256**: `28e38a1b9503ba6186c132f2bebdab11366a1f88186525f55920620c31e79172`
+- **Modified**: 2026-06-30 21:31:56 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `0802a811e61c29315e6787409107b8dc`
+- **SHA256**: `bfe309f8359195b946f124b8dbfc22410a22da136bb7d48cfaef3a9b75b66144`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -4219,9 +6627,9 @@ spring:
     name: anbesaflow-auth
 
   datasource:
-    url: ${DATABASE_URL:jdbc:postgresql://localhost:8432/anbesaflow}
-    username: ${DATABASE_USERNAME:postgres}
-    password: ${DATABASE_PASSWORD:postgres}
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -4239,9 +6647,7 @@ spring:
 
 app:
   jwt:
-    # 512-bit HMAC-SHA Secret Key (Hex-encoded 64-byte string)
-    secret: ${JWT_SECRET:9a67431a7b1b369c0d4860b81c4e743a6d4860b81c4e743a6d4860b81c4e743a9a67431a7b1b369c0d4860b81c4e743a6d4860b81c4e743a6d4860b81c4e743a}
-    # Token expiration time: 24 hours in milliseconds (24 * 60 * 60 * 1000)
+    secret: ${JWT_SECRET}
     expiration-ms: 86400000
     header: Authorization
     prefix: "Bearer "
@@ -4255,6 +6661,13 @@ server:
 ```
 
 ---
+
+## 🚫 Binary/Excluded Files
+
+The following files were not included in the text content:
+
+- `target/classes/com/anbesaflow/auth/config/CorsConfig.class`
+- `target/classes/com/anbesaflow/auth/config/CorsConfig$1.class`
 
 ## 🚫 Binary/Excluded Files
 
@@ -4367,7 +6780,7 @@ The following files were not included in the text content:
 - **Language**: `sql`
 - **Location**: `target/classes/db/migration/V1__init_schema.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 19:48:26 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `47babe6a83cb9430d2757b5c900cedde`
 - **SHA256**: `fd2b61e463f3a6772a8ba7349fe5ab74b5444f913a489cd9111352eb1b8e2089`
@@ -4400,7 +6813,7 @@ CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
 - **Language**: `sql`
 - **Location**: `target/classes/db/migration/V2__create_queue_entry_table.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 19:48:26 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
 - **Modified**: 2026-06-30 14:19:21 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `0bf34dc2776d1e38f88d07e6e6a045ae`
 - **SHA256**: `471243f8d03f1a9a240ff65946b210d4e2e08b2bbe2ca6f85ef9211eb2878373`
@@ -4444,8 +6857,8 @@ ON queue_entries(position);
 - **Language**: `sql`
 - **Location**: `target/classes/db/migration/V3__create_bus_table.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 19:48:26 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:31:15 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `abacdbba3a2a6a0410018680967f9027`
 - **SHA256**: `a15e0c4aaf3ed5a3e413ea8c5a6b0afbba0e0da8552ffb285c49ea9f79f7a974`
 - **Encoding**: ASCII
@@ -4476,6 +6889,98 @@ ON buses(plate_number);
 
 ---
 
+### <a id="📄-target-classes-db-migration-v3-create-route-and-bus-tables-sql"></a>📄 `target/classes/db/migration/V3__create_route_and_bus_tables.sql`
+
+**File Info:**
+- **Size**: 1 KB
+- **Extension**: `.sql`
+- **Language**: `sql`
+- **Location**: `target/classes/db/migration/V3__create_route_and_bus_tables.sql`
+- **Relative Path**: `target/classes/db/migration`
+- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `0bbc5283d13fd813c7f7f6a2de86fe03`
+- **SHA256**: `6a1d203e2d2f72cb61457077d542249be80cab12ec7807b40cdb5aa8a6226a9c`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```sql
+CREATE TABLE IF NOT EXISTS routes (
+    id BIGSERIAL PRIMARY KEY,
+    route_code VARCHAR(50) NOT NULL UNIQUE,
+    description VARCHAR(200) NOT NULL,
+    active BOOLEAN NOT NULL DEFAULT TRUE,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS bus_stops (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(150) NOT NULL,
+    location_description VARCHAR(255),
+    latitude NUMERIC(10, 7),
+    longitude NUMERIC(10, 7),
+    route_id BIGINT,
+    active BOOLEAN NOT NULL DEFAULT TRUE,
+    CONSTRAINT fk_bus_stop_route
+        FOREIGN KEY(route_id)
+        REFERENCES routes(id)
+        ON DELETE SET NULL
+);
+
+CREATE TABLE IF NOT EXISTS buses (
+    id BIGSERIAL PRIMARY KEY,
+    plate_number VARCHAR(30) NOT NULL UNIQUE,
+    status VARCHAR(20) NOT NULL DEFAULT 'ACTIVE',
+    capacity INTEGER NOT NULL DEFAULT 50,
+    route_id BIGINT NOT NULL,
+    CONSTRAINT fk_bus_route
+        FOREIGN KEY(route_id)
+        REFERENCES routes(id)
+        ON DELETE CASCADE
+);
+
+```
+
+---
+
+### <a id="📄-target-classes-db-migration-v4-create-arrival-log-table-sql"></a>📄 `target/classes/db/migration/V4__create_arrival_log_table.sql`
+
+**File Info:**
+- **Size**: 467 B
+- **Extension**: `.sql`
+- **Language**: `sql`
+- **Location**: `target/classes/db/migration/V4__create_arrival_log_table.sql`
+- **Relative Path**: `target/classes/db/migration`
+- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `a2f8265227ec64e082e0478de1c11944`
+- **SHA256**: `0d1be63532db76abca41b3af322935f226e463482c73f0da23962724b2512857`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```sql
+CREATE TABLE IF NOT EXISTS arrival_logs (
+    id BIGSERIAL PRIMARY KEY,
+    bus_id BIGINT NOT NULL,
+    bus_stop_id BIGINT NOT NULL,
+    arrival_time TIMESTAMP NOT NULL,
+    departure_time TIMESTAMP,
+    CONSTRAINT fk_arrival_log_bus
+        FOREIGN KEY(bus_id)
+        REFERENCES buses(id)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_arrival_log_bus_stop
+        FOREIGN KEY(bus_stop_id)
+        REFERENCES bus_stops(id)
+        ON DELETE CASCADE
+);
+
+```
+
+---
+
 ### <a id="📄-target-classes-db-migration-v4-create-route-table-sql"></a>📄 `target/classes/db/migration/V4__create_route_table.sql`
 
 **File Info:**
@@ -4484,8 +6989,8 @@ ON buses(plate_number);
 - **Language**: `sql`
 - **Location**: `target/classes/db/migration/V4__create_route_table.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 19:48:26 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:31:27 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `2724843474bcfc47dc4abd260d0d6821`
 - **SHA256**: `95c1a3d2a56d50003ea96fc9ff422f9ffb73e18d49395189e2766d0bdcdf3ed9`
 - **Encoding**: ASCII
@@ -4520,8 +7025,8 @@ ON routes(name);
 - **Language**: `sql`
 - **Location**: `target/classes/db/migration/V5__create_bus_stop_and_arrival_log_tables.sql`
 - **Relative Path**: `target/classes/db/migration`
-- **Created**: 2026-06-30 19:48:26 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:31:36 (Africa/Nairobi / GMT+03:00)
+- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `c039b9442688c99fce2d07835bba33b6`
 - **SHA256**: `df6eae64247a31b1699ae1c30a1d928fd5712cdc515628e6fc85e7bb6c322939`
 - **Encoding**: ASCII
@@ -4574,18 +7079,2108 @@ ON arrival_logs(bus_stop_id);
 
 ---
 
+### <a id="📄-target-classes-db-migration-v5-seed-data-sql"></a>📄 `target/classes/db/migration/V5__seed_data.sql`
+
+**File Info:**
+- **Size**: 1.96 KB
+- **Extension**: `.sql`
+- **Language**: `sql`
+- **Location**: `target/classes/db/migration/V5__seed_data.sql`
+- **Relative Path**: `target/classes/db/migration`
+- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `462f61df5cc6c158044523ed5e6df717`
+- **SHA256**: `357bbc6149c1f20b433190cfcbdfa5f8be9dbe7308d00178e51277131499dcd3`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```sql
+-- Seed some dummy users (password is 'password' encoded with BCrypt)
+INSERT INTO users (name, email, password, role) VALUES 
+('Admin User', 'admin@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'ADMIN'),
+('Operator User', 'operator@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'OPERATOR'),
+('Passenger One', 'passenger1@anbesaflow.com', '$2a$10$XJ28aM9/W0M1p5O43YfV/.yH8/pI24oF8L4uB5lM2r.tZ.M/o/M8q', 'PASSENGER')
+ON CONFLICT (email) DO NOTHING;
+
+-- Seed Routes
+INSERT INTO routes (route_code, description, active) VALUES 
+('R47', 'Megenagna to Bole', TRUE),
+('R12', 'Piassa to Arat Kilo', TRUE)
+ON CONFLICT (route_code) DO NOTHING;
+
+-- We need to get the IDs of the routes we just inserted to insert bus stops and buses.
+-- To keep it simple and idempotent, we use subqueries.
+
+-- Seed Bus Stops
+INSERT INTO bus_stops (name, location_description, route_id, active) 
+SELECT 'Megenagna Station', 'Main terminal at Megenagna', id, TRUE FROM routes WHERE route_code = 'R47'
+WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Megenagna Station');
+
+INSERT INTO bus_stops (name, location_description, route_id, active) 
+SELECT 'Bole Station', 'Terminal near Bole Airport', id, TRUE FROM routes WHERE route_code = 'R47'
+WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Bole Station');
+
+INSERT INTO bus_stops (name, location_description, route_id, active) 
+SELECT 'Piassa Station', 'Main terminal at Piassa', id, TRUE FROM routes WHERE route_code = 'R12'
+WHERE NOT EXISTS (SELECT 1 FROM bus_stops WHERE name = 'Piassa Station');
+
+-- Seed Buses
+INSERT INTO buses (plate_number, status, capacity, route_id) 
+SELECT 'AA-1001', 'ACTIVE', 60, id FROM routes WHERE route_code = 'R47'
+ON CONFLICT (plate_number) DO NOTHING;
+
+INSERT INTO buses (plate_number, status, capacity, route_id) 
+SELECT 'AA-1002', 'ACTIVE', 50, id FROM routes WHERE route_code = 'R12'
+ON CONFLICT (plate_number) DO NOTHING;
+
+```
+
+---
+
+### <a id="📄-target-classes-static-css-auth-css"></a>📄 `target/classes/static/css/auth.css`
+
+**File Info:**
+- **Size**: 4.47 KB
+- **Extension**: `.css`
+- **Language**: `css`
+- **Location**: `target/classes/static/css/auth.css`
+- **Relative Path**: `target/classes/static/css`
+- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `86519359668137428cdf0f90b68347e6`
+- **SHA256**: `f56dfea5760e2fe608ef28cde046344624ae278f2df3ab44a28b25d9cb34616f`
+- **Encoding**: UTF-8
+
+**File code content:**
+
+```css
+/* ═══════════════════════════════════════
+   AUTH PAGES — Login & Register styles
+   ═══════════════════════════════════════ */
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Left panel — brand */
+.auth-brand {
+  background: linear-gradient(145deg, var(--orange-500) 0%, #ff4500 60%, var(--red-500) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 64px;
+  position: relative;
+  overflow: hidden;
+}
+.auth-brand::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='200' cy='200' r='200' fill='rgba(255,255,255,.05)'/%3E%3C/svg%3E") center/cover;
+}
+.auth-brand-logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+.auth-brand h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.auth-brand p {
+  color: rgba(255,255,255,.8);
+  font-size: .95rem;
+  line-height: 1.7;
+  max-width: 380px;
+  position: relative;
+  z-index: 1;
+}
+.auth-brand-features {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  position: relative;
+  z-index: 1;
+}
+.auth-feature-item {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  font-size: .88rem;
+  color: rgba(255,255,255,.9);
+}
+.auth-feature-icon {
+  width: 32px; height: 32px;
+  background: rgba(255,255,255,.2);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Right panel — form */
+.auth-form-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 48px;
+  background: var(--white);
+}
+.auth-form-box { width: 100%; max-width: 420px; }
+.auth-form-header { margin-bottom: 2rem; }
+.auth-form-header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--grey-900);
+  margin-bottom: .4rem;
+}
+.auth-form-header p { color: var(--grey-400); font-size: .9rem; }
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin: 1.4rem 0;
+}
+.auth-divider::before, .auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--grey-200);
+}
+.auth-divider span { font-size: .78rem; color: var(--grey-400); font-weight: 500; }
+
+.auth-footer-text {
+  text-align: center;
+  font-size: .85rem;
+  color: var(--grey-500);
+  margin-top: 1.5rem;
+}
+.auth-footer-text a { color: var(--orange-500); font-weight: 600; }
+.auth-footer-text a:hover { text-decoration: underline; }
+
+.password-toggle-wrapper { position: relative; }
+.password-toggle-wrapper .form-input { padding-right: 2.8rem; }
+.password-toggle {
+  position: absolute;
+  right: .85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--grey-400);
+  cursor: pointer;
+  font-size: .9rem;
+  padding: .2rem;
+  transition: color var(--duration) var(--ease);
+}
+.password-toggle:hover { color: var(--orange-500); }
+
+.role-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .65rem;
+  margin-bottom: 1.2rem;
+}
+.role-option {
+  position: relative;
+}
+.role-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.role-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+  padding: .75rem .5rem;
+  border: 1.5px solid var(--grey-200);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--grey-500);
+  transition: all var(--duration) var(--ease);
+  text-align: center;
+}
+.role-label:hover { border-color: var(--orange-400); color: var(--orange-500); }
+.role-option input[type="radio"]:checked + .role-label {
+  border-color: var(--orange-500);
+  background: var(--orange-50);
+  color: var(--orange-600);
+}
+.role-emoji { font-size: 1.4rem; }
+
+@media (max-width: 900px) {
+  .auth-page { grid-template-columns: 1fr; }
+  .auth-brand { display: none; }
+  .auth-form-panel { padding: 48px 24px; min-height: 100vh; }
+}
+
+```
+
+---
+
+### <a id="📄-target-classes-static-css-dashboard-css"></a>📄 `target/classes/static/css/dashboard.css`
+
+**File Info:**
+- **Size**: 9.98 KB
+- **Extension**: `.css`
+- **Language**: `css`
+- **Location**: `target/classes/static/css/dashboard.css`
+- **Relative Path**: `target/classes/static/css`
+- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `316cc521a88722f082d6b2b8ab885fb6`
+- **SHA256**: `e8202cec4feada004572ed265ddc3c357625a90f7609a4f6332379423853c369`
+- **Encoding**: UTF-8
+
+**File code content:**
+
+```css
+/* ═══════════════════════════════════════
+   DASHBOARD — shared layout styles
+   ═══════════════════════════════════════ */
+
+/* Layout */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--grey-50);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background: var(--white);
+  border-right: 1px solid var(--grey-100);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  z-index: 100;
+  transition: transform var(--duration) var(--ease);
+}
+.sidebar-logo {
+  padding: 1.4rem 1.4rem 1rem;
+  border-bottom: 1px solid var(--grey-100);
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--grey-900);
+}
+.sidebar-logo .logo-icon { font-size: 1.4rem; }
+.sidebar-nav { flex: 1; padding: 1rem 0; }
+.sidebar-section-label {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--grey-400);
+  padding: .6rem 1.4rem;
+  margin-top: .4rem;
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .65rem 1.4rem;
+  font-size: .88rem;
+  font-weight: 500;
+  color: var(--grey-500);
+  border-radius: 0;
+  transition: all var(--duration) var(--ease);
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  text-decoration: none;
+  position: relative;
+}
+.sidebar-link:hover { color: var(--orange-500); background: var(--orange-50); }
+.sidebar-link.active {
+  color: var(--orange-500);
+  background: rgba(255,107,0,.07);
+  border-left-color: var(--orange-500);
+  font-weight: 600;
+}
+.sidebar-link .link-icon { font-size: 1.1rem; width: 20px; text-align: center; }
+.sidebar-link .link-badge {
+  margin-left: auto;
+  background: var(--orange-500);
+  color: var(--white);
+  font-size: .65rem;
+  font-weight: 700;
+  padding: .1rem .45rem;
+  border-radius: var(--radius-full);
+}
+.sidebar-user {
+  padding: 1rem 1.4rem;
+  border-top: 1px solid var(--grey-100);
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.user-avatar {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, var(--orange-400), var(--orange-600));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--white);
+  flex-shrink: 0;
+}
+.user-info { flex: 1; min-width: 0; }
+.user-name { font-size: .85rem; font-weight: 600; color: var(--grey-900); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.user-role { font-size: .72rem; color: var(--orange-500); font-weight: 600; text-transform: uppercase; }
+.logout-btn {
+  color: var(--grey-400);
+  font-size: .9rem;
+  padding: .3rem;
+  cursor: pointer;
+  transition: color var(--duration) var(--ease);
+}
+.logout-btn:hover { color: var(--red-500); }
+
+/* Main content */
+.dashboard-main {
+  flex: 1;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.dashboard-topbar {
+  background: var(--white);
+  border-bottom: 1px solid var(--grey-100);
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.topbar-title { font-size: 1.05rem; font-weight: 700; color: var(--grey-900); }
+.topbar-right { display: flex; align-items: center; gap: 1rem; }
+.topbar-notif {
+  position: relative;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--grey-500);
+  transition: background var(--duration) var(--ease);
+}
+.topbar-notif:hover { background: var(--grey-100); }
+.notif-dot {
+  position: absolute;
+  top: 6px; right: 6px;
+  width: 8px; height: 8px;
+  background: var(--orange-500);
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+.dashboard-content { flex: 1; padding: 2rem; }
+
+/* Page header */
+.page-header { margin-bottom: 1.8rem; }
+.page-header h1 { font-size: 1.55rem; font-weight: 800; color: var(--grey-900); margin-bottom: .3rem; }
+.page-header p { color: var(--grey-400); font-size: .9rem; }
+
+/* Stats row */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+.stat-box {
+  background: var(--white);
+  border: 1.5px solid var(--grey-100);
+  border-radius: var(--radius-lg);
+  padding: 1.3rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  transition: all var(--duration) var(--ease);
+}
+.stat-box:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.stat-box-icon {
+  width: 40px; height: 40px;
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: .2rem;
+}
+.stat-box-icon.orange { background: rgba(255,107,0,.1); }
+.stat-box-icon.red    { background: rgba(229,57,53,.1); }
+.stat-box-icon.green  { background: rgba(34,197,94,.1); }
+.stat-box-icon.blue   { background: rgba(59,130,246,.1); }
+.stat-box-value { font-size: 1.8rem; font-weight: 800; color: var(--grey-900); line-height: 1; }
+.stat-box-label { font-size: .8rem; color: var(--grey-400); font-weight: 500; }
+.stat-box-change { font-size: .75rem; font-weight: 600; }
+.stat-box-change.positive { color: #16a34a; }
+.stat-box-change.negative { color: var(--red-500); }
+
+/* Panels / content cards */
+.panel {
+  background: var(--white);
+  border: 1.5px solid var(--grey-100);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.6rem;
+}
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+  gap: .8rem;
+}
+.panel-title { font-size: 1rem; font-weight: 700; color: var(--grey-900); }
+.panel-subtitle { font-size: .8rem; color: var(--grey-400); margin-top: .1rem; }
+
+/* Table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .88rem;
+}
+.data-table th {
+  text-align: left;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--grey-400);
+  padding: .6rem .75rem;
+  border-bottom: 1.5px solid var(--grey-100);
+}
+.data-table td {
+  padding: .85rem .75rem;
+  border-bottom: 1px solid var(--grey-50);
+  color: var(--grey-700);
+  vertical-align: middle;
+}
+.data-table tbody tr { transition: background var(--duration) var(--ease); }
+.data-table tbody tr:hover { background: var(--grey-50); }
+.data-table tbody tr:last-child td { border-bottom: none; }
+
+/* Queue card */
+.queue-info-card {
+  background: linear-gradient(135deg, var(--orange-500) 0%, #ff4500 100%);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-orange);
+}
+.queue-big-num {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.queue-info-text h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: .3rem; }
+.queue-info-text p { font-size: .88rem; opacity: .8; }
+.queue-info-right { margin-left: auto; text-align: right; }
+.queue-wait-big { font-size: 2rem; font-weight: 800; }
+.queue-wait-label { font-size: .8rem; opacity: .75; }
+
+/* Search bar */
+.search-bar {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+.search-bar input {
+  width: 100%;
+  padding: .75rem 1rem .75rem 2.8rem;
+  border: 1.5px solid var(--grey-200);
+  border-radius: var(--radius-full);
+  font-size: .9rem;
+  background: var(--white);
+  color: var(--grey-900);
+  transition: border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+.search-bar input:focus {
+  border-color: var(--orange-500);
+  box-shadow: 0 0 0 3px rgba(255,107,0,.1);
+  outline: none;
+}
+.search-icon {
+  position: absolute;
+  left: 1rem; top: 50%; transform: translateY(-50%);
+  color: var(--grey-400);
+  font-size: .95rem;
+  pointer-events: none;
+}
+
+/* Stop cards grid */
+.stops-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+.stop-card {
+  background: var(--white);
+  border: 1.5px solid var(--grey-100);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem;
+  transition: all var(--duration) var(--ease);
+  cursor: pointer;
+}
+.stop-card:hover {
+  border-color: var(--orange-400);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.stop-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: .75rem;
+}
+.stop-card-name { font-size: .98rem; font-weight: 700; color: var(--grey-900); }
+.stop-card-route { font-size: .75rem; color: var(--grey-400); margin-top: .15rem; }
+.stop-card-stats { display: flex; gap: 1rem; margin-bottom: .9rem; }
+.stop-stat { display: flex; flex-direction: column; }
+.stop-stat-val { font-size: 1.15rem; font-weight: 800; color: var(--grey-900); }
+.stop-stat-key { font-size: .7rem; color: var(--grey-400); }
+
+/* Mobile sidebar toggle */
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  bottom: 1.5rem; right: 1.5rem;
+  width: 52px; height: 52px;
+  background: var(--orange-500);
+  border-radius: 50%;
+  box-shadow: var(--shadow-orange);
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--white);
+  cursor: pointer;
+  z-index: 200;
+}
+
+@media (max-width: 900px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.open { transform: translateX(0); }
+  .dashboard-main { margin-left: 0; }
+  .sidebar-toggle { display: flex; }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+  .queue-info-card { flex-direction: column; text-align: center; }
+  .queue-info-right { margin-left: 0; text-align: center; }
+}
+@media (max-width: 500px) {
+  .stats-row { grid-template-columns: 1fr; }
+  .dashboard-content { padding: 1rem; }
+}
+
+```
+
+---
+
+### <a id="📄-target-classes-static-css-global-css"></a>📄 `target/classes/static/css/global.css`
+
+**File Info:**
+- **Size**: 7.65 KB
+- **Extension**: `.css`
+- **Language**: `css`
+- **Location**: `target/classes/static/css/global.css`
+- **Relative Path**: `target/classes/static/css`
+- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `75c52ca9b22ca3cfac7cb95d05bf1439`
+- **SHA256**: `01decc2e0165c54e9f9797563adb0fddb7b17ef30ac7d2b1f998352c9bbe03ee`
+- **Encoding**: UTF-8
+
+**File code content:**
+
+```css
+/* ═══════════════════════════════════════════════
+   ANBESAFLOW — Global CSS Design System
+   Palette: White bg · Orange primary · Red accent
+   ═══════════════════════════════════════════════ */
+
+/* ── Custom Properties ── */
+:root {
+  /* Brand colours */
+  --orange-50:  #fff4e6;
+  --orange-100: #ffe0b2;
+  --orange-200: #ffcc80;
+  --orange-400: #ffa726;
+  --orange-500: #FF6B00;   /* primary */
+  --orange-600: #e55f00;
+  --orange-700: #cc5200;
+
+  --red-500:    #E53935;
+  --red-400:    #EF5350;
+
+  --white:      #ffffff;
+  --grey-50:    #f9fafb;
+  --grey-100:   #f3f4f6;
+  --grey-200:   #e5e7eb;
+  --grey-300:   #d1d5db;
+  --grey-400:   #9ca3af;
+  --grey-500:   #6b7280;
+  --grey-700:   #374151;
+  --grey-800:   #1f2937;
+  --grey-900:   #111827;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Shadows */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md:  0 4px 16px rgba(0,0,0,.10);
+  --shadow-lg:  0 10px 40px rgba(0,0,0,.12);
+  --shadow-orange: 0 8px 32px rgba(255,107,0,.28);
+
+  /* Radii */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --ease: cubic-bezier(.4,0,.2,1);
+  --duration: 220ms;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-sans);
+  background: var(--white);
+  color: var(--grey-800);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
+/* ── Utility buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .65rem 1.4rem;
+  border-radius: var(--radius-full);
+  font-size: .9rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  transition: all var(--duration) var(--ease);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--orange-500);
+  color: var(--white);
+  box-shadow: var(--shadow-orange);
+}
+.btn-primary:hover {
+  background: var(--orange-600);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(255,107,0,.38);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--grey-700);
+  border: 1.5px solid var(--grey-300);
+}
+.btn-ghost:hover {
+  border-color: var(--orange-500);
+  color: var(--orange-500);
+  transform: translateY(-2px);
+}
+.btn-danger {
+  background: var(--red-500);
+  color: var(--white);
+}
+.btn-danger:hover {
+  background: var(--red-400);
+  transform: translateY(-2px);
+}
+.btn-lg { padding: .85rem 2rem; font-size: 1rem; }
+.btn-sm { padding: .45rem .9rem; font-size: .82rem; }
+.btn-full { width: 100%; }
+
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--orange-500) 0%, var(--red-500) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.accent { color: var(--orange-500); }
+
+/* ── Section scaffolding ── */
+.section-container { max-width: 1180px; margin: 0 auto; padding: 80px 24px; }
+.section-header { text-align: center; margin-bottom: 56px; }
+.section-eyebrow {
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--orange-500);
+  margin-bottom: .6rem;
+}
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: var(--grey-900);
+  line-height: 1.2;
+  margin-bottom: .8rem;
+}
+.section-sub { color: var(--grey-500); font-size: 1rem; max-width: 480px; margin: 0 auto; }
+
+/* ── Cards ── */
+.card {
+  background: var(--white);
+  border: 1.5px solid var(--grey-100);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--duration) var(--ease), transform var(--duration) var(--ease);
+}
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+/* ── Form controls ── */
+.form-group { margin-bottom: 1.2rem; }
+.form-label {
+  display: block;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--grey-700);
+  margin-bottom: .45rem;
+}
+.form-input {
+  width: 100%;
+  padding: .75rem 1rem;
+  border: 1.5px solid var(--grey-200);
+  border-radius: var(--radius-md);
+  font-size: .95rem;
+  background: var(--grey-50);
+  color: var(--grey-900);
+  transition: border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+.form-input:focus {
+  border-color: var(--orange-500);
+  box-shadow: 0 0 0 3px rgba(255,107,0,.12);
+  background: var(--white);
+}
+.form-select {
+  width: 100%;
+  padding: .75rem 1rem;
+  border: 1.5px solid var(--grey-200);
+  border-radius: var(--radius-md);
+  font-size: .95rem;
+  background: var(--grey-50);
+  color: var(--grey-900);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 1.2em;
+  transition: border-color var(--duration) var(--ease);
+}
+.form-select:focus { border-color: var(--orange-500); outline: none; }
+
+/* ── Alert / toast ── */
+.alert {
+  padding: .85rem 1.1rem;
+  border-radius: var(--radius-md);
+  font-size: .88rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.alert-error { background: rgba(229,57,53,.08); color: var(--red-500); border: 1px solid rgba(229,57,53,.18); }
+.alert-success { background: rgba(255,107,0,.08); color: var(--orange-600); border: 1px solid rgba(255,107,0,.2); }
+
+/* ── Badge / pill ── */
+.badge {
+  display: inline-block;
+  padding: .25rem .7rem;
+  border-radius: var(--radius-full);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.badge-orange { background: var(--orange-50); color: var(--orange-600); }
+.badge-red    { background: rgba(229,57,53,.1); color: var(--red-500); }
+.badge-green  { background: rgba(34,197,94,.1); color: #16a34a; }
+.badge-grey   { background: var(--grey-100); color: var(--grey-500); }
+
+/* ── Loading spinner ── */
+.spinner {
+  width: 22px; height: 22px;
+  border: 3px solid rgba(255,107,0,.2);
+  border-top-color: var(--orange-500);
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+  display: inline-block;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--grey-100); }
+::-webkit-scrollbar-thumb { background: var(--grey-300); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--orange-400); }
+
+/* ── Fade-in animation ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-in { animation: fadeInUp .55s var(--ease) both; }
+.delay-1 { animation-delay: .1s; }
+.delay-2 { animation-delay: .2s; }
+.delay-3 { animation-delay: .3s; }
+
+/* ── Responsive helper ── */
+@media (max-width: 768px) {
+  .section-container { padding: 60px 16px; }
+}
+
+```
+
+---
+
+### <a id="📄-target-classes-static-css-landing-css"></a>📄 `target/classes/static/css/landing.css`
+
+**File Info:**
+- **Size**: 13.06 KB
+- **Extension**: `.css`
+- **Language**: `css`
+- **Location**: `target/classes/static/css/landing.css`
+- **Relative Path**: `target/classes/static/css`
+- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `6a1939e398550829cf7fb0bebccbf2b5`
+- **SHA256**: `580582ad5c8affc5be91225356461e5ad034c24e236eab501bdef6ab12ddb730`
+- **Encoding**: UTF-8
+
+**File code content:**
+
+```css
+/* ═══════════════════════════════════════
+   LANDING PAGE — specific styles
+   ═══════════════════════════════════════ */
+
+/* ── NAVBAR ── */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+.navbar.scrolled {
+  border-color: var(--grey-100);
+  box-shadow: var(--shadow-sm);
+}
+.nav-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--grey-900);
+  flex-shrink: 0;
+}
+.logo-icon { font-size: 1.6rem; }
+.nav-links {
+  display: flex;
+  gap: .25rem;
+  flex: 1;
+}
+.nav-link {
+  padding: .45rem .85rem;
+  border-radius: var(--radius-full);
+  font-size: .88rem;
+  font-weight: 500;
+  color: var(--grey-600);
+  transition: color var(--duration) var(--ease), background var(--duration) var(--ease);
+}
+.nav-link:hover {
+  color: var(--orange-500);
+  background: var(--orange-50);
+}
+.nav-cta { display: flex; gap: .65rem; }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--grey-700);
+  border-radius: 2px;
+  transition: all var(--duration) var(--ease);
+}
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 1rem 24px 1.4rem;
+  background: var(--white);
+  border-top: 1px solid var(--grey-100);
+}
+.mobile-menu a {
+  padding: .55rem .75rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  color: var(--grey-700);
+}
+.mobile-menu.open { display: flex; }
+
+@media (max-width: 820px) {
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  padding-top: 68px;
+  overflow: hidden;
+  position: relative;
+}
+.hero-bg-shapes { position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: .45;
+}
+.shape-1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(255,107,0,.18) 0%, transparent 70%);
+  top: -100px; right: -100px;
+}
+.shape-2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(229,57,53,.12) 0%, transparent 70%);
+  bottom: 0; left: 10%;
+}
+.shape-3 {
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(255,107,0,.1) 0%, transparent 70%);
+  top: 40%; left: 40%;
+}
+.hero-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 64px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--orange-50);
+  border: 1px solid rgba(255,107,0,.2);
+  color: var(--orange-600);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .4rem .9rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.2rem;
+}
+.badge-dot {
+  width: 7px; height: 7px;
+  background: var(--orange-500);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .6; transform: scale(1.4); }
+}
+.hero-title {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.08;
+  color: var(--grey-900);
+  margin-bottom: 1.2rem;
+}
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: var(--grey-500);
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 2rem;
+}
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.trust-item { display: flex; flex-direction: column; }
+.trust-num { font-size: 1.5rem; font-weight: 800; color: var(--grey-900); }
+.trust-label { font-size: .75rem; color: var(--grey-400); font-weight: 500; }
+.trust-divider { width: 1px; height: 36px; background: var(--grey-200); }
+
+/* Phone mockup */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.phone-mockup {
+  width: 280px;
+  background: var(--white);
+  border-radius: 32px;
+  box-shadow: 0 32px 80px rgba(0,0,0,.16), 0 0 0 1px rgba(0,0,0,.06);
+  padding: 24px 20px;
+  position: relative;
+  z-index: 2;
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.phone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.phone-stop { font-weight: 700; font-size: .9rem; color: var(--grey-900); }
+.phone-live {
+  font-size: .72rem;
+  font-weight: 700;
+  color: #16a34a;
+  background: rgba(34,197,94,.1);
+  padding: .2rem .55rem;
+  border-radius: var(--radius-full);
+  animation: blink 2s ease-in-out infinite;
+}
+@keyframes blink { 0%,100% { opacity:1; } 50% { opacity:.5; } }
+
+.phone-queue-card {
+  background: linear-gradient(135deg, var(--orange-500) 0%, #ff4500 100%);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-orange);
+}
+.queue-position, .queue-wait {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.queue-num { font-size: 2.2rem; font-weight: 900; color: var(--white); line-height: 1; }
+.queue-label { font-size: .65rem; color: rgba(255,255,255,.75); font-weight: 500; text-transform: uppercase; }
+.wait-num { font-size: 1.3rem; font-weight: 800; color: var(--white); }
+.wait-label { font-size: .65rem; color: rgba(255,255,255,.75); font-weight: 500; text-transform: uppercase; }
+.queue-divider { width: 1px; height: 36px; background: rgba(255,255,255,.25); }
+
+.phone-bus-row { display: flex; flex-direction: column; gap: .45rem; margin-bottom: 1rem; }
+.bus-tag {
+  font-size: .75rem;
+  font-weight: 600;
+  padding: .35rem .65rem;
+  border-radius: var(--radius-sm);
+}
+.bus-tag.arriving { background: rgba(34,197,94,.1); color: #16a34a; }
+.bus-tag.delayed  { background: rgba(229,57,53,.1); color: var(--red-500); }
+
+.phone-people { margin-bottom: 1rem; }
+.people-bar {
+  height: 6px;
+  background: var(--grey-100);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: .3rem;
+}
+.people-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--orange-400), var(--orange-500));
+  border-radius: 99px;
+  transition: width .8s var(--ease);
+}
+.people-label { font-size: .72rem; color: var(--grey-400); }
+
+.phone-btn {
+  width: 100%;
+  background: var(--grey-100);
+  color: var(--grey-600);
+  font-size: .82rem;
+  font-weight: 600;
+  padding: .55rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--duration) var(--ease);
+}
+.phone-btn:hover { background: rgba(229,57,53,.1); color: var(--red-500); }
+
+/* Floating cards */
+.float-card {
+  position: absolute;
+  background: var(--white);
+  border: 1px solid var(--grey-100);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+  padding: .6rem 1rem;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--grey-800);
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  white-space: nowrap;
+  z-index: 3;
+}
+.float-card-1 { top: 10%; left: -30%; animation: float 4.5s ease-in-out .5s infinite; }
+.float-card-2 { bottom: 10%; right: -25%; animation: float 4s ease-in-out 1s infinite; }
+
+/* ── FEATURES ── */
+.features { background: var(--grey-50); }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.feature-card {
+  background: var(--white);
+  border: 1.5px solid var(--grey-100);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  position: relative;
+  transition: all var(--duration) var(--ease);
+  animation: fadeInUp .5s var(--ease) var(--delay) both;
+}
+.feature-card:hover {
+  border-color: rgba(255,107,0,.3);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+.feature-card.featured {
+  border-color: var(--orange-500);
+  box-shadow: 0 0 0 1px rgba(255,107,0,.15), var(--shadow-orange);
+}
+.feature-badge {
+  position: absolute;
+  top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--orange-500);
+  color: var(--white);
+  font-size: .72rem;
+  font-weight: 700;
+  padding: .25rem .8rem;
+  border-radius: var(--radius-full);
+  letter-spacing: .05em;
+}
+.feature-icon {
+  width: 52px; height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+.feature-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--grey-900); margin-bottom: .9rem; }
+.feature-list li {
+  font-size: .88rem;
+  color: var(--grey-500);
+  padding: .35rem 0;
+  border-bottom: 1px solid var(--grey-50);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.feature-list li::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--orange-500);
+  flex-shrink: 0;
+}
+
+/* ── HOW IT WORKS ── */
+.how-it-works { background: var(--white); }
+.steps-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  justify-content: center;
+}
+.step { flex: 1; text-align: center; padding: 0 1.5rem; }
+.step-num {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--orange-500);
+  opacity: .2;
+  line-height: 1;
+  margin-bottom: .6rem;
+}
+.step-content h3 { font-size: 1.05rem; font-weight: 700; color: var(--grey-900); margin-bottom: .5rem; }
+.step-content p { font-size: .88rem; color: var(--grey-500); line-height: 1.65; }
+.step-connector {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--orange-200), var(--orange-400));
+  border-radius: 99px;
+  margin-top: 22px;
+  flex-shrink: 0;
+}
+
+/* ── STATS ── */
+.stats-section {
+  background: linear-gradient(135deg, var(--orange-500) 0%, #ff4500 100%);
+  padding: 64px 24px;
+}
+.stats-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+.stat-card { color: var(--white); }
+.stat-num {
+  display: block;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: .1rem;
+}
+.stat-plus { font-size: 1.8rem; font-weight: 800; }
+.stat-label { font-size: .85rem; opacity: .8; font-weight: 500; display: block; margin-top: .4rem; }
+
+/* ── CTA ── */
+.cta-section { background: var(--grey-50); padding: 100px 24px; text-align: center; }
+.cta-container { max-width: 600px; margin: 0 auto; }
+.cta-container h2 { font-size: clamp(1.8rem,4vw,2.4rem); font-weight: 800; color: var(--grey-900); margin-bottom: .8rem; }
+.cta-container p { color: var(--grey-500); margin-bottom: 2rem; }
+.cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* ── FOOTER ── */
+.footer { background: var(--grey-900); color: var(--grey-400); }
+.footer-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 56px 24px 32px;
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.footer-brand { flex: 1; min-width: 200px; }
+.footer-brand .nav-logo .logo-text { color: var(--white); }
+.footer-brand p { margin-top: .8rem; font-size: .85rem; line-height: 1.65; }
+.footer-links { display: flex; gap: 3rem; flex-wrap: wrap; }
+.footer-col { display: flex; flex-direction: column; gap: .5rem; }
+.footer-col h4 { color: var(--white); font-size: .85rem; font-weight: 700; margin-bottom: .2rem; }
+.footer-col a { font-size: .83rem; transition: color var(--duration) var(--ease); }
+.footer-col a:hover { color: var(--orange-400); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.08);
+  text-align: center;
+  padding: 1.4rem 24px;
+  font-size: .78rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .hero-container { grid-template-columns: 1fr; text-align: center; }
+  .hero-subtitle { margin: 0 auto 2rem; }
+  .hero-actions { justify-content: center; }
+  .hero-trust { justify-content: center; }
+  .hero-visual { display: none; }
+  .features-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps-container { flex-direction: column; align-items: center; }
+  .step-connector { width: 2px; height: 40px; margin-top: 0; }
+}
+@media (max-width: 500px) {
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .footer-container { flex-direction: column; gap: 2rem; }
+}
+
+```
+
+---
+
+### <a id="📄-target-classes-static-js-dashboard-js"></a>📄 `target/classes/static/js/dashboard.js`
+
+**File Info:**
+- **Size**: 3.14 KB
+- **Extension**: `.js`
+- **Language**: `javascript`
+- **Location**: `target/classes/static/js/dashboard.js`
+- **Relative Path**: `target/classes/static/js`
+- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `0484b191367916c3f35437696681bd6f`
+- **SHA256**: `5910e560ee38a0b7d50c373bb072cfd4702c230dfb006e2df273dbef190da361`
+- **Encoding**: UTF-8
+
+**File code content:**
+
+```javascript
+// ═══════════════════════════════════════════
+//  AnbesaFlow — Dashboard shared JS
+// ═══════════════════════════════════════════
+
+/* Sidebar toggle on mobile */
+function initSidebarToggle() {
+  const toggle = document.getElementById('sidebarToggle');
+  const sidebar = document.getElementById('sidebar');
+  if (!toggle || !sidebar) return;
+  toggle.addEventListener('click', () => sidebar.classList.toggle('open'));
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && !toggle.contains(e.target)) {
+      sidebar.classList.remove('open');
+    }
+  });
+}
+
+/* Active link */
+function setActiveLink() {
+  const current = location.pathname.split('/').pop();
+  document.querySelectorAll('.sidebar-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && href.includes(current)) link.classList.add('active');
+  });
+}
+
+/* Logout */
+function initLogout() {
+  const logoutBtn = document.getElementById('logoutBtn');
+  if (!logoutBtn) return;
+  logoutBtn.addEventListener('click', () => {
+    if (confirm('Are you sure you want to sign out?')) {
+      sessionStorage.removeItem('anbesaUser');
+      window.location.href = '../pages/login.html';
+    }
+  });
+}
+
+/* Simple toast */
+function showToast(message, type = 'success') {
+  const existing = document.querySelector('.toast');
+  if (existing) existing.remove();
+
+  const toast = document.createElement('div');
+  toast.className = `toast toast-${type}`;
+  toast.innerHTML = `<span>${type === 'success' ? '✅' : '⚠️'}</span> ${message}`;
+  toast.style.cssText = `
+    position:fixed; bottom:1.5rem; right:1.5rem;
+    background:${type === 'success' ? '#fff' : 'rgba(229,57,53,.08)'};
+    border:1.5px solid ${type === 'success' ? 'rgba(255,107,0,.25)' : 'rgba(229,57,53,.25)'};
+    color:${type === 'success' ? '#FF6B00' : '#E53935'};
+    padding:.75rem 1.2rem; border-radius:12px;
+    box-shadow:0 8px 32px rgba(0,0,0,.12);
+    font-size:.88rem; font-weight:600;
+    display:flex; align-items:center; gap:.6rem;
+    z-index:9999; animation: fadeInUp .35s ease;
+    max-width:320px;
+  `;
+  document.body.appendChild(toast);
+  setTimeout(() => { toast.style.opacity = '0'; toast.style.transition = 'opacity .3s'; setTimeout(() => toast.remove(), 300); }, 3500);
+}
+
+/* Mock user data */
+function getMockUser() {
+  return { name: 'Lydia Kebede', role: 'Passenger', initials: 'LK' };
+}
+
+/* Render sidebar user info */
+function renderUserInfo() {
+  const nameEl = document.getElementById('userName');
+  const roleEl = document.getElementById('userRole');
+  const avatarEl = document.getElementById('userAvatar');
+  const user = getMockUser();
+  if (nameEl) nameEl.textContent = user.name;
+  if (roleEl) roleEl.textContent = user.role;
+  if (avatarEl) avatarEl.textContent = user.initials;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initSidebarToggle();
+  setActiveLink();
+  initLogout();
+  renderUserInfo();
+});
+
+```
+
+---
+
+### <a id="📄-target-classes-static-js-main-js"></a>📄 `target/classes/static/js/main.js`
+
+**File Info:**
+- **Size**: 2.94 KB
+- **Extension**: `.js`
+- **Language**: `javascript`
+- **Location**: `target/classes/static/js/main.js`
+- **Relative Path**: `target/classes/static/js`
+- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `0747fd60835c8006a4f508f2e63ac868`
+- **SHA256**: `fb9849cab77472c63cfa66d544049e9be352350ccd96f47127d316e9dfb1301f`
+- **Encoding**: UTF-8
+
+**File code content:**
+
+```javascript
+// ═══════════════════════════════════════════
+//  AnbesaFlow — Main JS (Landing page)
+// ═══════════════════════════════════════════
+
+/* ── Navbar scroll effect ── */
+const navbar = document.getElementById('navbar');
+if (navbar) {
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  });
+}
+
+/* ── Mobile hamburger ── */
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  // Close on link click
+  mobileMenu.querySelectorAll('a').forEach(link =>
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'))
+  );
+}
+
+/* ── Counter animation ── */
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target, 10);
+  const duration = 1800;
+  const start = performance.now();
+  const update = (now) => {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    // Ease out
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(ease * target).toLocaleString();
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+
+const counterEls = document.querySelectorAll('.stat-num[data-target]');
+if (counterEls.length > 0) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  counterEls.forEach(el => observer.observe(el));
+}
+
+/* ── Smooth anchor scroll ── */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', (e) => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+/* ── Fade-in-on-scroll ── */
+const fadeEls = document.querySelectorAll('.feature-card, .step, .stat-card');
+if (fadeEls.length > 0) {
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  fadeEls.forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = `opacity .5s ease ${i * 0.08}s, transform .5s ease ${i * 0.08}s`;
+    fadeObserver.observe(el);
+  });
+}
+
+```
+
+---
+
+### <a id="📄-target-classes-static-pages-login-html"></a>📄 `target/classes/static/pages/login.html`
+
+**File Info:**
+- **Size**: 5.07 KB
+- **Extension**: `.html`
+- **Language**: `html`
+- **Location**: `target/classes/static/pages/login.html`
+- **Relative Path**: `target/classes/static/pages`
+- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `58514865406d1ba6203f97094f863b2f`
+- **SHA256**: `62505a5a3c9caf24ac145e9845984c29cd079b21461b337913f9998269656546`
+- **Encoding**: UTF-8
+
+**File code content:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — AnbesaFlow</title>
+  <meta name="description" content="Sign in to AnbesaFlow to manage your bus queue." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/auth.css" />
+</head>
+<body>
+<main class="auth-page">
+
+  <!-- Brand panel -->
+  <div class="auth-brand">
+    <div class="auth-brand-logo">
+      <span>🚌</span>
+      <span>AnbesaFlow</span>
+    </div>
+    <h2>Welcome back to smarter transit.</h2>
+    <p>Real-time queues, live waiting times, and fair boarding — every ride, every stop.</p>
+    <div class="auth-brand-features">
+      <div class="auth-feature-item">
+        <div class="auth-feature-icon">⏱️</div>
+        <span>Know your exact wait time before you even arrive.</span>
+      </div>
+      <div class="auth-feature-item">
+        <div class="auth-feature-icon">📍</div>
+        <span>Join the queue at 120+ bus stops across Addis Ababa.</span>
+      </div>
+      <div class="auth-feature-item">
+        <div class="auth-feature-icon">🔒</div>
+        <span>Secure, token-based authentication protects your data.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form panel -->
+  <div class="auth-form-panel">
+    <div class="auth-form-box animate-in">
+      <div class="auth-form-header">
+        <h1>Sign In</h1>
+        <p>Enter your credentials to access your dashboard.</p>
+      </div>
+
+      <div id="loginAlert" class="alert alert-error" style="display:none;"></div>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="loginEmail">Email Address</label>
+          <input
+            class="form-input"
+            type="email"
+            id="loginEmail"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="loginPassword">Password</label>
+          <div class="password-toggle-wrapper">
+            <input
+              class="form-input"
+              type="password"
+              id="loginPassword"
+              placeholder="••••••••"
+              autocomplete="current-password"
+              required
+            />
+            <span class="password-toggle" id="toggleLoginPwd" title="Show password">👁️</span>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; margin-bottom:1.4rem;">
+          <a href="#" style="font-size:.83rem; color:var(--orange-500); font-weight:600;">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full btn-lg" id="loginBtn">
+          Sign In
+        </button>
+      </form>
+
+      <p class="auth-footer-text">
+        Don't have an account? <a href="register.html">Create one free →</a>
+      </p>
+    </div>
+  </div>
+</main>
+
+<script>
+  const form = document.getElementById('loginForm');
+  const alert = document.getElementById('loginAlert');
+  const loginBtn = document.getElementById('loginBtn');
+
+  // Password toggle
+  document.getElementById('toggleLoginPwd').addEventListener('click', function() {
+    const pwd = document.getElementById('loginPassword');
+    const isText = pwd.type === 'text';
+    pwd.type = isText ? 'password' : 'text';
+    this.textContent = isText ? '👁️' : '🙈';
+  });
+
+  // Mock credentials
+  const USERS = [
+    { email: 'lydia@anbesaflow.et', password: 'pass123', role: 'passenger', page: 'passenger-dashboard.html' },
+    { email: 'operator@anbesaflow.et', password: 'op123', role: 'operator', page: 'operator-dashboard.html' },
+    { email: 'admin@anbesaflow.et', password: 'admin123', role: 'admin', page: 'admin-dashboard.html' },
+  ];
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    alert.style.display = 'none';
+    const email = document.getElementById('loginEmail').value.trim();
+    const pwd = document.getElementById('loginPassword').value;
+
+    if (!email || !pwd) {
+      alert.textContent = 'Please fill in all fields.';
+      alert.style.display = 'block';
+      return;
+    }
+
+    loginBtn.innerHTML = '<span class="spinner"></span> Signing in…';
+    loginBtn.disabled = true;
+
+    await new Promise(r => setTimeout(r, 900)); // simulate API
+
+    const user = USERS.find(u => u.email === email && u.password === pwd);
+    if (user) {
+      sessionStorage.setItem('anbesaUser', JSON.stringify(user));
+      window.location.href = user.page;
+    } else {
+      alert.textContent = 'Invalid email or password. Please try again.';
+      alert.style.display = 'block';
+      loginBtn.innerHTML = 'Sign In';
+      loginBtn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
+
+```
+
+---
+
+### <a id="📄-target-classes-static-index-html"></a>📄 `target/classes/static/index.html`
+
+**File Info:**
+- **Size**: 11.44 KB
+- **Extension**: `.html`
+- **Language**: `html`
+- **Location**: `target/classes/static/index.html`
+- **Relative Path**: `target/classes/static`
+- **Created**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `c21a5fc8892eb64396a588625c2c5ae4`
+- **SHA256**: `f33ca6ddf27aac8f79e910c59bab1ef6d42a585bf83197fabe59d2af6b990607`
+- **Encoding**: UTF-8
+
+**File code content:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnbesaFlow — Smart Bus Queue Management</title>
+  <meta name="description" content="AnbesaFlow digitises Addis Ababa's bus-stop queues, giving passengers real-time waiting times and fair queue positions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/landing.css" />
+</head>
+<body>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🚌</span>
+        <span class="logo-text">Anbesa<span class="accent">Flow</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#stats" class="nav-link">Impact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="pages/login.html" class="btn btn-ghost">Sign In</a>
+        <a href="pages/register.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#stats">Impact</a>
+      <a href="pages/login.html" class="btn btn-ghost" style="text-align:center;">Sign In</a>
+      <a href="pages/register.html" class="btn btn-primary" style="text-align:center;">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Smart Transit · Addis Ababa
+        </div>
+        <h1 class="hero-title">
+          No More Guessing.<br />
+          <span class="gradient-text">Know Your Wait.</span>
+        </h1>
+        <p class="hero-subtitle">
+          AnbesaFlow brings real-time queue management and waiting time estimation to Addis Ababa's bus stops — making every commute fairer, faster, and smarter.
+        </p>
+        <div class="hero-actions">
+          <a href="pages/register.html" class="btn btn-primary btn-lg">
+            Join the Queue →
+          </a>
+          <a href="#how-it-works" class="btn btn-ghost btn-lg">
+            See How It Works
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <span class="trust-num">3 000+</span>
+            <span class="trust-label">Daily Commuters</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <span class="trust-num">120+</span>
+            <span class="trust-label">Bus Stops</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <span class="trust-num">99%</span>
+            <span class="trust-label">Uptime</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="phone-header">
+              <span class="phone-stop">Megenagna Stop</span>
+              <span class="phone-live">● LIVE</span>
+            </div>
+            <div class="phone-queue-card">
+              <div class="queue-position">
+                <span class="queue-num">4</span>
+                <span class="queue-label">Your Position</span>
+              </div>
+              <div class="queue-divider"></div>
+              <div class="queue-wait">
+                <span class="wait-num">~8 min</span>
+                <span class="wait-label">Est. Wait</span>
+              </div>
+            </div>
+            <div class="phone-bus-row">
+              <div class="bus-tag arriving">Bus 47 → Arriving</div>
+              <div class="bus-tag delayed">Bus 12 → Delayed</div>
+            </div>
+            <div class="phone-people">
+              <div class="people-bar">
+                <div class="people-fill" style="width:65%"></div>
+              </div>
+              <span class="people-label">Queue: 4 / 20</span>
+            </div>
+            <button class="phone-btn">Leave Queue</button>
+          </div>
+        </div>
+        <div class="float-card float-card-1">
+          <span>✅</span> Queue updated
+        </div>
+        <div class="float-card float-card-2">
+          <span>🚌</span> Bus 47 arriving in 2 min
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FEATURES ══════════════ -->
+  <section class="features" id="features">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">What AnbesaFlow Offers</p>
+        <h2 class="section-title">Built for Every Commuter</h2>
+        <p class="section-sub">Three powerful roles. One seamless platform.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card" style="--delay:0s">
+          <div class="feature-icon" style="background:rgba(255,107,0,.12)">🧍</div>
+          <h3>For Passengers</h3>
+          <ul class="feature-list">
+            <li>Join virtual bus-stop queues</li>
+            <li>Real-time position tracking</li>
+            <li>Live waiting time estimate</li>
+            <li>Search any registered stop</li>
+          </ul>
+        </div>
+        <div class="feature-card featured" style="--delay:.1s">
+          <div class="feature-badge">Most Used</div>
+          <div class="feature-icon" style="background:rgba(255,107,0,.18)">🚌</div>
+          <h3>For Operators</h3>
+          <ul class="feature-list">
+            <li>Submit bus arrival events</li>
+            <li>Mark buses as delayed</li>
+            <li>Update stop status live</li>
+            <li>Simple one-tap interface</li>
+          </ul>
+        </div>
+        <div class="feature-card" style="--delay:.2s">
+          <div class="feature-icon" style="background:rgba(255,107,0,.12)">🛡️</div>
+          <h3>For Admins</h3>
+          <ul class="feature-list">
+            <li>Manage all user accounts</li>
+            <li>Assign & modify roles</li>
+            <li>Monitor system-wide stats</li>
+            <li>Configure routes & stops</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ HOW IT WORKS ══════════════ -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">Simple Process</p>
+        <h2 class="section-title">Three Steps to a Smarter Queue</h2>
+      </div>
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Register & Sign In</h3>
+            <p>Create a free account in under 30 seconds. Sign in with your email and password to access your personalised dashboard.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Find Your Stop & Join</h3>
+            <p>Search for your bus stop by name. See the live queue length and estimated wait, then tap to join the virtual queue.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Track & Board</h3>
+            <p>Watch your position count down in real time as buses arrive. Board when it's your turn — no pushing, no confusion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ STATS ══════════════ -->
+  <section class="stats-section" id="stats">
+    <div class="section-container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-num" data-target="3000">0</span>
+          <span class="stat-plus">+</span>
+          <span class="stat-label">Daily Users</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-target="120">0</span>
+          <span class="stat-plus">+</span>
+          <span class="stat-label">Bus Stops Covered</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-target="40">0</span>
+          <span class="stat-plus">%</span>
+          <span class="stat-label">Wait Time Reduction</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-target="99">0</span>
+          <span class="stat-plus">%</span>
+          <span class="stat-label">System Uptime</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CTA ══════════════ -->
+  <section class="cta-section">
+    <div class="cta-container">
+      <h2>Ready for a smarter commute?</h2>
+      <p>Join thousands of Addis Ababa commuters who already rely on AnbesaFlow every day.</p>
+      <div class="cta-actions">
+        <a href="pages/register.html" class="btn btn-primary btn-lg">Create Free Account</a>
+        <a href="pages/login.html" class="btn btn-ghost btn-lg">Sign In</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-icon">🚌</span>
+          <span class="logo-text">Anbesa<span class="accent">Flow</span></span>
+        </a>
+        <p>Smarter queues for a smarter Addis Ababa.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="pages/login.html">Sign In</a>
+          <a href="pages/register.html">Register</a>
+          <a href="pages/passenger-dashboard.html">Dashboard</a>
+        </div>
+        <div class="footer-col">
+          <h4>Project</h4>
+          <a href="#">SECT-4221</a>
+          <a href="#">Group 3</a>
+          <a href="#">AAiT</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 AnbesaFlow · Group 3 · Addis Ababa Institute of Technology · SECT-4221</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+```
+
+---
+
 ### <a id="📄-target-classes-application-yml"></a>📄 `target/classes/application.yml`
 
 **File Info:**
-- **Size**: 1 KB
+- **Size**: 696 B
 - **Extension**: `.yml`
 - **Language**: `yaml`
 - **Location**: `target/classes/application.yml`
 - **Relative Path**: `target/classes`
-- **Created**: 2026-06-30 19:48:26 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 19:48:26 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `1cadd546df5716b7f78628dcc3bb7080`
-- **SHA256**: `28e38a1b9503ba6186c132f2bebdab11366a1f88186525f55920620c31e79172`
+- **Created**: 2026-06-30 20:22:34 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `0802a811e61c29315e6787409107b8dc`
+- **SHA256**: `bfe309f8359195b946f124b8dbfc22410a22da136bb7d48cfaef3a9b75b66144`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -4596,9 +9191,9 @@ spring:
     name: anbesaflow-auth
 
   datasource:
-    url: ${DATABASE_URL:jdbc:postgresql://localhost:8432/anbesaflow}
-    username: ${DATABASE_USERNAME:postgres}
-    password: ${DATABASE_PASSWORD:postgres}
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -4616,9 +9211,7 @@ spring:
 
 app:
   jwt:
-    # 512-bit HMAC-SHA Secret Key (Hex-encoded 64-byte string)
-    secret: ${JWT_SECRET:9a67431a7b1b369c0d4860b81c4e743a6d4860b81c4e743a6d4860b81c4e743a9a67431a7b1b369c0d4860b81c4e743a6d4860b81c4e743a6d4860b81c4e743a}
-    # Token expiration time: 24 hours in milliseconds (24 * 60 * 60 * 1000)
+    secret: ${JWT_SECRET}
     expiration-ms: 86400000
     header: Authorization
     prefix: "Bearer "
@@ -4633,12 +9226,44 @@ server:
 
 ---
 
+### <a id="📄-target-maven-archiver-pom-properties"></a>📄 `target/maven-archiver/pom.properties`
+
+**File Info:**
+- **Size**: 67 B
+- **Extension**: `.properties`
+- **Language**: `text`
+- **Location**: `target/maven-archiver/pom.properties`
+- **Relative Path**: `target/maven-archiver`
+- **Created**: 2026-06-30 20:22:41 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 20:22:41 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `1e2341ade8f78e9852767486af6aab75`
+- **SHA256**: `a328a0fd9611202e511cb7589a51b71f658ae0b30781c248ef12592a7e981bb6`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```text
+artifactId=anbesaflow-auth
+groupId=com.anbesaflow
+version=1.0.0
+
+```
+
+---
+
 ## 🚫 Binary/Excluded Files
 
 The following files were not included in the text content:
 
 - `target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst`
 - `target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst`
+
+## 🚫 Binary/Excluded Files
+
+The following files were not included in the text content:
+
+- `target/anbesaflow-auth-1.0.0.jar`
+- `target/anbesaflow-auth-1.0.0.jar.original`
 
 ### <a id="📄-anbesaflow-authentication-postman-collection-json"></a>📄 `AnbesaFlow_Authentication_Postman_Collection.json`
 
@@ -5321,7 +9946,7 @@ The following files were not included in the text content:
 - **Location**: `pom.xml`
 - **Relative Path**: `root`
 - **Created**: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 19:40:23 (Africa/Nairobi / GMT+03:00)
+- **Modified**: 2026-06-30 22:09:49 (Africa/Nairobi / GMT+03:00)
 - **MD5**: `271bb8ad7bf18edf7baccf9d38a5302d`
 - **SHA256**: `d166e2e59f13739750c21504cd413a77a80e265b0f9000878accf4239c7ea080`
 - **Encoding**: ASCII
@@ -5455,4 +10080,10 @@ The following files were not included in the text content:
 ````
 
 ---
+
+## 🚫 Binary/Excluded Files
+
+The following files were not included in the text content:
+
+- `Dockerfile`
 

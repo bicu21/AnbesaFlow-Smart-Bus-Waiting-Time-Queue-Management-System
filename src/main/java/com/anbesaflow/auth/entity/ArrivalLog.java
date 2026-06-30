@@ -5,7 +5,6 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "arrival_logs")
 @Getter
 @Setter
 @NoArgsConstructor

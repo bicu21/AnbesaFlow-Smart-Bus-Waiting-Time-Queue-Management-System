@@ -30,7 +30,13 @@ public class AdminController {
         String location = request.getOrDefault("location", "");
         Long routeId = request.containsKey("routeId") ? Long.parseLong(request.get("routeId")) : null;
         
-        BusStop stop = busStopService.createBusStop(name, location, routeId);
+        BusStop stop = new BusStop();
+stop.setName(name);
+stop.setLocation(location);
+
+// If BusStop has a Route field, we'll set it later.
+
+BusStop savedStop = busStopService.createBusStop(stop);;
         
         return ResponseEntity.ok(Map.of(
                 "status", "success",
@@ -40,29 +46,39 @@ public class AdminController {
     }
     
     @GetMapping("/bus-stops")
-    public ResponseEntity<List<BusStop>> getBusStops() {
-        return ResponseEntity.ok(busStopService.getAllBusStops());
-    }
+public ResponseEntity<List<BusStop>> getBusStops() {
+    return ResponseEntity.ok(
+            busStopService
+                    .getAllBusStops(null, org.springframework.data.domain.Pageable.unpaged())
+                    .getContent()
+    );
+}
 
     @PostMapping("/routes")
-    public ResponseEntity<Map<String, Object>> createRoute(@RequestBody Map<String, String> request) {
-        String routeCode = request.getOrDefault("routeCode", "Unknown Route");
-        String description = request.getOrDefault("description", "No description");
-        
-        Route route = routeService.createRoute(routeCode, description);
-        
-        return ResponseEntity.ok(Map.of(
-                "status", "success",
-                "message", "Route '" + routeCode + "' created successfully",
-                "data", route
-        ));
-    }
-    
-    @GetMapping("/routes")
-    public ResponseEntity<List<Route>> getRoutes() {
-        return ResponseEntity.ok(routeService.getAllRoutes());
-    }
+public ResponseEntity<Map<String, Object>> createRoute(@RequestBody Map<String, String> request) {
 
+    Route route = new Route();
+    route.setName(request.getOrDefault("name", "Unknown Route"));
+    route.setStartPoint(request.getOrDefault("startPoint", ""));
+    route.setEndPoint(request.getOrDefault("endPoint", ""));
+
+    Route savedRoute = routeService.createRoute(route);
+
+    return ResponseEntity.ok(Map.of(
+            "status", "success",
+            "message", "Route created successfully",
+            "data", savedRoute
+    ));
+}
+    
+@GetMapping("/routes")
+public ResponseEntity<List<Route>> getRoutes() {
+    return ResponseEntity.ok(
+            routeService
+                    .getAllRoutes(null, org.springframework.data.domain.Pageable.unpaged())
+                    .getContent()
+    );
+}
     @PostMapping("/settings")
     public ResponseEntity<Map<String, String>> updateSettings(@RequestBody Map<String, Object> settings) {
         return ResponseEntity.ok(Map.of(
