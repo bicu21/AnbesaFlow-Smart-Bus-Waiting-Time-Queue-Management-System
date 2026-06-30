@@ -1,5 +1,25 @@
 package com.anbesaflow.auth.service;
 
-public class BusService {
-    
+import com.anbesaflow.auth.dto.BusRequest;
+import com.anbesaflow.auth.dto.BusResponse;
+
+import java.util.List;
+
+public interface BusService {
+
+    BusResponse create(
+            BusRequest request
+    );
+
+    List<BusResponse> getAll();
+
+    BusResponse update(
+            Long id,
+            BusRequest request
+    );
+
+    void delete(
+            Long id
+    );
+
 }

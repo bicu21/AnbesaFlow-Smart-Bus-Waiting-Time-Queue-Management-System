@@ -3,7 +3,7 @@
 ## 📊 Project Information
 
 - **Project Name**: `AnbesaFlow-Smart-Bus-Waiting-Time-Queue-Management-System`
-- **Generated On**: 2026-06-30 17:53:26 (Africa/Nairobi / GMT+03:00)
+- **Generated On**: 2026-06-30 18:04:52 (Africa/Nairobi / GMT+03:00)
 - **Total Files Processed**: 138
 - **Export Tool**: Easy Whole Project to Single Text File for LLMs v1.1.0
 - **Tool Author**: Jota / José Guilherme Pandolfi
@@ -78,12 +78,12 @@
 │   │   │               │   ├── 📄 SecurityConfig.java (3.21 KB)
 │   │   │               │   └── 📄 TokenBlacklistService.java (1.74 KB)
 │   │   │               ├── 📁 service/
-│   │   │               │   ├── 📄 ArrivalLogService.java (83 B)
+│   │   │               │   ├── 📄 ArrivalLogService.java (487 B)
 │   │   │               │   ├── 📄 AuthService.java (3.95 KB)
-│   │   │               │   ├── 📄 BusService.java (76 B)
-│   │   │               │   ├── 📄 BusStopService.java (80 B)
+│   │   │               │   ├── 📄 BusService.java (431 B)
+│   │   │               │   ├── 📄 BusStopService.java (463 B)
 │   │   │               │   ├── 📄 QueueService.java (3.84 KB)
-│   │   │               │   ├── 📄 RouteService.java (78 B)
+│   │   │               │   ├── 📄 RouteService.java (447 B)
 │   │   │               │   ├── 📄 UserService.java (1.13 KB)
 │   │   │               │   └── 📄 WaitingTimeService.java (523 B)
 │   │   │               └── 📄 AnbesaFlowAuthApplication.java (438 B)
@@ -163,12 +163,12 @@
 │   │   │           │   ├── 📄 SecurityConfig.class (7.22 KB)
 │   │   │           │   └── 📄 TokenBlacklistService.class (2.56 KB)
 │   │   │           ├── 📁 service/
-│   │   │           │   ├── 📄 ArrivalLogService.class (332 B)
+│   │   │           │   ├── 📄 ArrivalLogService.class (612 B)
 │   │   │           │   ├── 📄 AuthService.class (6.12 KB)
-│   │   │           │   ├── 📄 BusService.class (311 B)
-│   │   │           │   ├── 📄 BusStopService.class (323 B)
+│   │   │           │   ├── 📄 BusService.class (563 B)
+│   │   │           │   ├── 📄 BusStopService.class (591 B)
 │   │   │           │   ├── 📄 QueueService.class (6.04 KB)
-│   │   │           │   ├── 📄 RouteService.class (317 B)
+│   │   │           │   ├── 📄 RouteService.class (577 B)
 │   │   │           │   ├── 📄 UserService.class (3.22 KB)
 │   │   │           │   └── 📄 WaitingTimeService.class (897 B)
 │   │   │           └── 📄 AnbesaFlowAuthApplication.class (836 B)
@@ -289,7 +289,7 @@
 | Total Directories | 44 |
 | Text Files | 70 |
 | Binary Files | 68 |
-| Total Size | 49.58 MB |
+| Total Size | 49.59 MB |
 
 ### 📄 File Types Distribution
 
@@ -2970,15 +2970,15 @@ public class TokenBlacklistService {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-service-arrivallogservice-java"></a>📄 `src/main/java/com/anbesaflow/auth/service/ArrivalLogService.java`
 
 **File Info:**
-- **Size**: 83 B
+- **Size**: 487 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/service/ArrivalLogService.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/service`
 - **Created**: 2026-06-30 16:02:27 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:02:29 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `2191494a8b48af2fa7efc632789646e2`
-- **SHA256**: `046a3562c0a02fec66d58cdb0b8354bcaa224e0af6a30f1cc3e3e5ab5cb71618`
+- **Modified**: 2026-06-30 18:04:51 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `e148d6e0235b2a72cff1bb90a586d29c`
+- **SHA256**: `6848cf67fda4e112bb82ecc693159c28d8ae921834c43a340bd2cd39f35b983e`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -2986,10 +2986,29 @@ public class TokenBlacklistService {
 ```java
 package com.anbesaflow.auth.service;
 
-public class ArrivalLogService {
-    
-}
+import com.anbesaflow.auth.dto.ArrivalLogRequest;
+import com.anbesaflow.auth.dto.ArrivalLogResponse;
 
+import java.util.List;
+
+public interface ArrivalLogService {
+
+    ArrivalLogResponse create(
+            ArrivalLogRequest request
+    );
+
+    List<ArrivalLogResponse> getAll();
+
+    ArrivalLogResponse update(
+            Long id,
+            ArrivalLogRequest request
+    );
+
+    void delete(
+            Long id
+    );
+
+}
 ```
 
 ---
@@ -3115,15 +3134,15 @@ public class AuthService {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-service-busservice-java"></a>📄 `src/main/java/com/anbesaflow/auth/service/BusService.java`
 
 **File Info:**
-- **Size**: 76 B
+- **Size**: 431 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/service/BusService.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/service`
 - **Created**: 2026-06-30 16:01:49 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:01:52 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `bbfc92a35311e70675a30bb3d4ab6e17`
-- **SHA256**: `f708233d9f2951cb7c8b6b6b9c43b35bd14b146929bbdeb87c5c7bf5beefc1ce`
+- **Modified**: 2026-06-30 18:03:57 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `e427a6c97b62ffd655a7f90d3548f48d`
+- **SHA256**: `33e31f57d6852a52997183509f31b5ea9507f93b9a0e1495110b61edc99a9d37`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -3131,10 +3150,29 @@ public class AuthService {
 ```java
 package com.anbesaflow.auth.service;
 
-public class BusService {
-    
-}
+import com.anbesaflow.auth.dto.BusRequest;
+import com.anbesaflow.auth.dto.BusResponse;
 
+import java.util.List;
+
+public interface BusService {
+
+    BusResponse create(
+            BusRequest request
+    );
+
+    List<BusResponse> getAll();
+
+    BusResponse update(
+            Long id,
+            BusRequest request
+    );
+
+    void delete(
+            Long id
+    );
+
+}
 ```
 
 ---
@@ -3142,15 +3180,15 @@ public class BusService {
 ### <a id="📄-src-main-java-com-anbesaflow-auth-service-busstopservice-java"></a>📄 `src/main/java/com/anbesaflow/auth/service/BusStopService.java`
 
 **File Info:**
-- **Size**: 80 B
+- **Size**: 463 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/service/BusStopService.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/service`
 - **Created**: 2026-06-30 16:02:14 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:02:16 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `65436a0db3fc19f6b392662e73a5d66d`
-- **SHA256**: `6b18e5fc91093ac2ac2b854041e25800211cb056cabc71e661db64ac87e1b05e`
+- **Modified**: 2026-06-30 18:04:38 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `909b4e1da1a55a330617b7bae602d5e8`
+- **SHA256**: `cf713b419264488a2206b88a07d9e6d124c4a31db05664b9edb89b9dafe05d4e`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -3158,10 +3196,29 @@ public class BusService {
 ```java
 package com.anbesaflow.auth.service;
 
-public class BusStopService {
-    
-}
+import com.anbesaflow.auth.dto.BusStopRequest;
+import com.anbesaflow.auth.dto.BusStopResponse;
 
+import java.util.List;
+
+public interface BusStopService {
+
+    BusStopResponse create(
+            BusStopRequest request
+    );
+
+    List<BusStopResponse> getAll();
+
+    BusStopResponse update(
+            Long id,
+            BusStopRequest request
+    );
+
+    void delete(
+            Long id
+    );
+
+}
 ```
 
 ---
@@ -3330,15 +3387,15 @@ public int getEstimatedWaitingTime(){
 ### <a id="📄-src-main-java-com-anbesaflow-auth-service-routeservice-java"></a>📄 `src/main/java/com/anbesaflow/auth/service/RouteService.java`
 
 **File Info:**
-- **Size**: 78 B
+- **Size**: 447 B
 - **Extension**: `.java`
 - **Language**: `java`
 - **Location**: `src/main/java/com/anbesaflow/auth/service/RouteService.java`
 - **Relative Path**: `src/main/java/com/anbesaflow/auth/service`
 - **Created**: 2026-06-30 16:02:04 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-06-30 16:02:06 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `b9af2d8886c35ee6e414df0a0755c46e`
-- **SHA256**: `7b6fd26212bbcb8d0bc690adf21a422c7791e26e78cd88b9b50abd5700811bfa`
+- **Modified**: 2026-06-30 18:04:26 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `ee375d679ef932c69a614018ae39a2ff`
+- **SHA256**: `53bf10e32a1fe774097fbe384b6ea72a02a413920363bef3fc0ba1655f516030`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -3346,10 +3403,29 @@ public int getEstimatedWaitingTime(){
 ```java
 package com.anbesaflow.auth.service;
 
-public class RouteService {
-    
-}
+import com.anbesaflow.auth.dto.RouteRequest;
+import com.anbesaflow.auth.dto.RouteResponse;
 
+import java.util.List;
+
+public interface RouteService {
+
+    RouteResponse create(
+            RouteRequest request
+    );
+
+    List<RouteResponse> getAll();
+
+    RouteResponse update(
+            Long id,
+            RouteRequest request
+    );
+
+    void delete(
+            Long id
+    );
+
+}
 ```
 
 ---
