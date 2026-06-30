@@ -1,32 +1,66 @@
 package com.anbesaflow.auth.controller;
 
+import com.anbesaflow.auth.entity.BusStop;
+import com.anbesaflow.auth.entity.Route;
+import com.anbesaflow.auth.service.BusStopService;
+import com.anbesaflow.auth.service.RouteService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
+import java.util.List;
 
 @RestController
 @RequestMapping("/admin")
 @PreAuthorize("hasRole('ADMIN')")
 public class AdminController {
 
+    private final RouteService routeService;
+    private final BusStopService busStopService;
+
+    public AdminController(RouteService routeService, BusStopService busStopService) {
+        this.routeService = routeService;
+        this.busStopService = busStopService;
+    }
+
     @PostMapping("/bus-stops")
-    public ResponseEntity<Map<String, String>> createBusStop(@RequestBody Map<String, String> request) {
+    public ResponseEntity<Map<String, Object>> createBusStop(@RequestBody Map<String, String> request) {
         String name = request.getOrDefault("name", "Unknown Stop");
+        String location = request.getOrDefault("location", "");
+        Long routeId = request.containsKey("routeId") ? Long.parseLong(request.get("routeId")) : null;
+        
+        BusStop stop = busStopService.createBusStop(name, location, routeId);
+        
         return ResponseEntity.ok(Map.of(
                 "status", "success",
-                "message", "Bus stop '" + name + "' created successfully"
+                "message", "Bus stop '" + name + "' created successfully",
+                "data", stop
         ));
+    }
+    
+    @GetMapping("/bus-stops")
+    public ResponseEntity<List<BusStop>> getBusStops() {
+        return ResponseEntity.ok(busStopService.getAllBusStops());
     }
 
     @PostMapping("/routes")
-    public ResponseEntity<Map<String, String>> createRoute(@RequestBody Map<String, String> request) {
+    public ResponseEntity<Map<String, Object>> createRoute(@RequestBody Map<String, String> request) {
         String routeCode = request.getOrDefault("routeCode", "Unknown Route");
+        String description = request.getOrDefault("description", "No description");
+        
+        Route route = routeService.createRoute(routeCode, description);
+        
         return ResponseEntity.ok(Map.of(
                 "status", "success",
-                "message", "Route '" + routeCode + "' created successfully"
+                "message", "Route '" + routeCode + "' created successfully",
+                "data", route
         ));
+    }
+    
+    @GetMapping("/routes")
+    public ResponseEntity<List<Route>> getRoutes() {
+        return ResponseEntity.ok(routeService.getAllRoutes());
     }
 
     @PostMapping("/settings")
