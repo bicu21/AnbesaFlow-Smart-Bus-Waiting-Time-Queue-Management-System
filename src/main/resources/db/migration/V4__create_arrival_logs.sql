@@ -1,19 +1,7 @@
-CREATE TABLE IF NOT EXISTS arrival_logs (
-    id BIGSERIAL PRIMARY KEY,
-    bus_id BIGINT NOT NULL,
-    bus_stop_id BIGINT NOT NULL,
-    arrival_time TIMESTAMP,
-    departure_time TIMESTAMP,
-    status VARCHAR(50) NOT NULL DEFAULT 'ACTIVE',
-    CONSTRAINT fk_arrival_bus
-        FOREIGN KEY (bus_id)
-        REFERENCES buses(id)
-        ON DELETE CASCADE,
-    CONSTRAINT fk_arrival_stop
-        FOREIGN KEY (bus_stop_id)
-        REFERENCES bus_stops(id)
-        ON DELETE CASCADE
-);
+INSERT INTO buses (plate_number, status, capacity, route_id)
+SELECT 'AA-1001', 'ACTIVE', 60, id FROM routes WHERE route_code = 'R47'
+ON CONFLICT (plate_number) DO NOTHING;
 
-CREATE INDEX IF NOT EXISTS idx_arrival_bus ON arrival_logs(bus_id);
-CREATE INDEX IF NOT EXISTS idx_arrival_stop ON arrival_logs(bus_stop_id);
+INSERT INTO buses (plate_number, status, capacity, route_id)
+SELECT 'AA-1002', 'ACTIVE', 50, id FROM routes WHERE route_code = 'R12'
+ON CONFLICT (plate_number) DO NOTHING;

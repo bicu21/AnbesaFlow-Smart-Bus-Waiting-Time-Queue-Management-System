@@ -1,26 +1,40 @@
--- Create users table for AnbesaFlow Authentication
-CREATE TABLE IF NOT EXISTS users (
-    id BIGSERIAL PRIMARY KEY,
+-- USERS
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
+    email VARCHAR(150) UNIQUE NOT NULL,
     password VARCHAR(255) NOT NULL,
-    role VARCHAR(50) NOT NULL
+    role VARCHAR(20) NOT NULL
 );
 
-CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
+-- ROUTES
+CREATE TABLE routes (
+    id SERIAL PRIMARY KEY,
+    route_code VARCHAR(50) UNIQUE NOT NULL,
+    description VARCHAR(255),
+    end_point VARCHAR(255),
+    active BOOLEAN DEFAULT TRUE
+);
 
--- Create passenger queue entries table
-CREATE TABLE IF NOT EXISTS queue_entries (
-    id BIGSERIAL PRIMARY KEY,
-    position INTEGER NOT NULL,
-    joined_at TIMESTAMP NOT NULL,
-    bus_stop VARCHAR(100) NOT NULL,
-    user_id BIGINT NOT NULL UNIQUE,
-    CONSTRAINT fk_queue_user
-        FOREIGN KEY(user_id)
-        REFERENCES users(id)
+-- BUS STOPS
+CREATE TABLE bus_stops (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    location VARCHAR(255),
+    route_id INT NOT NULL,
+    CONSTRAINT fk_bus_stops_route
+        FOREIGN KEY (route_id) REFERENCES routes(id)
         ON DELETE CASCADE
 );
 
-CREATE INDEX IF NOT EXISTS idx_queue_bus_stop ON queue_entries(bus_stop);
-CREATE INDEX IF NOT EXISTS idx_queue_position ON queue_entries(position);
+-- BUSES
+CREATE TABLE buses (
+    id SERIAL PRIMARY KEY,
+    plate_number VARCHAR(50) UNIQUE NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    capacity INT NOT NULL,
+    route_id INT NOT NULL,
+    CONSTRAINT fk_buses_route
+        FOREIGN KEY (route_id) REFERENCES routes(id)
+        ON DELETE SET NULL
+);
