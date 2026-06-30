@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — AnbesaFlow</title>
+  <meta name="description" content="Sign in to AnbesaFlow to manage your bus queue." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/auth.css" />
+</head>
+<body>
+<main class="auth-page">
+
+  <!-- Brand panel -->
+  <div class="auth-brand">
+    <div class="auth-brand-logo">
+      <span>🚌</span>
+      <span>AnbesaFlow</span>
+    </div>
+    <h2>Welcome back to smarter transit.</h2>
+    <p>Real-time queues, live waiting times, and fair boarding — every ride, every stop.</p>
+    <div class="auth-brand-features">
+      <div class="auth-feature-item">
+        <div class="auth-feature-icon">⏱️</div>
+        <span>Know your exact wait time before you even arrive.</span>
+      </div>
+      <div class="auth-feature-item">
+        <div class="auth-feature-icon">📍</div>
+        <span>Join the queue at 120+ bus stops across Addis Ababa.</span>
+      </div>
+      <div class="auth-feature-item">
+        <div class="auth-feature-icon">🔒</div>
+        <span>Secure, token-based authentication protects your data.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form panel -->
+  <div class="auth-form-panel">
+    <div class="auth-form-box animate-in">
+      <div class="auth-form-header">
+        <h1>Sign In</h1>
+        <p>Enter your credentials to access your dashboard.</p>
+      </div>
+
+      <div id="loginAlert" class="alert alert-error" style="display:none;"></div>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="loginEmail">Email Address</label>
+          <input
+            class="form-input"
+            type="email"
+            id="loginEmail"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="loginPassword">Password</label>
+          <div class="password-toggle-wrapper">
+            <input
+              class="form-input"
+              type="password"
+              id="loginPassword"
+              placeholder="••••••••"
+              autocomplete="current-password"
+              required
+            />
+            <span class="password-toggle" id="toggleLoginPwd" title="Show password">👁️</span>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; margin-bottom:1.4rem;">
+          <a href="#" style="font-size:.83rem; color:var(--orange-500); font-weight:600;">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full btn-lg" id="loginBtn">
+          Sign In
+        </button>
+      </form>
+
+      <p class="auth-footer-text">
+        Don't have an account? <a href="register.html">Create one free →</a>
+      </p>
+    </div>
+  </div>
+</main>
+
+<script>
+  const form = document.getElementById('loginForm');
+  const alert = document.getElementById('loginAlert');
+  const loginBtn = document.getElementById('loginBtn');
+
+  // Password toggle
+  document.getElementById('toggleLoginPwd').addEventListener('click', function() {
+    const pwd = document.getElementById('loginPassword');
+    const isText = pwd.type === 'text';
+    pwd.type = isText ? 'password' : 'text';
+    this.textContent = isText ? '👁️' : '🙈';
+  });
+
+  // Mock credentials
+  const USERS = [
+    { email: 'lydia@anbesaflow.et', password: 'pass123', role: 'passenger', page: 'passenger-dashboard.html' },
+    { email: 'operator@anbesaflow.et', password: 'op123', role: 'operator', page: 'operator-dashboard.html' },
+    { email: 'admin@anbesaflow.et', password: 'admin123', role: 'admin', page: 'admin-dashboard.html' },
+  ];
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    alert.style.display = 'none';
+    const email = document.getElementById('loginEmail').value.trim();
+    const pwd = document.getElementById('loginPassword').value;
+
+    if (!email || !pwd) {
+      alert.textContent = 'Please fill in all fields.';
+      alert.style.display = 'block';
+      return;
+    }
+
+    loginBtn.innerHTML = '<span class="spinner"></span> Signing in…';
+    loginBtn.disabled = true;
+
+    await new Promise(r => setTimeout(r, 900)); // simulate API
+
+    const user = USERS.find(u => u.email === email && u.password === pwd);
+    if (user) {
+      sessionStorage.setItem('anbesaUser', JSON.stringify(user));
+      window.location.href = user.page;
+    } else {
+      alert.textContent = 'Invalid email or password. Please try again.';
+      alert.style.display = 'block';
+      loginBtn.innerHTML = 'Sign In';
+      loginBtn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>

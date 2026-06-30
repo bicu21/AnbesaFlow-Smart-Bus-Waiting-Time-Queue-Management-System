@@ -3,9 +3,9 @@ spring:
     name: anbesaflow-auth
 
   datasource:
-    url: ${DATABASE_URL:jdbc:postgresql://localhost:8432/anbesaflow}
-    username: ${DATABASE_USERNAME:postgres}
-    password: ${DATABASE_PASSWORD:postgres}
+    url: ${DATABASE_URL:jdbc:postgresql://dpg-d921vdkvikkc73bl0fqg-a:5432/anbesa_flow}
+    username: ${DATABASE_USERNAME:anbesa_flow_user}
+    password: ${DATABASE_PASSWORD:iqvLwlA0DqcHccSzuejwv2Ui7Yv56auX}
     driver-class-name: org.postgresql.Driver
 
   jpa:

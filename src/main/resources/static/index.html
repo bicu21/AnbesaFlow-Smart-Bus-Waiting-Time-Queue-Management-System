@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnbesaFlow — Smart Bus Queue Management</title>
+  <meta name="description" content="AnbesaFlow digitises Addis Ababa's bus-stop queues, giving passengers real-time waiting times and fair queue positions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/landing.css" />
+</head>
+<body>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🚌</span>
+        <span class="logo-text">Anbesa<span class="accent">Flow</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#stats" class="nav-link">Impact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="pages/login.html" class="btn btn-ghost">Sign In</a>
+        <a href="pages/register.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#stats">Impact</a>
+      <a href="pages/login.html" class="btn btn-ghost" style="text-align:center;">Sign In</a>
+      <a href="pages/register.html" class="btn btn-primary" style="text-align:center;">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Smart Transit · Addis Ababa
+        </div>
+        <h1 class="hero-title">
+          No More Guessing.<br />
+          <span class="gradient-text">Know Your Wait.</span>
+        </h1>
+        <p class="hero-subtitle">
+          AnbesaFlow brings real-time queue management and waiting time estimation to Addis Ababa's bus stops — making every commute fairer, faster, and smarter.
+        </p>
+        <div class="hero-actions">
+          <a href="pages/register.html" class="btn btn-primary btn-lg">
+            Join the Queue →
+          </a>
+          <a href="#how-it-works" class="btn btn-ghost btn-lg">
+            See How It Works
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <span class="trust-num">3 000+</span>
+            <span class="trust-label">Daily Commuters</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <span class="trust-num">120+</span>
+            <span class="trust-label">Bus Stops</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <span class="trust-num">99%</span>
+            <span class="trust-label">Uptime</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="phone-header">
+              <span class="phone-stop">Megenagna Stop</span>
+              <span class="phone-live">● LIVE</span>
+            </div>
+            <div class="phone-queue-card">
+              <div class="queue-position">
+                <span class="queue-num">4</span>
+                <span class="queue-label">Your Position</span>
+              </div>
+              <div class="queue-divider"></div>
+              <div class="queue-wait">
+                <span class="wait-num">~8 min</span>
+                <span class="wait-label">Est. Wait</span>
+              </div>
+            </div>
+            <div class="phone-bus-row">
+              <div class="bus-tag arriving">Bus 47 → Arriving</div>
+              <div class="bus-tag delayed">Bus 12 → Delayed</div>
+            </div>
+            <div class="phone-people">
+              <div class="people-bar">
+                <div class="people-fill" style="width:65%"></div>
+              </div>
+              <span class="people-label">Queue: 4 / 20</span>
+            </div>
+            <button class="phone-btn">Leave Queue</button>
+          </div>
+        </div>
+        <div class="float-card float-card-1">
+          <span>✅</span> Queue updated
+        </div>
+        <div class="float-card float-card-2">
+          <span>🚌</span> Bus 47 arriving in 2 min
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FEATURES ══════════════ -->
+  <section class="features" id="features">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">What AnbesaFlow Offers</p>
+        <h2 class="section-title">Built for Every Commuter</h2>
+        <p class="section-sub">Three powerful roles. One seamless platform.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card" style="--delay:0s">
+          <div class="feature-icon" style="background:rgba(255,107,0,.12)">🧍</div>
+          <h3>For Passengers</h3>
+          <ul class="feature-list">
+            <li>Join virtual bus-stop queues</li>
+            <li>Real-time position tracking</li>
+            <li>Live waiting time estimate</li>
+            <li>Search any registered stop</li>
+          </ul>
+        </div>
+        <div class="feature-card featured" style="--delay:.1s">
+          <div class="feature-badge">Most Used</div>
+          <div class="feature-icon" style="background:rgba(255,107,0,.18)">🚌</div>
+          <h3>For Operators</h3>
+          <ul class="feature-list">
+            <li>Submit bus arrival events</li>
+            <li>Mark buses as delayed</li>
+            <li>Update stop status live</li>
+            <li>Simple one-tap interface</li>
+          </ul>
+        </div>
+        <div class="feature-card" style="--delay:.2s">
+          <div class="feature-icon" style="background:rgba(255,107,0,.12)">🛡️</div>
+          <h3>For Admins</h3>
+          <ul class="feature-list">
+            <li>Manage all user accounts</li>
+            <li>Assign & modify roles</li>
+            <li>Monitor system-wide stats</li>
+            <li>Configure routes & stops</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ HOW IT WORKS ══════════════ -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">Simple Process</p>
+        <h2 class="section-title">Three Steps to a Smarter Queue</h2>
+      </div>
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Register & Sign In</h3>
+            <p>Create a free account in under 30 seconds. Sign in with your email and password to access your personalised dashboard.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Find Your Stop & Join</h3>
+            <p>Search for your bus stop by name. See the live queue length and estimated wait, then tap to join the virtual queue.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Track & Board</h3>
+            <p>Watch your position count down in real time as buses arrive. Board when it's your turn — no pushing, no confusion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ STATS ══════════════ -->
+  <section class="stats-section" id="stats">
+    <div class="section-container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-num" data-target="3000">0</span>
+          <span class="stat-plus">+</span>
+          <span class="stat-label">Daily Users</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-target="120">0</span>
+          <span class="stat-plus">+</span>
+          <span class="stat-label">Bus Stops Covered</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-target="40">0</span>
+          <span class="stat-plus">%</span>
+          <span class="stat-label">Wait Time Reduction</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-target="99">0</span>
+          <span class="stat-plus">%</span>
+          <span class="stat-label">System Uptime</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CTA ══════════════ -->
+  <section class="cta-section">
+    <div class="cta-container">
+      <h2>Ready for a smarter commute?</h2>
+      <p>Join thousands of Addis Ababa commuters who already rely on AnbesaFlow every day.</p>
+      <div class="cta-actions">
+        <a href="pages/register.html" class="btn btn-primary btn-lg">Create Free Account</a>
+        <a href="pages/login.html" class="btn btn-ghost btn-lg">Sign In</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-icon">🚌</span>
+          <span class="logo-text">Anbesa<span class="accent">Flow</span></span>
+        </a>
+        <p>Smarter queues for a smarter Addis Ababa.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="pages/login.html">Sign In</a>
+          <a href="pages/register.html">Register</a>
+          <a href="pages/passenger-dashboard.html">Dashboard</a>
+        </div>
+        <div class="footer-col">
+          <h4>Project</h4>
+          <a href="#">SECT-4221</a>
+          <a href="#">Group 3</a>
+          <a href="#">AAiT</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 AnbesaFlow · Group 3 · Addis Ababa Institute of Technology · SECT-4221</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
