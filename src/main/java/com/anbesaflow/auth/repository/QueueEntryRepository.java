@@ -11,6 +11,8 @@ import com.anbesaflow.auth.entity.User;
 public interface QueueEntryRepository extends JpaRepository<QueueEntry, Long> {
 
     List<QueueEntry> findByBusStopOrderByPositionAsc(String busStop);
+    List<QueueEntry> findAllByOrderByJoinedAtAsc();
+    List<QueueEntry> findByBusStop(String busStop);
 
     Optional<QueueEntry> findByUser(User user);
 

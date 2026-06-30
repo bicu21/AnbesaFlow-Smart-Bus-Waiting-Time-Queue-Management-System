@@ -1,12 +1,20 @@
 package com.anbesaflow.auth.controller;
 
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.anbesaflow.auth.dto.JoinQueueRequest;
 import com.anbesaflow.auth.dto.QueueStatusResponse;
 import com.anbesaflow.auth.dto.WaitingTimeResponse;
 import com.anbesaflow.auth.service.QueueService;
 import com.anbesaflow.auth.service.WaitingTimeService;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/queue")
@@ -25,7 +33,7 @@ public class QueueController {
 
     @PostMapping("/join")
     public ResponseEntity<QueueStatusResponse> join(
-            @RequestBody JoinQueueRequest request){
+            @Valid @RequestBody JoinQueueRequest request){
 
         return ResponseEntity.ok(
                 queueService.joinQueue(request.getBusStop())

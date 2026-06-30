@@ -13,6 +13,8 @@ import org.springframework.web.context.request.WebRequest;
 
 import com.anbesaflow.auth.dto.ErrorResponse;
 
+import jakarta.servlet.http.HttpServletRequest;
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -87,12 +89,17 @@ public class GlobalExceptionHandler {
     }
     @ExceptionHandler(QueueNotFoundException.class)
     public ResponseEntity<ErrorResponse> handleQueue(
-        QueueNotFoundException ex){
-            return ResponseEntity.status(404)
-                        .body(new ErrorResponse(
-                    404,
-                    ex.getMessage(), null, null
-            ));
+        QueueNotFoundException ex,
+        HttpServletRequest request) {
+
+            ErrorResponse error = new ErrorResponse(
+            HttpStatus.NOT_FOUND.value(),
+            HttpStatus.NOT_FOUND.getReasonPhrase(),
+            ex.getMessage(),
+            request.getRequestURI()
+            );
+
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
     }
     
 }

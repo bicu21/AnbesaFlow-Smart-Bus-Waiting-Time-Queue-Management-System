@@ -45,9 +45,11 @@ public QueueStatusResponse joinQueue(String busStop) {
 
     User user = currentUser();
 
-    if(queueRepository.existsByUser(user)){
-        throw new RuntimeException("User already joined a queue.");
-    }
+    queueRepository.findByUser(user).ifPresent(q -> {
+    throw new IllegalStateException(
+            "User is already in a queue."
+    );
+});
 
     long total = queueRepository.countByBusStop(busStop);
 
