@@ -21,7 +21,7 @@ spring:
     enabled: true
     validate-on-migrate: false
     baseline-on-migrate: true
-
+    ignore-migration-foreign-key: true
 app:
   jwt:
     secret: ${JWT_SECRET}

@@ -3,7 +3,7 @@
 ## 📊 Project Information
 
 - **Project Name**: `AnbesaFlow-Smart-Bus-Waiting-Time-Queue-Management-System`
-- **Generated On**: 2026-07-01 00:10:54 (Africa/Nairobi / GMT+03:00)
+- **Generated On**: 2026-07-01 00:19:00 (Africa/Nairobi / GMT+03:00)
 - **Total Files Processed**: 161
 - **Export Tool**: Easy Whole Project to Single Text File for LLMs v1.1.0
 - **Tool Author**: Jota / José Guilherme Pandolfi
@@ -113,7 +113,7 @@
 │   │       │   ├── 📁 pages/
 │   │       │   │   └── 📄 login.html (5.07 KB)
 │   │       │   └── 📄 index.html (11.44 KB)
-│   │       └── 📄 application.yml (728 B)
+│   │       └── 📄 application.yml (766 B)
 │   └── 📁 test/
 │       └── 📁 java/
 ├── 📁 target/
@@ -213,7 +213,7 @@
 │   │   │   ├── 📁 pages/
 │   │   │   │   └── 📄 login.html (5.07 KB)
 │   │   │   └── 📄 index.html (11.44 KB)
-│   │   └── 📄 application.yml (724 B)
+│   │   └── 📄 application.yml (766 B)
 │   ├── 📁 generated-sources/
 │   │   └── 📁 annotations/
 │   ├── 📁 generated-test-sources/
@@ -6432,15 +6432,15 @@ if (fadeEls.length > 0) {
 ### <a id="📄-src-main-resources-application-yml"></a>📄 `src/main/resources/application.yml`
 
 **File Info:**
-- **Size**: 728 B
+- **Size**: 766 B
 - **Extension**: `.yml`
 - **Language**: `yaml`
 - **Location**: `src/main/resources/application.yml`
 - **Relative Path**: `src/main/resources`
 - **Created**: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-07-01 00:10:52 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `0ec5319d247bde0685046acd8132833f`
-- **SHA256**: `805b11406e949268787476ad03d6631536d98e8dad8676cadf4c55fff2309f40`
+- **Modified**: 2026-07-01 00:18:58 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `51b09e22a0e449bf3c3dccac65c5fe45`
+- **SHA256**: `44bbc0ab9ff1b6973e52163fb86754d210cc66c5c4e3c5cced75e5add377f3f5`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -6469,7 +6469,7 @@ spring:
     enabled: true
     validate-on-migrate: false
     baseline-on-migrate: true
-
+    ignore-migration-foreign-key: true
 app:
   jwt:
     secret: ${JWT_SECRET}
@@ -8824,15 +8824,15 @@ if (fadeEls.length > 0) {
 ### <a id="📄-target-classes-application-yml"></a>📄 `target/classes/application.yml`
 
 **File Info:**
-- **Size**: 724 B
+- **Size**: 766 B
 - **Extension**: `.yml`
 - **Language**: `yaml`
 - **Location**: `target/classes/application.yml`
 - **Relative Path**: `target/classes`
 - **Created**: 2026-06-30 20:22:34 (Africa/Nairobi / GMT+03:00)
-- **Modified**: 2026-07-01 00:10:53 (Africa/Nairobi / GMT+03:00)
-- **MD5**: `0ec5319d247bde0685046acd8132833f`
-- **SHA256**: `805b11406e949268787476ad03d6631536d98e8dad8676cadf4c55fff2309f40`
+- **Modified**: 2026-07-01 00:18:59 (Africa/Nairobi / GMT+03:00)
+- **MD5**: `51b09e22a0e449bf3c3dccac65c5fe45`
+- **SHA256**: `44bbc0ab9ff1b6973e52163fb86754d210cc66c5c4e3c5cced75e5add377f3f5`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -8861,7 +8861,7 @@ spring:
     enabled: true
     validate-on-migrate: false
     baseline-on-migrate: true
-
+    ignore-migration-foreign-key: true
 app:
   jwt:
     secret: ${JWT_SECRET}
