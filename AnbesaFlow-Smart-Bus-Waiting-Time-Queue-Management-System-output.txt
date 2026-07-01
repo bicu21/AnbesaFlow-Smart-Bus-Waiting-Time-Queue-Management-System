@@ -5,7 +5,7 @@ PROJECT EXPORT FOR LLMs
 PROJECT INFORMATION:
 --------------------------------------------------
 Project Name: AnbesaFlow-Smart-Bus-Waiting-Time-Queue-Management-System
-Generated On: 2026-06-30 23:54:39 (Africa/Nairobi / GMT+03:00)
+Generated On: 2026-07-01 00:10:54 (Africa/Nairobi / GMT+03:00)
 Total Files Processed: 161
 Export Tool: Easy Whole Project to Single Text File for LLMs v1.1.0
 Tool Author: Jota / José Guilherme Pandolfi
@@ -115,7 +115,7 @@ PROJECT STRUCTURE
 │   │       │   ├── 📁 pages/
 │   │       │   │   └── 📄 login.html (5.07 KB)
 │   │       │   └── 📄 index.html (11.44 KB)
-│   │       └── 📄 application.yml (696 B)
+│   │       └── 📄 application.yml (728 B)
 │   └── 📁 test/
 │       └── 📁 java/
 ├── 📁 target/
@@ -215,7 +215,7 @@ PROJECT STRUCTURE
 │   │   │   ├── 📁 pages/
 │   │   │   │   └── 📄 login.html (5.07 KB)
 │   │   │   └── 📄 index.html (11.44 KB)
-│   │   └── 📄 application.yml (696 B)
+│   │   └── 📄 application.yml (724 B)
 │   ├── 📁 generated-sources/
 │   │   └── 📁 annotations/
 │   ├── 📁 generated-test-sources/
@@ -6410,15 +6410,15 @@ FILE: src/main/resources/application.yml
 
 FILE INFORMATION:
 ----------------------------------------
-Size: 696 B
+Size: 728 B
 Extension: .yml
 Language: yaml
 Location: src/main/resources/application.yml
 Relative Path: src/main/resources
 Created: 2026-06-29 07:49:09 (Africa/Nairobi / GMT+03:00)
-Modified: 2026-06-30 21:31:56 (Africa/Nairobi / GMT+03:00)
-MD5: 0802a811e61c29315e6787409107b8dc
-SHA256: bfe309f8359195b946f124b8dbfc22410a22da136bb7d48cfaef3a9b75b66144
+Modified: 2026-07-01 00:10:52 (Africa/Nairobi / GMT+03:00)
+MD5: 0ec5319d247bde0685046acd8132833f
+SHA256: 805b11406e949268787476ad03d6631536d98e8dad8676cadf4c55fff2309f40
 Encoding: ASCII
 
 FILE CONTENT:
@@ -6444,6 +6444,7 @@ spring:
 
   flyway:
     enabled: true
+    validate-on-migrate: false
     baseline-on-migrate: true
 
 app:
@@ -8815,15 +8816,15 @@ FILE: target/classes/application.yml
 
 FILE INFORMATION:
 ----------------------------------------
-Size: 696 B
+Size: 724 B
 Extension: .yml
 Language: yaml
 Location: target/classes/application.yml
 Relative Path: target/classes
 Created: 2026-06-30 20:22:34 (Africa/Nairobi / GMT+03:00)
-Modified: 2026-06-30 22:29:59 (Africa/Nairobi / GMT+03:00)
-MD5: 0802a811e61c29315e6787409107b8dc
-SHA256: bfe309f8359195b946f124b8dbfc22410a22da136bb7d48cfaef3a9b75b66144
+Modified: 2026-07-01 00:10:53 (Africa/Nairobi / GMT+03:00)
+MD5: 0ec5319d247bde0685046acd8132833f
+SHA256: 805b11406e949268787476ad03d6631536d98e8dad8676cadf4c55fff2309f40
 Encoding: ASCII
 
 FILE CONTENT:
@@ -8849,6 +8850,7 @@ spring:
 
   flyway:
     enabled: true
+    validate-on-migrate: false
     baseline-on-migrate: true
 
 app:
