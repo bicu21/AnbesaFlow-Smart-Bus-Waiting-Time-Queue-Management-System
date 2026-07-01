@@ -18,7 +18,11 @@ public class Bus {
     private Integer capacity;
 
     @Column(nullable = false, length = 50)
-    private String status; // e.g., AVAILABLE, IN_TRANSIT, MAINTENANCE
+    private String status; // e.g., ACTIVE, IN_TRANSIT, MAINTENANCE
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "route_id")
+    private Route route;
 
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
@@ -36,10 +40,8 @@ public class Bus {
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
     }
-    @ManyToOne(fetch = FetchType.LAZY)
-@JoinColumn(name = "route_id", nullable = false)
-private Route route;
-    // Explicit Getters and Setters to resolve any Lombok/IDE compilation issues
+
+    // Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -52,13 +54,10 @@ private Route route;
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
 
+    public Route getRoute() { return route; }
+    public void setRoute(Route route) { this.route = route; }
+
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
-    public Route getRoute() {
-    return route;
 }
 
-public void setRoute(Route route) {
-    this.route = route;
-}
-}

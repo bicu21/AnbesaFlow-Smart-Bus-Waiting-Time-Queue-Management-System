@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.data.domain.Pageable;
 
 import java.util.Map;
+
 @RestController
 @RequestMapping("/operator")
 @PreAuthorize("hasRole('OPERATOR')")
@@ -25,7 +26,6 @@ public class OperatorController {
 
     @PostMapping("/bus-arrivals")
     public ResponseEntity<Map<String, Object>> recordArrival(@RequestBody Map<String, String> request) {
-
         String busPlate = request.getOrDefault("busPlate", "");
 
         // TEMP FIX: we don't have recordArrival(), so we return a placeholder response
@@ -38,7 +38,6 @@ public class OperatorController {
 
     @PostMapping("/bus-departures")
     public ResponseEntity<Map<String, Object>> recordDeparture(@RequestBody Map<String, String> request) {
-
         String busPlate = request.getOrDefault("busPlate", "");
 
         // TEMP FIX: same issue, avoid calling missing service method
@@ -49,32 +48,27 @@ public class OperatorController {
         ));
     }
 
-   @PutMapping("/bus-status")
-public ResponseEntity<Map<String, Object>> updateBusStatus(@RequestBody Map<String, String> request) {
+    @PutMapping("/bus-status")
+    public ResponseEntity<Map<String, Object>> updateBusStatus(@RequestBody Map<String, String> request) {
+        String busPlate = request.getOrDefault("busPlate", "");
+        String status = request.getOrDefault("status", "ACTIVE");
 
-    String busPlate = request.getOrDefault("busPlate", "");
-    String status = request.getOrDefault("status", "ACTIVE");
+        // Find bus by plate (searches all, filters in-memory)
+        Bus bus = busService.getAllBuses(null, Pageable.unpaged())
+                .getContent()
+                .stream()
+                .filter(b -> b.getPlateNumber().equals(busPlate))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("Bus not found: " + busPlate));
 
-    Bus bus = busService.getAllBuses(null, Pageable.unpaged())
-            .getContent()
-            .stream()
-            .filter(b -> b.getPlateNumber().equals(busPlate))
-            .findFirst()
-            .orElseThrow(() -> new RuntimeException("Bus not found: " + busPlate));
+        // Update only the status field — preserving all other fields (including route association)
+        bus.setStatus(status);
+        Bus saved = busService.updateBus(bus.getId(), bus);
 
-    Bus updatedBus = new Bus(
-            bus.getId(),
-            bus.getPlateNumber(),
-            bus.getCapacity(),
-            status
-    );
-
-    Bus saved = busService.updateBus(bus.getId(), updatedBus);
-
-    return ResponseEntity.ok(Map.of(
-            "status", "success",
-            "message", "Bus " + busPlate + " status updated to: " + status,
-            "data", saved
-    ));
-}
-}
+        return ResponseEntity.ok(Map.of(
+                "status", "success",
+                "message", "Bus " + busPlate + " status updated to: " + status,
+                "data", saved
+        ));
+    }
+}

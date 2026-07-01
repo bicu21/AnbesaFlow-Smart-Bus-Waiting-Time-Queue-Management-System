@@ -12,7 +12,7 @@ public class Route {
     private Long id;
 
     @Column(nullable = false, length = 100)
-    private String name; 
+    private String name;
 
     @Column(name = "start_point", nullable = false, length = 100)
     private String startPoint;
@@ -30,7 +30,7 @@ public class Route {
         this.createdAt = LocalDateTime.now();
     }
 
-    // Explicit Getters and Setters
+    // Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 

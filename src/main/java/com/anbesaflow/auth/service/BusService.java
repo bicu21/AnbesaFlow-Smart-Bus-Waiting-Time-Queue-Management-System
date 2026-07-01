@@ -41,6 +41,10 @@ public class BusService {
         existingBus.setPlateNumber(updatedBus.getPlateNumber());
         existingBus.setCapacity(updatedBus.getCapacity());
         existingBus.setStatus(updatedBus.getStatus());
+        // Preserve route association if provided
+        if (updatedBus.getRoute() != null) {
+            existingBus.setRoute(updatedBus.getRoute());
+        }
         return busRepository.save(existingBus);
     }
 

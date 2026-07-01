@@ -9,16 +9,14 @@ public class BusStop {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @PrimaryKeyJoinColumn
     private Long id;
 
     @Column(nullable = false, length = 120)
-    private String name; 
+    private String name;
 
     @Column(nullable = false, length = 255)
     private String location;
 
-    // 1. ADD THE RELATIONSHIP TO ROUTE
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "route_id")
     private Route route;
@@ -39,7 +37,7 @@ public class BusStop {
         this.createdAt = LocalDateTime.now();
     }
 
-    // Explicit Getters and Setters
+    // Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -49,10 +47,9 @@ public class BusStop {
     public String getLocation() { return location; }
     public void setLocation(String location) { this.location = location; }
 
-    // 2. ADD GETTER AND SETTER FOR ROUTE
     public Route getRoute() { return route; }
     public void setRoute(Route route) { this.route = route; }
 
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
-}
+}

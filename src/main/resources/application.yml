@@ -19,9 +19,10 @@ spring:
 
   flyway:
     enabled: true
-    validate-on-migrate: false
+    validate-on-migrate: true
     baseline-on-migrate: true
-    ignore-migration-foreign-key: true
+    locations: classpath:db/migration
+
 app:
   jwt:
     secret: ${JWT_SECRET}
