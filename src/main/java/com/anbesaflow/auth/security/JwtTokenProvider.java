@@ -30,18 +30,14 @@ public class JwtTokenProvider {
     public JwtTokenProvider(
             @Value("${app.jwt.secret}") String jwtSecret,
             @Value("${app.jwt.expiration-ms}") long jwtExpirationMs) {
-        // Decode the secret string. If it is hex-encoded, we parse it, otherwise we use raw bytes.
-        byte[] keyBytes = jwtSecret.getBytes();
-        if (jwtSecret.length() >= 64) {
-            // Hex string convert to bytes
-            try {
-                keyBytes = java.util.HexFormat.of().parseHex(jwtSecret);
-            } catch (Exception e) {
-                // Fallback to raw bytes
-                keyBytes = jwtSecret.getBytes();
-            }
+        // Hash the secret string using SHA-512 to guarantee exactly 512 bits (64 bytes)
+        try {
+            java.security.MessageDigest md = java.security.MessageDigest.getInstance("SHA-512");
+            byte[] keyBytes = md.digest(jwtSecret.getBytes(java.nio.charset.StandardCharsets.UTF_8));
+            this.signingKey = Keys.hmacShaKeyFor(keyBytes);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to initialize JWT signing key", e);
         }
-        this.signingKey = Keys.hmacShaKeyFor(keyBytes);
         this.jwtExpirationMs = jwtExpirationMs;
     }
 
